@@ -1,0 +1,513 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchBar from '../components/SearchBar.astro';
+import MountainCard from '../components/MountainCard.astro';
+import { supabase } from '../lib/supabase';
+
+const { data: mountains, error } = await supabase
+  .from('mountains')
+  .select(`
+    *,
+    mountain_images!inner (image_url)
+  `)
+  .order('height_meters', { ascending: false })
+  .limit(12);
+
+const mountainsWithImages = mountains?.map(m => ({
+  ...m,
+  image_url: m.mountain_images?.[0]?.image_url
+})) || [];
+---
+
+<Layout
+  title="UK Mountains Directory - Explore the Peaks of Britain"
+  description="Discover and explore the mountains of the United Kingdom. Search for mountains by location, height, and features. Find detailed information about every peak."
+>
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">Discover the Mountains of the UK</h1>
+        <p class="hero-subtitle">
+          Explore comprehensive information about every peak, from the mighty Munros of Scotland to the historic mountains of Wales and England
+        </p>
+        <SearchBar />
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Mountains</h2>
+        <p>Explore some of the most iconic peaks across the United Kingdom</p>
+      </div>
+
+      <div id="mountains-grid" class="mountains-grid">
+        {mountainsWithImages.length > 0 ? (
+          mountainsWithImages.map((mountain) => (
+            <MountainCard mountain={mountain} />
+          ))
+        ) : (
+          <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+            </svg>
+            <h3>No Mountains Found</h3>
+            <p>Start exploring by adding mountain data to the database.</p>
+          </div>
+        )}
+      </div>
+
+      <div id="loading-state" class="loading-state" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading mountains...</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">⛰️</div>
+          <div class="stat-number">282</div>
+          <div class="stat-label">Munros</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏔️</div>
+          <div class="stat-number">222</div>
+          <div class="stat-label">Corbetts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🗻</div>
+          <div class="stat-number">1556</div>
+          <div class="stat-label">Marilyns</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📍</div>
+          <div class="stat-number">All UK</div>
+          <div class="stat-label">Regions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { supabase } from '../lib/supabase';
+
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const nearMeBtn = document.getElementById('near-me-btn') as HTMLButtonElement;
+  const regionFilters = document.querySelectorAll('.region-filter');
+  const classFilters = document.querySelectorAll('.class-filter');
+  const diffFilters = document.querySelectorAll('.diff-filter');
+  const mountainsGrid = document.getElementById('mountains-grid');
+  const loadingState = document.getElementById('loading-state');
+
+  let currentRegion = 'all';
+  let currentClassification = 'all';
+  let currentDifficulty = 'all';
+  let userLocation: { latitude: number; longitude: number } | null = null;
+
+  function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a =
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  async function searchMountains(query: string = '') {
+    if (mountainsGrid && loadingState) {
+      mountainsGrid.style.display = 'none';
+      loadingState.style.display = 'flex';
+
+      let queryBuilder = supabase
+        .from('mountains')
+        .select(`*, mountain_images!inner (image_url)`)
+        .order('height_meters', { ascending: false });
+
+      if (query) {
+        queryBuilder = queryBuilder.or(`name.ilike.%${query}%,region.ilike.%${query}%,county.ilike.%${query}%,area.ilike.%${query}%`);
+      }
+
+      if (currentRegion !== 'all') {
+        queryBuilder = queryBuilder.eq('region', currentRegion);
+      }
+
+      if (currentClassification !== 'all') {
+        const classField = `is_${currentClassification}`;
+        queryBuilder = queryBuilder.eq(classField, true);
+      }
+
+      if (currentDifficulty !== 'all') {
+        queryBuilder = queryBuilder.eq('difficulty_rating', currentDifficulty);
+      }
+
+      const { data: mountains, error } = await queryBuilder.limit(50);
+
+      loadingState.style.display = 'none';
+      mountainsGrid.style.display = 'grid';
+
+      if (mountains && mountains.length > 0) {
+        mountainsGrid.innerHTML = mountains.map((mountain: any) => `
+          <a href="/mountain/${mountain.slug}" class="mountain-card">
+            <div class="card-image">
+              <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
+              ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
+            </div>
+            <div class="card-content">
+              <h3>${mountain.name}</h3>
+              <div class="card-meta">
+                <span class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                    <polyline points="16 17 22 17 22 11"></polyline>
+                  </svg>
+                  ${mountain.height_meters}m (${mountain.height_feet}ft)
+                </span>
+                <span class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  ${mountain.region}
+                </span>
+              </div>
+              ${mountain.description ? `<p class="card-description">${mountain.description.substring(0, 120)}${mountain.description.length > 120 ? '...' : ''}</p>` : ''}
+            </div>
+          </a>
+        `).join('');
+      } else {
+        mountainsGrid.innerHTML = `
+          <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+            </svg>
+            <h3>No Mountains Found</h3>
+            <p>Try adjusting your search or filters.</p>
+          </div>
+        `;
+      }
+    }
+  }
+
+  if (searchInput) {
+    let debounceTimer: number;
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const query = (e.target as HTMLInputElement).value;
+        searchMountains(query);
+      }, 300);
+    });
+  }
+
+  regionFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      regionFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentRegion = chip.getAttribute('data-filter') || 'all';
+      searchMountains(searchInput?.value || '');
+    });
+  });
+
+  classFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      classFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentClassification = chip.getAttribute('data-filter') || 'all';
+      searchMountains(searchInput?.value || '');
+    });
+  });
+
+  diffFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      diffFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentDifficulty = chip.getAttribute('data-filter') || 'all';
+      searchMountains(searchInput?.value || '');
+    });
+  });
+
+  if (nearMeBtn) {
+    nearMeBtn.addEventListener('click', async () => {
+      if ('geolocation' in navigator) {
+        nearMeBtn.disabled = true;
+        nearMeBtn.innerHTML = '<div class="spinner-small"></div> Finding...';
+
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            userLocation = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            };
+
+            if (mountainsGrid && loadingState) {
+              mountainsGrid.style.display = 'none';
+              loadingState.style.display = 'flex';
+
+              const { data: mountains, error } = await supabase
+                .from('mountains')
+                .select(`*, mountain_images!inner (image_url)`);
+
+              if (mountains && userLocation) {
+                const mountainsWithDistance = mountains.map((m: any) => ({
+                  ...m,
+                  distance: calculateDistance(
+                    userLocation.latitude,
+                    userLocation.longitude,
+                    parseFloat(m.latitude),
+                    parseFloat(m.longitude)
+                  )
+                })).sort((a, b) => a.distance - b.distance).slice(0, 20);
+
+                loadingState.style.display = 'none';
+                mountainsGrid.style.display = 'grid';
+
+                mountainsGrid.innerHTML = mountainsWithDistance.map((mountain: any) => `
+                  <a href="/mountain/${mountain.slug}" class="mountain-card">
+                    <div class="card-image">
+                      <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
+                      ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
+                    </div>
+                    <div class="card-content">
+                      <h3>${mountain.name}</h3>
+                      <div class="card-meta">
+                        <span class="meta-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                            <polyline points="16 17 22 17 22 11"></polyline>
+                          </svg>
+                          ${mountain.height_meters}m
+                        </span>
+                        <span class="meta-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                          ${mountain.distance.toFixed(1)} km away
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                `).join('');
+              }
+            }
+
+            nearMeBtn.disabled = false;
+            nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+          },
+          (error) => {
+            alert('Unable to access your location. Please enable location services.');
+            nearMeBtn.disabled = false;
+            nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+          }
+        );
+      } else {
+        alert('Geolocation is not supported by your browser.');
+      }
+    });
+  }
+</script>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1920');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-2xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  .featured-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+  }
+
+  .mountains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+    gap: var(--spacing-md);
+  }
+
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--color-neutral-200);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .spinner-small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-3xl);
+  }
+
+  .empty-state svg {
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-neutral-400);
+  }
+
+  .empty-state h3 {
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .empty-state p {
+    color: var(--color-neutral-500);
+  }
+
+  .stats-section {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    margin-top: var(--spacing-3xl);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .stat-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .stat-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      padding: 0 var(--spacing-md);
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+
+    .mountains-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>

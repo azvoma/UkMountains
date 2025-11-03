@@ -1,0 +1,208 @@
+---
+---
+
+<div class="search-container">
+  <div class="search-wrapper">
+    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.35-4.35"></path>
+    </svg>
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="Search for mountains by name or location..."
+      autocomplete="off"
+    />
+    <button id="near-me-btn" class="near-me-btn" aria-label="Find mountains near me">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      Near Me
+    </button>
+  </div>
+
+  <div class="filters-section">
+    <div class="filter-group">
+      <span class="filter-label">Region:</span>
+      <div class="filter-chips">
+        <button class="filter-chip region-filter active" data-filter="all" data-type="region">All</button>
+        <button class="filter-chip region-filter" data-filter="Scotland" data-type="region">Scotland</button>
+        <button class="filter-chip region-filter" data-filter="Wales" data-type="region">Wales</button>
+        <button class="filter-chip region-filter" data-filter="England" data-type="region">England</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Classification:</span>
+      <div class="filter-chips">
+        <button class="filter-chip class-filter active" data-filter="all" data-type="classification">All</button>
+        <button class="filter-chip class-filter" data-filter="munro" data-type="classification">Munros</button>
+        <button class="filter-chip class-filter" data-filter="corbett" data-type="classification">Corbetts</button>
+        <button class="filter-chip class-filter" data-filter="graham" data-type="classification">Grahams</button>
+        <button class="filter-chip class-filter" data-filter="wainwright" data-type="classification">Wainwrights</button>
+        <button class="filter-chip class-filter" data-filter="hewitt" data-type="classification">Hewitts</button>
+        <button class="filter-chip class-filter" data-filter="nuttall" data-type="classification">Nuttalls</button>
+        <button class="filter-chip class-filter" data-filter="marilyn" data-type="classification">Marilyns</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Difficulty:</span>
+      <div class="filter-chips">
+        <button class="filter-chip diff-filter active" data-filter="all" data-type="difficulty">All</button>
+        <button class="filter-chip diff-filter" data-filter="Easy" data-type="difficulty">Easy</button>
+        <button class="filter-chip diff-filter" data-filter="Moderate" data-type="difficulty">Moderate</button>
+        <button class="filter-chip diff-filter" data-filter="Hard" data-type="difficulty">Hard</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .search-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+    transition: box-shadow var(--transition-base);
+  }
+
+  .search-wrapper:focus-within {
+    box-shadow: 0 20px 30px -5px rgba(15, 118, 110, 0.3), 0 10px 10px -5px rgba(15, 118, 110, 0.1);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    color: var(--color-neutral-400);
+    pointer-events: none;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 16px 20px 16px 52px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+    color: var(--color-neutral-900);
+  }
+
+  .search-input::placeholder {
+    color: var(--color-neutral-400);
+  }
+
+  .near-me-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 12px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .near-me-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+  }
+
+  .near-me-btn:active {
+    transform: translateY(0);
+  }
+
+  .filters-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .filter-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-neutral-700);
+  }
+
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .filter-chip {
+    padding: 8px 16px;
+    border: 2px solid var(--color-neutral-300);
+    background: white;
+    color: var(--color-neutral-700);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .filter-chip:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .filter-chip.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .search-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .search-input {
+      padding: 14px 20px 14px 48px;
+    }
+
+    .search-icon {
+      left: 16px;
+    }
+
+    .near-me-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .filter-chips {
+      gap: var(--spacing-xs);
+    }
+
+    .filter-chip {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+</style>

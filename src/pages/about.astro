@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Us | UK Mountains Directory"
+  description="Learn about UK Mountains Directory and our mission to provide comprehensive information about mountains across the United Kingdom."
+>
+  <div class="about-page">
+    <div class="about-hero">
+      <div class="container">
+        <h1>About UK Mountains Directory</h1>
+        <p class="hero-text">
+          Your comprehensive guide to exploring the mountains of the United Kingdom
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="about-content">
+        <section class="content-section">
+          <h2>Our Mission</h2>
+          <p>
+            UK Mountains Directory is dedicated to providing accurate, comprehensive, and accessible information about
+            every significant peak across England, Scotland, and Wales. Whether you're an experienced mountaineer
+            planning your next Munro, a casual hiker looking for weekend adventures, or simply curious about the
+            magnificent peaks that define our landscape, we're here to help.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What We Offer</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">⛰️</div>
+              <h3>Comprehensive Database</h3>
+              <p>
+                Detailed information on Munros, Corbetts, Marilyns, and other significant peaks across the UK,
+                including heights, locations, and classifications.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📍</div>
+              <h3>Location Services</h3>
+              <p>
+                Find mountains near you with our geolocation feature, complete with distances and directions to
+                help plan your next adventure.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔍</div>
+              <h3>Smart Search</h3>
+              <p>
+                Powerful search and filtering tools to help you find the perfect mountain based on region, height,
+                classification, and more.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Rich Information</h3>
+              <p>
+                Discover the history, interesting facts, nearby facilities, and local attractions for each mountain
+                to enhance your experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Mountain Classifications</h2>
+          <div class="classifications">
+            <div class="classification-item">
+              <h3>Munros</h3>
+              <p>
+                Scottish mountains over 3,000 feet (914.4 meters). Named after Sir Hugh Munro, who first cataloged
+                them in 1891. There are 282 Munros in Scotland.
+              </p>
+            </div>
+            <div class="classification-item">
+              <h3>Corbetts</h3>
+              <p>
+                Scottish mountains between 2,500 and 3,000 feet (762-914 meters) with a drop of at least 500 feet
+                on all sides. Named after John Rooke Corbett.
+              </p>
+            </div>
+            <div class="classification-item">
+              <h3>Marilyns</h3>
+              <p>
+                Mountains in the British Isles with a prominence of at least 150 meters (492 feet). The name is a
+                pun on Munro, with the M representing "minimum" prominence.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Safety First</h2>
+          <p>
+            We believe that informed adventurers are safe adventurers. While we provide comprehensive information
+            about each mountain, we always emphasize the importance of proper preparation, appropriate equipment,
+            and respect for the natural environment.
+          </p>
+          <div class="safety-tips">
+            <ul>
+              <li>Always check weather forecasts before setting out</li>
+              <li>Inform someone of your planned route and expected return time</li>
+              <li>Carry appropriate equipment including maps, compass, and first aid kit</li>
+              <li>Know your limits and choose routes appropriate for your fitness level</li>
+              <li>Respect local guidelines and access restrictions</li>
+              <li>Leave no trace - take your litter home</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Our Commitment</h2>
+          <p>
+            We are committed to maintaining accurate and up-to-date information about UK mountains. Our database
+            is regularly updated to reflect changes in access, facilities, and other relevant information. If you
+            notice any inaccuracies or have suggestions for improvements, please <a href="/contact">contact us</a>.
+          </p>
+        </section>
+
+        <section class="content-section cta-section">
+          <h2>Start Exploring</h2>
+          <p>
+            Ready to discover the mountains of the UK? Start your journey today and find your next adventure.
+          </p>
+          <a href="/" class="btn btn-primary">Explore Mountains</a>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-page {
+    background: var(--color-neutral-50);
+  }
+
+  .about-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .about-hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-text {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: var(--spacing-3xl);
+  }
+
+  .content-section {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .content-section h2 {
+    color: var(--color-neutral-900);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .content-section p {
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .feature-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-900);
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--color-neutral-600);
+  }
+
+  .classifications {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .classification-item {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+  }
+
+  .classification-item h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .classification-item p {
+    margin: 0;
+    color: var(--color-neutral-700);
+  }
+
+  .safety-tips {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 2px solid #f59e0b;
+    margin-top: var(--spacing-lg);
+  }
+
+  .safety-tips ul {
+    margin: 0;
+    padding-left: var(--spacing-xl);
+  }
+
+  .safety-tips li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-800);
+  }
+
+  .cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  }
+
+  .cta-section h2 {
+    color: white;
+  }
+
+  .cta-section p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cta-section .btn {
+    background: white;
+    color: var(--color-primary);
+  }
+
+  .cta-section .btn:hover {
+    background: var(--color-neutral-100);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-text {
+      font-size: 1rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,129 @@
+---
+---
+
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <p>
+        <strong>We use cookies</strong><br />
+        This website uses cookies to enhance your experience and analyze site traffic.
+        By clicking "Accept", you consent to our use of cookies.
+        <a href="/cookie-policy">Learn more</a>
+      </p>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn btn-primary">Accept</button>
+      <button id="cookie-decline" class="btn btn-secondary">Decline</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const COOKIE_CONSENT_KEY = 'uk-mountains-cookie-consent';
+
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+
+  function checkCookieConsent() {
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (!consent && banner) {
+      setTimeout(() => {
+        banner.classList.add('visible');
+      }, 1000);
+    }
+  }
+
+  function setCookieConsent(accepted: boolean) {
+    localStorage.setItem(COOKIE_CONSENT_KEY, accepted ? 'accepted' : 'declined');
+    if (banner) {
+      banner.classList.remove('visible');
+    }
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => setCookieConsent(true));
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => setCookieConsent(false));
+  }
+
+  checkCookieConsent();
+</script>
+
+<style>
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    padding: var(--spacing-lg);
+    transform: translateY(100%);
+    transition: transform var(--transition-slow);
+    z-index: 1000;
+    border-top: 3px solid var(--color-primary);
+  }
+
+  .cookie-banner.visible {
+    transform: translateY(0);
+  }
+
+  .cookie-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+  }
+
+  .cookie-text {
+    flex: 1;
+  }
+
+  .cookie-text p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+  }
+
+  .cookie-text strong {
+    color: var(--color-neutral-900);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .cookie-text a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .cookie-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .cookie-banner {
+      padding: var(--spacing-md);
+    }
+
+    .cookie-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--spacing-md);
+    }
+
+    .cookie-actions {
+      flex-direction: column;
+    }
+
+    .cookie-actions button {
+      width: 100%;
+    }
+  }
+</style>

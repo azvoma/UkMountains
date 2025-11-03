@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Privacy Policy | UK Mountains Directory"
+  description="Learn about how UK Mountains Directory collects, uses, and protects your personal information."
+>
+  <div class="legal-page">
+    <div class="container">
+      <div class="legal-content">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: November 3, 2025</p>
+
+        <section>
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to UK Mountains Directory. We respect your privacy and are committed to protecting your personal data.
+            This privacy policy will inform you about how we look after your personal data when you visit our website
+            and tell you about your privacy rights and how the law protects you.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Collect</h2>
+          <p>We may collect, use, store and transfer different kinds of personal data about you:</p>
+          <ul>
+            <li><strong>Identity Data:</strong> includes first name, last name, username or similar identifier.</li>
+            <li><strong>Contact Data:</strong> includes email address and telephone numbers.</li>
+            <li><strong>Technical Data:</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform.</li>
+            <li><strong>Usage Data:</strong> includes information about how you use our website and services.</li>
+            <li><strong>Location Data:</strong> if you use our "Near Me" feature, we may collect your geographical location data with your consent.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. How We Use Your Information</h2>
+          <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+          <ul>
+            <li>To provide and maintain our service</li>
+            <li>To notify you about changes to our service</li>
+            <li>To provide customer support</li>
+            <li>To gather analysis or valuable information so that we can improve our service</li>
+            <li>To monitor the usage of our service</li>
+            <li>To detect, prevent and address technical issues</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Cookies</h2>
+          <p>
+            We use cookies and similar tracking technologies to track the activity on our website and hold certain information.
+            You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+            However, if you do not accept cookies, you may not be able to use some portions of our website.
+            For more information about cookies, please see our <a href="/cookie-policy">Cookie Policy</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Data Security</h2>
+          <p>
+            We have put in place appropriate security measures to prevent your personal data from being accidentally lost,
+            used or accessed in an unauthorized way, altered or disclosed. We limit access to your personal data to those
+            employees, agents, contractors and other third parties who have a business need to know.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Your Legal Rights</h2>
+          <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data including the right to:</p>
+          <ul>
+            <li>Request access to your personal data</li>
+            <li>Request correction of your personal data</li>
+            <li>Request erasure of your personal data</li>
+            <li>Object to processing of your personal data</li>
+            <li>Request restriction of processing your personal data</li>
+            <li>Request transfer of your personal data</li>
+            <li>Right to withdraw consent</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. Third-Party Links</h2>
+          <p>
+            This website may include links to third-party websites, plug-ins and applications. Clicking on those links
+            or enabling those connections may allow third parties to collect or share data about you. We do not control
+            these third-party websites and are not responsible for their privacy statements.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, please contact us at:
+          </p>
+          <p>
+            Email: <a href="mailto:privacy@ukmountains.directory">privacy@ukmountains.directory</a><br />
+            Or visit our <a href="/contact">Contact Page</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .legal-page {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-neutral-50);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--spacing-3xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .legal-content h1 {
+    color: var(--color-neutral-900);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .last-updated {
+    color: var(--color-neutral-600);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-2xl);
+    font-style: italic;
+  }
+
+  .legal-content section {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .legal-content h2 {
+    color: var(--color-neutral-900);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  .legal-content section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .legal-content p {
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-content ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+  }
+
+  .legal-content li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+  }
+
+  .legal-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .legal-content a:hover {
+    color: var(--color-primary-dark);
+  }
+
+  @media (max-width: 768px) {
+    .legal-content {
+      padding: var(--spacing-xl);
+    }
+
+    .legal-content h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

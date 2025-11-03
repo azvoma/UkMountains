@@ -1,0 +1,220 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Terms of Service | UK Mountains Directory"
+  description="Read the terms and conditions for using UK Mountains Directory."
+>
+  <div class="legal-page">
+    <div class="container">
+      <div class="legal-content">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last Updated: November 3, 2025</p>
+
+        <section>
+          <h2>1. Agreement to Terms</h2>
+          <p>
+            By accessing and using UK Mountains Directory, you accept and agree to be bound by the terms and
+            provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Use of Service</h2>
+          <p>UK Mountains Directory provides information about mountains in the United Kingdom for educational and recreational purposes. You agree to use the service only for lawful purposes and in accordance with these Terms.</p>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the service in any way that violates any applicable national or international law or regulation</li>
+            <li>Transmit, or procure the sending of, any advertising or promotional material without our prior written consent</li>
+            <li>Impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity</li>
+            <li>Engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the service</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Information Accuracy</h2>
+          <p>
+            While we strive to provide accurate and up-to-date information about mountains, including heights, locations,
+            and facilities, we cannot guarantee the absolute accuracy of all information. Mountain conditions, facilities,
+            and access routes may change without notice.
+          </p>
+          <p>
+            Users are advised to verify all information independently before embarking on any mountain-related activities.
+            Always check current weather conditions, access restrictions, and safety information from official sources.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Safety Disclaimer</h2>
+          <p>
+            Mountain climbing and hiking can be dangerous activities. UK Mountains Directory provides information for
+            reference purposes only and does not constitute professional mountaineering advice or guidance.
+          </p>
+          <p>
+            Users assume all risks associated with mountain activities. We strongly recommend:
+          </p>
+          <ul>
+            <li>Proper preparation and planning before any mountain expedition</li>
+            <li>Appropriate equipment and clothing</li>
+            <li>Checking weather forecasts</li>
+            <li>Informing others of your plans</li>
+            <li>Knowing your physical limitations</li>
+            <li>Following all local regulations and guidelines</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Intellectual Property</h2>
+          <p>
+            The service and its original content, features, and functionality are and will remain the exclusive
+            property of UK Mountains Directory and its licensors. The service is protected by copyright, trademark,
+            and other laws of both the United Kingdom and foreign countries.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. User Content</h2>
+          <p>
+            If we enable features that allow you to submit content (such as reviews, photos, or comments), you retain
+            ownership of any content you submit. However, by submitting content, you grant us a worldwide, non-exclusive,
+            royalty-free license to use, reproduce, and display such content in connection with the service.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Links to Other Websites</h2>
+          <p>
+            Our service may contain links to third-party websites or services that are not owned or controlled by
+            UK Mountains Directory. We have no control over, and assume no responsibility for, the content, privacy
+            policies, or practices of any third-party websites or services.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            In no event shall UK Mountains Directory, nor its directors, employees, partners, agents, suppliers,
+            or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages,
+            including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
+            resulting from your access to or use of or inability to access or use the service.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Changes to Terms</h2>
+          <p>
+            We reserve the right to modify or replace these Terms at any time. If a revision is material, we will
+            provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change
+            will be determined at our sole discretion.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Governing Law</h2>
+          <p>
+            These Terms shall be governed and construed in accordance with the laws of England and Wales, without
+            regard to its conflict of law provisions.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Contact Us</h2>
+          <p>
+            If you have any questions about these Terms, please contact us at:
+          </p>
+          <p>
+            Email: <a href="mailto:legal@ukmountains.directory">legal@ukmountains.directory</a><br />
+            Or visit our <a href="/contact">Contact Page</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .legal-page {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-neutral-50);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--spacing-3xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .legal-content h1 {
+    color: var(--color-neutral-900);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .last-updated {
+    color: var(--color-neutral-600);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-2xl);
+    font-style: italic;
+  }
+
+  .legal-content section {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .legal-content h2 {
+    color: var(--color-neutral-900);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  .legal-content section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .legal-content p {
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-content ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+  }
+
+  .legal-content li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+  }
+
+  .legal-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .legal-content a:hover {
+    color: var(--color-primary-dark);
+  }
+
+  @media (max-width: 768px) {
+    .legal-content {
+      padding: var(--spacing-xl);
+    }
+
+    .legal-content h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
