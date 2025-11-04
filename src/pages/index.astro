@@ -2,21 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
-import { supabase } from '../lib/supabase';
+import { getMountainsWithImages } from '../lib/data';
 
-const { data: mountains, error } = await supabase
-  .from('mountains')
-  .select(`
-    *,
-    mountain_images!inner (image_url)
-  `)
-  .order('height_meters', { ascending: false })
-  .limit(12);
-
-const mountainsWithImages = mountains?.map(m => ({
-  ...m,
-  image_url: m.mountain_images?.[0]?.image_url
-})) || [];
+const mountainsWithImages = getMountainsWithImages(12);
 ---
 
 <Layout
@@ -95,7 +83,7 @@ const mountainsWithImages = mountains?.map(m => ({
 </Layout>
 
 <script>
-  import { supabase } from '../lib/supabase';
+  import { searchMountains, getMountainImages } from '../lib/data';
 
   const searchInput = document.getElementById('search-input') as HTMLInputElement;
   const nearMeBtn = document.getElementById('near-me-btn') as HTMLButtonElement;
@@ -122,40 +110,31 @@ const mountainsWithImages = mountains?.map(m => ({
     return R * c;
   }
 
-  async function searchMountains(query: string = '') {
+  function performSearch(query: string = '') {
     if (mountainsGrid && loadingState) {
       mountainsGrid.style.display = 'none';
       loadingState.style.display = 'flex';
 
-      let queryBuilder = supabase
-        .from('mountains')
-        .select(`*, mountain_images!inner (image_url)`)
-        .order('height_meters', { ascending: false });
+      const filtered = searchMountains(
+        query,
+        currentRegion,
+        currentClassification,
+        currentDifficulty
+      ).slice(0, 50);
 
-      if (query) {
-        queryBuilder = queryBuilder.or(`name.ilike.%${query}%,region.ilike.%${query}%,county.ilike.%${query}%,area.ilike.%${query}%`);
-      }
-
-      if (currentRegion !== 'all') {
-        queryBuilder = queryBuilder.eq('region', currentRegion);
-      }
-
-      if (currentClassification !== 'all') {
-        const classField = `is_${currentClassification}`;
-        queryBuilder = queryBuilder.eq(classField, true);
-      }
-
-      if (currentDifficulty !== 'all') {
-        queryBuilder = queryBuilder.eq('difficulty_rating', currentDifficulty);
-      }
-
-      const { data: mountains, error } = await queryBuilder.limit(50);
+      const mountainsWithImages = filtered.map(m => {
+        const images = getMountainImages(m.id);
+        return {
+          ...m,
+          mountain_images: images
+        };
+      });
 
       loadingState.style.display = 'none';
       mountainsGrid.style.display = 'grid';
 
-      if (mountains && mountains.length > 0) {
-        mountainsGrid.innerHTML = mountains.map((mountain: any) => `
+      if (mountainsWithImages && mountainsWithImages.length > 0) {
+        mountainsGrid.innerHTML = mountainsWithImages.map((mountain: any) => `
           <a href="/mountain/${mountain.slug}" class="mountain-card">
             <div class="card-image">
               <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
@@ -203,7 +182,7 @@ const mountainsWithImages = mountains?.map(m => ({
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
         const query = (e.target as HTMLInputElement).value;
-        searchMountains(query);
+        performSearch(query);
       }, 300);
     });
   }
@@ -213,7 +192,7 @@ const mountainsWithImages = mountains?.map(m => ({
       regionFilters.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       currentRegion = chip.getAttribute('data-filter') || 'all';
-      searchMountains(searchInput?.value || '');
+      performSearch(searchInput?.value || '');
     });
   });
 
@@ -222,7 +201,7 @@ const mountainsWithImages = mountains?.map(m => ({
       classFilters.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       currentClassification = chip.getAttribute('data-filter') || 'all';
-      searchMountains(searchInput?.value || '');
+      performSearch(searchInput?.value || '');
     });
   });
 
@@ -231,7 +210,7 @@ const mountainsWithImages = mountains?.map(m => ({
       diffFilters.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       currentDifficulty = chip.getAttribute('data-filter') || 'all';
-      searchMountains(searchInput?.value || '');
+      performSearch(searchInput?.value || '');
     });
   });
 
@@ -252,20 +231,22 @@ const mountainsWithImages = mountains?.map(m => ({
               mountainsGrid.style.display = 'none';
               loadingState.style.display = 'flex';
 
-              const { data: mountains, error } = await supabase
-                .from('mountains')
-                .select(`*, mountain_images!inner (image_url)`);
+              const allMountains = searchMountains('', 'all', 'all', 'all');
 
-              if (mountains && userLocation) {
-                const mountainsWithDistance = mountains.map((m: any) => ({
-                  ...m,
-                  distance: calculateDistance(
-                    userLocation.latitude,
-                    userLocation.longitude,
-                    parseFloat(m.latitude),
-                    parseFloat(m.longitude)
-                  )
-                })).sort((a, b) => a.distance - b.distance).slice(0, 20);
+              if (allMountains && userLocation) {
+                const mountainsWithDistance = allMountains.map((m: any) => {
+                  const images = getMountainImages(m.id);
+                  return {
+                    ...m,
+                    mountain_images: images,
+                    distance: calculateDistance(
+                      userLocation.latitude,
+                      userLocation.longitude,
+                      parseFloat(m.latitude),
+                      parseFloat(m.longitude)
+                    )
+                  };
+                }).sort((a, b) => a.distance - b.distance).slice(0, 20);
 
                 loadingState.style.display = 'none';
                 mountainsGrid.style.display = 'grid';

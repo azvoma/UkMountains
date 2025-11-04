@@ -1,43 +1,27 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { supabase, type Mountain, type MountainImage } from '../../lib/supabase';
+import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoutes, type Mountain } from '../../lib/data';
 
 export async function getStaticPaths() {
-  const { data: mountains } = await supabase
-    .from('mountains')
-    .select('slug');
+  const mountains = getAllMountains();
 
-  return mountains?.map((mountain) => ({
+  return mountains.map((mountain) => ({
     params: { slug: mountain.slug },
-  })) || [];
+  }));
 }
 
 const { slug } = Astro.params;
 
-const { data: mountain } = await supabase
-  .from('mountains')
-  .select('*')
-  .eq('slug', slug)
-  .maybeSingle();
-
-const { data: images } = await supabase
-  .from('mountain_images')
-  .select('*')
-  .eq('mountain_id', mountain?.id)
-  .order('order', { ascending: true })
-  .limit(4);
-
-const { data: routes } = await supabase
-  .from('routes')
-  .select('*')
-  .eq('mountain_id', mountain?.id)
-  .order('order', { ascending: true });
+const mountain = getMountainBySlug(slug);
 
 if (!mountain) {
   return Astro.redirect('/404');
 }
 
-const mountainRoutes = routes || [];
+const images = getMountainImages(mountain.id);
+const routes = getMountainRoutes(mountain.id);
+
+const mountainRoutes = routes;
 const classifications = [];
 if (mountain.is_munro) classifications.push('Munro');
 if (mountain.is_corbett) classifications.push('Corbett');
@@ -47,7 +31,7 @@ if (mountain.is_hewitt) classifications.push('Hewitt');
 if (mountain.is_nuttall) classifications.push('Nuttall');
 if (mountain.is_marilyn) classifications.push('Marilyn');
 
-const mountainImages = images || [];
+const mountainImages = images;
 const defaultImages = [
   'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200',
