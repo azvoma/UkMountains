@@ -8,11 +8,13 @@
       <path d="m21 21-4.35-4.35"></path>
     </svg>
     <input
-      type="text"
+      type="search"
       id="search-input"
       class="search-input"
       placeholder="Search for mountains by name or location..."
       autocomplete="off"
+      aria-label="Search mountains"
+      role="searchbox"
     />
     <button id="near-me-btn" class="near-me-btn" aria-label="Find mountains near me">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -23,10 +25,10 @@
     </button>
   </div>
 
-  <div class="filters-section">
+  <div class="filters-section" role="group" aria-label="Filter mountains">
     <div class="filter-group">
-      <span class="filter-label">Region:</span>
-      <div class="filter-chips">
+      <span class="filter-label" id="region-label">Region:</span>
+      <div class="filter-chips" role="group" aria-labelledby="region-label">
         <button class="filter-chip region-filter active" data-filter="all" data-type="region">All</button>
         <button class="filter-chip region-filter" data-filter="Scotland" data-type="region">Scotland</button>
         <button class="filter-chip region-filter" data-filter="Wales" data-type="region">Wales</button>
@@ -35,8 +37,8 @@
     </div>
 
     <div class="filter-group">
-      <span class="filter-label">Classification:</span>
-      <div class="filter-chips">
+      <span class="filter-label" id="classification-label">Classification:</span>
+      <div class="filter-chips" role="group" aria-labelledby="classification-label">
         <button class="filter-chip class-filter active" data-filter="all" data-type="classification">All</button>
         <button class="filter-chip class-filter" data-filter="munro" data-type="classification">Munros</button>
         <button class="filter-chip class-filter" data-filter="corbett" data-type="classification">Corbetts</button>
@@ -49,8 +51,8 @@
     </div>
 
     <div class="filter-group">
-      <span class="filter-label">Difficulty:</span>
-      <div class="filter-chips">
+      <span class="filter-label" id="difficulty-label">Difficulty:</span>
+      <div class="filter-chips" role="group" aria-labelledby="difficulty-label">
         <button class="filter-chip diff-filter active" data-filter="all" data-type="difficulty">All</button>
         <button class="filter-chip diff-filter" data-filter="Easy" data-type="difficulty">Easy</button>
         <button class="filter-chip diff-filter" data-filter="Moderate" data-type="difficulty">Moderate</button>
@@ -118,6 +120,9 @@
     cursor: pointer;
     transition: all var(--transition-base);
     white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
   }
 
   .near-me-btn:hover {
@@ -164,6 +169,9 @@
     font-weight: 500;
     cursor: pointer;
     transition: all var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
   }
 
   .filter-chip:hover {

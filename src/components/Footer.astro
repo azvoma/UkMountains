@@ -2,7 +2,7 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
@@ -83,6 +83,11 @@ const currentYear = new Date().getFullYear();
     color: var(--color-neutral-300);
     text-decoration: none;
     transition: color var(--transition-fast);
+  }
+
+  .footer-links a:focus {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
   }
 
   .footer-links a:hover {

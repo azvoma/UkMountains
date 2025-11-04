@@ -16,12 +16,14 @@ const { mountain } = Astro.props;
 const defaultImage = 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800';
 ---
 
-<a href={`/mountain/${mountain.slug}`} class="mountain-card">
+<a href={`/mountain/${mountain.slug}`} class="mountain-card" aria-label={`View details for ${mountain.name}, ${mountain.height_meters} meters in ${mountain.region}`}>
   <div class="card-image">
     <img
       src={mountain.image_url || defaultImage}
-      alt={mountain.name}
+      alt={`${mountain.name} mountain in ${mountain.region}`}
       loading="lazy"
+      width="400"
+      height="220"
     />
     {mountain.classification && (
       <span class="badge">{mountain.classification}</span>
@@ -64,6 +66,12 @@ const defaultImage = 'https://images.pexels.com/photos/417074/pexels-photo-41707
     text-decoration: none;
     color: inherit;
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mountain-card:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
   }
 
   .mountain-card:hover {

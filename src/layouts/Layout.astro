@@ -20,6 +20,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = image.startsWith('http') ? image : new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -34,24 +35,39 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
+    <meta name="keywords" content="UK mountains, British mountains, Scottish Munros, Welsh peaks, English mountains, hiking UK, mountain climbing, Wainwrights, Corbetts, mountain directory" />
+    <meta name="author" content="UK Mountains Directory" />
+    <meta name="language" content="en-GB" />
+
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="UK Mountains Directory" />
+    <meta property="og:locale" content="en_GB" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.site)} />
+    <meta name="twitter:image" content={imageURL} />
+    <meta name="twitter:image:alt" content={title} />
 
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#0f766e" />
+    <link rel="preconnect" href="https://images.pexels.com" />
+    <link rel="dns-prefetch" href="https://images.pexels.com" />
+    <link rel="preconnect" href="https://api.mapbox.com" />
+    <link rel="dns-prefetch" href="https://api.mapbox.com" />
   </head>
   <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <Header />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
@@ -59,3 +75,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <CookieBanner />
   </body>
 </html>
+
+<style is:global>
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+  }
+
+  .skip-to-content:focus {
+    top: 0;
+  }
+</style>
