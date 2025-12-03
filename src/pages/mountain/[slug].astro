@@ -11,7 +11,6 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-
 const mountain = getMountainBySlug(slug);
 
 if (!mountain) {
@@ -69,656 +68,698 @@ const structuredData = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-  <div class="breadcrumb-container">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">Home</a></li>
-          <li><span aria-current="page">{mountain.name}</span></li>
-        </ol>
-      </nav>
+  <!-- 1. HERO SECTION -->
+  <div class="hero-section">
+    <div class="hero-image">
+      <img src={displayImages[0]} alt={`${mountain.name} Summit`} />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>{mountain.name}</span>
+      </div>
+      <h1>{mountain.name}</h1>
+      {mountain.national_park && <div class="hero-subtitle">{mountain.national_park}</div>}
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-value">{mountain.height_meters}m</span>
+          <span class="stat-label">Height ({mountain.height_feet}ft)</span>
+        </div>
+        {mountain.difficulty_rating && (
+          <div class="hero-stat">
+            <span class={`difficulty-badge difficulty-${mountain.difficulty_rating.toLowerCase()}`}>
+              {mountain.difficulty_rating}
+            </span>
+            <span class="stat-label">Difficulty</span>
+          </div>
+        )}
+      </div>
+
+      <div class="quick-stats">
+        {mountain.time_to_summit && (
+          <div class="quick-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>{mountain.time_to_summit}</span>
+          </div>
+        )}
+        {mountain.route_distance && (
+          <div class="quick-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span>{mountain.route_distance}</span>
+          </div>
+        )}
+        {mountain.best_season && (
+          <div class="quick-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <span>{mountain.best_season}</span>
+          </div>
+        )}
+        {mountain.popular_route_name && (
+          <div class="quick-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>{mountain.popular_route_name}</span>
+          </div>
+        )}
+        <div class="quick-stat">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>{mountain.latitude.toFixed(4)}°N, {Math.abs(mountain.longitude).toFixed(4)}°W</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#routes" class="btn btn-primary">View Routes</a>
+        <a href={`https://www.metoffice.gov.uk/weather/forecast/${mountain.parking_postcode || mountain.grid_reference}`} target="_blank" rel="noopener" class="btn btn-secondary">Check Weather</a>
+      </div>
     </div>
   </div>
 
-  <div class="mountain-detail">
-    <div class="image-gallery">
-      {displayImages.slice(0, 4).map((imageUrl, index) => (
-        <div class={`gallery-item item-${index + 1}`}>
-          <img
-            src={imageUrl}
-            alt={`${mountain.name} - View ${index + 1}`}
-            loading={index === 0 ? 'eager' : 'lazy'}
-          />
-        </div>
-      ))}
-    </div>
+  <div class="container">
+    <!-- 2. MOUNTAIN OVERVIEW -->
+    {mountain.description && (
+      <section class="section-overview">
+        <div class="section-content">
+          <h2>About {mountain.name}</h2>
+          <p class="lead">{mountain.description}</p>
 
-    <div class="container">
-      <div class="mountain-header">
-        <div class="mountain-title-section">
-          <h1>{mountain.name}</h1>
-          {mountain.classification && (
-            <span class="classification-badge">{mountain.classification}</span>
-          )}
-        </div>
-        <div class="mountain-stats">
-          <div class="stat-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
-              <polyline points="16 17 22 17 22 11"></polyline>
-            </svg>
-            <div>
-              <div class="stat-label">Height</div>
-              <div class="stat-value">{mountain.height_meters}m ({mountain.height_feet}ft)</div>
+          {mountain.famous_for && (
+            <div class="famous-for">
+              <h3>What Makes It Special</h3>
+              <p>{mountain.famous_for}</p>
             </div>
-          </div>
-          <div class="stat-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <div>
-              <div class="stat-label">Region</div>
-              <div class="stat-value">{mountain.region}{mountain.county ? `, ${mountain.county}` : ''}</div>
-            </div>
-          </div>
-          <div class="stat-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <div>
-              <div class="stat-label">Location</div>
-              <div class="stat-value">{mountain.latitude.toFixed(4)}°N, {mountain.longitude.toFixed(4)}°W</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-grid">
-        <div class="main-content">
-          {mountain.description && (
-            <section class="content-section">
-              <h2>About {mountain.name}</h2>
-              <p>{mountain.description}</p>
-            </section>
           )}
 
-          {mountainRoutes.length > 0 && (
-            <section class="content-section routes-section">
-              <h2>Routes to the Summit</h2>
-              <p class="routes-intro">Multiple routes are available to reach the summit. Choose based on your experience and fitness level.</p>
-              <div class="routes-grid">
-                {mountainRoutes.map((route: any) => (
-                  <div class="route-card">
-                    <div class="route-header">
-                      <h3>{route.name}</h3>
-                      {route.difficulty && (
-                        <span class={`difficulty-badge difficulty-${route.difficulty.toLowerCase()}`}>
-                          {route.difficulty}
-                        </span>
-                      )}
-                    </div>
-                    {route.description && <p class="route-description">{route.description}</p>}
-                    <div class="route-stats">
-                      {route.distance_km && (
-                        <div class="route-stat">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                          </svg>
-                          <span>{route.distance_km}km ({route.distance_miles}mi)</span>
-                        </div>
-                      )}
-                      {route.ascent_meters && (
-                        <div class="route-stat">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
-                            <polyline points="16 17 22 17 22 11"></polyline>
-                          </svg>
-                          <span>{route.ascent_meters}m ascent</span>
-                        </div>
-                      )}
-                      {route.estimated_time_hours && (
-                        <div class="route-stat">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                          </svg>
-                          <span>{route.estimated_time_hours} hours</span>
-                        </div>
-                      )}
-                    </div>
-                    {route.starting_point && (
-                      <div class="route-start">
-                        <strong>Starting Point:</strong> {route.starting_point}
-                        {route.postcode && <span class="postcode"> ({route.postcode})</span>}
-                      </div>
-                    )}
-                    {route.route_notes && (
-                      <div class="route-notes">
-                        <strong>Route Notes:</strong> {route.route_notes}
-                      </div>
-                    )}
-                    {route.seasonal_notes && (
-                      <div class="seasonal-notes">
-                        <strong>Seasonal Notes:</strong> {route.seasonal_notes}
-                      </div>
-                    )}
-                  </div>
+          {mountain.landscape_description && (
+            <div class="landscape-info">
+              <h3>Landscape & Terrain</h3>
+              <p>{mountain.landscape_description}</p>
+            </div>
+          )}
+
+          {mountain.suitable_for && mountain.suitable_for.length > 0 && (
+            <div class="suitable-for">
+              <h3>Suitable For</h3>
+              <div class="tag-list">
+                {mountain.suitable_for.map((audience: string) => (
+                  <span class="tag">{audience}</span>
                 ))}
               </div>
-            </section>
+            </div>
           )}
 
           {mountain.history && (
-            <section class="content-section">
-              <h2>History</h2>
+            <div class="history-section">
+              <h3>History</h3>
               <p>{mountain.history}</p>
-            </section>
+            </div>
           )}
+        </div>
+      </section>
+    )}
 
-          {mountain.fun_facts && mountain.fun_facts.length > 0 && (
-            <section class="content-section">
-              <h2>Fun Facts & Interesting Information</h2>
-              <ul class="fact-list">
-                {mountain.fun_facts.map((fact: string) => (
-                  <li>{fact}</li>
-                ))}
-              </ul>
-            </section>
+    <!-- 3. KEY INFORMATION GRID -->
+    <section class="key-information">
+      <h2>Key Information</h2>
+      <div class="info-grid-layout">
+        <!-- Location & Map -->
+        <div class="info-card">
+          <h3>Location & Map</h3>
+          <div class="map-container">
+            <img
+              src={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/pin-s+0f766e(${mountain.longitude},${mountain.latitude})/${mountain.longitude},${mountain.latitude},11,0/600x400@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw`}
+              alt={`Map showing location of ${mountain.name}`}
+              loading="lazy"
+            />
+          </div>
+          <dl>
+            <dt>Region:</dt>
+            <dd>{mountain.region}{mountain.county ? `, ${mountain.county}` : ''}</dd>
+            {mountain.nearest_town && (
+              <>
+                <dt>Nearest Town:</dt>
+                <dd>{mountain.nearest_town}</dd>
+              </>
+            )}
+            {mountain.parking_postcode && (
+              <>
+                <dt>Postcode for Sat-Nav:</dt>
+                <dd class="postcode">{mountain.parking_postcode}</dd>
+              </>
+            )}
+            {mountain.grid_reference && (
+              <>
+                <dt>OS Grid Reference:</dt>
+                <dd>{mountain.grid_reference}</dd>
+              </>
+            )}
+          </dl>
+        </div>
+
+        <!-- Weather & Conditions -->
+        <div class="info-card">
+          <h3>Weather & Conditions</h3>
+          <div class="weather-widget">
+            <p>Check current conditions before your visit:</p>
+            <a href={`https://www.metoffice.gov.uk/weather/forecast/${mountain.parking_postcode || mountain.grid_reference}`} target="_blank" rel="noopener" class="btn btn-small">View Live Weather</a>
+          </div>
+          {mountain.best_season && (
+            <div class="season-info">
+              <strong>Best Season:</strong> {mountain.best_season}
+            </div>
           )}
-
-          {mountain.nearby_places && mountain.nearby_places.length > 0 && (
-            <section class="content-section">
-              <h2>Nearby Places</h2>
-              <div class="info-grid">
-                {mountain.nearby_places.map((place: string) => (
-                  <div class="info-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span>{place}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {mountain.facilities && mountain.facilities.length > 0 && (
-            <section class="content-section">
-              <h2>Facilities & Amenities</h2>
-              <div class="info-grid">
-                {mountain.facilities.map((facility: string) => (
-                  <div class="info-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    <span>{facility}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {mountain.restaurants && mountain.restaurants.length > 0 && (
-            <section class="content-section">
-              <h2>Nearby Restaurants & Food</h2>
-              <div class="info-grid">
-                {mountain.restaurants.map((restaurant: string) => (
-                  <div class="info-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                      <line x1="6" y1="1" x2="6" y2="4"></line>
-                      <line x1="10" y1="1" x2="10" y2="4"></line>
-                      <line x1="14" y1="1" x2="14" y2="4"></line>
-                    </svg>
-                    <span>{restaurant}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
+          {mountain.weather_warnings && (
+            <div class="weather-warning">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                <path d="M12 9v4"/>
+                <path d="M12 17h.01"/>
+              </svg>
+              <p>{mountain.weather_warnings}</p>
+            </div>
           )}
         </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-card">
-            <h3>Location Map</h3>
-            <div class="map-placeholder">
-              <img
-                src={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/pin-s+0f766e(${mountain.longitude},${mountain.latitude})/${mountain.longitude},${mountain.latitude},11,0/600x400@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw`}
-                alt={`Map showing location of ${mountain.name}`}
-                loading="lazy"
-              />
+        <!-- Parking & Access -->
+        <div class="info-card">
+          <h3>Parking & Access</h3>
+          {mountain.parking_postcode && (
+            <div class="parking-detail">
+              <strong>Parking Postcode:</strong>
+              <span class="postcode">{mountain.parking_postcode}</span>
             </div>
-            <div class="coordinates">
-              <p><strong>Coordinates:</strong></p>
-              <p>{mountain.latitude.toFixed(6)}°N, {mountain.longitude.toFixed(6)}°W</p>
+          )}
+          {mountain.parking_fees && (
+            <div class="parking-detail">
+              <strong>Parking Fees:</strong> {mountain.parking_fees}
             </div>
-          </div>
+          )}
+          {mountain.toilets_available && (
+            <div class="facility-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/>
+                <path d="M12 5v14"/>
+              </svg>
+              Toilets Available
+            </div>
+          )}
+          {mountain.visitor_centre && (
+            <div class="parking-detail">
+              <strong>Visitor Centre:</strong> {mountain.visitor_centre}
+            </div>
+          )}
+          {mountain.public_transport && (
+            <div class="parking-detail">
+              <strong>Public Transport:</strong> {mountain.public_transport}
+            </div>
+          )}
+          {mountain.facilities && mountain.facilities.length > 0 && (
+            <div class="facilities-list">
+              <strong>Available Facilities:</strong>
+              <ul>
+                {mountain.facilities.map((facility: string) => (
+                  <li>{facility}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
 
-          <div class="sidebar-card">
-            <h3>Quick Info</h3>
-            <dl class="info-list">
-              <dt>Height</dt>
-              <dd>{mountain.height_meters}m ({mountain.height_feet}ft)</dd>
-              {mountain.prominence_meters && (
-                <>
-                  <dt>Prominence</dt>
-                  <dd>{mountain.prominence_meters}m</dd>
-                </>
-              )}
-              {mountain.grid_reference && (
-                <>
-                  <dt>OS Grid Reference</dt>
-                  <dd>{mountain.grid_reference}</dd>
-                </>
-              )}
-              <dt>Region</dt>
-              <dd>{mountain.region}</dd>
-              {mountain.county && (
-                <>
-                  <dt>County</dt>
-                  <dd>{mountain.county}</dd>
-                </>
-              )}
-              {mountain.national_park && (
-                <>
-                  <dt>National Park</dt>
-                  <dd>{mountain.national_park}</dd>
-                </>
-              )}
-              {mountain.area && (
-                <>
-                  <dt>Area</dt>
-                  <dd>{mountain.area}</dd>
-                </>
-              )}
-              {mountain.parent_range && (
-                <>
-                  <dt>Mountain Range</dt>
-                  <dd>{mountain.parent_range}</dd>
-                </>
-              )}
-              {mountain.difficulty_rating && (
-                <>
-                  <dt>Difficulty</dt>
-                  <dd>{mountain.difficulty_rating}</dd>
-                </>
-              )}
-              {classifications.length > 0 && (
-                <>
-                  <dt>Classifications</dt>
-                  <dd>
-                    <div class="classification-tags">
-                      {classifications.map(cls => (
-                        <span class="classification-tag">{cls}</span>
-                      ))}
-                    </div>
-                  </dd>
-                </>
-              )}
-              {(mountain.gaelic_name || mountain.welsh_name) && (
-                <>
-                  <dt>Local Name</dt>
-                  <dd>{mountain.gaelic_name || mountain.welsh_name}</dd>
-                </>
-              )}
-            </dl>
-          </div>
-
-          <div class="sidebar-card safety-card">
-            <h3>Safety Information</h3>
-            <p>Always check weather conditions before attempting any mountain climb. Ensure you have appropriate equipment and inform someone of your plans.</p>
-            <a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-storm-centre" target="_blank" rel="noopener" class="btn btn-secondary">
-              Check Weather
-            </a>
-          </div>
-        </aside>
+        <!-- Safety & Emergency -->
+        <div class="info-card safety-card">
+          <h3>Safety & Emergency Info</h3>
+          {mountain.mountain_rescue_contact && (
+            <div class="emergency-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <strong>Emergency:</strong> {mountain.mountain_rescue_contact}
+            </div>
+          )}
+          {mountain.signal_black_spots && (
+            <div class="signal-warning">
+              <strong>Signal Black Spots:</strong> {mountain.signal_black_spots}
+            </div>
+          )}
+          {mountain.what_to_bring && mountain.what_to_bring.length > 0 && (
+            <div class="essentials-list">
+              <strong>Essential Items:</strong>
+              <ul>
+                {mountain.what_to_bring.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- 4. TRAIL ROUTES SECTION -->
+    {mountainRoutes.length > 0 && (
+      <section id="routes" class="routes-section">
+        <h2>Trail Routes to the Summit</h2>
+        <p class="section-intro">Choose from multiple routes based on your experience and fitness level.</p>
+        <div class="routes-container">
+          {mountainRoutes.map((route: any) => (
+            <div class="route-card-detailed">
+              <div class="route-header">
+                <h3>{route.name}</h3>
+                {route.difficulty && (
+                  <span class={`difficulty-badge difficulty-${route.difficulty.toLowerCase()}`}>
+                    {route.difficulty}
+                  </span>
+                )}
+              </div>
+
+              {route.description && <p class="route-description">{route.description}</p>}
+
+              <div class="route-stats-grid">
+                {route.distance_km && (
+                  <div class="stat-box">
+                    <span class="stat-label">Distance</span>
+                    <span class="stat-value">{route.distance_km} km</span>
+                    <span class="stat-sub">({route.distance_miles} mi)</span>
+                  </div>
+                )}
+                {route.estimated_time_hours && (
+                  <div class="stat-box">
+                    <span class="stat-label">Duration</span>
+                    <span class="stat-value">{route.estimated_time_hours} hrs</span>
+                  </div>
+                )}
+                {route.ascent_meters && (
+                  <div class="stat-box">
+                    <span class="stat-label">Elevation Gain</span>
+                    <span class="stat-value">{route.ascent_meters} m</span>
+                  </div>
+                )}
+                {route.user_rating && (
+                  <div class="stat-box">
+                    <span class="stat-label">Rating</span>
+                    <span class="stat-value">{'⭐'.repeat(Math.round(route.user_rating))}</span>
+                  </div>
+                )}
+              </div>
+
+              {route.starting_point && (
+                <div class="route-detail">
+                  <strong>Starting Point:</strong> {route.starting_point}
+                  {route.postcode && <span class="postcode"> ({route.postcode})</span>}
+                </div>
+              )}
+
+              {route.highlights && route.highlights.length > 0 && (
+                <div class="route-highlights">
+                  <strong>Highlights:</strong>
+                  <div class="highlight-tags">
+                    {route.highlights.map((highlight: string) => (
+                      <span class="highlight-tag">{highlight}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {route.route_notes && (
+                <div class="route-notes">
+                  <strong>Route Notes:</strong> {route.route_notes}
+                </div>
+              )}
+
+              {route.seasonal_notes && (
+                <div class="seasonal-notes">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                  </svg>
+                  <strong>Seasonal Notes:</strong> {route.seasonal_notes}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- 5. THINGS TO DO -->
+    {mountain.activities && Object.keys(mountain.activities).length > 0 && (
+      <section class="things-to-do">
+        <h2>Things to Do</h2>
+        <div class="activities-grid">
+          {mountain.activities.hiking && (
+            <div class="activity-card">
+              <div class="activity-icon">🥾</div>
+              <h3>Hiking & Scrambling</h3>
+              <p>{mountain.activities.hiking}</p>
+            </div>
+          )}
+
+          {mountain.photography_spots && mountain.photography_spots.length > 0 && (
+            <div class="activity-card">
+              <div class="activity-icon">📸</div>
+              <h3>Photography Spots</h3>
+              <ul>
+                {mountain.photography_spots.map((spot: string) => (
+                  <li>{spot}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {mountain.wildlife && mountain.wildlife.length > 0 && (
+            <div class="activity-card">
+              <div class="activity-icon">🦅</div>
+              <h3>Wildlife Watching</h3>
+              <ul>
+                {mountain.wildlife.map((animal: string) => (
+                  <li>{animal}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {mountain.activities.biking && (
+            <div class="activity-card">
+              <div class="activity-icon">🚵</div>
+              <h3>Mountain Biking</h3>
+              <p>{mountain.activities.biking}</p>
+            </div>
+          )}
+
+          {mountain.winter_activities && mountain.winter_activities.length > 0 && (
+            <div class="activity-card">
+              <div class="activity-icon">⛷️</div>
+              <h3>Winter Activities</h3>
+              <ul>
+                {mountain.winter_activities.map((activity: string) => (
+                  <li>{activity}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {mountain.camping_info && (
+            <div class="activity-card">
+              <div class="activity-icon">🏕️</div>
+              <h3>Camping & Bothies</h3>
+              <p>{mountain.camping_info}</p>
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- 6. GALLERY SECTION -->
+    <section class="gallery-section">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-grid">
+        {displayImages.map((imageUrl, index) => (
+          <div class="gallery-item">
+            <img
+              src={imageUrl}
+              alt={`${mountain.name} - View ${index + 1}`}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 7. REVIEWS & COMMUNITY (Placeholder for future implementation) -->
+    <section class="reviews-section">
+      <h2>Reviews & Community Insights</h2>
+      <div class="reviews-placeholder">
+        <p>Share your experience of climbing {mountain.name}!</p>
+        <p>Reviews and ratings coming soon.</p>
+      </div>
+    </section>
+
+    <!-- 8. NEARBY ATTRACTIONS -->
+    {(mountain.nearby_attractions && mountain.nearby_attractions.length > 0) || (mountain.nearby_places && mountain.nearby_places.length > 0) || (mountain.restaurants && mountain.restaurants.length > 0) ? (
+      <section class="nearby-section">
+        <h2>Nearby Attractions</h2>
+        <div class="nearby-grid">
+          {mountain.nearby_attractions && Array.isArray(mountain.nearby_attractions) && mountain.nearby_attractions.length > 0 && (
+            mountain.nearby_attractions.map((attraction: any) => (
+              <div class="nearby-card">
+                <h3>{attraction.name}</h3>
+                {attraction.type && <span class="attraction-type">{attraction.type}</span>}
+                {attraction.description && <p>{attraction.description}</p>}
+                {attraction.distance && <span class="distance">{attraction.distance}</span>}
+              </div>
+            ))
+          )}
+
+          {mountain.nearby_places && mountain.nearby_places.length > 0 && (
+            <div class="nearby-card">
+              <h3>Nearby Places</h3>
+              <ul>
+                {mountain.nearby_places.map((place: string) => (
+                  <li>{place}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {mountain.restaurants && mountain.restaurants.length > 0 && (
+            <div class="nearby-card">
+              <h3>Nearby Dining</h3>
+              <ul>
+                {mountain.restaurants.map((restaurant: string) => (
+                  <li>{restaurant}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+    ) : null}
+
+    <!-- 9. FAQs SECTION -->
+    {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.length > 0 && (
+      <section class="faqs-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faqs-container">
+          {mountain.faqs.map((faq: any) => (
+            <div class="faq-item">
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- 10. SEO FOOTER INFORMATION -->
+    <section class="seo-footer">
+      <div class="seo-summary">
+        <h2>{mountain.name} - Complete Guide</h2>
+        <p>
+          {mountain.name} is a {mountain.height_meters}m ({mountain.height_feet}ft) {mountain.classification || 'mountain'}
+          located in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}.
+          {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}.` : ''}
+          {mountain.suitable_for && mountain.suitable_for.length > 0 ? ` Perfect for ${mountain.suitable_for.join(', ').toLowerCase()}.` : ''}
+        </p>
+      </div>
+
+      {mountain.related_mountains && mountain.related_mountains.length > 0 && (
+        <div class="related-mountains">
+          <h3>Similar Mountains You Might Like</h3>
+          <div class="related-links">
+            {mountain.related_mountains.map((slug: string) => (
+              <a href={`/mountain/${slug}`} class="related-link">{slug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {classifications.length > 0 && (
+        <div class="classifications-footer">
+          <strong>Classifications:</strong>
+          <div class="classification-tags">
+            {classifications.map(cls => (
+              <span class="classification-tag">{cls}</span>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
   </div>
 </Layout>
 
 <style>
-  .breadcrumb-container {
-    background: var(--color-neutral-100);
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--color-neutral-200);
+  /* HERO SECTION */
+  .hero-section {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: var(--spacing-3xl);
   }
 
-  .breadcrumb ol {
-    list-style: none;
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .breadcrumb {
     display: flex;
     gap: var(--spacing-sm);
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .breadcrumb li {
-    display: flex;
-    align-items: center;
-  }
-
-  .breadcrumb li:not(:last-child)::after {
-    content: '/';
-    margin-left: var(--spacing-sm);
-    color: var(--color-neutral-400);
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
   }
 
   .breadcrumb a {
-    color: var(--color-primary);
+    color: rgba(255,255,255,0.8);
     text-decoration: none;
   }
 
   .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-
-  .breadcrumb span {
-    color: var(--color-neutral-600);
-  }
-
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 400px;
-    gap: 8px;
-    margin-bottom: var(--spacing-2xl);
-  }
-
-  .gallery-item {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .item-1 {
-    grid-column: 1 / 3;
-    grid-row: 1;
-  }
-
-  .item-2 {
-    grid-column: 3 / 4;
-  }
-
-  .item-3 {
-    grid-column: 4 / 5;
-  }
-
-  .item-4 {
-    grid-column: 3 / 5;
-    grid-row: 2;
-    display: none;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .mountain-header {
-    margin-bottom: var(--spacing-2xl);
-  }
-
-  .mountain-title-section {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    flex-wrap: wrap;
-  }
-
-  .mountain-title-section h1 {
-    margin: 0;
-    font-size: 3rem;
-  }
-
-  .classification-badge {
-    padding: 8px 16px;
-    background: var(--color-primary);
     color: white;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.9rem;
   }
 
-  .mountain-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
+  .hero-content h1 {
+    font-size: 4rem;
+    margin: 0 0 var(--spacing-md) 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   }
 
-  .stat-item {
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.95;
+  }
+
+  .hero-stats {
     display: flex;
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg);
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    gap: var(--spacing-2xl);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
   }
 
-  .stat-item svg {
-    color: var(--color-primary);
-    flex-shrink: 0;
-  }
-
-  .stat-label {
-    font-size: 0.875rem;
-    color: var(--color-neutral-600);
-    margin-bottom: 4px;
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .stat-value {
-    font-size: 1.125rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--color-neutral-900);
   }
 
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: var(--spacing-2xl);
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .main-content {
-    min-width: 0;
-  }
-
-  .content-section {
-    margin-bottom: var(--spacing-2xl);
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .content-section h2 {
-    color: var(--color-neutral-900);
-    margin-bottom: var(--spacing-md);
-    font-size: 1.75rem;
-  }
-
-  .content-section p {
-    line-height: 1.5;
-    color: var(--color-neutral-700);
-  }
-
-  .fact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .fact-list li {
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-    background: var(--color-neutral-50);
-    border-left: 4px solid var(--color-primary);
-    border-radius: var(--radius-sm);
-  }
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .info-card {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-fast);
-  }
-
-  .info-card:hover {
-    background: var(--color-neutral-100);
-    transform: translateX(4px);
-  }
-
-  .info-card svg {
-    color: var(--color-primary);
-    flex-shrink: 0;
-  }
-
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-  }
-
-  .sidebar-card {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .sidebar-card h3 {
-    margin: 0 0 var(--spacing-md) 0;
-    font-size: 1.25rem;
-  }
-
-  .map-placeholder {
-    width: 100%;
-    height: 250px;
-    background: var(--color-neutral-200);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .map-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .coordinates {
+  .stat-label {
     font-size: 0.9rem;
-    color: var(--color-neutral-700);
+    opacity: 0.9;
   }
 
-  .coordinates p {
-    margin: 0;
-  }
-
-  .info-list {
-    display: grid;
-    gap: var(--spacing-sm);
-    margin: 0;
-  }
-
-  .info-list dt {
-    font-weight: 600;
-    color: var(--color-neutral-700);
-    font-size: 0.875rem;
-  }
-
-  .info-list dd {
-    margin: 0 0 var(--spacing-md) 0;
-    color: var(--color-neutral-900);
-  }
-
-  .classification-tags {
+  .quick-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-xs);
-  }
-
-  .classification-tag {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  .routes-section {
-    background: var(--color-neutral-50);
-  }
-
-  .routes-intro {
-    font-size: 1rem;
-    color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .routes-grid {
-    display: grid;
     gap: var(--spacing-lg);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
   }
 
-  .route-card {
-    background: white;
-    padding: var(--spacing-lg);
+  .quick-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+
+  .btn {
+    padding: var(--spacing-md) var(--spacing-xl);
     border-radius: var(--radius-md);
-    border: 2px solid var(--color-neutral-200);
+    text-decoration: none;
+    font-weight: 600;
     transition: all var(--transition-base);
   }
 
-  .route-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-md);
+  .btn-primary {
+    background: var(--color-primary);
+    color: white;
   }
 
-  .route-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-md);
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
+  .btn-primary:hover {
+    background: #0a5c3d;
+    transform: translateY(-2px);
   }
 
-  .route-header h3 {
-    margin: 0;
-    font-size: 1.25rem;
+  .btn-secondary {
+    background: white;
     color: var(--color-neutral-900);
   }
 
+  .btn-secondary:hover {
+    background: var(--color-neutral-100);
+    transform: translateY(-2px);
+  }
+
+  .btn-small {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.875rem;
+  }
+
   .difficulty-badge {
-    padding: 4px 12px;
+    padding: 8px 16px;
     border-radius: var(--radius-md);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
   }
 
   .difficulty-easy {
@@ -736,57 +777,157 @@ const structuredData = {
     color: #991b1b;
   }
 
-  .route-description {
-    color: var(--color-neutral-600);
-    line-height: 1.5;
-    margin-bottom: var(--spacing-md);
+  .difficulty-expert {
+    background: #ddd6fe;
+    color: #5b21b6;
   }
 
-  .route-stats {
+  /* OVERVIEW SECTION */
+  .section-overview {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .section-overview h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .section-overview h3 {
+    font-size: 1.5rem;
+    margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+  }
+
+  .tag-list {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+
+  .tag {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-neutral-700);
+  }
+
+  /* KEY INFORMATION GRID */
+  .key-information {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .key-information h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .info-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .info-card {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .info-card h3 {
+    font-size: 1.25rem;
     margin-bottom: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-sm);
+    color: var(--color-neutral-900);
   }
 
-  .route-stat {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    font-size: 0.9rem;
+  .map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info-card dl {
+    display: grid;
+    gap: var(--spacing-sm);
+  }
+
+  .info-card dt {
+    font-weight: 600;
     color: var(--color-neutral-700);
+    font-size: 0.875rem;
   }
 
-  .route-stat svg {
-    color: var(--color-primary);
-    flex-shrink: 0;
-  }
-
-  .route-start,
-  .route-notes,
-  .seasonal-notes {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-top: var(--spacing-sm);
-    padding-top: var(--spacing-sm);
-    border-top: 1px solid var(--color-neutral-200);
-    color: var(--color-neutral-700);
-  }
-
-  .seasonal-notes {
-    background: #fef3c7;
-    padding: var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    border: none;
-    color: var(--color-neutral-800);
+  .info-card dd {
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--color-neutral-900);
   }
 
   .postcode {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-weight: 700;
+    background: var(--color-neutral-100);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+  }
+
+  .weather-widget {
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .season-info, .parking-detail {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+  }
+
+  .weather-warning {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-md);
+  }
+
+  .weather-warning svg {
+    flex-shrink: 0;
+    color: #f59e0b;
+  }
+
+  .facility-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: #d1fae5;
+    color: #065f46;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .safety-card {
@@ -794,51 +935,444 @@ const structuredData = {
     border: 2px solid #f59e0b;
   }
 
-  .safety-card p {
-    font-size: 0.9rem;
+  .emergency-contact {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-md);
     margin-bottom: var(--spacing-md);
-    color: var(--color-neutral-800);
   }
 
-  @media (max-width: 1024px) {
-    .content-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-      order: -1;
-    }
+  .emergency-contact svg {
+    color: #dc2626;
+    flex-shrink: 0;
   }
 
+  .facilities-list ul, .essentials-list ul {
+    margin: var(--spacing-sm) 0 0 var(--spacing-lg);
+    list-style: disc;
+  }
+
+  .facilities-list li, .essentials-list li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* ROUTES SECTION */
+  .routes-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .routes-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .routes-container {
+    display: grid;
+    gap: var(--spacing-xl);
+  }
+
+  .route-card-detailed {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
+  }
+
+  .route-card-detailed:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .route-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .route-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .route-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-box .stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-neutral-600);
+    margin-bottom: 4px;
+  }
+
+  .stat-box .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+  }
+
+  .stat-box .stat-sub {
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+  }
+
+  .route-detail {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-sm);
+  }
+
+  .route-highlights {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .highlight-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+  }
+
+  .highlight-tag {
+    padding: 4px 12px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+  }
+
+  .route-notes {
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .seasonal-notes {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius-sm);
+  }
+
+  .seasonal-notes svg {
+    flex-shrink: 0;
+    color: #f59e0b;
+  }
+
+  /* THINGS TO DO */
+  .things-to-do {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .things-to-do h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .activity-card {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .activity-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .activity-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .activity-card ul {
+    margin: var(--spacing-sm) 0 0 var(--spacing-lg);
+    list-style: disc;
+  }
+
+  .activity-card li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* GALLERY SECTION */
+  .gallery-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .gallery-item {
+    aspect-ratio: 4/3;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* REVIEWS SECTION */
+  .reviews-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .reviews-placeholder {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* NEARBY SECTION */
+  .nearby-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .nearby-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .nearby-card {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nearby-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .attraction-type {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .distance {
+    display: inline-block;
+    color: var(--color-neutral-600);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .nearby-card ul {
+    margin: 0 0 0 var(--spacing-lg);
+    list-style: disc;
+  }
+
+  .nearby-card li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* FAQs SECTION */
+  .faqs-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .faqs-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .faqs-container {
+    display: grid;
+    gap: var(--spacing-lg);
+  }
+
+  .faq-item {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+  }
+
+  /* SEO FOOTER */
+  .seo-footer {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-lg);
+  }
+
+  .seo-summary h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .seo-summary p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .related-mountains h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .related-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: white;
+    border: 2px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all var(--transition-base);
+  }
+
+  .related-link:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+
+  .classifications-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .classification-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .classification-tag {
+    padding: 4px 12px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* RESPONSIVE */
   @media (max-width: 768px) {
-    .image-gallery {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 250px 250px;
+    .hero-section {
+      height: 500px;
     }
 
-    .item-1 {
-      grid-column: 1 / 3;
+    .hero-content h1 {
+      font-size: 2.5rem;
     }
 
-    .item-2 {
-      grid-column: 1 / 2;
-      grid-row: 2;
+    .hero-subtitle {
+      font-size: 1.125rem;
     }
 
-    .item-3 {
-      grid-column: 2 / 3;
-      grid-row: 2;
+    .hero-stats {
+      flex-direction: column;
+      gap: var(--spacing-md);
     }
 
-    .mountain-title-section h1 {
-      font-size: 2rem;
-    }
-
-    .mountain-stats {
+    .info-grid-layout {
       grid-template-columns: 1fr;
     }
 
-    .info-grid {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .activities-grid, .nearby-grid {
       grid-template-columns: 1fr;
     }
   }
