@@ -1,17 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About the Mountains in UK",
+  "description": "Learn about our mission to showcase the mountains in UK, including guides, tall mountains, UK mountains maps, and complete peak data.",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many mountains in UK are listed in your directory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide a complete and regularly updated list covering all mountain classifications across England, Scotland, Wales, and Northern Ireland."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the tallest mountains in UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ben Nevis, Snowdon, and Scafell Pike are among the tallest mountains in UK, with full comparisons available in our peak database."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does your site include a UK mountains map?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we include an interactive UK mountains map with filters for height, region, difficulty, and popularity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is accurate mountain data important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accurate information helps hikers plan safely, choose appropriate routes, and understand the terrain and conditions before setting off."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title="About Us | UK Mountains Directory"
-  description="Learn about UK Mountains Directory and our mission to provide comprehensive information about mountains across the United Kingdom."
+  title="The Mountains in UK – About Our Mission & Mountain Guides"
+  description="Learn about our mission to showcase the mountains in UK, from tall peaks to complete UK mountains maps, guides, and expert resources."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="about-page">
     <div class="about-hero">
       <div class="container">
-        <h1>About UK Mountains Directory</h1>
+        <h1>About Our Mission to Showcase the Mountains in UK</h1>
         <p class="hero-text">
-          Your comprehensive guide to exploring the mountains of the United Kingdom
+          Discover accurate guides, maps, and expert resources for every peak across the United Kingdom
         </p>
       </div>
     </div>
@@ -19,217 +67,183 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="about-content">
         <section class="content-section">
-          <h2>Our Mission</h2>
+          <h2>Who We Are</h2>
           <p>
-            UK Mountains Directory is dedicated to providing accurate, comprehensive, and accessible information about
-            every significant peak across England, Scotland, and Wales. Whether you're an experienced mountaineer
-            planning your next Munro, a casual hiker looking for weekend adventures, or simply curious about the
-            magnificent peaks that define our landscape, we're here to help.
+            Welcome to the most comprehensive online resource dedicated to the mountains in UK. Our mission is simple: to help explorers, hikers, and nature lovers discover the beauty, history, height, and geography of the country's most iconic peaks.
           </p>
           <p>
-            We believe that access to reliable mountain information should be free and available to everyone. Our mission
-            extends beyond simply cataloging peaks - we aim to inspire a deeper appreciation for the UK's mountain heritage,
-            promote safe and responsible mountain practices, and build a community of passionate mountain enthusiasts who
-            respect and protect these natural treasures for future generations. Through detailed route information, historical
-            context, and practical guidance, we empower adventurers of all levels to explore confidently and safely.
-          </p>
-          <p>
-            Our team continuously researches and updates mountain data, working with local communities, conservation groups,
-            and experienced mountaineers to ensure our information remains current and accurate. We're committed to environmental
-            stewardship and encourage all visitors to follow Leave No Trace principles, respect wildlife habitats, and support
-            local mountain communities. Together, we can preserve the beauty and integrity of UK mountains for generations to come.
+            From Scotland's rugged Highlands to the dramatic landscapes of Wales and the scenic mountains of England and Northern Ireland, we focus on bringing accurate, engaging, and up-to-date information to every adventurer.
           </p>
         </section>
 
         <section class="content-section">
-          <h2>What We Offer</h2>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">⛰️</div>
-              <h3>Comprehensive Database</h3>
-              <p>
-                Detailed information on Munros, Corbetts, Marilyns, and other significant peaks across the UK,
-                including heights, locations, and classifications.
-              </p>
+          <h2>Why We Created This UK Mountains Platform</h2>
+          <p>
+            As outdoor enthusiasts, we noticed that many websites provided incomplete or outdated information about the mountains in UK. Our goal was to build a central hub for:
+          </p>
+          <ul class="features-list">
+            <li>Peak data and elevation comparisons</li>
+            <li>Guides to tall mountains in UK</li>
+            <li>Expert climbing tips and safety advice</li>
+            <li>Easy-to-read UK mountains map tools</li>
+            <li>Step-by-step hiking routes</li>
+          </ul>
+          <p>
+            We combine verified data, real-world hiking experience, and advanced mapping technology to create a platform you can trust.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What Makes Our Information Reliable</h2>
+          <p>
+            We believe accurate mountain information saves time—and sometimes lives. Our database includes thoroughly researched facts such as:
+          </p>
+          <ul class="features-list">
+            <li>How many mountains in UK (with full lists per country)</li>
+            <li>Elevation measurements verified through Ordnance Survey</li>
+            <li>Regional mountain classifications (Munros, Corbetts, Hewitts, etc.)</li>
+            <li>Weather patterns & seasonal conditions</li>
+            <li>Difficulty grades for all major peaks</li>
+          </ul>
+          <p>
+            We update our guides regularly, ensuring you always have the most trustworthy details at your fingertips.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Our Mission: Inspire & Educate Mountain Lovers</h2>
+          <p>
+            We aim to make exploring the mountains in UK accessible to everyone. Whether you're a beginner looking for your first summit or an experienced climber tackling the highest peaks, we're here to support your journey.
+          </p>
+          <h3>Our Mission Pillars</h3>
+          <div class="mission-pillars">
+            <div class="pillar-item">
+              <h4>Accuracy</h4>
+              <p>Verified, researched mountain data</p>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">📍</div>
-              <h3>Location Services</h3>
-              <p>
-                Find mountains near you with our geolocation feature, complete with distances and directions to
-                help plan your next adventure.
-              </p>
+            <div class="pillar-item">
+              <h4>Accessibility</h4>
+              <p>Easy-to-use maps and guides</p>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">🔍</div>
-              <h3>Smart Search</h3>
-              <p>
-                Powerful search and filtering tools to help you find the perfect mountain based on region, height,
-                classification, and more.
-              </p>
+            <div class="pillar-item">
+              <h4>Adventure</h4>
+              <p>Inspiring stories & stunning photography</p>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">📚</div>
-              <h3>Rich Information</h3>
-              <p>
-                Discover the history, interesting facts, nearby facilities, and local attractions for each mountain
-                to enhance your experience.
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🗺️</div>
-              <h3>Route Planning</h3>
-              <p>
-                Detailed route descriptions with difficulty ratings, estimated times, elevation profiles, and
-                turn-by-turn guidance to help you choose the perfect path.
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🌤️</div>
-              <h3>Weather & Safety</h3>
-              <p>
-                Essential safety information, weather considerations, emergency contacts, and practical tips to
-                ensure your mountain adventures are safe and enjoyable.
-              </p>
+            <div class="pillar-item">
+              <h4>Safety</h4>
+              <p>Practical tips for all ability levels</p>
             </div>
           </div>
         </section>
 
         <section class="content-section">
-          <h2>Mountain Classifications</h2>
-          <div class="classifications">
-            <div class="classification-item">
-              <h3>Munros</h3>
-              <p>
-                Scottish mountains over 3,000 feet (914.4 meters). Named after Sir Hugh Munro, who first cataloged
-                them in 1891. There are 282 Munros in Scotland.
-              </p>
-            </div>
-            <div class="classification-item">
-              <h3>Corbetts</h3>
-              <p>
-                Scottish mountains between 2,500 and 3,000 feet (762-914 meters) with a drop of at least 500 feet
-                on all sides. Named after John Rooke Corbett.
-              </p>
-            </div>
-            <div class="classification-item">
-              <h3>Marilyns</h3>
-              <p>
-                Mountains in the British Isles with a prominence of at least 150 meters (492 feet). The name is a
-                pun on Munro, with the M representing "minimum" prominence.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-section">
-          <h2>Safety First</h2>
+          <h2>Our UK Mountains Map & Tools</h2>
           <p>
-            We believe that informed adventurers are safe adventurers. While we provide comprehensive information
-            about each mountain, we always emphasize the importance of proper preparation, appropriate equipment,
-            and respect for the natural environment.
+            To help you explore visually, we provide an interactive UK mountains map that allows you to:
           </p>
-          <div class="safety-tips">
-            <ul>
-              <li>Always check weather forecasts before setting out</li>
-              <li>Inform someone of your planned route and expected return time</li>
-              <li>Carry appropriate equipment including maps, compass, and first aid kit</li>
-              <li>Know your limits and choose routes appropriate for your fitness level</li>
-              <li>Respect local guidelines and access restrictions</li>
-              <li>Leave no trace - take your litter home</li>
-            </ul>
-          </div>
+          <ul class="features-list">
+            <li>Locate peaks by region</li>
+            <li>Filter mountains by height</li>
+            <li>Compare tall mountains in UK</li>
+            <li>View routes, difficulty & GPS coordinates</li>
+            <li>Check weather updates near summits</li>
+          </ul>
+          <p>
+            This map is designed for walkers, hikers, families, climbers and peak-baggers wanting to find their next challenge.
+          </p>
         </section>
 
         <section class="content-section">
-          <h2>Our Commitment</h2>
+          <h2>Meet the Team Behind the Project</h2>
           <p>
-            We are committed to maintaining accurate and up-to-date information about UK mountains. Our database
-            is regularly updated to reflect changes in access, facilities, and other relevant information. If you
-            notice any inaccuracies or have suggestions for improvements, please <a href="/contact">contact us</a>.
+            Our team is made up of:
+          </p>
+          <ul class="features-list">
+            <li>Experienced hikers</li>
+            <li>Data analysts</li>
+            <li>Outdoor photographers</li>
+            <li>Cartographers</li>
+            <li>Web designers and researchers</li>
+          </ul>
+          <p>
+            Together, we ensure our platform delivers depth, accuracy, and the passion of true mountain enthusiasts.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Our Promise to the Mountain Community</h2>
+          <p>
+            We are committed to continuously expanding our directory to cover every major and minor peak. As more people search for details like how many mountains in UK or want to explore maps of tall mountains, our platform will grow to meet that need.
+          </p>
+          <p>
+            We update our guides regularly, work with local communities, conservation groups, and experienced mountaineers to ensure our information remains current and accurate. If you notice any inaccuracies or have suggestions for improvements, please <a href="/contact">contact us</a>.
           </p>
         </section>
 
         <section class="content-section cta-section">
-          <h2>Start Exploring</h2>
+          <h2>Start Exploring the Mountains in UK</h2>
           <p>
-            Ready to discover the mountains of the UK? Start your journey today and find your next adventure.
+            Ready to discover the beauty, scale, and history of the mountains in UK? Start your journey today and find your next adventure with our comprehensive guides and interactive maps.
           </p>
-          <a href="/mountains" class="btn btn-primary">Explore Mountains</a>
+          <a href="/mountains" class="btn btn-primary">Explore All Mountains</a>
         </section>
 
         <section class="faq-section content-section">
           <h2>Frequently Asked Questions</h2>
           <div class="faq-container">
             <details class="faq-item">
-              <summary>Who maintains UK Mountains Directory?</summary>
+              <summary>How many mountains in UK are listed in your directory?</summary>
               <p>
-                UK Mountains Directory is maintained by a dedicated team of mountain enthusiasts, experienced hillwalkers, and outdoor
-                professionals who are passionate about UK mountains. We work closely with mountaineering organizations, conservation
-                groups, and local communities to ensure our information is accurate and up-to-date.
+                We provide a complete and regularly updated list covering all mountain classifications across England, Scotland, Wales, and Northern Ireland. Our directory includes Munros, Corbetts, Marilyns, Wainwrights, and many other significant peaks, giving you access to comprehensive data about the mountains in UK.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What are the tallest mountains in UK?</summary>
+              <p>
+                Ben Nevis (1,345m), Snowdon (1,085m), and Scafell Pike (978m) are among the tallest mountains in UK, with full comparisons available in our <a href="/mountains">peak database</a>. We provide detailed information about height rankings, difficulty levels, and climbing routes for all major peaks.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Does your site include a UK mountains map?</summary>
+              <p>
+                Yes, we include an interactive UK mountains map with filters for height, region, difficulty, and popularity. Our map helps you locate peaks by region, compare tall mountains in UK, view routes and GPS coordinates, and plan your next mountain adventure with confidence.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Why is accurate mountain data important?</summary>
+              <p>
+                Accurate information helps hikers plan safely, choose appropriate routes, and understand the terrain and conditions before setting off. Reliable data about the mountains in UK can save time and sometimes lives, which is why we verify all elevation measurements through Ordnance Survey and regularly update our guides.
               </p>
             </details>
 
             <details class="faq-item">
               <summary>How do you ensure the accuracy of mountain information?</summary>
               <p>
-                We use data from authoritative sources including Ordnance Survey, Scottish Mountaineering Club, and other recognized
-                mountain organizations. Our team regularly reviews and verifies information, and we welcome feedback from users to help
-                us maintain accuracy. When heights or classifications are updated by official bodies, we update our database accordingly.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can I contribute information or photos?</summary>
-              <p>
-                Yes! We welcome contributions from the mountain community. If you have photos, route updates, or additional information
-                about any UK mountain, please contact us through our contact page. While we can't guarantee all submissions will be used,
-                we review each one carefully and appreciate community input in keeping our directory comprehensive and current.
+                We use data from authoritative sources including Ordnance Survey, Scottish Mountaineering Club, and other recognized mountain organizations. Our team regularly reviews and verifies information, and we welcome feedback from users to help us maintain accuracy. When heights or classifications are updated by official bodies, we update our database accordingly.
               </p>
             </details>
 
             <details class="faq-item">
               <summary>Is UK Mountains Directory free to use?</summary>
               <p>
-                Absolutely! UK Mountains Directory is completely free to access and use. We believe mountain information should be
-                accessible to everyone. There are no hidden fees, subscriptions, or paywalls. Our goal is to support the mountain
-                community by providing comprehensive, reliable information at no cost.
+                Absolutely! UK Mountains Directory is completely free to access and use. We believe information about the mountains in UK should be accessible to everyone. There are no hidden fees, subscriptions, or paywalls. Our goal is to support the mountain community by providing comprehensive, reliable information at no cost.
               </p>
             </details>
 
             <details class="faq-item">
-              <summary>Do you cover mountains outside the UK?</summary>
+              <summary>Can I contribute information or photos?</summary>
               <p>
-                Currently, UK Mountains Directory focuses exclusively on mountains in England, Scotland, and Wales. This allows us to
-                provide the most detailed and accurate information possible for UK peaks. While we don't cover international mountains,
-                we do include all significant UK peaks regardless of classification or height.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>How do I report incorrect information?</summary>
-              <p>
-                If you notice any incorrect or outdated information, please contact us through our contact page. Provide specific details
-                about the error, including the mountain name and what needs correcting. We take accuracy seriously and will investigate
-                and update information as quickly as possible. Your feedback helps us maintain the quality of our directory.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Do you have a mobile app?</summary>
-              <p>
-                Currently, UK Mountains Directory is a web-based platform optimized for all devices including smartphones and tablets.
-                Our responsive design ensures full functionality on mobile devices, so you can access mountain information on the go.
-                We're exploring the possibility of a dedicated mobile app based on user feedback and interest.
+                Yes! We welcome contributions from the mountain community. If you have photos, route updates, or additional information about any mountain in the UK, please <a href="/contact">contact us</a>. While we can't guarantee all submissions will be used, we review each one carefully and appreciate community input in keeping our directory comprehensive and current.
               </p>
             </details>
 
             <details class="faq-item">
               <summary>How often do you add new mountains to the directory?</summary>
               <p>
-                We continuously expand our database to include more UK mountains. Priority is given to classified peaks (Munros, Corbetts,
-                Marilyns, Wainwrights, etc.), but we're also adding prominent regional peaks. New mountains are added after thorough
-                research to ensure comprehensive and accurate information. Check back regularly to discover newly added peaks.
+                We continuously expand our database to include more mountains in UK. Priority is given to classified peaks (Munros, Corbetts, Marilyns, Wainwrights, etc.), but we're also adding prominent regional peaks. New mountains are added after thorough research to ensure comprehensive and accurate information. Check back regularly to discover newly added peaks.
               </p>
             </details>
           </div>
@@ -285,82 +299,68 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .content-section p {
-    line-height: 1.5;
+    line-height: 1.7;
     color: var(--color-neutral-700);
     margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
   }
 
-  .features-grid {
+  .content-section h3 {
+    color: var(--color-neutral-900);
+    font-size: 1.5rem;
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  }
+
+  .features-list {
+    background: var(--color-neutral-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-md) 0;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .features-list li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-700);
+    line-height: 1.6;
+  }
+
+  .features-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .mission-pillars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
   }
 
-  .feature-card {
+  .pillar-item {
     padding: var(--spacing-lg);
     background: var(--color-neutral-50);
     border-radius: var(--radius-md);
     text-align: center;
+    border: 2px solid var(--color-primary);
+    transition: all var(--transition-base);
   }
 
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
+  .pillar-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: #0a5c3d;
   }
 
-  .feature-card h3 {
+  .pillar-item h4 {
+    color: var(--color-primary);
     font-size: 1.25rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-900);
   }
 
-  .feature-card p {
+  .pillar-item p {
     font-size: 0.95rem;
     margin: 0;
     color: var(--color-neutral-600);
-  }
-
-  .classifications {
-    display: grid;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-  }
-
-  .classification-item {
-    padding: var(--spacing-lg);
-    background: var(--color-neutral-50);
-    border-left: 4px solid var(--color-primary);
-    border-radius: var(--radius-md);
-  }
-
-  .classification-item h3 {
-    color: var(--color-primary);
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .classification-item p {
-    margin: 0;
-    color: var(--color-neutral-700);
-  }
-
-  .safety-tips {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-md);
-    border: 2px solid #f59e0b;
-    margin-top: var(--spacing-lg);
-  }
-
-  .safety-tips ul {
-    margin: 0;
-    padding-left: var(--spacing-xl);
-  }
-
-  .safety-tips li {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-800);
   }
 
   .cta-section {
@@ -387,6 +387,16 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(-2px);
   }
 
+  .content-section a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .content-section a:hover {
+    text-decoration: underline;
+  }
+
   .faq-container {
     display: flex;
     flex-direction: column;
@@ -399,10 +409,12 @@ import Layout from '../layouts/Layout.astro';
     border-radius: var(--radius-md);
     padding: var(--spacing-lg);
     transition: all var(--transition-base);
+    border: 1px solid var(--color-neutral-200);
   }
 
   .faq-item:hover {
-    background: var(--color-neutral-100);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
   }
 
   .faq-item summary {
@@ -440,9 +452,20 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-neutral-700);
   }
 
+  .faq-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .faq-item a:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 768px) {
     .about-hero h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
+      line-height: 1.3;
     }
 
     .hero-text {
@@ -453,8 +476,16 @@ import Layout from '../layouts/Layout.astro';
       font-size: 1.75rem;
     }
 
-    .features-grid {
+    .content-section h3 {
+      font-size: 1.25rem;
+    }
+
+    .mission-pillars {
       grid-template-columns: 1fr;
+    }
+
+    .content-section p {
+      font-size: 1rem;
     }
   }
 </style>
