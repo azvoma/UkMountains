@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
 import { getMountainsWithImages } from '../lib/data';
 
-const mountainsWithImages = getMountainsWithImages(12);
+const mountainsWithImages = getMountainsWithImages(6);
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -41,9 +41,29 @@ const organizationData = {
       <div class="container">
         <h1 class="hero-title">Discover the Mountains of the UK</h1>
         <p class="hero-subtitle">
-          Explore comprehensive information about every peak, from the mighty Munros of Scotland to the historic mountains of Wales and England
+          Explore comprehensive information about every peak, from the mighty Munros of Scotland to the historic mountains of Wales and England. Our extensive database features detailed guides, routes, historical facts, and practical information for all major UK mountains. Whether you're planning your first hill walk or completing your Munro round, find everything you need to make your mountain adventure safe and memorable. Discover heights, locations, difficulty ratings, best seasons to visit, parking information, and much more for hundreds of peaks across the United Kingdom.
         </p>
         <SearchBar />
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Your Gateway to UK Mountain Adventures</h2>
+        <p>
+          Welcome to the UK's most comprehensive mountain directory. Whether you're an experienced mountaineer tackling Munros,
+          a weekend walker exploring local peaks, or a nature enthusiast discovering Britain's stunning landscapes, we provide
+          the essential information you need. Our carefully curated database includes detailed descriptions, route information,
+          historical context, and practical advice for hundreds of mountains across England, Scotland, and Wales.
+        </p>
+        <p>
+          From the towering heights of Ben Nevis to the dramatic ridges of Snowdonia, from the rugged beauty of the Lake District
+          to the remote wilderness of the Scottish Highlands, discover the diversity and majesty of UK mountains. Each mountain
+          page offers comprehensive details including elevation data, GPS coordinates, parking facilities, difficulty ratings,
+          weather considerations, and interesting facts to enrich your climbing experience.
+        </p>
       </div>
     </div>
   </section>
@@ -101,6 +121,113 @@ const organizationData = {
           <div class="stat-number">All UK</div>
           <div class="stat-label">Regions</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section">
+    <div class="container">
+      <h1>Why Choose UK Mountains Directory?</h1>
+      <div class="why-choose-content">
+        <p>
+          UK Mountains Directory stands as the most comprehensive and reliable resource for mountain enthusiasts across the United Kingdom.
+          We've meticulously compiled data on hundreds of peaks, creating an invaluable tool for anyone looking to explore Britain's
+          stunning mountain landscapes. Our platform combines accurate geographical data with practical hiking information, historical
+          insights, and safety guidance to ensure every mountain adventure is well-planned and memorable.
+        </p>
+        <p>
+          What sets us apart is our commitment to providing detailed, verified information that goes beyond basic statistics. Each mountain
+          profile includes route descriptions, parking details, weather considerations, nearby facilities, and fascinating historical facts.
+          Whether you're planning a challenging winter ascent or a family-friendly summer walk, our database helps you make informed
+          decisions and discover new peaks to conquer. Join thousands of mountain enthusiasts who trust UK Mountains Directory for their
+          outdoor adventures.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>What is a Munro and how many are there in Scotland?</summary>
+          <p>
+            A Munro is a Scottish mountain over 3,000 feet (914.4 meters) in height. Named after Sir Hugh Munro who first catalogued
+            them in 1891, there are 282 Munros in Scotland. Completing all Munros is a popular challenge among hillwalkers, known as
+            "Munro bagging." Each Munro offers unique challenges and stunning views, from the iconic Ben Nevis to remote peaks in the
+            Northwest Highlands.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What equipment do I need for UK mountain hiking?</summary>
+          <p>
+            Essential equipment includes proper hiking boots with ankle support, waterproof jacket and trousers, warm layers, map and
+            compass (and the knowledge to use them), first aid kit, torch, emergency whistle, and sufficient food and water. In winter,
+            additional equipment like crampons, ice axe, and winter clothing may be necessary. Always check weather forecasts and inform
+            someone of your plans before setting out.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>When is the best time to climb UK mountains?</summary>
+          <p>
+            The best time varies by mountain and personal preference. Summer (June-August) offers the longest daylight hours and generally
+            more stable weather, making it ideal for beginners. Spring and autumn provide fewer crowds and beautiful colors. Winter climbing
+            requires additional skills and equipment but offers spectacular snow-covered landscapes. Always check specific mountain conditions
+            and weather forecasts regardless of season.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are dogs allowed on UK mountains?</summary>
+          <p>
+            Dogs are generally allowed on most UK mountains, but they must be kept under close control, especially around livestock during
+            lambing season (March-May). Some nature reserves and protected areas may have restrictions. Always keep your dog on a lead near
+            sheep, clean up after them, and consider their fitness level for the terrain. Check specific mountain regulations before your visit.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need special permission to climb UK mountains?</summary>
+          <p>
+            Most UK mountains are accessible under Right to Roam legislation (England and Wales) or Scottish Access Rights. However, some
+            areas may have temporary restrictions during deer stalking season (August-October in Scotland) or for conservation reasons.
+            Always check local access information, follow the Countryside Code, and respect any closure notices. Private land may require
+            permission from landowners.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I find parking for mountain walks?</summary>
+          <p>
+            Most popular mountains have designated car parks, which may be free or require payment. Our mountain pages include specific
+            parking postcodes for GPS navigation. Arrive early on weekends and holidays as car parks fill quickly. Always park considerately,
+            don't block gates or access roads, and never leave valuables visible in your vehicle. Some remote mountains may only have roadside
+            parking areas.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What should I do in an emergency on a mountain?</summary>
+          <p>
+            In an emergency, call 999 or 112 and ask for Police, then Mountain Rescue. Provide your exact location (grid reference if possible),
+            describe the emergency, and the number of people in your group. Stay where you are unless it's unsafe. Keep the casualty warm and
+            comfortable. If you have a whistle, use the international distress signal: six blasts, one-minute pause, repeat. Modern smartphones
+            can provide location coordinates even without signal.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can beginners climb UK mountains?</summary>
+          <p>
+            Absolutely! The UK offers mountains suitable for all experience levels. Start with well-maintained paths on lower peaks, gradually
+            building fitness and confidence. Popular beginner-friendly mountains include Ben Lomond, Pen y Fan, and some Lake District fells.
+            Always choose routes appropriate for your fitness level, check weather forecasts, go with experienced friends if possible, and
+            never hesitate to turn back if conditions deteriorate or you feel uncomfortable.
+          </p>
+        </details>
       </div>
     </div>
   </section>
@@ -375,14 +502,39 @@ const organizationData = {
     color: rgba(255, 255, 255, 0.95);
     font-size: 1.25rem;
     margin-bottom: var(--spacing-2xl);
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5;
+    line-height: 1.7;
+  }
+
+  .intro-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+  }
+
+  .intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-neutral-900);
+  }
+
+  .intro-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-lg);
   }
 
   .featured-section {
     padding: var(--spacing-3xl) 0;
+    background: var(--color-neutral-50);
   }
 
   .section-header {
@@ -495,6 +647,95 @@ const organizationData = {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .why-choose-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+  }
+
+  .why-choose-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-neutral-900);
+  }
+
+  .why-choose-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .why-choose-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .faq-section {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-neutral-50);
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-neutral-900);
+  }
+
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
   }
 
   @media (max-width: 768px) {

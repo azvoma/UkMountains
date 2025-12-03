@@ -26,6 +26,19 @@ import Layout from '../layouts/Layout.astro';
             planning your next Munro, a casual hiker looking for weekend adventures, or simply curious about the
             magnificent peaks that define our landscape, we're here to help.
           </p>
+          <p>
+            We believe that access to reliable mountain information should be free and available to everyone. Our mission
+            extends beyond simply cataloging peaks - we aim to inspire a deeper appreciation for the UK's mountain heritage,
+            promote safe and responsible mountain practices, and build a community of passionate mountain enthusiasts who
+            respect and protect these natural treasures for future generations. Through detailed route information, historical
+            context, and practical guidance, we empower adventurers of all levels to explore confidently and safely.
+          </p>
+          <p>
+            Our team continuously researches and updates mountain data, working with local communities, conservation groups,
+            and experienced mountaineers to ensure our information remains current and accurate. We're committed to environmental
+            stewardship and encourage all visitors to follow Leave No Trace principles, respect wildlife habitats, and support
+            local mountain communities. Together, we can preserve the beauty and integrity of UK mountains for generations to come.
+          </p>
         </section>
 
         <section class="content-section">
@@ -61,6 +74,22 @@ import Layout from '../layouts/Layout.astro';
               <p>
                 Discover the history, interesting facts, nearby facilities, and local attractions for each mountain
                 to enhance your experience.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🗺️</div>
+              <h3>Route Planning</h3>
+              <p>
+                Detailed route descriptions with difficulty ratings, estimated times, elevation profiles, and
+                turn-by-turn guidance to help you choose the perfect path.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌤️</div>
+              <h3>Weather & Safety</h3>
+              <p>
+                Essential safety information, weather considerations, emergency contacts, and practical tips to
+                ensure your mountain adventures are safe and enjoyable.
               </p>
             </div>
           </div>
@@ -126,7 +155,84 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Ready to discover the mountains of the UK? Start your journey today and find your next adventure.
           </p>
-          <a href="/" class="btn btn-primary">Explore Mountains</a>
+          <a href="/mountains" class="btn btn-primary">Explore Mountains</a>
+        </section>
+
+        <section class="faq-section content-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>Who maintains UK Mountains Directory?</summary>
+              <p>
+                UK Mountains Directory is maintained by a dedicated team of mountain enthusiasts, experienced hillwalkers, and outdoor
+                professionals who are passionate about UK mountains. We work closely with mountaineering organizations, conservation
+                groups, and local communities to ensure our information is accurate and up-to-date.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do you ensure the accuracy of mountain information?</summary>
+              <p>
+                We use data from authoritative sources including Ordnance Survey, Scottish Mountaineering Club, and other recognized
+                mountain organizations. Our team regularly reviews and verifies information, and we welcome feedback from users to help
+                us maintain accuracy. When heights or classifications are updated by official bodies, we update our database accordingly.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I contribute information or photos?</summary>
+              <p>
+                Yes! We welcome contributions from the mountain community. If you have photos, route updates, or additional information
+                about any UK mountain, please contact us through our contact page. While we can't guarantee all submissions will be used,
+                we review each one carefully and appreciate community input in keeping our directory comprehensive and current.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Is UK Mountains Directory free to use?</summary>
+              <p>
+                Absolutely! UK Mountains Directory is completely free to access and use. We believe mountain information should be
+                accessible to everyone. There are no hidden fees, subscriptions, or paywalls. Our goal is to support the mountain
+                community by providing comprehensive, reliable information at no cost.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you cover mountains outside the UK?</summary>
+              <p>
+                Currently, UK Mountains Directory focuses exclusively on mountains in England, Scotland, and Wales. This allows us to
+                provide the most detailed and accurate information possible for UK peaks. While we don't cover international mountains,
+                we do include all significant UK peaks regardless of classification or height.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do I report incorrect information?</summary>
+              <p>
+                If you notice any incorrect or outdated information, please contact us through our contact page. Provide specific details
+                about the error, including the mountain name and what needs correcting. We take accuracy seriously and will investigate
+                and update information as quickly as possible. Your feedback helps us maintain the quality of our directory.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you have a mobile app?</summary>
+              <p>
+                Currently, UK Mountains Directory is a web-based platform optimized for all devices including smartphones and tablets.
+                Our responsive design ensures full functionality on mobile devices, so you can access mountain information on the go.
+                We're exploring the possibility of a dedicated mobile app based on user feedback and interest.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How often do you add new mountains to the directory?</summary>
+              <p>
+                We continuously expand our database to include more UK mountains. Priority is given to classified peaks (Munros, Corbetts,
+                Marilyns, Wainwrights, etc.), but we're also adding prominent regional peaks. New mountains are added after thorough
+                research to ensure comprehensive and accurate information. Check back regularly to discover newly added peaks.
+              </p>
+            </details>
+          </div>
         </section>
       </div>
     </div>
@@ -279,6 +385,59 @@ import Layout from '../layouts/Layout.astro';
   .cta-section .btn:hover {
     background: var(--color-neutral-100);
     transform: translateY(-2px);
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .faq-item {
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    background: var(--color-neutral-100);
+  }
+
+  .faq-item summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
   }
 
   @media (max-width: 768px) {

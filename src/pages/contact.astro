@@ -114,16 +114,95 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="info-card help-card">
-            <h3>Frequently Asked Questions</h3>
+            <h3>Quick Tips</h3>
             <ul>
-              <li>How often is the information updated?</li>
-              <li>Can I submit photos of mountains?</li>
-              <li>How do I report incorrect information?</li>
-              <li>Do you have an API for developers?</li>
+              <li>Response time: 24-48 hours</li>
+              <li>Include mountain names for data corrections</li>
+              <li>Photos welcome in common formats (JPG, PNG)</li>
+              <li>Check FAQ section below before contacting</li>
             </ul>
-            <p>Check our FAQ section (coming soon) or contact us directly.</p>
           </div>
         </div>
+      </div>
+
+      <div class="container">
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>How do I report incorrect mountain information?</summary>
+              <p>
+                Use the contact form above and select "Data Correction" as the subject. Please include the mountain name,
+                specific information that needs correcting, and the correct information if you know it. Providing OS grid
+                references or other verification sources helps us update information more quickly.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I submit my own mountain photos?</summary>
+              <p>
+                Yes! We welcome high-quality photos from the mountain community. Please contact us with details about the
+                photos including mountain name, date taken, and any relevant information. Photos should be your own work,
+                and by submitting them, you grant us permission to use them on our website with credit to you.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How long does it take to get a response?</summary>
+              <p>
+                We aim to respond to all inquiries within 24-48 hours during business days (Monday-Friday). Complex technical
+                issues or data verification may take longer. If your inquiry is urgent, please mention this in your message.
+                We appreciate your patience as our small team works to maintain this comprehensive directory.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer guided mountain walks or tours?</summary>
+              <p>
+                No, UK Mountains Directory is an information resource only. We don't organize or lead mountain walks, tours,
+                or guided expeditions. However, we can point you towards reputable guide services and mountaineering clubs.
+                Always ensure any guide or organization you choose is properly qualified and insured.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I suggest new features for the website?</summary>
+              <p>
+                Absolutely! We value feedback from our users and are always looking to improve. Use the contact form and
+                select "Suggestion" as the subject. Tell us what features you'd like to see, what would improve your
+                experience, or any other ideas you have. While we can't implement every suggestion, we carefully consider
+                all feedback.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you have an API for developers?</summary>
+              <p>
+                We're currently exploring the possibility of offering an API for developers who want to integrate mountain
+                data into their applications. If you're interested in this, please contact us with details about your project
+                and how you'd like to use the data. This helps us understand developer needs and prioritize API development.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How can I support UK Mountains Directory?</summary>
+              <p>
+                The best way to support us is by using and sharing our directory with fellow mountain enthusiasts. Provide
+                feedback, report errors, contribute photos, and help spread the word about our resource. If you represent
+                an organization interested in sponsorship or partnership opportunities, please contact us to discuss possibilities.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you provide information for commercial projects?</summary>
+              <p>
+                For commercial use of our data, photography, or other resources, please contact us with details about your
+                project, intended use, and timeline. We'll review your request and discuss appropriate arrangements. Personal,
+                non-commercial use of information found on our website for trip planning and research is always free.
+              </p>
+            </details>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -341,6 +420,72 @@ import Layout from '../layouts/Layout.astro';
     left: 0;
     color: var(--color-primary);
     font-weight: bold;
+  }
+
+  .faq-section {
+    padding: var(--spacing-3xl) 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-neutral-900);
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
   }
 
   @media (max-width: 1024px) {

@@ -1,0 +1,535 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchBar from '../components/SearchBar.astro';
+import MountainCard from '../components/MountainCard.astro';
+import { getAllMountains, getMountainImages } from '../lib/data';
+
+const allMountains = getAllMountains();
+const mountainsWithImages = allMountains.map(m => {
+  const images = getMountainImages(m.id);
+  return {
+    ...m,
+    mountain_images: images
+  };
+});
+---
+
+<Layout
+  title="All UK Mountains | UK Mountains Directory"
+  description="Browse our complete directory of UK mountains including Munros, Corbetts, Wainwrights, and more. Search by name, location, height, or classification."
+>
+  <div class="mountains-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Explore All UK Mountains</h1>
+        <p class="hero-description">
+          Browse our comprehensive database of UK mountains. Use the search and filters below to find your next adventure.
+        </p>
+        <SearchBar />
+      </div>
+    </section>
+
+    <section class="mountains-section">
+      <div class="container">
+        <div class="results-header">
+          <p id="results-count" class="results-count">Showing {mountainsWithImages.length} mountains</p>
+        </div>
+
+        <div id="mountains-grid" class="mountains-grid">
+          {mountainsWithImages.map((mountain) => (
+            <MountainCard mountain={mountain} />
+          ))}
+        </div>
+
+        <div id="loading-state" class="loading-state" style="display: none;">
+          <div class="spinner"></div>
+          <p>Loading mountains...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>How many mountains are in the UK?</summary>
+            <p>
+              The UK has thousands of mountains depending on how you define them. There are 282 Munros (Scottish peaks over 3,000 feet),
+              222 Corbetts (Scottish peaks 2,500-3,000 feet), 1,556 Marilyns (peaks with 150m prominence), and numerous other classified
+              peaks across England, Scotland, and Wales. Our database includes all major mountain classifications with detailed information
+              for each peak.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's the difference between Munros, Corbetts, and Marilyns?</summary>
+            <p>
+              Munros are Scottish mountains over 3,000 feet (914.4m). Corbetts are Scottish mountains between 2,500-3,000 feet (762-914m)
+              with at least 500 feet of prominence. Marilyns are any British peaks with at least 150m of prominence, regardless of absolute
+              height. Each classification offers unique challenges and rewards for hillwalkers and mountain enthusiasts.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I filter mountains by difficulty?</summary>
+            <p>
+              Yes! Use our search filters to find mountains by difficulty rating. We classify mountains as Easy, Moderate, Hard, or Expert
+              based on factors like terrain, distance, elevation gain, and technical requirements. This helps you choose mountains appropriate
+              for your experience and fitness level. Remember that weather conditions can significantly affect difficulty.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What information is available for each mountain?</summary>
+            <p>
+              Each mountain page includes comprehensive information: height in meters and feet, OS grid reference, parking details and postcodes,
+              route descriptions, difficulty ratings, estimated walking times, weather considerations, historical facts, nearby facilities,
+              and practical tips. We also include photos, maps, and safety information to help you plan your climb effectively.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are the mountain heights accurate?</summary>
+            <p>
+              Yes, we use official data from Ordnance Survey and other authoritative sources. Mountain heights can occasionally be revised
+              as surveying techniques improve. We regularly update our database to reflect the most current measurements. Heights are provided
+              in both meters and feet for convenience. If you notice any discrepancies, please contact us.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I find mountains near my location?</summary>
+            <p>
+              Absolutely! Use the "Near Me" button in the search bar to find mountains closest to your current location. You'll need to grant
+              location permissions to your browser. The results show distances from your location and are sorted by proximity, making it easy
+              to discover peaks in your area for spontaneous adventures.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you have information about Scottish mountains only?</summary>
+            <p>
+              No, our directory covers mountains across the entire United Kingdom including Scotland, England, and Wales. While Scotland has
+              the most high peaks (Munros and Corbetts), we also feature the Lake District fells, Welsh mountains like Snowdon and the
+              Brecon Beacons, and peaks in other regions. Search by region to explore mountains in specific areas.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How often is the mountain information updated?</summary>
+            <p>
+              We continuously update our database to ensure accuracy. This includes adding new route information, updating parking and access
+              details, revising facility information, and incorporating user feedback. Major updates occur quarterly, with critical information
+              like access restrictions updated as needed. Check individual mountain pages for the latest information before your visit.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import { searchMountains, getMountainImages } from '../lib/data';
+
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const nearMeBtn = document.getElementById('near-me-btn') as HTMLButtonElement;
+  const regionFilters = document.querySelectorAll('.region-filter');
+  const classFilters = document.querySelectorAll('.class-filter');
+  const diffFilters = document.querySelectorAll('.diff-filter');
+  const mountainsGrid = document.getElementById('mountains-grid');
+  const loadingState = document.getElementById('loading-state');
+  const resultsCount = document.getElementById('results-count');
+
+  let currentRegion = 'all';
+  let currentClassification = 'all';
+  let currentDifficulty = 'all';
+  let userLocation: { latitude: number; longitude: number } | null = null;
+
+  function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a =
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  function updateResultsCount(count: number) {
+    if (resultsCount) {
+      resultsCount.textContent = `Showing ${count} mountain${count !== 1 ? 's' : ''}`;
+    }
+  }
+
+  function performSearch(query: string = '') {
+    if (mountainsGrid && loadingState) {
+      mountainsGrid.style.display = 'none';
+      loadingState.style.display = 'flex';
+
+      const filtered = searchMountains(
+        query,
+        currentRegion,
+        currentClassification,
+        currentDifficulty
+      );
+
+      const mountainsWithImages = filtered.map(m => {
+        const images = getMountainImages(m.id);
+        return {
+          ...m,
+          mountain_images: images
+        };
+      });
+
+      loadingState.style.display = 'none';
+      mountainsGrid.style.display = 'grid';
+      updateResultsCount(mountainsWithImages.length);
+
+      if (mountainsWithImages && mountainsWithImages.length > 0) {
+        mountainsGrid.innerHTML = mountainsWithImages.map((mountain: any) => `
+          <a href="/mountain/${mountain.slug}" class="mountain-card">
+            <div class="card-image">
+              <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
+              ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
+            </div>
+            <div class="card-content">
+              <h3>${mountain.name}</h3>
+              <div class="card-meta">
+                <span class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                    <polyline points="16 17 22 17 22 11"></polyline>
+                  </svg>
+                  ${mountain.height_meters}m (${mountain.height_feet}ft)
+                </span>
+                <span class="meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  ${mountain.region}
+                </span>
+              </div>
+              ${mountain.description ? `<p class="card-description">${mountain.description.substring(0, 120)}${mountain.description.length > 120 ? '...' : ''}</p>` : ''}
+            </div>
+          </a>
+        `).join('');
+      } else {
+        mountainsGrid.innerHTML = `
+          <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+            </svg>
+            <h3>No Mountains Found</h3>
+            <p>Try adjusting your search or filters.</p>
+          </div>
+        `;
+      }
+    }
+  }
+
+  if (searchInput) {
+    let debounceTimer: number;
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const query = (e.target as HTMLInputElement).value;
+        performSearch(query);
+      }, 300);
+    });
+  }
+
+  regionFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      regionFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentRegion = chip.getAttribute('data-filter') || 'all';
+      performSearch(searchInput?.value || '');
+    });
+  });
+
+  classFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      classFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentClassification = chip.getAttribute('data-filter') || 'all';
+      performSearch(searchInput?.value || '');
+    });
+  });
+
+  diffFilters.forEach(chip => {
+    chip.addEventListener('click', () => {
+      diffFilters.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentDifficulty = chip.getAttribute('data-filter') || 'all';
+      performSearch(searchInput?.value || '');
+    });
+  });
+
+  if (nearMeBtn) {
+    nearMeBtn.addEventListener('click', async () => {
+      if (!('geolocation' in navigator)) {
+        alert('Location services are not supported by your browser.');
+        return;
+      }
+
+      nearMeBtn.disabled = true;
+      nearMeBtn.innerHTML = '<div class="spinner-small"></div> Finding...';
+
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          userLocation = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          };
+
+          if (mountainsGrid && loadingState) {
+            mountainsGrid.style.display = 'none';
+            loadingState.style.display = 'flex';
+
+            const allMountains = searchMountains('', 'all', 'all', 'all');
+
+            if (allMountains && userLocation) {
+              const mountainsWithDistance = allMountains.map((m: any) => {
+                const images = getMountainImages(m.id);
+                return {
+                  ...m,
+                  mountain_images: images,
+                  distance: calculateDistance(
+                    userLocation.latitude,
+                    userLocation.longitude,
+                    parseFloat(m.latitude),
+                    parseFloat(m.longitude)
+                  )
+                };
+              }).sort((a, b) => a.distance - b.distance);
+
+              loadingState.style.display = 'none';
+              mountainsGrid.style.display = 'grid';
+              updateResultsCount(mountainsWithDistance.length);
+
+              mountainsGrid.innerHTML = mountainsWithDistance.map((mountain: any) => `
+                <a href="/mountain/${mountain.slug}" class="mountain-card">
+                  <div class="card-image">
+                    <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
+                    ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
+                  </div>
+                  <div class="card-content">
+                    <h3>${mountain.name}</h3>
+                    <div class="card-meta">
+                      <span class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                          <polyline points="16 17 22 17 22 11"></polyline>
+                        </svg>
+                        ${mountain.height_meters}m
+                      </span>
+                      <span class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        ${mountain.distance.toFixed(1)} km away
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              `).join('');
+            }
+          }
+
+          nearMeBtn.disabled = false;
+          nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+        },
+        (error) => {
+          alert('Unable to access your location. Please enable location permissions.');
+          nearMeBtn.disabled = false;
+          nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+        }
+      );
+    });
+  }
+</script>
+
+<style>
+  .mountains-page {
+    background: var(--color-neutral-50);
+  }
+
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-description {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mountains-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .results-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .results-count {
+    font-size: 1.125rem;
+    color: var(--color-neutral-700);
+    font-weight: 600;
+  }
+
+  .mountains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+    gap: var(--spacing-md);
+  }
+
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--color-neutral-200);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .spinner-small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-3xl);
+  }
+
+  .empty-state svg {
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-neutral-400);
+  }
+
+  .empty-state h3 {
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .empty-state p {
+    color: var(--color-neutral-500);
+  }
+
+  .faq-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-neutral-900);
+  }
+
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item {
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+  }
+
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .mountains-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+  }
+</style>
