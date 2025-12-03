@@ -337,6 +337,28 @@ const structuredData = {
       </div>
     </section>
 
+    <!-- 3.5 INTERESTING FACTS SECTION -->
+    {mountain.fun_facts && mountain.fun_facts.length > 0 && (
+      <section class="interesting-facts-section">
+        <h2>10 Interesting Facts About {mountain.name}</h2>
+        <ul class="facts-list">
+          {mountain.fun_facts.map((fact: string) => (
+            <li>{fact}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- 3.6 GUIDE TO WALKING SECTION -->
+    {mountain.walking_guide && (
+      <section class="walking-guide-section">
+        <h2>A Guide to Walking {mountain.name}</h2>
+        <div class="guide-content">
+          <p>{mountain.walking_guide}</p>
+        </div>
+      </section>
+    )}
+
     <!-- 4. TRAIL ROUTES SECTION -->
     {mountainRoutes.length > 0 && (
       <section id="routes" class="routes-section">
@@ -493,7 +515,7 @@ const structuredData = {
     <!-- 6. GALLERY SECTION -->
     <section class="gallery-section">
       <h2>Photo Gallery</h2>
-      <div class="gallery-grid">
+      <div class="gallery-row">
         {displayImages.map((imageUrl, index) => (
           <div class="gallery-item">
             <img
@@ -1141,6 +1163,82 @@ const structuredData = {
     margin-bottom: var(--spacing-xs);
   }
 
+  /* INTERESTING FACTS SECTION */
+  .interesting-facts-section {
+    margin-bottom: var(--spacing-3xl);
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .interesting-facts-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-neutral-900);
+  }
+
+  .facts-list {
+    list-style: none;
+    counter-reset: facts-counter;
+    padding: 0;
+    margin: 0;
+  }
+
+  .facts-list li {
+    counter-increment: facts-counter;
+    position: relative;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-3xl);
+    margin-bottom: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    line-height: 1.6;
+  }
+
+  .facts-list li::before {
+    content: counter(facts-counter);
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  /* WALKING GUIDE SECTION */
+  .walking-guide-section {
+    margin-bottom: var(--spacing-3xl);
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .walking-guide-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-neutral-900);
+  }
+
+  .guide-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+  }
+
+  .guide-content p {
+    margin-bottom: var(--spacing-md);
+  }
+
   /* GALLERY SECTION */
   .gallery-section {
     margin-bottom: var(--spacing-3xl);
@@ -1151,14 +1249,17 @@ const structuredData = {
     margin-bottom: var(--spacing-xl);
   }
 
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .gallery-row {
+    display: flex;
     gap: var(--spacing-md);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-md);
   }
 
   .gallery-item {
-    aspect-ratio: 4/3;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 225px;
     border-radius: var(--radius-md);
     overflow: hidden;
   }
@@ -1368,8 +1469,13 @@ const structuredData = {
       grid-template-columns: 1fr;
     }
 
-    .gallery-grid {
-      grid-template-columns: 1fr;
+    .gallery-row {
+      overflow-x: scroll;
+    }
+
+    .gallery-item {
+      width: 250px;
+      height: 187px;
     }
 
     .activities-grid, .nearby-grid {
