@@ -2242,32 +2242,32 @@
   {
     "id": "236e5792-37a3-4993-9154-700b925d31c3",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis - Mountain view 1",
+    "image_url": "/Ben Nevis 1.jpg",
+    "alt_text": "Ben Nevis with reflection in water at sunset",
     "order": 0,
     "created_at": "2025-11-03T19:24:59.528947+00:00"
   },
   {
     "id": "c3bdd577-39ee-4b1a-a709-8e4b82abac8c",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis - Mountain view 2",
+    "image_url": "/Ben Nevis 2.jpg",
+    "alt_text": "Ben Nevis snow-capped mountain view from across the loch",
     "order": 1,
     "created_at": "2025-11-03T19:25:04.964514+00:00"
   },
   {
     "id": "388027f1-9b82-47d1-a962-52a2b7064b68",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis - Mountain view 3",
+    "image_url": "/Ben Nevis 3.jpg",
+    "alt_text": "Ben Nevis scenic view with water reflection",
     "order": 2,
     "created_at": "2025-11-03T19:25:10.761075+00:00"
   },
   {
     "id": "2311258d-9892-48e1-accd-d6f8ce76a3b8",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis - Mountain view 4",
+    "image_url": "/Ben Nevis 4.jpg",
+    "alt_text": "Ben Nevis panoramic landscape view",
     "order": 3,
     "created_at": "2025-11-03T19:25:17.049243+00:00"
   }
