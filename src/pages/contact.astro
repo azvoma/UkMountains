@@ -1,17 +1,123 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Us – Top 10 Highest Mountains in UK",
+  "description": "Contact our team for information about the top 10 highest mountains in UK, including beginner routes and easy mountains to climb UK."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you help me plan a route for the top 10 highest mountains in UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can guide you on suitable routes, difficulty levels, and preparation tips for climbing the highest peaks in the UK."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you recommend any easy mountains to climb UK for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can recommend beginner-friendly mountains that are safe, scenic, and perfect for families or new hikers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to receive a reply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We respond to all contact form messages within 24–48 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I submit corrections or new mountain data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you spot errors or want to contribute new information, simply contact us using the form above."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title="Contact Us | UK Mountains Directory"
-  description="Get in touch with UK Mountains Directory. We'd love to hear from you."
+  title="Top 10 Highest Mountains in UK – Contact Our Team"
+  description="Contact us for questions about the top 10 highest mountains in UK, hiking tips, and guides to easy mountains to climb in the UK. We're here to help."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="contact-page">
     <div class="container">
       <div class="contact-header">
-        <h1>Contact Us</h1>
-        <p>Have a question, suggestion, or found an error? We'd love to hear from you.</p>
+        <h1>Contact Us About the Top 10 Highest Mountains in UK</h1>
+        <p class="lead-intro">
+          If you have questions about the top 10 highest mountains in UK, need help planning your next hiking trip, or want guidance on easy mountains to climb UK, our team is here to support you. Whether you're a beginner, an experienced climber, or a directory contributor, we'd love to hear from you.
+        </p>
+        <p class="mission-text">Our mission is to make exploring UK mountains easier, safer, and more enjoyable for everyone.</p>
       </div>
+
+      <section class="help-section">
+        <h2>How We Can Help</h2>
+        <p>You can contact us for:</p>
+        <div class="help-grid">
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span>Info about the <strong>top 10 highest mountains in the UK</strong></span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Route suggestions for beginners and families</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <span>Advice on <strong>easy mountains to climb UK</strong></span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            <span>Corrections or updates to our mountain database</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Partnership or collaboration enquiries</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Listing or featuring your hiking group or service</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            </svg>
+            <span>Media and press information</span>
+          </div>
+        </div>
+      </section>
 
       <div class="contact-grid">
         <div class="contact-form-section">
@@ -39,15 +145,29 @@ import Layout from '../layouts/Layout.astro';
             </div>
 
             <div class="form-group">
-              <label for="subject">Subject *</label>
+              <label for="subject">Reason for Contact *</label>
               <select id="subject" name="subject" required>
-                <option value="">Select a subject</option>
-                <option value="general">General Inquiry</option>
+                <option value="">Select a reason</option>
+                <option value="top-10-mountains">Top 10 Highest Mountains Info</option>
+                <option value="beginner-routes">Easy Mountains to Climb UK</option>
+                <option value="route-advice">Route Planning & Advice</option>
                 <option value="correction">Data Correction</option>
-                <option value="suggestion">Suggestion</option>
+                <option value="contribution">Submit Photos/Information</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="general">General Inquiry</option>
                 <option value="technical">Technical Issue</option>
                 <option value="other">Other</option>
               </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mountain">Optional: Mountain or Route You're Enquiring About</label>
+              <input
+                type="text"
+                id="mountain"
+                name="mountain"
+                placeholder="e.g., Ben Nevis, Snowdon, Scafell Pike"
+              />
             </div>
 
             <div class="form-group">
@@ -125,10 +245,126 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
+      <section class="why-contact-section">
+        <h2>Why Hikers Contact Us</h2>
+        <p>We regularly receive messages about:</p>
+        <div class="why-contact-grid">
+          <div class="why-contact-card">
+            <h3>Top 10 Highest Mountains</h3>
+            <p>The best ways to climb the top 10 highest mountains in the UK, including preparation tips and difficulty levels.</p>
+          </div>
+          <div class="why-contact-card">
+            <h3>Beginner Routes</h3>
+            <p>Safer beginner routes on famous peaks and easy mountains to climb UK for first-time hikers.</p>
+          </div>
+          <div class="why-contact-card">
+            <h3>Family Hiking</h3>
+            <p>Tips for kids & family hiking trips with distance, duration, and terrain advice.</p>
+          </div>
+          <div class="why-contact-card">
+            <h3>Weather & Seasonal Guidance</h3>
+            <p>Best times to climb, seasonal conditions, and weather preparation for UK mountains.</p>
+          </div>
+          <div class="why-contact-card">
+            <h3>Maps & Navigation</h3>
+            <p>Navigation support, GPS coordinates, parking postcodes, and OS grid references.</p>
+          </div>
+          <div class="why-contact-card">
+            <h3>Mountain Classifications</h3>
+            <p>Questions about Munros, Corbetts, Hewitts, Wainwrights, and other mountain classifications.</p>
+          </div>
+        </div>
+        <p class="help-footer">If it's about mountains—we can help.</p>
+      </section>
+
+      <section class="beginner-peaks-section">
+        <h2>Looking for Beginner-Friendly Peaks?</h2>
+        <p>
+          If you're just getting started, check out our guides to the most <strong>easy mountains to climb UK</strong>, including routes, maps, time estimates, and difficulty breakdowns. These are ideal for:
+        </p>
+        <div class="beginner-list">
+          <div class="beginner-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>First-time climbers</span>
+          </div>
+          <div class="beginner-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Families with children</span>
+          </div>
+          <div class="beginner-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Casual weekend hikers</span>
+          </div>
+          <div class="beginner-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Photography trips</span>
+          </div>
+          <div class="beginner-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Beginners testing their fitness</span>
+          </div>
+        </div>
+        <a href="/mountains" class="btn btn-primary explore-btn">Explore Mountains Directory</a>
+      </section>
+
+      <section class="contribute-section">
+        <h2>Want to Contribute to Our Directory?</h2>
+        <p>We welcome contributions from:</p>
+        <div class="contribute-grid">
+          <div class="contribute-tag">Local Guides</div>
+          <div class="contribute-tag">Hikers</div>
+          <div class="contribute-tag">Photographers</div>
+          <div class="contribute-tag">Drone Enthusiasts</div>
+          <div class="contribute-tag">Mountain Writers</div>
+          <div class="contribute-tag">Outdoor Organisations</div>
+        </div>
+        <p>
+          If you want to submit new mountain info, photos, routes, or corrections, contact us anytime. We value community contributions and aim to make this the most comprehensive UK mountains resource available.
+        </p>
+      </section>
+
       <div class="container">
         <section class="faq-section">
           <h2>Frequently Asked Questions</h2>
           <div class="faq-container">
+            <details class="faq-item">
+              <summary>Can you help me plan a route for the top 10 highest mountains in UK?</summary>
+              <p>
+                Yes, we can guide you on suitable routes, difficulty levels, and preparation tips for climbing the highest UK peaks. Contact us with details about your experience level, fitness, and timeline, and we'll provide tailored recommendations.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you recommend any easy mountains to climb UK for beginners?</summary>
+              <p>
+                Absolutely! We can suggest scenic, beginner-friendly mountains perfect for families and new hikers. Our directory includes detailed information about difficulty levels, time estimates, and facilities to help you choose the right mountain for your first climb.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How long does it take to receive a reply?</summary>
+              <p>
+                We respond to all contact form messages within 24–48 hours during business days. Complex inquiries or data verification may take slightly longer, but we'll acknowledge your message and keep you updated on progress.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I submit corrections or new mountain data?</summary>
+              <p>
+                Yes! If you spot errors or want to contribute new information, simply contact us using the form above. Select "Data Correction" or "Submit Photos/Information" as your reason for contact, and include as much detail as possible including mountain name and specific corrections needed.
+              </p>
+            </details>
+
             <details class="faq-item">
               <summary>How do I report incorrect mountain information?</summary>
               <p>
@@ -261,14 +497,25 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-header h1 {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
     color: var(--color-neutral-900);
+    line-height: 1.2;
   }
 
-  .contact-header p {
-    font-size: 1.25rem;
-    color: var(--color-neutral-600);
+  .contact-header .lead-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-700);
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-md) auto;
+  }
+
+  .contact-header .mission-text {
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: var(--spacing-md);
   }
 
   .contact-grid {
@@ -488,6 +735,217 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-neutral-700);
   }
 
+  /* HELP SECTION */
+  .help-section {
+    margin-bottom: var(--spacing-3xl);
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .help-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    color: var(--color-neutral-900);
+  }
+
+  .help-section > p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .help-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-primary);
+    transition: all var(--transition-base);
+  }
+
+  .help-item:hover {
+    background: var(--color-neutral-100);
+    transform: translateX(4px);
+  }
+
+  .help-item svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+  }
+
+  .help-item span {
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+  }
+
+  /* WHY CONTACT SECTION */
+  .why-contact-section {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .why-contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    color: var(--color-neutral-900);
+  }
+
+  .why-contact-section > p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .why-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .why-contact-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
+  }
+
+  .why-contact-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .why-contact-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-900);
+  }
+
+  .why-contact-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-neutral-600);
+    margin: 0;
+  }
+
+  .help-footer {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--spacing-lg);
+  }
+
+  /* BEGINNER PEAKS SECTION */
+  .beginner-peaks-section {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .beginner-peaks-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-900);
+  }
+
+  .beginner-peaks-section > p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .beginner-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .beginner-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: white;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    color: var(--color-neutral-700);
+  }
+
+  .beginner-item svg {
+    flex-shrink: 0;
+    color: #10b981;
+  }
+
+  .explore-btn {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  /* CONTRIBUTE SECTION */
+  .contribute-section {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contribute-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    color: var(--color-neutral-900);
+  }
+
+  .contribute-section > p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .contribute-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .contribute-tag {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
   @media (max-width: 1024px) {
     .contact-grid {
       grid-template-columns: 1fr;
@@ -500,15 +958,42 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     .contact-header h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
+      line-height: 1.3;
     }
 
-    .contact-header p {
+    .contact-header .lead-intro {
       font-size: 1rem;
     }
 
     .contact-form-section {
       padding: var(--spacing-lg);
+    }
+
+    .help-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .why-contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .beginner-list {
+      grid-template-columns: 1fr;
+    }
+
+    .help-section,
+    .why-contact-section,
+    .beginner-peaks-section,
+    .contribute-section {
+      padding: var(--spacing-lg);
+    }
+
+    .help-section h2,
+    .why-contact-section h2,
+    .beginner-peaks-section h2,
+    .contribute-section h2 {
+      font-size: 1.5rem;
     }
   }
 </style>
