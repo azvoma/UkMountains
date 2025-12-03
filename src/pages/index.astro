@@ -9,8 +9,8 @@ const mountainsWithImages = getMountainsWithImages(6);
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "UK Mountains Directory",
-  "description": "Comprehensive directory of UK mountains including Munros, Corbetts, Wainwrights, and more",
+  "name": "UK Mountains – Guides, Peaks, Maps & Highest Mountains in the UK",
+  "description": "Discover UK mountains with detailed guides, maps, and rankings of the highest mountains in the UK. Explore routes, tips, and must-see peaks.",
   "url": "https://ukmountains.directory",
   "potentialAction": {
     "@type": "SearchAction",
@@ -27,21 +27,69 @@ const organizationData = {
   "logo": "https://ukmountains.directory/favicon.svg",
   "description": "The comprehensive guide to UK mountains"
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the highest mountains in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The highest mountains in the UK include Ben Nevis (1,345m), Snowdon (1,085m), and Scafell Pike (978m), with full rankings available in our directory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I see the highest mountains in the UK in order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can view a complete ranked list of the highest mountains in the UK in order on our dedicated mountains page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best UK mountain for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Easier beginner-friendly mountains include Pen y Fan, Catbells, and Mam Tor due to clear paths and gentler gradients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What equipment do I need to climb UK mountains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic equipment includes boots, layers, navigation tools, water, and safety gear. Winter climbs may require crampons and ice axes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are UK mountains safe for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—many lower peaks are family-friendly, but always check weather conditions and route difficulty before climbing."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title="UK Mountains Directory - Explore the Peaks of Britain"
-  description="Discover and explore the mountains of the United Kingdom. Search for mountains by location, height, and features. Find detailed information about every peak."
+  title="UK Mountains – Guides, Peaks, Maps & Highest Mountains in the UK"
+  description="Discover UK mountains with detailed guides, maps, and rankings of the highest mountains in the UK. Explore routes, tips, and must-see peaks."
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <section class="hero">
     <div class="hero-background"></div>
     <div class="hero-content">
       <div class="container">
-        <h1 class="hero-title">Discover the Mountains of the UK</h1>
+        <h1 class="hero-title">Explore the Best UK Mountains: Maps, Guides & Peak Rankings</h1>
         <p class="hero-subtitle">
-          Explore comprehensive information about every peak, from the mighty Munros of Scotland to the historic mountains of Wales and England. Our extensive database features detailed guides, routes, historical facts, and practical information for all major UK mountains. Whether you're planning your first hill walk or completing your Munro round, find everything you need to make your mountain adventure safe and memorable. Discover heights, locations, difficulty ratings, best seasons to visit, parking information, and much more for hundreds of peaks across the United Kingdom.
+          Discover the beauty, scale, and history of UK mountains with the most complete peak directory online. Whether you're planning your next hike, researching the highest mountains in the UK, or simply exploring iconic peaks, our platform provides accurate data, maps, rankings, and adventure tips.
         </p>
         <SearchBar />
       </div>
@@ -51,19 +99,31 @@ const organizationData = {
   <section class="intro-section">
     <div class="container">
       <div class="intro-content">
-        <h2>Your Gateway to UK Mountain Adventures</h2>
+        <h2>Welcome to the Ultimate UK Mountains Directory</h2>
         <p>
-          Welcome to the UK's most comprehensive mountain directory. Whether you're an experienced mountaineer tackling Munros,
-          a weekend walker exploring local peaks, or a nature enthusiast discovering Britain's stunning landscapes, we provide
-          the essential information you need. Our carefully curated database includes detailed descriptions, route information,
-          historical context, and practical advice for hundreds of mountains across England, Scotland, and Wales.
+          Discover the beauty, scale, and history of UK mountains with the most complete peak directory online. Whether you're planning your next hike, researching the highest mountains in the UK, or simply exploring iconic peaks, our platform provides accurate data, maps, rankings, and adventure tips.
         </p>
         <p>
-          From the towering heights of Ben Nevis to the dramatic ridges of Snowdonia, from the rugged beauty of the Lake District
-          to the remote wilderness of the Scottish Highlands, discover the diversity and majesty of UK mountains. Each mountain
-          page offers comprehensive details including elevation data, GPS coordinates, parking facilities, difficulty ratings,
-          weather considerations, and interesting facts to enrich your climbing experience.
+          From Scotland's dramatic Munros to England's rugged Lake District summits, we help mountain lovers, hikers, climbers, and photographers explore the best nature has to offer.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highest-mountains-section">
+    <div class="container">
+      <div class="highest-content">
+        <h2>Highest Mountains in the UK</h2>
+        <p>
+          If you're searching for reliable information on the highest mountains in the UK, you'll find complete rankings, elevation statistics, and comparison charts here. Our directory also lists the highest mountains in the UK in order, making it easy for peak baggers and adventurers to plan their next challenge.
+        </p>
+        <h3>Explore Peaks by Height</h3>
+        <ul class="peaks-list">
+          <li><a href="/mountains?filter=munro">Scottish Munros</a></li>
+          <li><a href="/mountains?filter=english">English peaks over 900m</a></li>
+          <li><a href="/mountains?filter=welsh">Highest Welsh mountains</a></li>
+          <li><a href="/mountains">All UK peaks ranked by height</a></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -71,8 +131,8 @@ const organizationData = {
   <section class="featured-section">
     <div class="container">
       <div class="section-header">
-        <h2>Featured Mountains</h2>
-        <p>Explore some of the most iconic peaks across the United Kingdom</p>
+        <h2>Featured Mountain Guides</h2>
+        <p>Dive into in-depth guides covering peak difficulty, best routes, parking information, safety tips, recommended seasons to climb, and nearby activities. These guides help beginners and experienced climbers explore UK mountains confidently.</p>
       </div>
 
       <div id="mountains-grid" class="mountains-grid">
@@ -127,21 +187,18 @@ const organizationData = {
 
   <section class="why-choose-section">
     <div class="container">
-      <h1>Why Choose UK Mountains Directory?</h1>
+      <h2>Start Exploring the UK's Greatest Peaks</h2>
       <div class="why-choose-content">
         <p>
-          UK Mountains Directory stands as the most comprehensive and reliable resource for mountain enthusiasts across the United Kingdom.
-          We've meticulously compiled data on hundreds of peaks, creating an invaluable tool for anyone looking to explore Britain's
-          stunning mountain landscapes. Our platform combines accurate geographical data with practical hiking information, historical
-          insights, and safety guidance to ensure every mountain adventure is well-planned and memorable.
+          Whether your goal is to climb the highest mountains UK peak-by-peak or to explore hidden gems across Scotland, Wales, England and Northern Ireland, our platform gives you everything you need to plan your journey.
         </p>
         <p>
-          What sets us apart is our commitment to providing detailed, verified information that goes beyond basic statistics. Each mountain
-          profile includes route descriptions, parking details, weather considerations, nearby facilities, and fascinating historical facts.
-          Whether you're planning a challenging winter ascent or a family-friendly summer walk, our database helps you make informed
-          decisions and discover new peaks to conquer. Join thousands of mountain enthusiasts who trust UK Mountains Directory for their
-          outdoor adventures.
+          We combine expert insights with real local knowledge for the most trustworthy content. Stay updated with mountain safety tips, seasonal climbing advice, gear reviews, hiking route breakdowns, and weather updates for popular mountains.
         </p>
+        <div class="cta-buttons">
+          <a href="/mountains" class="btn btn-primary">View All Mountains</a>
+          <a href="/about" class="btn btn-secondary">Learn More About Us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -151,81 +208,58 @@ const organizationData = {
       <h2>Frequently Asked Questions</h2>
       <div class="faq-container">
         <details class="faq-item">
-          <summary>What is a Munro and how many are there in Scotland?</summary>
+          <summary>What are the highest mountains in the UK?</summary>
           <p>
-            A Munro is a Scottish mountain over 3,000 feet (914.4 meters) in height. Named after Sir Hugh Munro who first catalogued
-            them in 1891, there are 282 Munros in Scotland. Completing all Munros is a popular challenge among hillwalkers, known as
-            "Munro bagging." Each Munro offers unique challenges and stunning views, from the iconic Ben Nevis to remote peaks in the
-            Northwest Highlands.
+            The highest mountains in the UK include Ben Nevis (1,345m), Snowdon (1,085m), and Scafell Pike (978m), with full rankings available in our directory. Ben Nevis in Scotland is the tallest peak in the entire United Kingdom, while Snowdon is the highest in Wales and Scafell Pike tops England's peaks.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>What equipment do I need for UK mountain hiking?</summary>
+          <summary>Where can I see the highest mountains in the UK in order?</summary>
           <p>
-            Essential equipment includes proper hiking boots with ankle support, waterproof jacket and trousers, warm layers, map and
-            compass (and the knowledge to use them), first aid kit, torch, emergency whistle, and sufficient food and water. In winter,
-            additional equipment like crampons, ice axe, and winter clothing may be necessary. Always check weather forecasts and inform
-            someone of your plans before setting out.
+            You can view a complete ranked list of the highest mountains in the UK in order on our dedicated <a href="/mountains">mountains page</a>. Our directory includes detailed height information, location data, and climbing difficulty for each peak, making it easy to plan your next mountain adventure.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>When is the best time to climb UK mountains?</summary>
+          <summary>What is the best UK mountain for beginners?</summary>
           <p>
-            The best time varies by mountain and personal preference. Summer (June-August) offers the longest daylight hours and generally
-            more stable weather, making it ideal for beginners. Spring and autumn provide fewer crowds and beautiful colors. Winter climbing
-            requires additional skills and equipment but offers spectacular snow-covered landscapes. Always check specific mountain conditions
-            and weather forecasts regardless of season.
+            Easier beginner-friendly mountains include Pen y Fan in Wales, Catbells in the Lake District, and Mam Tor in the Peak District due to clear paths and gentler gradients. These mountains offer stunning views without requiring technical climbing skills, making them perfect for families and first-time hikers.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>Are dogs allowed on UK mountains?</summary>
+          <summary>What equipment do I need to climb UK mountains?</summary>
           <p>
-            Dogs are generally allowed on most UK mountains, but they must be kept under close control, especially around livestock during
-            lambing season (March-May). Some nature reserves and protected areas may have restrictions. Always keep your dog on a lead near
-            sheep, clean up after them, and consider their fitness level for the terrain. Check specific mountain regulations before your visit.
+            Basic equipment includes hiking boots with good ankle support, waterproof layers, navigation tools (map and compass or GPS), water, snacks, and safety gear including a first aid kit and emergency whistle. Winter climbs may require crampons, ice axes, and additional winter clothing. Always check the weather forecast and inform someone of your plans before setting out.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>Do I need special permission to climb UK mountains?</summary>
+          <summary>Are UK mountains safe for children?</summary>
           <p>
-            Most UK mountains are accessible under Right to Roam legislation (England and Wales) or Scottish Access Rights. However, some
-            areas may have temporary restrictions during deer stalking season (August-October in Scotland) or for conservation reasons.
-            Always check local access information, follow the Countryside Code, and respect any closure notices. Private land may require
-            permission from landowners.
+            Yes—many lower peaks are family-friendly, but always check weather conditions and route difficulty before climbing. Mountains like Pen y Fan, Catbells, and the lower Lake District fells offer excellent family hiking opportunities with well-maintained paths and manageable distances. Start with easier peaks and gradually build up to more challenging climbs as children gain experience and confidence.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>How do I find parking for mountain walks?</summary>
+          <summary>What is a Munro and how many are there?</summary>
           <p>
-            Most popular mountains have designated car parks, which may be free or require payment. Our mountain pages include specific
-            parking postcodes for GPS navigation. Arrive early on weekends and holidays as car parks fill quickly. Always park considerately,
-            don't block gates or access roads, and never leave valuables visible in your vehicle. Some remote mountains may only have roadside
-            parking areas.
+            A Munro is a Scottish mountain over 3,000 feet (914.4 meters) in height. There are 282 Munros in Scotland, named after Sir Hugh Munro who first catalogued them in 1891. Completing all Munros, known as "Munro bagging," is a popular challenge among hillwalkers and mountaineers.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>What should I do in an emergency on a mountain?</summary>
+          <summary>When is the best time to climb the highest mountains in the UK?</summary>
           <p>
-            In an emergency, call 999 or 112 and ask for Police, then Mountain Rescue. Provide your exact location (grid reference if possible),
-            describe the emergency, and the number of people in your group. Stay where you are unless it's unsafe. Keep the casualty warm and
-            comfortable. If you have a whistle, use the international distress signal: six blasts, one-minute pause, repeat. Modern smartphones
-            can provide location coordinates even without signal.
+            Summer (June-August) offers the most stable weather and longest daylight hours, making it ideal for climbing the highest mountains UK has to offer. However, spring and autumn provide fewer crowds and beautiful scenery. Winter climbing requires advanced skills and specialized equipment but rewards climbers with spectacular snow-covered landscapes.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>Can beginners climb UK mountains?</summary>
+          <summary>Do I need permission to climb UK mountains?</summary>
           <p>
-            Absolutely! The UK offers mountains suitable for all experience levels. Start with well-maintained paths on lower peaks, gradually
-            building fitness and confidence. Popular beginner-friendly mountains include Ben Lomond, Pen y Fan, and some Lake District fells.
-            Always choose routes appropriate for your fitness level, check weather forecasts, go with experienced friends if possible, and
-            never hesitate to turn back if conditions deteriorate or you feel uncomfortable.
+            Most UK mountains are accessible under Right to Roam legislation (England and Wales) or Scottish Access Rights. However, some areas may have temporary restrictions during deer stalking season (August-October in Scotland) or for conservation reasons. Always check local access information and respect any closure notices or private land restrictions.
           </p>
         </details>
       </div>
@@ -532,9 +566,71 @@ const organizationData = {
     margin-bottom: var(--spacing-lg);
   }
 
-  .featured-section {
+  .highest-mountains-section {
     padding: var(--spacing-3xl) 0;
     background: var(--color-neutral-50);
+  }
+
+  .highest-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .highest-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-neutral-900);
+  }
+
+  .highest-content h3 {
+    font-size: 1.75rem;
+    margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+    color: var(--color-neutral-800);
+  }
+
+  .highest-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .peaks-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .peaks-list li {
+    background: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    transition: all var(--transition-base);
+  }
+
+  .peaks-list li:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .peaks-list a {
+    color: var(--color-neutral-900);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .peaks-list a:hover {
+    color: var(--color-primary);
+  }
+
+  .featured-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
   }
 
   .section-header {
@@ -651,10 +747,10 @@ const organizationData = {
 
   .why-choose-section {
     padding: var(--spacing-3xl) 0;
-    background: white;
+    background: var(--color-neutral-50);
   }
 
-  .why-choose-section h1 {
+  .why-choose-section h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: var(--spacing-xl);
@@ -664,6 +760,7 @@ const organizationData = {
   .why-choose-content {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
   }
 
   .why-choose-content p {
@@ -673,9 +770,50 @@ const organizationData = {
     margin-bottom: var(--spacing-lg);
   }
 
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+  }
+
+  .cta-buttons .btn {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-base);
+    font-size: 1.05rem;
+  }
+
+  .cta-buttons .btn-primary {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .cta-buttons .btn-primary:hover {
+    background: #0a5c3d;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cta-buttons .btn-secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .cta-buttons .btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
   .faq-section {
     padding: var(--spacing-3xl) 0;
-    background: var(--color-neutral-50);
+    background: white;
   }
 
   .faq-section h2 {
@@ -694,15 +832,17 @@ const organizationData = {
   }
 
   .faq-item {
-    background: white;
+    background: var(--color-neutral-50);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
+    border: 1px solid var(--color-neutral-200);
   }
 
   .faq-item:hover {
     box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
   }
 
   .faq-item summary {
