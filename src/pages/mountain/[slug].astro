@@ -42,11 +42,14 @@ const displayImages = mountainImages.length > 0
   ? mountainImages.map(img => img.image_url)
   : defaultImages;
 
-const structuredData = {
+const difficultyText = mountain.difficulty_rating || 'Moderate';
+const seasonText = mountain.best_season || 'Spring to Autumn';
+
+const touristAttractionSchema = {
   "@context": "https://schema.org",
-  "@type": "Mountain",
-  "name": mountain.name,
-  "description": mountain.description,
+  "@type": "TouristAttraction",
+  "name": `${mountain.name} - One of the Mountains in the UK`,
+  "description": mountain.description || `A complete guide to ${mountain.name}, one of the mountains in the UK, including routes, maps, difficulty, and tips for climbers.`,
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": mountain.latitude,
@@ -59,14 +62,62 @@ const structuredData = {
     "addressCountry": "GB"
   }
 };
+
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": `Is ${mountain.name} one of the best mountains to climb UK?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Yes, ${mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, ${mountain.height_meters}m elevation, and ${difficultyText.toLowerCase()} difficulty level, making it accessible to ${mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various skill levels'}.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `What level of difficulty is ${mountain.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${mountain.name} has a difficulty rating of ${difficultyText}. ${mountainRoutes.length > 0 ? 'Multiple routes are available ranging from easier to more challenging options.' : 'The mountain offers various routes suitable for different experience levels.'}`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `Where can I see ${mountain.name} on a map?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `You can view ${mountain.name} on our interactive map showing its location in ${mountain.region}. The mountain is positioned at coordinates ${mountain.latitude.toFixed(4)}°N, ${Math.abs(mountain.longitude).toFixed(4)}°W, with detailed route maps and nearby geographical features.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `Are there family-friendly routes on ${mountain.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${mountain.suitable_for && mountain.suitable_for.includes('Families') ? 'Yes, ' + mountain.name + ' has family-friendly routes suitable for those with children, particularly during ' + seasonText.toLowerCase() + ' when conditions are most favorable.' : 'Route suitability depends on experience level and weather conditions. Always assess your group\'s capabilities and check current conditions before setting out.'}`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `When is the best time to climb ${mountain.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `The best season to climb ${mountain.name} is ${seasonText}. Weather conditions can vary significantly, so always check the forecast before your visit and be prepared for changing mountain weather.`
+      }
+    }
+  ]
+};
 ---
 
 <Layout
-  title={`${mountain.name} - ${mountain.height_meters}m | UK Mountains Directory`}
-  description={mountain.description || `Discover ${mountain.name}, a ${mountain.height_meters}m (${mountain.height_feet}ft) mountain in ${mountain.region}. Find height, location, facilities, history and more.`}
+  title={`Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`}
+  description={`Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips. Discover the best mountains to climb in the UK for all skill levels.`}
   image={displayImages[0]}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(touristAttractionSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchemaData)} />
 
   <!-- 1. HERO SECTION -->
   <div class="hero-section">
@@ -78,9 +129,11 @@ const structuredData = {
       <div class="breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
+        <a href="/mountains">Mountains</a>
+        <span>/</span>
         <span>{mountain.name}</span>
       </div>
-      <h1>{mountain.name}</h1>
+      <h1>Explore One of the Mountains in the UK: {mountain.name} Guide</h1>
       {mountain.national_park && <div class="hero-subtitle">{mountain.national_park}</div>}
       <div class="hero-stats">
         <div class="hero-stat">
@@ -162,13 +215,16 @@ const structuredData = {
     {mountain.description && (
       <section class="section-overview">
         <div class="section-content">
-          <h2>About {mountain.name}</h2>
+          <h2>Introduction to {mountain.name}</h2>
+          <p class="lead">
+            {mountain.name} is one of the notable mountains in the UK, known for its unique landscape, scenic routes, and {mountain.famous_for ? mountain.famous_for.toLowerCase() : 'natural beauty'}. Whether you're searching for popular mountains to climb UK, planning your first summit, or exploring the best mountains to climb UK, this guide covers everything you need to know to plan your adventure.
+          </p>
           <p class="lead">{mountain.description}</p>
 
           {mountain.famous_for && (
             <div class="famous-for">
-              <h3>What Makes It Special</h3>
-              <p>{mountain.famous_for}</p>
+              <h3>Why This Mountain Is Popular</h3>
+              <p>This peak is regularly listed among the best mountains to climb UK thanks to its {mountain.famous_for.toLowerCase()}, well-marked routes suitable for different skill levels, and {mountain.nearby_attractions && mountain.nearby_attractions.length > 0 ? 'nearby facilities and attractions' : 'natural setting'}.</p>
             </div>
           )}
 
@@ -218,7 +274,7 @@ const structuredData = {
 
     <!-- 3. KEY INFORMATION GRID -->
     <section class="key-information">
-      <h2>Key Information</h2>
+      <h2>Key Mountain Facts & Map</h2>
       <div class="info-grid-layout">
         <!-- Location & Map -->
         <div class="info-card">
@@ -383,8 +439,8 @@ const structuredData = {
     <!-- 4. TRAIL ROUTES SECTION -->
     {mountainRoutes.length > 0 && (
       <section id="routes" class="routes-section">
-        <h2>Trail Routes to the Summit</h2>
-        <p class="section-intro">Choose from multiple routes based on your experience and fitness level.</p>
+        <h2>Hiking & Climbing Routes for {mountain.name}</h2>
+        <p class="section-intro">Choose from multiple routes based on your experience and fitness level. Each route offers unique highlights and challenges for those exploring the mountains in the UK.</p>
         <div class="routes-container">
           {mountainRoutes.map((route: any) => (
             <div class="route-card-detailed">
@@ -465,10 +521,34 @@ const structuredData = {
       </section>
     )}
 
+    <!-- 4.5 SAFETY TIPS SECTION -->
+    <section class="safety-tips-section">
+      <h2>Safety Tips for Climbing {mountain.name}</h2>
+      <p class="section-intro">Stay safe while climbing one of the mountains in the UK with these essential safety guidelines:</p>
+      <div class="safety-grid">
+        <div class="safety-tip-card">
+          <h3>Weather Preparation</h3>
+          <p>Always check weather forecasts before setting out. Mountain weather can change rapidly, and summit conditions are typically 5-10°C colder than valley floor with significant wind chill.</p>
+        </div>
+        <div class="safety-tip-card">
+          <h3>Essential Equipment</h3>
+          <p>Carry maps, compass or GPS, water, food, first aid kit, whistle, torch, emergency shelter, and appropriate clothing layers including waterproofs.</p>
+        </div>
+        <div class="safety-tip-card">
+          <h3>Route Planning</h3>
+          <p>Let someone know your route plan and expected return time. Stick to marked paths and be prepared to turn back if conditions deteriorate.</p>
+        </div>
+        <div class="safety-tip-card">
+          <h3>Emergency Contact</h3>
+          <p>In case of emergency, dial 999 or 112 and ask for Police, then Mountain Rescue. Know your location using grid reference or GPS coordinates.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- 5. THINGS TO DO -->
     {mountain.activities && Object.keys(mountain.activities).length > 0 && (
       <section class="things-to-do">
-        <h2>Things to Do</h2>
+        <h2>Activities & Nearby Attractions</h2>
         <div class="activities-grid">
           {mountain.activities.hiking && (
             <div class="activity-card">
@@ -583,30 +663,81 @@ const structuredData = {
       </section>
     ) : null}
 
-    <!-- 9. FAQs SECTION -->
-    {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.length > 0 && (
-      <section class="faqs-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faqs-container">
-          {mountain.faqs.map((faq: any) => (
-            <div class="faq-item">
-              <h3>{faq.question}</h3>
+    <!-- 9. SEO-OPTIMIZED FAQs SECTION -->
+    <section class="faqs-section">
+      <h2>Frequently Asked Questions About {mountain.name}</h2>
+      <div class="faqs-container">
+        <details class="faq-item-detail">
+          <summary>Is {mountain.name} one of the best mountains to climb UK?</summary>
+          <p>
+            Yes, {mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, {mountain.height_meters}m elevation, and {difficultyText.toLowerCase()} difficulty level, making it accessible to {mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various skill levels'}. {mountain.famous_for ? `The mountain is particularly known for ${mountain.famous_for.toLowerCase()}.` : ''}
+          </p>
+        </details>
+
+        <details class="faq-item-detail">
+          <summary>What level of difficulty is {mountain.name}?</summary>
+          <p>
+            {mountain.name} has a difficulty rating of {difficultyText}. {mountainRoutes.length > 0 ? `We provide detailed information about ${mountainRoutes.length} different route${mountainRoutes.length > 1 ? 's' : ''} ranging from easier to more challenging options, so you can choose the path that best suits your experience level.` : 'The mountain offers various routes suitable for different experience levels.'} {mountain.time_to_summit ? `Average time to summit is ${mountain.time_to_summit}.` : ''}
+          </p>
+        </details>
+
+        <details class="faq-item-detail">
+          <summary>Where can I see {mountain.name} on a map?</summary>
+          <p>
+            You can view {mountain.name} on our interactive map showing its location in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}. The mountain is positioned at coordinates {mountain.latitude.toFixed(4)}°N, {Math.abs(mountain.longitude).toFixed(4)}°W, with detailed route maps and nearby geographical features. {mountain.parking_postcode ? `Use postcode ${mountain.parking_postcode} for sat-nav directions to the parking area.` : ''}
+          </p>
+        </details>
+
+        <details class="faq-item-detail">
+          <summary>Are there family-friendly routes on {mountain.name}?</summary>
+          <p>
+            {mountain.suitable_for && mountain.suitable_for.includes('Families')
+              ? `Yes, ${mountain.name} has family-friendly routes suitable for those with children, particularly during ${seasonText.toLowerCase()} when conditions are most favorable. ${mountain.toilets_available ? 'Toilet facilities are available at the base.' : 'Plan accordingly as facilities may be limited.'}`
+              : `Route suitability depends on experience level, weather conditions, and your group's capabilities. ${mountain.difficulty_rating === 'Easy' || mountain.difficulty_rating === 'Moderate' ? 'Some routes may be suitable for families with older children who have hillwalking experience.' : 'This mountain is generally recommended for experienced hikers.'} Always assess your group's abilities and check current conditions before setting out.`}
+          </p>
+        </details>
+
+        <details class="faq-item-detail">
+          <summary>When is the best time to climb {mountain.name}?</summary>
+          <p>
+            The best season to climb {mountain.name} is {seasonText}. Weather conditions can vary significantly throughout the year, so always check the forecast before your visit and be prepared for changing mountain weather. {mountain.weather_warnings ? `Please note: ${mountain.weather_warnings}` : 'Summit temperatures are typically 5-10°C colder than valley floor, and wind chill can make it feel significantly colder.'}
+          </p>
+        </details>
+
+        {mountain.parking_postcode && (
+          <details class="faq-item-detail">
+            <summary>Where should I park for {mountain.name}?</summary>
+            <p>
+              The recommended parking postcode for {mountain.name} is {mountain.parking_postcode}. {mountain.parking_fees ? `Parking fees apply: ${mountain.parking_fees}.` : 'Check for parking restrictions and fees before your visit.'} {mountain.nearest_town ? `The nearest town is ${mountain.nearest_town}, where you can find additional facilities.` : ''} Arrive early on weekends and during peak season as car parks fill quickly.
+            </p>
+          </details>
+        )}
+
+        {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.length > 0 && (
+          mountain.faqs.map((faq: any) => (
+            <details class="faq-item-detail">
+              <summary>{faq.question}</summary>
               <p>{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    )}
+            </details>
+          ))
+        )}
+      </div>
+    </section>
 
     <!-- 10. SEO FOOTER INFORMATION -->
     <section class="seo-footer">
       <div class="seo-summary">
-        <h2>{mountain.name} - Complete Guide</h2>
+        <h2>Why {mountain.name} Should Be on Your List</h2>
         <p>
-          {mountain.name} is a {mountain.height_meters}m ({mountain.height_feet}ft) {mountain.classification || 'mountain'}
-          located in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}.
-          {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}.` : ''}
-          {mountain.suitable_for && mountain.suitable_for.length > 0 ? ` Perfect for ${mountain.suitable_for.join(', ').toLowerCase()}.` : ''}
+          Whether you're chasing the best mountains to climb UK, working through a summit challenge, or simply exploring new landscapes, {mountain.name} offers a rewarding climb for {mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various experience levels'}.
+        </p>
+        <p>
+          This {mountain.height_meters}m ({mountain.height_feet}ft) {mountain.classification || 'mountain'} is one of the notable mountains in the UK, located in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}.
+          {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}, ` : ''}
+          {mountain.name} attracts hikers, climbers, {mountain.suitable_for && mountain.suitable_for.includes('Families') ? 'families, ' : ''}and photographers thanks to its {mountain.landscape_description ? 'distinctive terrain' : 'natural beauty'} and panoramic views.
+        </p>
+        <p>
+          With {mountainRoutes.length > 0 ? `${mountainRoutes.length} documented route${mountainRoutes.length > 1 ? 's' : ''}` : 'multiple routes'}, comprehensive maps, and detailed safety information, our guide helps you prepare for a successful and safe ascent of one of the mountains in the UK.
         </p>
       </div>
 
@@ -689,10 +820,14 @@ const structuredData = {
   }
 
   .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0 0 var(--spacing-md) 0;
     color: white !important;
     text-shadow: 2px 2px 12px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);
+    line-height: 1.2;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-subtitle {
@@ -1181,6 +1316,52 @@ const structuredData = {
     color: #f59e0b;
   }
 
+  /* SAFETY TIPS SECTION */
+  .safety-tips-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .safety-tips-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .safety-tip-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--color-neutral-200);
+    border-left: 4px solid #f59e0b;
+    transition: all var(--transition-base);
+  }
+
+  .safety-tip-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: #f59e0b;
+    transform: translateY(-2px);
+  }
+
+  .safety-tip-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-900);
+  }
+
+  .safety-tip-card p {
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
   /* THINGS TO DO */
   .things-to-do {
     margin-bottom: var(--spacing-3xl);
@@ -1451,7 +1632,7 @@ const structuredData = {
 
   .faqs-container {
     display: grid;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 
   .faq-item {
@@ -1465,6 +1646,57 @@ const structuredData = {
     font-size: 1.125rem;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
+  }
+
+  .faq-item-detail {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item-detail:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+  }
+
+  .faq-item-detail summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    padding-right: var(--spacing-lg);
+  }
+
+  .faq-item-detail summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item-detail summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+  }
+
+  .faq-item-detail[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item-detail p {
+    margin-top: var(--spacing-md);
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    font-size: 1.05rem;
   }
 
   /* SEO FOOTER */
@@ -1545,7 +1777,8 @@ const structuredData = {
     }
 
     .hero-content h1 {
-      font-size: 2.5rem;
+      font-size: 1.75rem;
+      line-height: 1.3;
     }
 
     .hero-subtitle {
@@ -1570,7 +1803,7 @@ const structuredData = {
       height: 187px;
     }
 
-    .activities-grid, .nearby-grid {
+    .activities-grid, .nearby-grid, .safety-grid {
       grid-template-columns: 1fr;
     }
   }
