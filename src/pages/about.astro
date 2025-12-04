@@ -95,19 +95,26 @@ const faqSchema = {
 
         <section class="content-section">
           <h2>What Makes Our Information Reliable</h2>
-          <p>
-            We believe accurate mountain information saves time—and sometimes lives. Our database includes thoroughly researched facts such as:
-          </p>
-          <ul class="features-list">
-            <li>How many mountains in UK (with full lists per country)</li>
-            <li>Elevation measurements verified through Ordnance Survey</li>
-            <li>Regional mountain classifications (Munros, Corbetts, Hewitts, etc.)</li>
-            <li>Weather patterns & seasonal conditions</li>
-            <li>Difficulty grades for all major peaks</li>
-          </ul>
-          <p>
-            We update our guides regularly, ensuring you always have the most trustworthy details at your fingertips.
-          </p>
+          <div class="section-with-image">
+            <div class="section-text">
+              <p>
+                We believe accurate mountain information saves time—and sometimes lives. Our database includes thoroughly researched facts such as:
+              </p>
+              <ul class="features-list">
+                <li>How many mountains in UK (with full lists per country)</li>
+                <li>Elevation measurements verified through Ordnance Survey</li>
+                <li>Regional mountain classifications (Munros, Corbetts, Hewitts, etc.)</li>
+                <li>Weather patterns & seasonal conditions</li>
+                <li>Difficulty grades for all major peaks</li>
+              </ul>
+              <p>
+                We update our guides regularly, ensuring you always have the most trustworthy details at your fingertips.
+              </p>
+            </div>
+            <div class="section-image">
+              <img src="/Ben Nevis 2.jpg" alt="Mountain landscape view" />
+            </div>
+          </div>
         </section>
 
         <section class="content-section">
@@ -155,19 +162,26 @@ const faqSchema = {
 
         <section class="content-section">
           <h2>Meet the Team Behind the Project</h2>
-          <p>
-            Our team is made up of:
-          </p>
-          <ul class="features-list">
-            <li>Experienced hikers</li>
-            <li>Data analysts</li>
-            <li>Outdoor photographers</li>
-            <li>Cartographers</li>
-            <li>Web designers and researchers</li>
-          </ul>
-          <p>
-            Together, we ensure our platform delivers depth, accuracy, and the passion of true mountain enthusiasts.
-          </p>
+          <div class="section-with-image">
+            <div class="section-image">
+              <img src="/Ben Nevis 3.jpg" alt="Mountain hiking team" />
+            </div>
+            <div class="section-text">
+              <p>
+                Our team is made up of:
+              </p>
+              <ul class="features-list">
+                <li>Experienced hikers</li>
+                <li>Data analysts</li>
+                <li>Outdoor photographers</li>
+                <li>Cartographers</li>
+                <li>Web designers and researchers</li>
+              </ul>
+              <p>
+                Together, we ensure our platform delivers depth, accuracy, and the passion of true mountain enthusiasts.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section class="content-section">
@@ -462,6 +476,31 @@ const faqSchema = {
     text-decoration: underline;
   }
 
+  .section-with-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+
+  .section-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+
+  .section-image img:hover {
+    transform: scale(1.05);
+  }
+
   @media (max-width: 768px) {
     .about-hero h1 {
       font-size: 1.75rem;
@@ -486,6 +525,11 @@ const faqSchema = {
 
     .content-section p {
       font-size: 1rem;
+    }
+
+    .section-with-image {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
     }
   }
 </style>
