@@ -70,14 +70,17 @@ const faqSchema = {
             id="contact-form"
             class="contact-form"
             method="POST"
-            action="https://formsubmit.co/ayzvoma@gmail.com"
-            data-netlify="true"
             name="contact"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="_subject" value="New Contact Form Submission - UK Mountains" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="box" />
-            <input type="hidden" name="_next" value={`${Astro.site}contact?success=true`} />
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="to-email" value="ayzvoma@gmail.com" />
+            <p style="display: none;">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
 
             <div class="form-group">
               <label for="name">Name *</label>
@@ -452,11 +455,50 @@ const faqSchema = {
     }
   }
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
     if (submitBtn) {
       submitBtn.disabled = true;
       btnText.style.display = 'none';
       btnLoading.style.display = 'inline';
+    }
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        if (formMessage) {
+          formMessage.style.display = 'block';
+          formMessage.className = 'form-message success';
+          formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+          form.reset();
+
+          setTimeout(() => {
+            formMessage.style.display = 'none';
+          }, 8000);
+        }
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      if (formMessage) {
+        formMessage.style.display = 'block';
+        formMessage.className = 'form-message error';
+        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at ayzvoma@gmail.com.';
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }
     }
   });
 </script>
