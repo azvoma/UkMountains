@@ -133,6 +133,16 @@ const faqSchema = {
 
             <div id="form-message" class="form-message" style="display: none;"></div>
           </form>
+
+          <div class="info-card help-card-inline">
+            <h3>Quick Tips</h3>
+            <ul>
+              <li>Response time: 24-48 hours</li>
+              <li>Include mountain names for data corrections</li>
+              <li>Photos welcome in common formats (JPG, PNG)</li>
+              <li>Check FAQ section below before contacting</li>
+            </ul>
+          </div>
         </div>
 
         <div class="contact-info">
@@ -176,16 +186,6 @@ const faqSchema = {
               We welcome contributions from mountain enthusiasts. If you have photos,
               corrections, or additional information about UK mountains, please reach out.
             </p>
-          </div>
-
-          <div class="info-card help-card">
-            <h3>Quick Tips</h3>
-            <ul>
-              <li>Response time: 24-48 hours</li>
-              <li>Include mountain names for data corrections</li>
-              <li>Photos welcome in common formats (JPG, PNG)</li>
-              <li>Check FAQ section below before contacting</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -241,6 +241,21 @@ const faqSchema = {
               <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
             </svg>
             <span>Media and press information</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <span>General mountain advice and safety tips</span>
+          </div>
+          <div class="help-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Access and parking information for specific peaks</span>
           </div>
         </div>
       </section>
@@ -622,6 +637,41 @@ const faqSchema = {
   }
 
   .help-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+
+  .help-card-inline {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .help-card-inline h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-neutral-900);
+  }
+
+  .help-card-inline ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+  }
+
+  .help-card-inline li {
+    padding: var(--spacing-sm) 0;
+    color: var(--color-neutral-700);
+    position: relative;
+    padding-left: var(--spacing-lg);
+  }
+
+  .help-card-inline li::before {
     content: '→';
     position: absolute;
     left: 0;
