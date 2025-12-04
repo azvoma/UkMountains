@@ -66,7 +66,19 @@ const faqSchema = {
 
       <div class="contact-grid">
         <div class="contact-form-section">
-          <form id="contact-form" class="contact-form">
+          <form
+            id="contact-form"
+            class="contact-form"
+            method="POST"
+            action="https://formsubmit.co/ayzvoma@gmail.com"
+            data-netlify="true"
+            name="contact"
+          >
+            <input type="hidden" name="_subject" value="New Contact Form Submission - UK Mountains" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value={`${Astro.site}contact?success=true`} />
+
             <div class="form-group">
               <label for="name">Name *</label>
               <input
@@ -426,36 +438,26 @@ const faqSchema = {
   const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLSpanElement;
   const formMessage = document.getElementById('form-message') as HTMLDivElement;
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    if (formMessage) {
+      formMessage.style.display = 'block';
+      formMessage.className = 'form-message success';
+      formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+      window.history.replaceState({}, document.title, window.location.pathname);
 
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 8000);
+    }
+  }
+
+  form?.addEventListener('submit', (e) => {
     if (submitBtn) {
       submitBtn.disabled = true;
       btnText.style.display = 'none';
       btnLoading.style.display = 'inline';
     }
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        btnText.style.display = 'inline';
-        btnLoading.style.display = 'none';
-      }
-
-      if (formMessage) {
-        formMessage.style.display = 'block';
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-        form.reset();
-
-        setTimeout(() => {
-          formMessage.style.display = 'none';
-        }, 5000);
-      }
-    }, 1000);
   });
 </script>
 
