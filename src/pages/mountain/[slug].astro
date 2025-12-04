@@ -39,8 +39,8 @@ const defaultImages = [
 ];
 
 const displayImages = mountainImages.length > 0
-  ? mountainImages.map(img => img.image_url)
-  : defaultImages;
+  ? mountainImages.map(img => img.image_url).slice(0, 5)
+  : defaultImages.slice(0, 5);
 
 const difficultyText = mountain.difficulty_rating || 'Moderate';
 const seasonText = mountain.best_season || 'Spring to Autumn';
@@ -1515,18 +1515,23 @@ const faqSchemaData = {
   }
 
   .gallery-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
-    overflow-x: auto;
-    padding-bottom: var(--spacing-md);
+    max-width: 100%;
   }
 
   .gallery-item {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 225px;
+    width: 100%;
+    height: 250px;
     border-radius: var(--radius-md);
     overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+  }
+
+  .gallery-item:hover {
+    box-shadow: var(--shadow-lg);
   }
 
   .gallery-item img {
@@ -1795,12 +1800,11 @@ const faqSchemaData = {
     }
 
     .gallery-row {
-      overflow-x: scroll;
+      grid-template-columns: 1fr;
     }
 
     .gallery-item {
-      width: 250px;
-      height: 187px;
+      height: 220px;
     }
 
     .activities-grid, .nearby-grid, .safety-grid {

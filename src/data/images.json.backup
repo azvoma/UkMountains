@@ -1,0 +1,2274 @@
+[
+  {
+    "id": "c8da853e-96ef-4e90-8056-6ed977c7471d",
+    "mountain_id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aran Fawddwy - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ca65c95b-20b7-4c29-b9e3-2e608d6198c5",
+    "mountain_id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aran Fawddwy - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c720019d-2f2b-4a22-9692-1ce992279b7e",
+    "mountain_id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aran Fawddwy - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1bf4bfa4-ccb7-4a18-b465-edc67fa99bdf",
+    "mountain_id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aran Fawddwy - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f9658f47-3a65-4078-a3fa-fe7744f725a7",
+    "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Toul - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "94bc9d09-3fed-4977-9099-6df79de12639",
+    "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Toul - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f4b67d9d-d8fc-4b06-a5c0-589880f7a5bf",
+    "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Toul - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9b707dc0-bba7-4cda-a953-2ca61c6aad79",
+    "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Toul - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a3ba6594-05dd-4fe4-9b98-d0451f5de46b",
+    "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stac Pollaidh - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9452d09e-6540-48d6-ae16-fbe9af59e1e9",
+    "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stac Pollaidh - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3c2c3bd0-6338-47b4-a646-499285b54485",
+    "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stac Pollaidh - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b92b71d3-b32f-41d2-85d6-3a42ae80ee2f",
+    "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stac Pollaidh - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4ec69b23-433f-4490-ade1-d131033d5b44",
+    "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stob Coire Easain - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "77576c17-884a-4096-afbf-379c3546c0ef",
+    "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stob Coire Easain - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8cdec8fb-e705-485b-9e35-29df2531c745",
+    "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stob Coire Easain - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "fa60f1ca-2a63-43ef-b0b0-d3e320b0f7c8",
+    "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Stob Coire Easain - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1f6ca17e-b003-4a1d-844e-b32688c27af8",
+    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "26cee783-00ca-4332-bbe0-b2a6caaff560",
+    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "564414de-ee27-494e-8d44-b8506cda4698",
+    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "33c8cb2c-4266-47c3-bcb3-250ae51573a3",
+    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "197907df-766e-4b8e-ad99-3442676c401f",
+    "mountain_id": "215212dc-2bf4-4258-af0d-0e201478767f",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bleaklow - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1c683061-ddcd-4396-8f38-1ee3ed030761",
+    "mountain_id": "215212dc-2bf4-4258-af0d-0e201478767f",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bleaklow - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1c92b1d9-dfed-49ca-bf6f-e10087cf2ae5",
+    "mountain_id": "215212dc-2bf4-4258-af0d-0e201478767f",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bleaklow - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "29e7f533-15af-4396-8819-70301820270c",
+    "mountain_id": "215212dc-2bf4-4258-af0d-0e201478767f",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bleaklow - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "6511c3a7-18f8-4ddc-9f10-df5a3cf35506",
+    "mountain_id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fairfield - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d200c499-431e-4b56-b7d9-9d5066384a9d",
+    "mountain_id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fairfield - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8143b341-7636-470d-bc0f-eeca3c5d5566",
+    "mountain_id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fairfield - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "73398858-72eb-4111-89de-bf5ca65fa17b",
+    "mountain_id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fairfield - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "af8ede20-fec6-4888-8dd6-c322a405dac9",
+    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "0dde7c94-37c6-43d1-9add-c3a1794b091e",
+    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "c08eb411-5b96-4e81-9e2b-d9fa5225d454",
+    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "fb7d1b0e-fcbb-4f29-8ea6-01871bcd6543",
+    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "59dd0f99-eccd-4e43-bd56-aa2c3b4bd452",
+    "mountain_id": "221a94f3-f61f-4e70-b15e-682a6e3be32f",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Blencathra - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3a827842-6352-403f-b537-2746ccd409ef",
+    "mountain_id": "221a94f3-f61f-4e70-b15e-682a6e3be32f",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Blencathra - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d7ebbffb-6481-464f-8dee-b1826d1fa00b",
+    "mountain_id": "221a94f3-f61f-4e70-b15e-682a6e3be32f",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Blencathra - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e018aff0-27a4-49a8-86a3-0dc69788d5f9",
+    "mountain_id": "221a94f3-f61f-4e70-b15e-682a6e3be32f",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Blencathra - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "85874e56-9d68-4ee5-859b-04b3f4f2c000",
+    "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "High Street - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4a504e48-380c-45c4-8fec-7df64ea4d30b",
+    "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "High Street - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "88bb7bef-c8af-4cb1-bab1-fb8cafc82a92",
+    "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "High Street - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "af1e2809-2023-462f-b744-cb169be1dc0d",
+    "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "High Street - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ed4760b9-f78e-435b-91e4-fb95a881bce4",
+    "mountain_id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Loyal - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5aa9a03f-bcb5-42c9-b44d-2bb771ee0e48",
+    "mountain_id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Loyal - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3f4875df-104b-413b-b5da-db3d2a01444d",
+    "mountain_id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Loyal - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "308cbca6-6fcd-45c6-9337-1d2dd750d472",
+    "mountain_id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Loyal - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3bb3c34d-3ad4-433f-8c8a-61cf94bf8abe",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Braeriach - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a53ac09e-3cd4-402f-9233-2edf3f24ac5f",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Braeriach - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "49f04e40-0fe9-4888-8cdf-809b752dbe4c",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Braeriach - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "fdba5349-7c4f-4833-81b0-1168dbc23085",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Braeriach - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0f5ca43b-8152-48ea-a788-1adbae58f076",
+    "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Llewelyn - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "041a07b6-993e-47fe-82f8-726b3731aa16",
+    "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Llewelyn - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "fe0e8f6c-7bfb-41e8-b95e-8be0c616cb9a",
+    "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Llewelyn - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "60e5e748-d810-4eab-8608-dbf4e1686e2d",
+    "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Llewelyn - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f74678c3-b4c7-4800-b3ae-0d829dafb81e",
+    "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lawers - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3551b5d1-8326-4fe8-a058-c70d673f50c1",
+    "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lawers - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c5dcaedf-5a5a-4ccb-bc5e-e072dbf9ee4b",
+    "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lawers - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "67485e52-a8b3-4235-8055-5d86f4767af0",
+    "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lawers - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7bb376ba-03a8-4301-a5e0-c467c840c366",
+    "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bidean nam Bian - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4c7670e6-9971-4ed8-ba92-8f04fc7e25be",
+    "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bidean nam Bian - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7acc6259-94bc-4693-991d-4bcc70fa4387",
+    "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bidean nam Bian - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c622174b-9d72-4fde-82a0-affe4a1dcaef",
+    "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bidean nam Bian - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d9794aee-d253-4ea6-9419-c3c690495e56",
+    "mountain_id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moel Siabod - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "034e0e54-cd35-4db9-9782-db5ab426e915",
+    "mountain_id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moel Siabod - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "61cf7d0c-baf8-4aa8-89a2-ea6a62fa19ed",
+    "mountain_id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moel Siabod - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "552f6b21-3842-48a6-8be1-158cd28c787f",
+    "mountain_id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moel Siabod - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "938b5956-61b6-442f-8c74-13c63ff40148",
+    "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Dafydd - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8c2566a7-107b-4852-9d6a-238fe3053607",
+    "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Dafydd - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5178ee38-44b8-45e1-9239-4a03ba31711c",
+    "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Dafydd - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "66a5674b-1cf5-47f6-87f0-e51334d42559",
+    "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carnedd Dafydd - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "944b26cf-5df8-488f-926c-bd79250c7ce5",
+    "mountain_id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great End - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8e3193dd-4ad0-4dd9-b279-bab008292cc0",
+    "mountain_id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great End - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a1495bea-d601-4150-b7c7-33492e5cedc3",
+    "mountain_id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great End - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "2dc63e22-5ddd-430c-bbba-35d129aaccdf",
+    "mountain_id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great End - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a01cec95-8378-4da4-83de-1257631c11b5",
+    "mountain_id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Kinder Scout - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c1d3b59b-b7a8-4914-a1a0-b161fcda3a7a",
+    "mountain_id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Kinder Scout - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "662e2dbd-83e7-4bcb-b8a7-8be52698f66d",
+    "mountain_id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Kinder Scout - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "aaab5423-a3dd-4c89-b4fd-2cdef8275221",
+    "mountain_id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Kinder Scout - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "6a67dcd3-ad74-4d27-8292-4c2b7f99a1cb",
+    "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Schiehallion - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0cd2b1b2-3290-4ba1-82a0-681d3d52fc99",
+    "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Schiehallion - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "31497b9c-b1eb-4029-a47b-35cd9a1cef0b",
+    "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Schiehallion - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e8da8cc4-cefc-473e-a354-05d0b8bd16fc",
+    "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Schiehallion - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5b3a19e3-29c1-4c84-abec-740886f1b078",
+    "mountain_id": "516c4794-ac77-4638-bc83-01f4d750eeae",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fach - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5daaf276-0746-4773-854e-94bce9b4e5f5",
+    "mountain_id": "516c4794-ac77-4638-bc83-01f4d750eeae",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fach - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4decb53f-4aab-4d27-b9a5-99ece5acbcae",
+    "mountain_id": "516c4794-ac77-4638-bc83-01f4d750eeae",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fach - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f469f6e2-308d-45bb-83f2-0e2fef750949",
+    "mountain_id": "516c4794-ac77-4638-bc83-01f4d750eeae",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fach - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8ee2d6d8-1c3c-4d08-aacf-a849c2b6d265",
+    "mountain_id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bowfell - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1b6f77c0-a890-4b94-8471-74daea54088a",
+    "mountain_id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bowfell - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b530bef1-64ae-4647-ab4e-5db22eb1eb5a",
+    "mountain_id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bowfell - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1ea4c957-ae39-467b-90dc-66df636dd98b",
+    "mountain_id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Bowfell - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0b6e86e6-8bf4-4579-9771-17d7c2c4339b",
+    "mountain_id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgorr Dhearg - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "6f891107-c241-4468-869c-382c282a3ae3",
+    "mountain_id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgorr Dhearg - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "47dc23db-14d1-4024-8420-643282d04b8d",
+    "mountain_id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgorr Dhearg - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5b5a59b8-dcd3-44d3-93b7-522b97bcea85",
+    "mountain_id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgorr Dhearg - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "28ae0b55-a3df-4045-85d4-ff10dbdaf277",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crinkle Crags - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "84a717d4-96b3-4837-ba39-963f5cfb2baa",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crinkle Crags - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f7aaa675-b8d7-43b9-9177-d9cc2de4dee5",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crinkle Crags - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d2005b2b-7be0-4469-988f-a273a86c010b",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crinkle Crags - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8dac77a6-3e08-4e59-8383-5e0273406d60",
+    "mountain_id": "56868213-04fd-4f62-b19e-cf3f54f00597",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Coniston Old Man - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "05e72637-0a25-4c56-9b3a-02a97a704e56",
+    "mountain_id": "56868213-04fd-4f62-b19e-cf3f54f00597",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Coniston Old Man - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8db7a64a-c5e3-4ba7-96e8-ac6a23f848bf",
+    "mountain_id": "56868213-04fd-4f62-b19e-cf3f54f00597",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Coniston Old Man - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "cbb2d26b-fb64-4b60-96f3-a785377302e4",
+    "mountain_id": "56868213-04fd-4f62-b19e-cf3f54f00597",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Coniston Old Man - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f34b7200-5c74-4aa5-805b-435b205c1aa7",
+    "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Elidir Fawr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e9e2951a-e297-4775-9b16-b18dbfe34c7e",
+    "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Elidir Fawr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4ccd0249-8f60-4ff1-8e48-1b1d7d98fcbe",
+    "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Elidir Fawr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "be9727ca-be37-4449-bd2c-10bf8d36e970",
+    "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Elidir Fawr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e13b8006-c8d5-43a9-aae3-956f1ab5cadd",
+    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "cfa36d21-66a0-4213-92ab-805dd25cbef3",
+    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "6ae57adc-416b-439b-92ff-d6d392478cf3",
+    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "e006aba8-3924-4d6f-b8ec-777b295e760c",
+    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "c4f26427-a61d-472e-9f1f-929224f0923e",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Skiddaw - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "36511a49-485e-4a8d-a12c-3372154e455d",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Skiddaw - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "78e189e2-7fce-4ea1-a71b-4545bf0097a2",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Skiddaw - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "21b2ca1c-7797-4161-aab0-a6fdb75e09b5",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Skiddaw - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "12a3bcd3-d854-44ee-b026-aa348965d97d",
+    "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Stack - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "615aa72a-b6d9-4a4e-8d0c-8ddd6faa4643",
+    "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Stack - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d0ad16d4-201b-491d-b471-b178d702250f",
+    "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Stack - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ee0b1116-a04f-4730-82e1-51919f0ddf48",
+    "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Stack - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "152d3ec3-ea8b-43c2-a390-6f009654b52d",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lochnagar - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "80d8b237-b0d1-4030-a237-e3fb8851b1a0",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lochnagar - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "bf485dc5-54b0-44d8-a19d-3be280b479fd",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lochnagar - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c6220de8-2fac-4606-a523-0e5f4af7e6ba",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lochnagar - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "25952964-f3a8-4628-b16f-4e1a45b1e0c4",
+    "mountain_id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Cruachan - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "881d2f4a-814d-489b-9f20-54fd49df2627",
+    "mountain_id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Cruachan - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "83cb6149-d197-4498-874e-821a678f0c3b",
+    "mountain_id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Cruachan - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9c2adc04-10a3-4d8e-8932-5caaf64a1f02",
+    "mountain_id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Cruachan - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e7c46c9d-1f92-44d7-a509-0927641f874f",
+    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great Gable - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "624c30d7-fc34-4d60-a91f-d264d4510b56",
+    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great Gable - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "2a1eaf5d-1704-45cc-99bf-94a0a1ba84b4",
+    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great Gable - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a9804942-4b52-4030-b58d-1fbf3fa8b816",
+    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Great Gable - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "76b958cd-23c7-455d-a6b3-59468e27668e",
+    "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Alder - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "865de352-53d7-47d1-8648-b623b5f2d9bc",
+    "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Alder - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "863d1e0b-120b-423b-9132-8b72940b6eea",
+    "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Alder - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4632fe26-6039-4e10-8edd-c4f15479aa5d",
+    "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Alder - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ea55a3c7-5f15-4e5f-aee6-2e7935971dfe",
+    "mountain_id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ingleborough - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "2be52b23-eabe-483f-9028-7d8ada8be200",
+    "mountain_id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ingleborough - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "36c2805d-b9ca-490b-9f1e-1eb983ec4420",
+    "mountain_id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ingleborough - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7c15cab0-7c50-44af-ac49-6a471a5cb932",
+    "mountain_id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ingleborough - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e45b32c2-65f2-4780-bf0f-a326d74439ef",
+    "mountain_id": "7188549e-446d-4d03-a012-39b77bcc26ed",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Grasmoor - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8247e690-7318-49c3-b79f-5044498c14e4",
+    "mountain_id": "7188549e-446d-4d03-a012-39b77bcc26ed",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Grasmoor - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b4a94700-efb4-4de4-9926-3b407a471ecd",
+    "mountain_id": "7188549e-446d-4d03-a012-39b77bcc26ed",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Grasmoor - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b236c528-8910-4c0e-a769-bfea7d5ff8c9",
+    "mountain_id": "7188549e-446d-4d03-a012-39b77bcc26ed",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Grasmoor - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "105d3223-269c-48b1-a51d-bc7bc107d031",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fan Fawr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "657fddc2-3e44-4ab9-92f5-ee0e5bd5bad5",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fan Fawr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3dde1745-5fd0-4742-8c77-7a5a220e420d",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fan Fawr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a576589a-1ddb-4336-a73e-4641a4a9502e",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fan Fawr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "80375b6e-c004-45ef-873e-c4af633eb774",
+    "mountain_id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Quinag - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d091261c-5073-4ac1-8d5d-2d4225691468",
+    "mountain_id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Quinag - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1518f8ae-0abd-4189-8519-5e3809b47330",
+    "mountain_id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Quinag - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c019ae36-e476-4e8e-8ed3-ed9511c5ca3a",
+    "mountain_id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Quinag - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b724fb00-6c9e-4d05-ab7a-334b5d0c9461",
+    "mountain_id": "847b3c5b-f7ae-45d6-936b-62f4562d180d",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cadair Idris - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "4a035e83-d983-421e-b4e5-e7222f832639",
+    "mountain_id": "847b3c5b-f7ae-45d6-936b-62f4562d180d",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cadair Idris - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "748d3e96-6b2c-41b4-ad71-c9216796c2ca",
+    "mountain_id": "847b3c5b-f7ae-45d6-936b-62f4562d180d",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cadair Idris - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "b67a9b8d-84b3-43ee-9857-ef79db2b7b2b",
+    "mountain_id": "847b3c5b-f7ae-45d6-936b-62f4562d180d",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cadair Idris - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "c8075397-ab40-42cb-b40e-0c44a2d226a5",
+    "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Beag - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "94dabf53-ade5-47d4-bff2-fa5eafdd4c63",
+    "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Beag - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "81560e23-42a9-462d-82cc-72e3cfc69294",
+    "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Beag - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "1f3fe6ac-2d77-461b-be9d-25a40442bfb8",
+    "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Beag - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "025fd57a-781d-4b80-8c0e-76abb5d9198f",
+    "mountain_id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crib Goch - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e6a5b700-2168-4133-aef5-e9d2f7ea4820",
+    "mountain_id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crib Goch - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7e81a807-fb08-4e72-8029-4d1fff2c78ac",
+    "mountain_id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crib Goch - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "62984a41-d39e-42ae-bb8c-47edabea9d36",
+    "mountain_id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Crib Goch - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "da962db4-b0a0-4169-9e63-1b8e94dbf25f",
+    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lomond - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "e5b0cd07-0e77-4f91-8cb7-cebdee8239a0",
+    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lomond - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "a2bedef7-13b2-45a9-89a1-3b69293a2567",
+    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lomond - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "4f3ddef3-0f98-4bd2-b488-b248273b0d1a",
+    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lomond - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "c5600182-e7c8-4193-96bc-33ceee222d54",
+    "mountain_id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ill Crag - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "af78c3b9-e9fa-4d01-b03c-2aee0a38e16f",
+    "mountain_id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ill Crag - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "20472124-9d25-46bc-83cf-374de8464dd9",
+    "mountain_id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ill Crag - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d50923ab-d6ff-410f-a61a-4a112c6b381e",
+    "mountain_id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ill Crag - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "6a200728-b3e0-429d-9078-54ed7869b508",
+    "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Whernside - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "70019fea-1e86-4ed4-93e2-f98afcd0e345",
+    "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Whernside - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7c02f9b0-c8b5-427e-aad1-3fe5636280fa",
+    "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Whernside - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5681c0a4-37c4-494b-8615-3edcb3fb4b8e",
+    "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Whernside - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "761097db-89e2-4145-9460-994586ddcd49",
+    "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fawr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4007a77f-3d89-4535-b435-2f9d3989ca1b",
+    "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fawr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "987dc38d-6c6d-48cf-99d9-3c041fb34119",
+    "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fawr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "88a94557-f025-4fa4-bea1-4b77acd136cb",
+    "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Glyder Fawr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "38d11ed4-dacc-4692-9d1a-00236d6c8871",
+    "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "An Teallach - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "45732ac7-61b5-4df9-92da-ddcfa2b8932e",
+    "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "An Teallach - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3f5ae54b-c65a-4b8f-9161-de8aa4455b71",
+    "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "An Teallach - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "607d1bf9-3f12-40b4-8d61-c800aed6f827",
+    "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "An Teallach - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "56f8608d-efd5-4fa5-b074-a1abcc3f82de",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a' Bhuird - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a76b8c03-191e-494f-9f09-0a4b5541951d",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a' Bhuird - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "702654c9-e938-4afa-8217-7a60cbaa969c",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a' Bhuird - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "27b1f3da-a89f-48cd-a252-8bfaa07cf5a4",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a' Bhuird - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4a083c66-3aa6-4052-bcc1-276a17b6ce7c",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Y Garn - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3860e85e-d267-4616-b7ad-13ec20357fce",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Y Garn - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8392fd5e-ae91-49b3-97dd-a3655b2e9553",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Y Garn - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "02fe6167-a83e-440a-bcc1-e1195d3e2b1b",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Y Garn - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "157958b2-946d-4d06-8c4c-d80c5c14fa8e",
+    "mountain_id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cribyn - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "accbcf6f-df58-4f76-a437-0c6a33987433",
+    "mountain_id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cribyn - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9e90e517-a948-4cd3-8495-8eaddb41711b",
+    "mountain_id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cribyn - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "fe56503d-83ea-4692-96eb-7f8937239f92",
+    "mountain_id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cribyn - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "93dc0ac3-a5a4-4774-9a39-57941e3f912f",
+    "mountain_id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Eighe - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4d3c331b-fa6a-43ab-b906-3af3bc8381ef",
+    "mountain_id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Eighe - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "27dc631a-5e2a-40b6-a417-091aa92068b7",
+    "mountain_id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Eighe - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f40dba78-52f7-4d99-9853-0a49cfac1761",
+    "mountain_id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Eighe - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f7c59bad-39a9-4478-ab55-b7a5847e8c6d",
+    "mountain_id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Mhic Choinnich - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8602acd4-22d3-495b-a161-c0c3cdbd6536",
+    "mountain_id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Mhic Choinnich - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7149e326-af33-4b09-9f68-c27bf1d4ce15",
+    "mountain_id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Mhic Choinnich - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "40fd0a88-38a9-4070-b402-a0034d7c421f",
+    "mountain_id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Mhic Choinnich - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "20add75d-a371-4afd-9f86-da5d70e74af8",
+    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "6d79ef32-0303-455f-bc2a-60d034c416bd",
+    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "6ea4ccac-d7f8-43a3-ad49-d77f06d64825",
+    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "0a7c5500-607a-44d0-bdb0-0162c61efbfc",
+    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "9fa6f9a5-4cb1-4c89-8b93-2aff549448fc",
+    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "05758511-7838-4d42-8b19-e2b5ebfaaab3",
+    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "cc883f96-44dd-494d-8cbd-8ae3528e48d8",
+    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "7ba214ee-c899-4e8f-bce0-3891529082dc",
+    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "e4620329-06ed-4df1-b0c0-00360c148f93",
+    "mountain_id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Buachaille Etive Mòr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "35d3040d-8946-4892-ad61-c265ad091dbb",
+    "mountain_id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Buachaille Etive Mòr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3c0a640e-da7d-4915-bde4-c344df0768ff",
+    "mountain_id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Buachaille Etive Mòr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7a03fe2d-2659-4a20-9374-fad73f2c121b",
+    "mountain_id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Buachaille Etive Mòr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8021fd29-e0c5-48c6-8f71-b0875b991149",
+    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Macdui - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "8c7a169b-c82a-43fd-8252-f6c81b78ffe1",
+    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Macdui - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "978efd14-97fd-4ad5-8903-50123d25cc2e",
+    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Macdui - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "2216bfd3-d8a9-4459-ae4b-a3ae862f6e5d",
+    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Macdui - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "3a4f6e1a-1d2d-4192-b73f-6f87db2a3da2",
+    "mountain_id": "d04aa449-44e0-4056-8943-546517d8fa6c",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Corn Du - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8b59e756-1f86-4762-bf5e-c4dc74bad0a3",
+    "mountain_id": "d04aa449-44e0-4056-8943-546517d8fa6c",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Corn Du - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "35f4839c-7427-4241-976d-333903164340",
+    "mountain_id": "d04aa449-44e0-4056-8943-546517d8fa6c",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Corn Du - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ef2dc317-9241-4113-81e1-9ed84711b8b8",
+    "mountain_id": "d04aa449-44e0-4056-8943-546517d8fa6c",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Corn Du - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0dfa9ca1-d526-4c7c-854d-faee048a8ea7",
+    "mountain_id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dearg - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7207d23d-ca29-41ab-9da4-2a4ee10c914a",
+    "mountain_id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dearg - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "cca8d2bc-3599-4067-9637-aa54c768b5b7",
+    "mountain_id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dearg - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f1ae9c13-fa5f-48fc-a2b5-e43f84372153",
+    "mountain_id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dearg - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "6ec41fee-ed35-4815-9720-d24f4e7c1436",
+    "mountain_id": "d8d92836-7c31-47f5-b293-d6d7620f1f04",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pillar - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "5c4f60d8-2394-4918-927b-27c320175c30",
+    "mountain_id": "d8d92836-7c31-47f5-b293-d6d7620f1f04",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pillar - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "8a20897e-b6e1-49a5-a126-4a8922241817",
+    "mountain_id": "d8d92836-7c31-47f5-b293-d6d7620f1f04",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pillar - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f1df1e77-d24d-4886-8fb7-8deee6711da3",
+    "mountain_id": "d8d92836-7c31-47f5-b293-d6d7620f1f04",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pillar - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "f481758d-55a4-4f37-a58e-7a220fac6270",
+    "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Dearg - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "99df4d48-25f3-4625-85b3-b4050745f4a8",
+    "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Dearg - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4dfed5c3-0c00-42eb-b2ab-fcacf5108bd3",
+    "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Dearg - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "44bae0de-8650-44b2-88f2-3b0b703822ac",
+    "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Dearg - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "7e659330-16f2-4550-aa18-b0fa6153cdc2",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr nan Gillean - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "dab1cddc-4e77-4f9e-a4f9-3ab0b0e7fe2a",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr nan Gillean - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "75411130-ff37-49e0-8fcb-5ca7217e1387",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr nan Gillean - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3fc6f664-000c-4807-8c8a-0b523a1d82ff",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr nan Gillean - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "655bcdc6-fe96-4cd7-9743-4dcd3ded5c46",
+    "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Haystacks - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "dd209e9b-f942-46c5-95fe-a74a8aab90fa",
+    "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Haystacks - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "96d457c4-7fd8-471f-a900-f9efb7d85986",
+    "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Haystacks - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "c87cfad8-71c4-4129-8aaf-27073c7ed19c",
+    "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Haystacks - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d8c3c944-6c03-4c1b-a87a-f85499be8c5d",
+    "mountain_id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Beag - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b986ef24-feb3-4b82-8461-d43b894d0a61",
+    "mountain_id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Beag - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ffc09893-24ed-4ea1-b670-a626bbc02975",
+    "mountain_id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Beag - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1d151524-a8e8-46b6-9abc-4f4656f7b45c",
+    "mountain_id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Beag - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4ce9b30e-e5bb-4f33-bd02-25ddff193c23",
+    "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben More Coigach - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "bc5d7817-1fc0-4032-a0bc-462bef999eb5",
+    "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben More Coigach - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "04f58008-8c54-4be8-a739-4298e2085ee9",
+    "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben More Coigach - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "dfcf32a4-6a47-4803-b5ee-0e6debf9b6b6",
+    "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben More Coigach - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9cd05f07-503f-43bb-9919-a09a4bf91cd4",
+    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "23a6feb2-0ea7-4108-8348-36fec95ad67b",
+    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "e95a291f-b1c4-4035-b79b-3ab1bb333c0e",
+    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "be3ebed8-480e-430e-9213-e2d74a2bcd72",
+    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  },
+  {
+    "id": "81e8f8fa-ab77-4b5c-9312-2ed2f5f391ff",
+    "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Mòr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0faab83a-901f-4b28-9c42-eb391f284d82",
+    "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Mòr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "74e597e4-e896-4e3e-992a-ffbfcc16a649",
+    "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Mòr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "04df3683-8d4d-4208-800c-a549a823b835",
+    "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Aonach Mòr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "79e033a9-70be-485e-a233-5331750690c4",
+    "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Liathach - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "da520616-0475-4fdd-b122-4e774cd3d543",
+    "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Liathach - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a20e57d8-926f-49f5-91ca-e9c9d70dde89",
+    "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Liathach - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "d7f59636-6395-4761-b46e-6a8ce0036013",
+    "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Liathach - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "250c8a44-5d5c-45c0-b35f-1a61fce6761c",
+    "mountain_id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Foinaven - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ab343242-d2bd-4108-90a5-f10e481ad138",
+    "mountain_id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Foinaven - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "808fad14-484c-40ec-95ee-0df6ff03f43a",
+    "mountain_id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Foinaven - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "b4c15c51-441d-4067-8a5c-1dfa778429ba",
+    "mountain_id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Foinaven - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "3017c6e0-c9db-4ff0-a9cd-c68947e195ef",
+    "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carn Mòr Dearg - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "edda1271-2892-4d48-bd50-e66374ecafd0",
+    "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carn Mòr Dearg - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "ce61d8bf-143c-4c5f-bba8-cd3005226364",
+    "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carn Mòr Dearg - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1afe3c0c-3596-449c-97e2-5cd8d4e9fa84",
+    "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Carn Mòr Dearg - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "9eeef06c-366e-4419-aec6-7e0176d65df4",
+    "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgor an Lochain Uaine - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "16a6d2eb-83f1-4dad-b901-af6c16511739",
+    "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgor an Lochain Uaine - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4e122662-e5e6-4ba9-93bc-6b1b68c8436e",
+    "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgor an Lochain Uaine - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0db258bc-06d9-4f46-9c8a-355baa032883",
+    "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgor an Lochain Uaine - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "0ab5ccfd-3f52-40e4-8b19-4aab7f2461b0",
+    "mountain_id": "f929cff9-910b-437a-a947-e5f447164fef",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Mor - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1d5ca607-9465-421a-9ba6-643c0c90e124",
+    "mountain_id": "f929cff9-910b-437a-a947-e5f447164fef",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Mor - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e8ddb9d7-ccc5-4df4-945f-26e02a6b33c8",
+    "mountain_id": "f929cff9-910b-437a-a947-e5f447164fef",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Mor - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "e472215d-24ad-43d5-ad2e-9c218b26d39f",
+    "mountain_id": "f929cff9-910b-437a-a947-e5f447164fef",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Mor - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "06ea99f8-c4e2-4fcd-bf8e-5523e72ed698",
+    "mountain_id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Liath Mhòr - Mountain view 1",
+    "order": 0,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "a81620ea-6b4c-474f-9bb6-54bd25dbac0a",
+    "mountain_id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Liath Mhòr - Mountain view 2",
+    "order": 1,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "4eb1b2f6-3cd3-47e4-b9d1-890ed8e4d48c",
+    "mountain_id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
+    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Liath Mhòr - Mountain view 3",
+    "order": 2,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "1c3e27ac-0f64-4d38-a03f-cd1d10a463b7",
+    "mountain_id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
+    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Liath Mhòr - Mountain view 4",
+    "order": 3,
+    "created_at": "2025-11-04T00:50:40.030673+00:00"
+  },
+  {
+    "id": "236e5792-37a3-4993-9154-700b925d31c3",
+    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
+    "image_url": "/Ben Nevis 1.jpg",
+    "alt_text": "Ben Nevis with reflection in water at sunset",
+    "order": 0,
+    "created_at": "2025-11-03T19:24:59.528947+00:00"
+  },
+  {
+    "id": "c3bdd577-39ee-4b1a-a709-8e4b82abac8c",
+    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
+    "image_url": "/Ben Nevis 2.jpg",
+    "alt_text": "Ben Nevis snow-capped mountain view from across the loch",
+    "order": 1,
+    "created_at": "2025-11-03T19:25:04.964514+00:00"
+  },
+  {
+    "id": "388027f1-9b82-47d1-a962-52a2b7064b68",
+    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
+    "image_url": "/Ben Nevis 3.jpg",
+    "alt_text": "Ben Nevis scenic view with water reflection",
+    "order": 2,
+    "created_at": "2025-11-03T19:25:10.761075+00:00"
+  },
+  {
+    "id": "2311258d-9892-48e1-accd-d6f8ce76a3b8",
+    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
+    "image_url": "/Ben Nevis 4.jpg",
+    "alt_text": "Ben Nevis panoramic landscape view",
+    "order": 3,
+    "created_at": "2025-11-03T19:25:17.049243+00:00"
+  }
+]
