@@ -9,6 +9,7 @@ const mountainsWithImages = allMountains.map(m => {
   const images = getMountainImages(m.id);
   return {
     ...m,
+    image_url: images[0]?.image_url,
     mountain_images: images
   };
 });

@@ -74,25 +74,41 @@
   {
     "id": "bm1",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Macdui - Second highest UK mountain",
+    "image_url": "/ben macdui 1.jpeg",
+    "alt_text": "Ben Macdui - Second highest UK mountain with Loch Etchachan",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bm2",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://images.pexels.com/photos/1910236/pexels-photo-1910236.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Macdui plateau",
+    "image_url": "/ben macdui 2.jpg",
+    "alt_text": "Ben Macdui hiking trail with mountain views",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bm3",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Macdui Cairngorms",
+    "image_url": "/ben macdui 3.webp",
+    "alt_text": "Ben Macdui winter landscape in the Cairngorms",
     "order": 2,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "br1",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "/Braeriach 1.jpg",
+    "alt_text": "Braeriach - Third highest UK mountain with dramatic corries",
+    "order": 0,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "br2",
+    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
+    "image_url": "/Braeriach 2.jpg",
+    "alt_text": "Braeriach snowy summit plateau in the Cairngorms",
+    "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
