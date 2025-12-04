@@ -24,22 +24,6 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "bn4",
-    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/1574228/pexels-photo-1574228.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis hiking trails",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bn5",
-    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis mountain range",
-    "order": 4,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "sn1",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
     "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -61,22 +45,6 @@
     "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
     "alt_text": "Snowdon hiking path",
     "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sn4",
-    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "https://images.pexels.com/photos/1933316/pexels-photo-1933316.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Snowdon summit trail",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sn5",
-    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Snowdon mountain vista",
-    "order": 4,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
@@ -104,22 +72,6 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "sp4",
-    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "image_url": "https://images.pexels.com/photos/1118877/pexels-photo-1118877.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Scafell Pike Lake District views",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sp5",
-    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "image_url": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Scafell Pike mountain landscape",
-    "order": 4,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "bm1",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
     "image_url": "https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -141,22 +93,6 @@
     "image_url": "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1200",
     "alt_text": "Ben Macdui Cairngorms",
     "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bm4",
-    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Macdui summit",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bm5",
-    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Macdui mountain views",
-    "order": 4,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
@@ -184,22 +120,6 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "hv4",
-    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "image_url": "https://images.pexels.com/photos/1624504/pexels-photo-1624504.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Helvellyn summit views",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "hv5",
-    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "image_url": "https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Helvellyn landscape",
-    "order": 4,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "bl1",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
     "image_url": "https://images.pexels.com/photos/1268102/pexels-photo-1268102.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -221,22 +141,6 @@
     "image_url": "https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&w=1200",
     "alt_text": "Ben Lomond summit approach",
     "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bl4",
-    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Lomond loch views",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bl5",
-    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Lomond landscape",
-    "order": 4,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
@@ -264,22 +168,6 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "cg4",
-    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
-    "image_url": "https://images.pexels.com/photos/1598073/pexels-photo-1598073.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Cairn Gorm highlands",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "cg5",
-    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
-    "image_url": "https://images.pexels.com/photos/1576193/pexels-photo-1576193.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Cairn Gorm mountain range",
-    "order": 4,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "pf1",
     "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
     "image_url": "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -301,22 +189,6 @@
     "image_url": "https://images.pexels.com/photos/1655329/pexels-photo-1655329.jpeg?auto=compress&cs=tinysrgb&w=1200",
     "alt_text": "Pen y Fan summit",
     "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "pf4",
-    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
-    "image_url": "https://images.pexels.com/photos/1657544/pexels-photo-1657544.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Pen y Fan landscape",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "pf5",
-    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
-    "image_url": "https://images.pexels.com/photos/1643113/pexels-photo-1643113.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Pen y Fan Brecon Beacons",
-    "order": 4,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
@@ -344,22 +216,6 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "tf4",
-    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://images.pexels.com/photos/1559117/pexels-photo-1559117.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Tryfan mountain climb",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "tf5",
-    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://images.pexels.com/photos/1933316/pexels-photo-1933316.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Tryfan Snowdonia",
-    "order": 4,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "gg1",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
     "image_url": "https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -381,22 +237,6 @@
     "image_url": "https://images.pexels.com/photos/1598073/pexels-photo-1598073.jpeg?auto=compress&cs=tinysrgb&w=1200",
     "alt_text": "Great Gable mountain path",
     "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "gg4",
-    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "https://images.pexels.com/photos/1576193/pexels-photo-1576193.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Great Gable Lake District",
-    "order": 3,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "gg5",
-    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Great Gable views",
-    "order": 4,
     "created_at": "2025-12-04T00:00:00.000Z"
   }
 ]

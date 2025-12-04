@@ -39,8 +39,8 @@ const defaultImages = [
 ];
 
 const displayImages = mountainImages.length > 0
-  ? mountainImages.map(img => img.image_url).slice(0, 5)
-  : defaultImages.slice(0, 5);
+  ? mountainImages.map(img => img.image_url).slice(0, 3)
+  : defaultImages.slice(0, 3);
 
 const difficultyText = mountain.difficulty_rating || 'Moderate';
 const seasonText = mountain.best_season || 'Spring to Autumn';
