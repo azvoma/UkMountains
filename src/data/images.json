@@ -358,5 +358,37 @@
     "alt_text": "Ben Lawers - Panoramic mountain ridge view",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
+  },
+  {
+    "id": "bab1",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "/beinn_a'_bhuird_1.jpg",
+    "alt_text": "Beinn a' Bhuird - Snow-covered peaks with hiker approaching",
+    "order": 0,
+    "created_at": "2025-12-05T00:00:00.000Z"
+  },
+  {
+    "id": "bab2",
+    "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
+    "image_url": "/beinn_a'_bhuird_2.jpg",
+    "alt_text": "Beinn a' Bhuird - Climbing routes on north face",
+    "order": 1,
+    "created_at": "2025-12-05T00:00:00.000Z"
+  },
+  {
+    "id": "ln1",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "/lochnagar_1.jpg",
+    "alt_text": "Lochnagar - Dramatic corrie with mountain lake",
+    "order": 0,
+    "created_at": "2025-12-05T00:00:00.000Z"
+  },
+  {
+    "id": "ln2",
+    "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
+    "image_url": "/lochnagar_2.jpg",
+    "alt_text": "Lochnagar - Snow-covered cliffs and corrie in winter",
+    "order": 1,
+    "created_at": "2025-12-05T00:00:00.000Z"
   }
 ]
