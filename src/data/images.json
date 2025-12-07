@@ -136,28 +136,20 @@
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
-    "id": "bl1",
+    "id": "blom1",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "https://images.pexels.com/photos/1268102/pexels-photo-1268102.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Lomond - Loch Lomond peak",
+    "image_url": "/ben_lomond_1.jpg",
+    "alt_text": "Ben Lomond - Mountain view from Loch Lomond",
     "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
+    "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
-    "id": "bl2",
+    "id": "blom2",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Lomond mountain trail",
+    "image_url": "/ben_lomond_2.jpg",
+    "alt_text": "Ben Lomond - Summit panoramic view over Loch Lomond",
     "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bl3",
-    "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Lomond summit approach",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
+    "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "cg1",
@@ -508,6 +500,22 @@
     "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
     "image_url": "/whernside_2.jpg",
     "alt_text": "Whernside - Stone wall gateway with panoramic views",
+    "order": 1,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "sng1",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "/sgurr_nan_gillean_1.jpg",
+    "alt_text": "Sgurr nan Gillean - Dramatic Black Cuillin peak on Skye",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "sng2",
+    "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
+    "image_url": "/sgurr_nan_gillean_2.jpg",
+    "alt_text": "Sgurr nan Gillean - Rocky peak and scrambling routes",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   }
