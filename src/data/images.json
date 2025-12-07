@@ -234,26 +234,18 @@
   {
     "id": "gg1",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Great Gable - Lake District icon",
+    "image_url": "/great_gable_1.jpg",
+    "alt_text": "Great Gable - Waswater lake view with iconic peak",
     "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
+    "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "gg2",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "https://images.pexels.com/photos/1612455/pexels-photo-1612455.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Great Gable summit",
+    "image_url": "/great_gable_2.jpg",
+    "alt_text": "Great Gable - Distinctive pyramid shape from valley",
     "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "gg3",
-    "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "https://images.pexels.com/photos/1598073/pexels-photo-1598073.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Great Gable mountain path",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
+    "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "ct1",
@@ -470,5 +462,21 @@
     "alt_text": "Haystacks - Valley view with lakes from summit",
     "order": 1,
     "created_at": "2025-12-06T00:00:00.000Z"
+  },
+  {
+    "id": "cc1",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "/crinkle_crags_1.jpg",
+    "alt_text": "Crinkle Crags - Iconic rocky ridge and five summits",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "cc2",
+    "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
+    "image_url": "/crinkle_crags_2.jpg",
+    "alt_text": "Crinkle Crags - Mountain range with distinctive crinkled peaks",
+    "order": 1,
+    "created_at": "2025-12-07T00:00:00.000Z"
   }
 ]
