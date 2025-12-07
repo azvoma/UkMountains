@@ -574,5 +574,37 @@
     "alt_text": "Liathach - Mountain view from loch with golden light",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "yg1",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "/y_garn_1.jpg",
+    "alt_text": "Y Garn - Aerial view with mountain lakes and ridges",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "yg2",
+    "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
+    "image_url": "/y_garn_2.jpg",
+    "alt_text": "Y Garn - View from summit showing Glyderau lakes",
+    "order": 1,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "ski1",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "/skiddaw_1.jpg",
+    "alt_text": "Skiddaw - View from Derwentwater with boat",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "ski2",
+    "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
+    "image_url": "/skiddaw_2.jpg",
+    "alt_text": "Skiddaw - Distant view of mountain range",
+    "order": 1,
+    "created_at": "2025-12-07T00:00:00.000Z"
   }
 ]
