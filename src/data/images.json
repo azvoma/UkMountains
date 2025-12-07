@@ -638,5 +638,29 @@
     "alt_text": "Elidir Fawr - Rocky summit cairn",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "ff1",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "/fan_fawr_1 copy.jpg",
+    "alt_text": "Fan Fawr - Mountain reflection in still loch",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "ff2",
+    "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
+    "image_url": "/fan_fawr_2 copy.webp",
+    "alt_text": "Fan Fawr - Dramatic cliffs and plateau",
+    "order": 1,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bs1",
+    "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
+    "image_url": "/ben_stack_1.jpg",
+    "alt_text": "Ben Stack - Distinctive pyramidal peak",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
   }
 ]
