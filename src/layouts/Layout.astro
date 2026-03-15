@@ -56,9 +56,32 @@ const imageURL = image.startsWith('http') ? image : new URL(image, Astro.site);
     <meta name="twitter:image" content={imageURL} />
     <meta name="twitter:image:alt" content={title} />
 
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="theme-color" content="#0f766e" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "UK Mountains Directory",
+      "description": "Discover and explore the mountains of the United Kingdom",
+      "url": Astro.site,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${Astro.site}mountains?search={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "UK Mountains Directory",
+        "url": Astro.site
+      }
+    })} />
+
     <link rel="preconnect" href="https://images.pexels.com" />
     <link rel="dns-prefetch" href="https://images.pexels.com" />
     <link rel="preconnect" href="https://api.mapbox.com" />

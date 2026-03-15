@@ -10,6 +10,12 @@ const currentPath = Astro.url.pathname;
         <span class="logo-text">UK Mountains Directory</span>
       </a>
 
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="nav-links">
         <li><a href="/" class={currentPath === '/' ? 'active' : ''} aria-current={currentPath === '/' ? 'page' : undefined}>Home</a></li>
         <li><a href="/about" class={currentPath === '/about' ? 'active' : ''} aria-current={currentPath === '/about' ? 'page' : undefined}>About</a></li>
@@ -19,6 +25,37 @@ const currentPath = Astro.url.pathname;
     </nav>
   </div>
 </header>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target as Node) && !navLinks.contains(e.target as Node)) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+</script>
 
 <style>
   .header {
@@ -35,6 +72,7 @@ const currentPath = Astro.url.pathname;
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-md) 0;
+    position: relative;
   }
 
   .logo {
@@ -46,6 +84,7 @@ const currentPath = Astro.url.pathname;
     color: var(--color-neutral-900);
     text-decoration: none;
     transition: transform var(--transition-fast);
+    z-index: 101;
   }
 
   .logo:focus {
@@ -60,6 +99,37 @@ const currentPath = Astro.url.pathname;
 
   .logo-icon {
     font-size: 2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 101;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-neutral-900);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 
   .nav-links {
@@ -91,26 +161,69 @@ const currentPath = Astro.url.pathname;
 
   .nav-links a.active {
     color: var(--color-primary);
-    background-color: var(--color-primary-light);
     background-color: rgba(15, 118, 110, 0.1);
   }
 
   @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      gap: 0;
+      padding: var(--spacing-md) 0;
+      box-shadow: var(--shadow-md);
+      border-top: 1px solid var(--color-neutral-200);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-links li {
+      width: 100%;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: var(--spacing-md) var(--spacing-lg);
+      font-size: 1rem;
+      border-radius: 0;
+    }
+
+    .logo-text {
+      font-size: 1.1rem;
+    }
+
+    .logo-icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
     .nav-links {
       gap: var(--spacing-md);
     }
 
     .nav-links a {
       padding: var(--spacing-sm);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     .logo-text {
-      font-size: 1.25rem;
-    }
-
-    .logo-icon {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 </style>
