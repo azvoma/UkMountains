@@ -4,7 +4,6 @@ import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoute
 
 export async function getStaticPaths() {
   const mountains = getAllMountains();
-
   return mountains.map((mountain) => ({
     params: { slug: mountain.slug },
   }));
@@ -35,7 +34,6 @@ const defaultImages = [
   'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1200'
 ];
 
 const displayImages = mountainImages.length > 0
@@ -45,11 +43,14 @@ const displayImages = mountainImages.length > 0
 const difficultyText = mountain.difficulty_rating || 'Moderate';
 const seasonText = mountain.best_season || 'Spring to Autumn';
 
+const weatherUrl = `https://www.metoffice.gov.uk/weather/forecast/${mountain.latitude.toFixed(4)},${mountain.longitude.toFixed(4)}`;
+const mountainForecastUrl = `https://www.mountain-forecast.com/`;
+
 const touristAttractionSchema = {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
   "name": `${mountain.name} - One of the Mountains in the UK`,
-  "description": mountain.description || `A complete guide to ${mountain.name}, one of the mountains in the UK, including routes, maps, difficulty, and tips for climbers.`,
+  "description": mountain.description || `A complete guide to ${mountain.name}, one of the mountains in the UK.`,
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": mountain.latitude,
@@ -72,7 +73,7 @@ const faqSchemaData = {
       "name": `Is ${mountain.name} one of the best mountains to climb UK?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Yes, ${mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, ${mountain.height_meters}m elevation, and ${difficultyText.toLowerCase()} difficulty level, making it accessible to ${mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various skill levels'}.`
+        "text": `Yes, ${mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, ${mountain.height_meters}m elevation, and ${difficultyText.toLowerCase()} difficulty level.`
       }
     },
     {
@@ -80,23 +81,7 @@ const faqSchemaData = {
       "name": `What level of difficulty is ${mountain.name}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `${mountain.name} has a difficulty rating of ${difficultyText}. ${mountainRoutes.length > 0 ? 'Multiple routes are available ranging from easier to more challenging options.' : 'The mountain offers various routes suitable for different experience levels.'}`
-      }
-    },
-    {
-      "@type": "Question",
-      "name": `Where can I see ${mountain.name} on a map?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `You can view ${mountain.name} on our interactive map showing its location in ${mountain.region}. The mountain is positioned at coordinates ${mountain.latitude.toFixed(4)}°N, ${Math.abs(mountain.longitude).toFixed(4)}°W, with detailed route maps and nearby geographical features.`
-      }
-    },
-    {
-      "@type": "Question",
-      "name": `Are there family-friendly routes on ${mountain.name}?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `${mountain.suitable_for && mountain.suitable_for.includes('Families') ? 'Yes, ' + mountain.name + ' has family-friendly routes suitable for those with children, particularly during ' + seasonText.toLowerCase() + ' when conditions are most favorable.' : 'Route suitability depends on experience level and weather conditions. Always assess your group\'s capabilities and check current conditions before setting out.'}`
+        "text": `${mountain.name} has a difficulty rating of ${difficultyText}. ${mountainRoutes.length > 0 ? 'Multiple routes are available.' : 'Various routes suit different experience levels.'}`
       }
     },
     {
@@ -104,7 +89,7 @@ const faqSchemaData = {
       "name": `When is the best time to climb ${mountain.name}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `The best season to climb ${mountain.name} is ${seasonText}. Weather conditions can vary significantly, so always check the forecast before your visit and be prepared for changing mountain weather.`
+        "text": `The best season to climb ${mountain.name} is ${seasonText}. Always check the forecast before visiting.`
       }
     }
   ]
@@ -113,19 +98,19 @@ const faqSchemaData = {
 
 <Layout
   title={`Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`}
-  description={`Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips. Discover the best mountains to climb in the UK for all skill levels.`}
+  description={`Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`}
   image={displayImages[0]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(touristAttractionSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchemaData)} />
 
-  <!-- 1. HERO SECTION -->
+  <!-- HERO -->
   <div class="hero-section">
     <div class="hero-image">
       <img src={displayImages[0]} alt={`${mountain.name} Summit`} />
       <div class="hero-overlay"></div>
     </div>
-    <div class="hero-content container">
+    <div class="hero-content page-wrap">
       <div class="breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
@@ -133,649 +118,384 @@ const faqSchemaData = {
         <span>/</span>
         <span>{mountain.name}</span>
       </div>
-      <h1>Explore One of the Mountains in the UK: {mountain.name} Guide</h1>
+      <h1>{mountain.name}</h1>
       {mountain.national_park && <div class="hero-subtitle">{mountain.national_park}</div>}
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="stat-value">{mountain.height_meters}m</span>
-          <span class="stat-label">Height ({mountain.height_feet}ft)</span>
+          <span class="stat-num">{mountain.height_meters}m</span>
+          <span class="stat-lbl">Elevation</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">{mountain.height_feet}ft</span>
+          <span class="stat-lbl">In Feet</span>
         </div>
         {mountain.difficulty_rating && (
           <div class="hero-stat">
-            <span class={`difficulty-badge difficulty-${mountain.difficulty_rating.toLowerCase()}`}>
-              {mountain.difficulty_rating}
-            </span>
-            <span class="stat-label">Difficulty</span>
+            <span class={`difficulty-badge difficulty-${mountain.difficulty_rating.toLowerCase()}`}>{mountain.difficulty_rating}</span>
+            <span class="stat-lbl">Difficulty</span>
+          </div>
+        )}
+        {classifications.length > 0 && (
+          <div class="hero-stat">
+            <span class="stat-num">{classifications[0]}</span>
+            <span class="stat-lbl">Classification</span>
           </div>
         )}
       </div>
-
-      <div class="quick-stats">
-        {mountain.time_to_summit && (
-          <div class="quick-stat">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <span>{mountain.time_to_summit}</span>
-          </div>
-        )}
-        {mountain.route_distance && (
-          <div class="quick-stat">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-            <span>{mountain.route_distance}</span>
-          </div>
-        )}
-        {mountain.best_season && (
-          <div class="quick-stat">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M12 2v2"></path>
-              <path d="M12 20v2"></path>
-              <path d="m4.93 4.93 1.41 1.41"></path>
-              <path d="m17.66 17.66 1.41 1.41"></path>
-              <path d="M2 12h2"></path>
-              <path d="M20 12h2"></path>
-              <path d="m6.34 17.66-1.41 1.41"></path>
-              <path d="m19.07 4.93-1.41 1.41"></path>
-            </svg>
-            <span>{mountain.best_season}</span>
-          </div>
-        )}
-        {mountain.popular_route_name && (
-          <div class="quick-stat">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>{mountain.popular_route_name}</span>
-          </div>
-        )}
-        <div class="quick-stat">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
-          <span>{mountain.latitude.toFixed(4)}°N, {Math.abs(mountain.longitude).toFixed(4)}°W</span>
-        </div>
-      </div>
-
       <div class="hero-actions">
-        <a href="#routes" class="btn btn-primary">View Routes</a>
-        <a href={`https://www.metoffice.gov.uk/weather/forecast/${mountain.parking_postcode || mountain.grid_reference}`} target="_blank" rel="noopener" class="btn btn-secondary">Check Weather</a>
+        <a href="#routes" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          View Routes
+        </a>
+        <a href={weatherUrl} target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          Check Weather
+        </a>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <!-- 2. MOUNTAIN OVERVIEW -->
-    {mountain.description && (
-      <section class="section-overview">
-        <div class="section-content">
-          <h2>Introduction to {mountain.name}</h2>
-          <p class="lead">
-            {mountain.name} is one of the notable mountains in the UK, known for its unique landscape, scenic routes, and {mountain.famous_for ? mountain.famous_for.toLowerCase() : 'natural beauty'}. Whether you're searching for popular mountains to climb UK, planning your first summit, or exploring the best mountains to climb UK, this guide covers everything you need to know to plan your adventure.
-          </p>
-          <p class="lead">{mountain.description}</p>
+  <!-- PAGE BODY: sidebar + main -->
+  <div class="page-wrap">
+    <div class="page-body">
 
-          {mountain.famous_for && (
-            <div class="famous-for">
-              <h3>Why This Mountain Is Popular</h3>
-              <p>This peak is regularly listed among the best mountains to climb UK thanks to its {mountain.famous_for.toLowerCase()}, well-marked routes suitable for different skill levels, and {mountain.nearby_attractions && mountain.nearby_attractions.length > 0 ? 'nearby facilities and attractions' : 'natural setting'}.</p>
-            </div>
-          )}
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
 
-          {mountain.landscape_description && (
-            <div class="landscape-info">
-              <h3>Landscape & Terrain</h3>
-              <p>{mountain.landscape_description}</p>
-            </div>
-          )}
-
-          {mountain.suitable_for && mountain.suitable_for.length > 0 && (
-            <div class="suitable-for">
-              <h3>Suitable For</h3>
-              <div class="tag-list">
-                {mountain.suitable_for.map((audience: string) => (
-                  <span class="tag">{audience}</span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {mountain.history && (
-            <div class="history-section">
-              <h3>History</h3>
-              <p>{mountain.history}</p>
-            </div>
-          )}
-        </div>
-      </section>
-    )}
-
-    <!-- 2.5 GALLERY SECTION -->
-    <section class="gallery-section">
-      <h2>Photo Gallery</h2>
-      <div class="gallery-row">
-        {displayImages.map((imageUrl, index) => (
-          <div class="gallery-item">
-            <img
-              src={imageUrl}
-              alt={`${mountain.name} - View ${index + 1}`}
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- 3. KEY INFORMATION GRID -->
-    <section class="key-information">
-      <h2>Key Mountain Facts & Map</h2>
-      <div class="info-grid-layout">
-        <!-- Location & Map -->
-        <div class="info-card">
-          <h3>Location & Map</h3>
-          <div class="map-container">
-            <img
-              src={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/pin-s+0f766e(${mountain.longitude},${mountain.latitude})/${mountain.longitude},${mountain.latitude},11,0/600x400@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw`}
-              alt={`Map showing location of ${mountain.name}`}
-              loading="lazy"
-            />
-          </div>
-          <dl>
-            <dt>Region:</dt>
+        <!-- Quick Facts -->
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Quick Facts
+          </h3>
+          <dl class="fact-list">
+            <dt>Height</dt>
+            <dd>{mountain.height_meters}m / {mountain.height_feet}ft</dd>
+            <dt>Region</dt>
             <dd>{mountain.region}{mountain.county ? `, ${mountain.county}` : ''}</dd>
-            {mountain.nearest_town && (
-              <>
-                <dt>Nearest Town:</dt>
-                <dd>{mountain.nearest_town}</dd>
-              </>
-            )}
-            {mountain.parking_postcode && (
-              <>
-                <dt>Postcode for Sat-Nav:</dt>
-                <dd class="postcode">{mountain.parking_postcode}</dd>
-              </>
-            )}
-            {mountain.grid_reference && (
-              <>
-                <dt>OS Grid Reference:</dt>
-                <dd>{mountain.grid_reference}</dd>
-              </>
-            )}
+            {mountain.area && <><dt>Area</dt><dd>{mountain.area}</dd></>}
+            {mountain.grid_reference && <><dt>OS Grid Ref</dt><dd class="mono">{mountain.grid_reference}</dd></>}
+            {mountain.prominence_meters && <><dt>Prominence</dt><dd>{mountain.prominence_meters}m</dd></>}
+            {mountain.gaelic_name && <><dt>Gaelic Name</dt><dd>{mountain.gaelic_name}</dd></>}
+            {mountain.welsh_name && <><dt>Welsh Name</dt><dd>{mountain.welsh_name}</dd></>}
+            {mountain.parent_range && <><dt>Range</dt><dd>{mountain.parent_range}</dd></>}
+            <dt>Coordinates</dt>
+            <dd class="mono">{mountain.latitude.toFixed(4)}°N, {Math.abs(mountain.longitude).toFixed(4)}°W</dd>
           </dl>
         </div>
 
-        <!-- Weather & Conditions -->
-        <div class="info-card">
-          <h3>Weather & Conditions</h3>
-          <div class="weather-intro">
-            <p>Mountain weather can change rapidly and dramatically. Always check the forecast before setting out and be prepared for conditions to be significantly different at the summit compared to the base.</p>
+        <!-- Classifications -->
+        {classifications.length > 0 && (
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+              Classifications
+            </h3>
+            <div class="tag-group">
+              {classifications.map(cls => (
+                <span class="cls-tag">{cls}</span>
+              ))}
+            </div>
           </div>
-          <div class="weather-widget">
-            <a href={`https://www.metoffice.gov.uk/weather/forecast/${mountain.parking_postcode || mountain.grid_reference}`} target="_blank" rel="noopener" class="btn btn-small">View Live Weather Forecast</a>
-            <a href={`https://www.mountain-forecast.com/`} target="_blank" rel="noopener" class="btn btn-small">Mountain Weather Forecast</a>
-          </div>
+        )}
+
+        <!-- Weather Links -->
+        <div class="sidebar-card sidebar-weather">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            Weather
+          </h3>
           {mountain.best_season && (
-            <div class="season-info">
-              <strong>Best Season:</strong> {mountain.best_season}
-            </div>
+            <p class="season-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m4.93-16.93 1.41 1.41M5.66 18.34l1.41 1.41M20 12h2M2 12h2m15.07 7.07 1.41-1.41M5.66 5.66 4.25 4.25"/></svg>
+              Best: {mountain.best_season}
+            </p>
           )}
-          <div class="weather-tips">
-            <h4>Weather Tips:</h4>
-            <ul>
-              <li>Summit temperatures are typically 5-10°C colder than valley floor</li>
-              <li>Wind chill can make it feel significantly colder</li>
-              <li>Visibility can drop to near zero in mist or cloud</li>
-              <li>Always carry waterproofs, warm layers, and emergency shelter</li>
-              <li>Be prepared to turn back if conditions deteriorate</li>
-            </ul>
-          </div>
-          {mountain.weather_warnings && (
-            <div class="weather-warning">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                <path d="M12 9v4"/>
-                <path d="M12 17h.01"/>
-              </svg>
-              <p>{mountain.weather_warnings}</p>
-            </div>
-          )}
+          <a href={weatherUrl} target="_blank" rel="noopener" class="weather-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            Met Office Forecast
+          </a>
+          <a href={mountainForecastUrl} target="_blank" rel="noopener" class="weather-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Mountain Forecast
+          </a>
+          <div class="weather-note">Summit temps are typically 5–10°C colder than the valley. Always carry waterproofs and warm layers.</div>
         </div>
 
-        <!-- Parking & Access -->
-        <div class="info-card">
-          <h3>Parking & Access</h3>
-          <div class="parking-intro">
-            <p>Plan your arrival early, especially on weekends and during peak season, as car parks fill quickly. Always check parking restrictions and fees before you travel.</p>
+        <!-- Map -->
+        <div class="sidebar-card sidebar-map">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+            Location Map
+          </h3>
+          <div class="map-thumb">
+            <img
+              src={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/pin-s+0f766e(${mountain.longitude},${mountain.latitude})/${mountain.longitude},${mountain.latitude},11,0/400x280@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw`}
+              alt={`Map of ${mountain.name}`}
+              loading="lazy"
+            />
           </div>
           {mountain.parking_postcode && (
-            <div class="parking-detail">
-              <strong>Parking Postcode:</strong>
-              <span class="postcode">{mountain.parking_postcode}</span>
-              <small>For sat-nav and route planning</small>
-            </div>
+            <p class="parking-info">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Parking: <span class="mono">{mountain.parking_postcode}</span>
+            </p>
           )}
-          {mountain.parking_fees && (
-            <div class="parking-detail">
-              <strong>Parking Fees:</strong> {mountain.parking_fees}
-            </div>
-          )}
-          <div class="parking-tips">
-            <h4>Parking Tips:</h4>
-            <ul>
-              <li>Arrive before 9am on busy days to secure parking</li>
-              <li>Have coins/card ready for pay-and-display machines</li>
-              <li>Don't leave valuables visible in your vehicle</li>
-              <li>Park considerately and don't block access roads</li>
-              <li>Note your parking location for your return</li>
+        </div>
+
+        <!-- Nearby Places -->
+        {mountain.nearby_places && mountain.nearby_places.length > 0 && (
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Nearby Places
+            </h3>
+            <ul class="nearby-list">
+              {mountain.nearby_places.map((place: string) => (
+                <li>{place}</li>
+              ))}
             </ul>
           </div>
-          {mountain.toilets_available && (
-            <div class="facility-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14"/>
-                <path d="M12 5v14"/>
-              </svg>
-              Toilets Available
-            </div>
-          )}
-          {mountain.visitor_centre && (
-            <div class="parking-detail">
-              <strong>Visitor Centre:</strong> {mountain.visitor_centre}
-            </div>
-          )}
-          {mountain.public_transport && (
-            <div class="parking-detail">
-              <strong>Public Transport:</strong> {mountain.public_transport}
-            </div>
-          )}
-          {mountain.facilities && mountain.facilities.length > 0 && (
-            <div class="facilities-list">
-              <strong>Available Facilities:</strong>
-              <ul>
-                {mountain.facilities.map((facility: string) => (
-                  <li>{facility}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          <div class="emergency-contact">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <strong>Emergency: 999 or 112</strong> (Ask for Police, then Mountain Rescue)
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3.5 INTERESTING FACTS SECTION -->
-    {mountain.fun_facts && mountain.fun_facts.length > 0 && (
-      <section class="interesting-facts-section">
-        <h2>10 Interesting Facts About {mountain.name}</h2>
-        <ul class="facts-list">
-          {mountain.fun_facts.map((fact: string) => (
-            <li>{fact}</li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    <!-- 3.6 GUIDE TO WALKING SECTION -->
-    {mountain.walking_guide && (
-      <section class="walking-guide-section">
-        <h2>A Guide to Walking {mountain.name}</h2>
-        <div class="guide-content">
-          <p>{mountain.walking_guide}</p>
-        </div>
-      </section>
-    )}
-
-    <!-- 4. TRAIL ROUTES SECTION -->
-    {mountainRoutes.length > 0 && (
-      <section id="routes" class="routes-section">
-        <h2>Hiking & Climbing Routes for {mountain.name}</h2>
-        <p class="section-intro">Choose from multiple routes based on your experience and fitness level. Each route offers unique highlights and challenges for those exploring the mountains in the UK.</p>
-        <div class="routes-container">
-          {mountainRoutes.map((route: any) => (
-            <div class="route-card-detailed">
-              <div class="route-header">
-                <h3>{route.name}</h3>
-                {route.difficulty && (
-                  <span class={`difficulty-badge difficulty-${route.difficulty.toLowerCase()}`}>
-                    {route.difficulty}
-                  </span>
-                )}
-              </div>
-
-              {route.description && <p class="route-description">{route.description}</p>}
-
-              <div class="route-stats-grid">
-                {route.distance_km && (
-                  <div class="stat-box">
-                    <span class="stat-label">Distance</span>
-                    <span class="stat-value">{route.distance_km} km</span>
-                    <span class="stat-sub">({route.distance_miles} mi)</span>
-                  </div>
-                )}
-                {route.estimated_time_hours && (
-                  <div class="stat-box">
-                    <span class="stat-label">Duration</span>
-                    <span class="stat-value">{route.estimated_time_hours} hrs</span>
-                  </div>
-                )}
-                {route.ascent_meters && (
-                  <div class="stat-box">
-                    <span class="stat-label">Elevation Gain</span>
-                    <span class="stat-value">{route.ascent_meters} m</span>
-                  </div>
-                )}
-                {route.user_rating && (
-                  <div class="stat-box">
-                    <span class="stat-label">Rating</span>
-                    <span class="stat-value">{'⭐'.repeat(Math.round(route.user_rating))}</span>
-                  </div>
-                )}
-              </div>
-
-              {route.starting_point && (
-                <div class="route-detail">
-                  <strong>Starting Point:</strong> {route.starting_point}
-                  {route.postcode && <span class="postcode"> ({route.postcode})</span>}
-                </div>
-              )}
-
-              {route.highlights && route.highlights.length > 0 && (
-                <div class="route-highlights">
-                  <strong>Highlights:</strong>
-                  <div class="highlight-tags">
-                    {route.highlights.map((highlight: string) => (
-                      <span class="highlight-tag">{highlight}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {route.route_notes && (
-                <div class="route-notes">
-                  <strong>Route Notes:</strong> {route.route_notes}
-                </div>
-              )}
-
-              {route.seasonal_notes && (
-                <div class="seasonal-notes">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                  </svg>
-                  <strong>Seasonal Notes:</strong> {route.seasonal_notes}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-    )}
-
-    <!-- 4.5 SAFETY TIPS SECTION -->
-    <section class="safety-tips-section">
-      <h2>Safety Tips for Climbing {mountain.name}</h2>
-      <p class="section-intro">Stay safe while climbing one of the mountains in the UK with these essential safety guidelines:</p>
-      <div class="safety-grid">
-        <div class="safety-tip-card">
-          <h3>Weather Preparation</h3>
-          <p>Always check weather forecasts before setting out. Mountain weather can change rapidly, and summit conditions are typically 5-10°C colder than valley floor with significant wind chill.</p>
-        </div>
-        <div class="safety-tip-card">
-          <h3>Essential Equipment</h3>
-          <p>Carry maps, compass or GPS, water, food, first aid kit, whistle, torch, emergency shelter, and appropriate clothing layers including waterproofs.</p>
-        </div>
-        <div class="safety-tip-card">
-          <h3>Route Planning</h3>
-          <p>Let someone know your route plan and expected return time. Stick to marked paths and be prepared to turn back if conditions deteriorate.</p>
-        </div>
-        <div class="safety-tip-card">
-          <h3>Emergency Contact</h3>
-          <p>In case of emergency, dial 999 or 112 and ask for Police, then Mountain Rescue. Know your location using grid reference or GPS coordinates.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. THINGS TO DO -->
-    {mountain.activities && Object.keys(mountain.activities).length > 0 && (
-      <section class="things-to-do">
-        <h2>Activities & Nearby Attractions</h2>
-        <div class="activities-grid">
-          {mountain.activities.hiking && (
-            <div class="activity-card">
-              <div class="activity-icon">🥾</div>
-              <h3>Hiking & Scrambling</h3>
-              <p>{mountain.activities.hiking}</p>
-            </div>
-          )}
-
-          {mountain.photography_spots && mountain.photography_spots.length > 0 && (
-            <div class="activity-card">
-              <div class="activity-icon">📸</div>
-              <h3>Photography Spots</h3>
-              <ul>
-                {mountain.photography_spots.map((spot: string) => (
-                  <li>{spot}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {mountain.wildlife && mountain.wildlife.length > 0 && (
-            <div class="activity-card">
-              <div class="activity-icon">🦅</div>
-              <h3>Wildlife Watching</h3>
-              <ul>
-                {mountain.wildlife.map((animal: string) => (
-                  <li>{animal}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {mountain.activities.biking && (
-            <div class="activity-card">
-              <div class="activity-icon">🚵</div>
-              <h3>Mountain Biking</h3>
-              <p>{mountain.activities.biking}</p>
-            </div>
-          )}
-
-          {mountain.winter_activities && mountain.winter_activities.length > 0 && (
-            <div class="activity-card">
-              <div class="activity-icon">⛷️</div>
-              <h3>Winter Activities</h3>
-              <ul>
-                {mountain.winter_activities.map((activity: string) => (
-                  <li>{activity}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {mountain.camping_info && (
-            <div class="activity-card">
-              <div class="activity-icon">🏕️</div>
-              <h3>Camping & Bothies</h3>
-              <p>{mountain.camping_info}</p>
-            </div>
-          )}
-        </div>
-      </section>
-    )}
-
-    <!-- 6. REVIEWS & COMMUNITY (Placeholder for future implementation) -->
-    <section class="reviews-section">
-      <h2>Reviews & Community Insights</h2>
-      <div class="reviews-placeholder">
-        <p>Share your experience of climbing {mountain.name}!</p>
-        <p>Reviews and ratings coming soon.</p>
-      </div>
-    </section>
-
-    <!-- 8. NEARBY ATTRACTIONS -->
-    {(mountain.nearby_attractions && mountain.nearby_attractions.length > 0) || (mountain.nearby_places && mountain.nearby_places.length > 0) || (mountain.restaurants && mountain.restaurants.length > 0) ? (
-      <section class="nearby-section">
-        <h2>Nearby Attractions</h2>
-        <div class="nearby-grid">
-          {mountain.nearby_attractions && Array.isArray(mountain.nearby_attractions) && mountain.nearby_attractions.length > 0 && (
-            mountain.nearby_attractions.map((attraction: any) => (
-              <div class="nearby-card">
-                <h3>{attraction.name}</h3>
-                {attraction.type && <span class="attraction-type">{attraction.type}</span>}
-                {attraction.description && <p>{attraction.description}</p>}
-                {attraction.distance && <span class="distance">{attraction.distance}</span>}
-              </div>
-            ))
-          )}
-
-          {mountain.nearby_places && mountain.nearby_places.length > 0 && (
-            <div class="nearby-card">
-              <h3>Nearby Places</h3>
-              <ul>
-                {mountain.nearby_places.map((place: string) => (
-                  <li>{place}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {mountain.restaurants && mountain.restaurants.length > 0 && (
-            <div class="nearby-card">
-              <h3>Nearby Dining</h3>
-              <ul>
-                {mountain.restaurants.map((restaurant: string) => (
-                  <li>{restaurant}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </section>
-    ) : null}
-
-    <!-- 9. SEO-OPTIMIZED FAQs SECTION -->
-    <section class="faqs-section">
-      <h2>Frequently Asked Questions About {mountain.name}</h2>
-      <div class="faqs-container">
-        <details class="faq-item-detail">
-          <summary>Is {mountain.name} one of the best mountains to climb UK?</summary>
-          <p>
-            Yes, {mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, {mountain.height_meters}m elevation, and {difficultyText.toLowerCase()} difficulty level, making it accessible to {mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various skill levels'}. {mountain.famous_for ? `The mountain is particularly known for ${mountain.famous_for.toLowerCase()}.` : ''}
-          </p>
-        </details>
-
-        <details class="faq-item-detail">
-          <summary>What level of difficulty is {mountain.name}?</summary>
-          <p>
-            {mountain.name} has a difficulty rating of {difficultyText}. {mountainRoutes.length > 0 ? `We provide detailed information about ${mountainRoutes.length} different route${mountainRoutes.length > 1 ? 's' : ''} ranging from easier to more challenging options, so you can choose the path that best suits your experience level.` : 'The mountain offers various routes suitable for different experience levels.'} {mountain.time_to_summit ? `Average time to summit is ${mountain.time_to_summit}.` : ''}
-          </p>
-        </details>
-
-        <details class="faq-item-detail">
-          <summary>Where can I see {mountain.name} on a map?</summary>
-          <p>
-            You can view {mountain.name} on our interactive map showing its location in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}. The mountain is positioned at coordinates {mountain.latitude.toFixed(4)}°N, {Math.abs(mountain.longitude).toFixed(4)}°W, with detailed route maps and nearby geographical features. {mountain.parking_postcode ? `Use postcode ${mountain.parking_postcode} for sat-nav directions to the parking area.` : ''}
-          </p>
-        </details>
-
-        <details class="faq-item-detail">
-          <summary>Are there family-friendly routes on {mountain.name}?</summary>
-          <p>
-            {mountain.suitable_for && mountain.suitable_for.includes('Families')
-              ? `Yes, ${mountain.name} has family-friendly routes suitable for those with children, particularly during ${seasonText.toLowerCase()} when conditions are most favorable. ${mountain.toilets_available ? 'Toilet facilities are available at the base.' : 'Plan accordingly as facilities may be limited.'}`
-              : `Route suitability depends on experience level, weather conditions, and your group's capabilities. ${mountain.difficulty_rating === 'Easy' || mountain.difficulty_rating === 'Moderate' ? 'Some routes may be suitable for families with older children who have hillwalking experience.' : 'This mountain is generally recommended for experienced hikers.'} Always assess your group's abilities and check current conditions before setting out.`}
-          </p>
-        </details>
-
-        <details class="faq-item-detail">
-          <summary>When is the best time to climb {mountain.name}?</summary>
-          <p>
-            The best season to climb {mountain.name} is {seasonText}. Weather conditions can vary significantly throughout the year, so always check the forecast before your visit and be prepared for changing mountain weather. {mountain.weather_warnings ? `Please note: ${mountain.weather_warnings}` : 'Summit temperatures are typically 5-10°C colder than valley floor, and wind chill can make it feel significantly colder.'}
-          </p>
-        </details>
-
-        {mountain.parking_postcode && (
-          <details class="faq-item-detail">
-            <summary>Where should I park for {mountain.name}?</summary>
-            <p>
-              The recommended parking postcode for {mountain.name} is {mountain.parking_postcode}. {mountain.parking_fees ? `Parking fees apply: ${mountain.parking_fees}.` : 'Check for parking restrictions and fees before your visit.'} {mountain.nearest_town ? `The nearest town is ${mountain.nearest_town}, where you can find additional facilities.` : ''} Arrive early on weekends and during peak season as car parks fill quickly.
-            </p>
-          </details>
         )}
 
-        {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.length > 0 && (
-          mountain.faqs.map((faq: any) => (
-            <details class="faq-item-detail">
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
+        <!-- Emergency -->
+        <div class="sidebar-card sidebar-emergency">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            Emergency
+          </h3>
+          <p class="emergency-text">Dial <strong>999 or 112</strong> — ask for Police, then Mountain Rescue</p>
+        </div>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+
+        <!-- Overview -->
+        {mountain.description && (
+          <section class="content-section">
+            <h2>About {mountain.name}</h2>
+            <p class="lead">{mountain.description}</p>
+            {mountain.history && (
+              <details class="expand-block">
+                <summary>History & Background</summary>
+                <p>{mountain.history}</p>
+              </details>
+            )}
+          </section>
+        )}
+
+        <!-- Gallery -->
+        <section class="content-section gallery-section">
+          <div class="gallery-row">
+            {displayImages.map((imageUrl, index) => (
+              <div class="gallery-item">
+                <img src={imageUrl} alt={`${mountain.name} – view ${index + 1}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Interesting Facts -->
+        {mountain.fun_facts && mountain.fun_facts.length > 0 && (
+          <section class="content-section">
+            <h2>Interesting Facts</h2>
+            <ul class="facts-list">
+              {mountain.fun_facts.map((fact: string) => (
+                <li>{fact}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <!-- Walking Guide -->
+        {mountain.walking_guide && (
+          <section class="content-section">
+            <h2>Walking Guide</h2>
+            <p class="guide-text">{mountain.walking_guide}</p>
+          </section>
+        )}
+
+        <!-- Routes -->
+        {mountainRoutes.length > 0 && (
+          <section id="routes" class="content-section">
+            <h2>Hiking Routes</h2>
+            <p class="section-intro">Choose a route based on your experience and fitness level.</p>
+            <div class="routes-list">
+              {mountainRoutes.map((route: any) => (
+                <div class="route-card">
+                  <div class="route-header">
+                    <h3>{route.name}</h3>
+                    {route.difficulty && (
+                      <span class={`difficulty-badge difficulty-${route.difficulty.toLowerCase()}`}>{route.difficulty}</span>
+                    )}
+                  </div>
+                  {route.description && <p class="route-desc">{route.description}</p>}
+                  <div class="route-stats">
+                    {route.distance_km && (
+                      <div class="rstat">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <span>{route.distance_km} km ({route.distance_miles} mi)</span>
+                      </div>
+                    )}
+                    {route.estimated_time_hours && (
+                      <div class="rstat">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>{route.estimated_time_hours} hrs</span>
+                      </div>
+                    )}
+                    {route.ascent_meters && (
+                      <div class="rstat">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <span>{route.ascent_meters}m ascent</span>
+                      </div>
+                    )}
+                  </div>
+                  {route.starting_point && (
+                    <div class="route-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Start: {route.starting_point}{route.postcode ? ` (${route.postcode})` : ''}
+                    </div>
+                  )}
+                  {route.route_notes && <p class="route-notes">{route.route_notes}</p>}
+                  {route.seasonal_notes && (
+                    <p class="seasonal-note">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg>
+                      {route.seasonal_notes}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Safety Tips -->
+        <section class="content-section">
+          <h2>Safety Tips</h2>
+          <div class="safety-grid">
+            <div class="safety-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              <div>
+                <strong>Weather</strong>
+                <p>Always check forecasts before setting out. Summit conditions differ dramatically from valley level.</p>
+              </div>
+            </div>
+            <div class="safety-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <div>
+                <strong>Equipment</strong>
+                <p>Carry map, compass/GPS, water, food, first aid, whistle, torch, and waterproofs.</p>
+              </div>
+            </div>
+            <div class="safety-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Route Planning</strong>
+                <p>Tell someone your route and return time. Stick to marked paths. Be ready to turn back.</p>
+              </div>
+            </div>
+            <div class="safety-card safety-card--emergency">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12 19.79 19.79 0 0 1 1.12 3.33A2 2 0 0 1 3.1 1.12h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+              <div>
+                <strong>Emergency: 999 / 112</strong>
+                <p>Ask for Police, then Mountain Rescue. Know your grid reference.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nearby & Dining -->
+        {(mountain.restaurants && mountain.restaurants.length > 0) && (
+          <section class="content-section">
+            <h2>Nearby Dining</h2>
+            <ul class="nearby-inline-list">
+              {mountain.restaurants.map((r: string) => <li>{r}</li>)}
+            </ul>
+          </section>
+        )}
+
+        <!-- FAQs -->
+        <section class="content-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faqs">
+            <details class="faq-item">
+              <summary>Is {mountain.name} one of the best mountains to climb in the UK?</summary>
+              <p>Yes, {mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, {mountain.height_meters}m elevation, and {difficultyText.toLowerCase()} difficulty level.</p>
             </details>
-          ))
-        )}
-      </div>
-    </section>
-
-    <!-- 10. SEO FOOTER INFORMATION -->
-    <section class="seo-footer">
-      <div class="seo-summary">
-        <h2>Why {mountain.name} Should Be on Your List</h2>
-        <p>
-          Whether you're chasing the best mountains to climb UK, working through a summit challenge, or simply exploring new landscapes, {mountain.name} offers a rewarding climb for {mountain.suitable_for && mountain.suitable_for.length > 0 ? mountain.suitable_for.join(', ').toLowerCase() : 'various experience levels'}.
-        </p>
-        <p>
-          This {mountain.height_meters}m ({mountain.height_feet}ft) {mountain.classification || 'mountain'} is one of the notable mountains in the UK, located in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}.
-          {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}, ` : ''}
-          {mountain.name} attracts hikers, climbers, {mountain.suitable_for && mountain.suitable_for.includes('Families') ? 'families, ' : ''}and photographers thanks to its {mountain.landscape_description ? 'distinctive terrain' : 'natural beauty'} and panoramic views.
-        </p>
-        <p>
-          With {mountainRoutes.length > 0 ? `${mountainRoutes.length} documented route${mountainRoutes.length > 1 ? 's' : ''}` : 'multiple routes'}, comprehensive maps, and detailed safety information, our guide helps you prepare for a successful and safe ascent of one of the mountains in the UK.
-        </p>
-      </div>
-
-      {mountain.related_mountains && mountain.related_mountains.length > 0 && (
-        <div class="related-mountains">
-          <h3>Similar Mountains You Might Like</h3>
-          <div class="related-links">
-            {mountain.related_mountains.map((slug: string) => (
-              <a href={`/mountain/${slug}`} class="related-link">{slug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</a>
+            <details class="faq-item">
+              <summary>What difficulty level is {mountain.name}?</summary>
+              <p>{mountain.name} has a difficulty rating of {difficultyText}. {mountainRoutes.length > 0 ? `There are ${mountainRoutes.length} documented route${mountainRoutes.length > 1 ? 's' : ''} to choose from.` : 'Various routes are available for different experience levels.'}</p>
+            </details>
+            <details class="faq-item">
+              <summary>When is the best time to climb {mountain.name}?</summary>
+              <p>The best season is {seasonText}. Summit temperatures are typically 5–10°C colder than the valley, and conditions can change rapidly.</p>
+            </details>
+            {mountain.parking_postcode && (
+              <details class="faq-item">
+                <summary>Where should I park for {mountain.name}?</summary>
+                <p>Use postcode {mountain.parking_postcode} for sat-nav. Arrive early on weekends — car parks fill quickly during peak season.</p>
+              </details>
+            )}
+            {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.map((faq: any) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
           </div>
-        </div>
-      )}
+        </section>
 
-      {classifications.length > 0 && (
-        <div class="classifications-footer">
-          <strong>Classifications:</strong>
-          <div class="classification-tags">
-            {classifications.map(cls => (
-              <span class="classification-tag">{cls}</span>
-            ))}
-          </div>
-        </div>
-      )}
-    </section>
+        <!-- SEO Summary -->
+        <section class="content-section seo-section">
+          <h2>Why Visit {mountain.name}?</h2>
+          <p>
+            {mountain.name} stands at {mountain.height_meters}m ({mountain.height_feet}ft) in {mountain.region}{mountain.county ? `, ${mountain.county}` : ''}.
+            {classifications.length > 0 ? ` Classified as a ${classifications.join(' and ')}, it` : ' It'} is a rewarding destination for hikers, climbers, and photographers.
+            {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}.` : ''}
+          </p>
+          {mountain.related_mountains && mountain.related_mountains.length > 0 && (
+            <div class="related-mountains">
+              <h3>Similar Mountains</h3>
+              <div class="related-links">
+                {mountain.related_mountains.map((s: string) => (
+                  <a href={`/mountain/${s}`} class="related-link">{s.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</a>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+      </main>
+    </div>
   </div>
 </Layout>
 
 <style>
-  /* HERO SECTION */
+  /* ── Layout ─────────────────────────────── */
+  .page-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .page-body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--spacing-2xl);
+    align-items: start;
+    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+  }
+
+  /* ── Hero ─────────────────────────────── */
   .hero-section {
     position: relative;
-    height: 600px;
+    height: 480px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     color: white;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: 0;
   }
 
   .hero-image {
@@ -793,102 +513,85 @@ const faqSchemaData = {
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
   }
 
   .hero-content {
     position: relative;
     z-index: 1;
-    text-align: center;
+    padding-bottom: var(--spacing-2xl);
+    width: 100%;
   }
 
   .breadcrumb {
     display: flex;
     gap: var(--spacing-sm);
-    justify-content: center;
-    margin-bottom: var(--spacing-md);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
   }
 
   .breadcrumb a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.75);
     text-decoration: none;
   }
 
-  .breadcrumb a:hover {
-    color: white;
-  }
+  .breadcrumb a:hover { color: white; }
+  .breadcrumb span { color: rgba(255,255,255,0.6); }
 
   .hero-content h1 {
-    font-size: 3rem;
-    margin: 0 0 var(--spacing-md) 0;
+    font-size: 2.75rem;
+    margin: 0 0 var(--spacing-sm) 0;
     color: white !important;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);
-    line-height: 1.2;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-lg);
-    opacity: 0.95;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-md);
   }
 
   .hero-stats {
     display: flex;
-    gap: var(--spacing-2xl);
-    justify-content: center;
-    margin-bottom: var(--spacing-xl);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
   }
 
   .hero-stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
-  .stat-value {
-    font-size: 2rem;
+  .stat-num {
+    font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1;
   }
 
-  .stat-label {
-    font-size: 0.9rem;
-    opacity: 0.9;
-  }
-
-  .quick-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-    justify-content: center;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .quick-stat {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-full);
-    font-size: 0.9rem;
+  .stat-lbl {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 2px;
   }
 
   .hero-actions {
     display: flex;
     gap: var(--spacing-md);
-    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .btn {
-    padding: var(--spacing-md) var(--spacing-xl);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
     border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: all var(--transition-base);
   }
 
@@ -903,635 +606,295 @@ const faqSchemaData = {
   }
 
   .btn-secondary {
-    background: white;
-    color: var(--color-neutral-900);
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(8px);
   }
 
   .btn-secondary:hover {
-    background: var(--color-neutral-100);
+    background: rgba(255,255,255,0.25);
     transform: translateY(-2px);
   }
 
-  .btn-small {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 0.875rem;
-  }
-
+  /* ── Difficulty badges ─────────────────── */
   .difficulty-badge {
-    padding: 8px 16px;
-    border-radius: var(--radius-md);
-    font-size: 0.875rem;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  .difficulty-easy {
-    background: #d1fae5;
-    color: #065f46;
+  .difficulty-easy    { background: #d1fae5; color: #065f46; }
+  .difficulty-moderate { background: #fed7aa; color: #9a3412; }
+  .difficulty-hard    { background: #fecaca; color: #991b1b; }
+  .difficulty-expert  { background: #e0e7ff; color: #3730a3; }
+
+  /* ── Sidebar ─────────────────────────── */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: sticky;
+    top: 24px;
+    order: 2;
   }
 
-  .difficulty-moderate {
-    background: #fed7aa;
-    color: #9a3412;
-  }
-
-  .difficulty-hard {
-    background: #fecaca;
-    color: #991b1b;
-  }
-
-  .difficulty-expert {
-    background: #ddd6fe;
-    color: #5b21b6;
-  }
-
-  /* OVERVIEW SECTION */
-  .section-overview {
+  .sidebar-card {
     background: white;
-    padding: var(--spacing-2xl);
     border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
-    margin-bottom: var(--spacing-2xl);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
+    border: 1px solid var(--color-neutral-200);
   }
 
-  .section-overview:hover {
+  .sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-title svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .fact-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    font-size: 0.875rem;
+  }
+
+  .fact-list dt {
+    font-weight: 600;
+    color: var(--color-neutral-600);
+    white-space: nowrap;
+  }
+
+  .fact-list dd {
+    margin: 0;
+    color: var(--color-neutral-900);
+    word-break: break-word;
+  }
+
+  .mono {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8rem;
+    background: var(--color-neutral-100);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .cls-tag {
+    padding: 4px 10px;
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(15, 118, 110, 0.2);
+  }
+
+  .sidebar-weather .season-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    background: #f0fdf4;
+    color: #166534;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+  }
+
+  .weather-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    background: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-neutral-800);
+    transition: all var(--transition-fast);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .weather-link:hover {
+    background: var(--color-primary);
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
+    color: white;
   }
 
-  .section-overview h2 {
-    font-size: 2rem;
+  .weather-link svg { flex-shrink: 0; }
+
+  .weather-note {
+    font-size: 0.78rem;
+    color: var(--color-neutral-500);
+    line-height: 1.5;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-neutral-100);
+  }
+
+  .map-thumb {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .map-thumb img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .parking-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--color-neutral-600);
+    margin: 0;
+  }
+
+  .parking-info svg { flex-shrink: 0; color: var(--color-primary); }
+
+  .nearby-list {
+    margin: 0;
+    padding: 0 0 0 var(--spacing-md);
+    list-style: disc;
+    font-size: 0.875rem;
+    color: var(--color-neutral-700);
+    line-height: 1.7;
+  }
+
+  .sidebar-emergency {
+    background: #fff5f5;
+    border-color: #fecaca;
+  }
+
+  .sidebar-emergency .sidebar-title { color: #991b1b; }
+  .sidebar-emergency .sidebar-title svg { color: #dc2626; }
+
+  .emergency-text {
+    font-size: 0.875rem;
+    color: #7f1d1d;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ── Main Content ─────────────────────── */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    order: 1;
+  }
+
+  .content-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
     margin-bottom: var(--spacing-lg);
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-neutral-100);
   }
 
   .lead {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-neutral-700);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .section-overview h3 {
-    font-size: 1.5rem;
-    margin: var(--spacing-xl) 0 var(--spacing-md) 0;
-  }
-
-  .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-  }
-
-  .tag {
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--color-neutral-100);
-    border-radius: var(--radius-full);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-neutral-700);
-  }
-
-  /* KEY INFORMATION GRID */
-  .key-information {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .key-information h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .info-grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .info-card {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .info-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-  }
-
-  .info-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-neutral-900);
-  }
-
-  .map-container {
-    width: 100%;
-    height: 250px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .map-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .info-card dl {
-    display: grid;
-    gap: var(--spacing-sm);
-  }
-
-  .info-card dt {
-    font-weight: 600;
-    color: var(--color-neutral-700);
-    font-size: 0.875rem;
-  }
-
-  .info-card dd {
-    margin: 0 0 var(--spacing-md) 0;
-    color: var(--color-neutral-900);
-  }
-
-  .postcode {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    background: var(--color-neutral-100);
-    padding: 2px 8px;
-    border-radius: var(--radius-sm);
-  }
-
-  .weather-intro, .parking-intro {
-    font-size: 0.95rem;
-    color: var(--color-neutral-700);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-  }
-
-  .weather-widget {
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .weather-tips, .parking-tips {
-    margin-top: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: #f0f9ff;
-    border-left: 4px solid var(--color-primary);
-    border-radius: var(--radius-md);
-  }
-
-  .weather-tips h4, .parking-tips h4 {
-    font-size: 1rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-900);
-  }
-
-  .weather-tips ul, .parking-tips ul {
-    margin: var(--spacing-sm) 0 0 var(--spacing-lg);
-    list-style: disc;
-  }
-
-  .weather-tips li, .parking-tips li {
-    margin-bottom: var(--spacing-xs);
-    color: var(--color-neutral-700);
-    line-height: 1.5;
-  }
-
-  .season-info, .parking-detail {
-    margin-bottom: var(--spacing-md);
-    line-height: 1.5;
-  }
-
-  .weather-warning {
-    display: flex;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: #fef3c7;
-    border-left: 4px solid #f59e0b;
-    border-radius: var(--radius-sm);
-    margin-top: var(--spacing-md);
-  }
-
-  .weather-warning svg {
-    flex-shrink: 0;
-    color: #f59e0b;
-  }
-
-  .facility-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: #d1fae5;
-    color: #065f46;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.875rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .safety-card {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border: 2px solid #f59e0b;
-  }
-
-  .emergency-contact {
-    display: flex;
-    gap: var(--spacing-sm);
-    align-items: flex-start;
-    padding: var(--spacing-md);
-    background: white;
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .emergency-contact svg {
-    color: #dc2626;
-    flex-shrink: 0;
-  }
-
-  .facilities-list ul, .essentials-list ul {
-    margin: var(--spacing-sm) 0 0 var(--spacing-lg);
-    list-style: disc;
-  }
-
-  .facilities-list li, .essentials-list li {
-    margin-bottom: var(--spacing-xs);
-  }
-
-  /* ROUTES SECTION */
-  .routes-section {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .routes-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .section-intro {
-    font-size: 1.125rem;
-    color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .routes-container {
-    display: grid;
-    gap: var(--spacing-xl);
-  }
-
-  .route-card-detailed {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .route-card-detailed:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .route-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-md);
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-  }
-
-  .route-header h3 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .route-description {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--color-neutral-700);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .route-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--spacing-md);
-    padding: var(--spacing-lg);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .stat-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .stat-box .stat-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--color-neutral-600);
-    margin-bottom: 4px;
-  }
-
-  .stat-box .stat-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-neutral-900);
-  }
-
-  .stat-box .stat-sub {
-    font-size: 0.875rem;
-    color: var(--color-neutral-600);
-  }
-
-  .route-detail {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-sm);
-  }
-
-  .route-highlights {
-    margin-bottom: var(--spacing-md);
-  }
-
-  .highlight-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    margin-top: var(--spacing-sm);
-  }
-
-  .highlight-tag {
-    padding: 4px 12px;
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    font-size: 0.8rem;
-  }
-
-  .route-notes {
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-sm);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .seasonal-notes {
-    display: flex;
-    gap: var(--spacing-sm);
-    align-items: flex-start;
-    padding: var(--spacing-md);
-    background: #fef3c7;
-    border-left: 4px solid #f59e0b;
-    border-radius: var(--radius-sm);
-  }
-
-  .seasonal-notes svg {
-    flex-shrink: 0;
-    color: #f59e0b;
-  }
-
-  /* SAFETY TIPS SECTION */
-  .safety-tips-section {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .safety-tips-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .safety-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-  }
-
-  .safety-tip-card {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    border-left: 4px solid #f59e0b;
-    transition: all var(--transition-base);
-  }
-
-  .safety-tip-card:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: #f59e0b;
-    transform: translateY(-2px);
-  }
-
-  .safety-tip-card h3 {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-900);
-  }
-
-  .safety-tip-card p {
-    line-height: 1.6;
-    color: var(--color-neutral-700);
-    font-size: 0.95rem;
-    margin: 0;
-  }
-
-  /* THINGS TO DO */
-  .things-to-do {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .things-to-do h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .activity-card {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .activity-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-  }
-
-  .activity-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .activity-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .activity-card ul {
-    margin: var(--spacing-sm) 0 0 var(--spacing-lg);
-    list-style: disc;
-  }
-
-  .activity-card li {
-    margin-bottom: var(--spacing-xs);
-  }
-
-  /* INTERESTING FACTS SECTION */
-  .interesting-facts-section {
-    margin-bottom: var(--spacing-3xl);
-    background: white;
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .interesting-facts-section:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-  }
-
-  .interesting-facts-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
-    color: var(--color-neutral-900);
-  }
-
-  .facts-list {
-    list-style: none;
-    counter-reset: facts-counter;
-    padding: 0;
-    margin: 0;
-  }
-
-  .facts-list li {
-    counter-increment: facts-counter;
-    position: relative;
-    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-3xl);
-    margin-bottom: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-left: 4px solid var(--color-primary);
-    border-radius: var(--radius-sm);
-    line-height: 1.6;
-  }
-
-  .facts-list li::before {
-    content: counter(facts-counter);
-    position: absolute;
-    left: var(--spacing-md);
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--color-primary);
-    color: white;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.875rem;
-  }
-
-  /* WALKING GUIDE SECTION */
-  .walking-guide-section {
-    margin-bottom: var(--spacing-3xl);
-    background: white;
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .walking-guide-section:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-  }
-
-  .walking-guide-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-lg);
-    color: var(--color-neutral-900);
-  }
-
-  .guide-content {
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--color-neutral-700);
+    margin: 0 0 var(--spacing-md) 0;
   }
 
-  .guide-content p {
-    margin-bottom: var(--spacing-md);
+  .section-intro {
+    font-size: 0.95rem;
+    color: var(--color-neutral-600);
+    margin: 0 0 var(--spacing-lg) 0;
   }
 
-  /* GALLERY SECTION */
-  .gallery-section {
-    margin-bottom: var(--spacing-3xl);
+  /* Expand block (history) */
+  .expand-block {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
   }
 
-  .gallery-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
+  .expand-block summary {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-primary);
+    background: var(--color-neutral-50);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-size: 0.95rem;
   }
+
+  .expand-block summary::-webkit-details-marker { display: none; }
+
+  .expand-block summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--color-primary);
+  }
+
+  .expand-block[open] summary::after { content: '−'; }
+
+  .expand-block p {
+    padding: var(--spacing-lg);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    border-top: 1px solid var(--color-neutral-100);
+  }
+
+  /* Gallery */
+  .gallery-section { padding: 0; border: none; background: transparent; box-shadow: none; }
 
   .gallery-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-md);
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
   }
 
   .gallery-item {
-    width: 100%;
-    height: 250px;
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
-  }
-
-  .gallery-item:hover {
-    box-shadow: var(--shadow-lg);
+    height: 200px;
   }
 
   .gallery-item img {
@@ -1539,137 +902,227 @@ const faqSchemaData = {
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow);
+    display: block;
   }
 
-  .gallery-item:hover img {
-    transform: scale(1.1);
+  .gallery-item:hover img { transform: scale(1.05); }
+
+  /* Facts list */
+  .facts-list {
+    list-style: none;
+    counter-reset: facts;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
 
-  /* REVIEWS SECTION */
-  .reviews-section {
-    margin-bottom: var(--spacing-3xl);
+  .facts-list li {
+    counter-increment: facts;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
   }
 
-  .reviews-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
+  .facts-list li::before {
+    content: counter(facts);
+    min-width: 28px;
+    height: 28px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
   }
 
-  .reviews-placeholder {
-    background: white;
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-lg);
-    text-align: center;
-    box-shadow: var(--shadow-md);
+  /* Guide text */
+  .guide-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-neutral-700);
+    margin: 0;
   }
 
-  /* NEARBY SECTION */
-  .nearby-section {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .nearby-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .nearby-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
-  .nearby-card {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .nearby-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-  }
-
-  .nearby-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .attraction-type {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--color-neutral-100);
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .distance {
-    display: inline-block;
-    color: var(--color-neutral-600);
-    font-size: 0.875rem;
-    margin-top: var(--spacing-sm);
-  }
-
-  .nearby-card ul {
-    margin: 0 0 0 var(--spacing-lg);
-    list-style: disc;
-  }
-
-  .nearby-card li {
-    margin-bottom: var(--spacing-xs);
-  }
-
-  /* FAQs SECTION */
-  .faqs-section {
-    margin-bottom: var(--spacing-3xl);
-  }
-
-  .faqs-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .faqs-container {
-    display: grid;
+  /* Routes */
+  .routes-list {
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-md);
   }
 
-  .faq-item {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .faq-item h3 {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-primary);
-  }
-
-  .faq-item-detail {
-    background: white;
-    border-radius: var(--radius-lg);
+  .route-card {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
+    transition: border-color var(--transition-fast);
   }
 
-  .faq-item-detail:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: var(--color-primary);
+  .route-card:hover { border-color: var(--color-primary); }
+
+  .route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
   }
 
-  .faq-item-detail summary {
-    font-size: 1.125rem;
+  .route-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--color-neutral-900);
+  }
+
+  .route-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  .route-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .rstat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--color-neutral-600);
+    background: var(--color-neutral-50);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+  }
+
+  .rstat svg { color: var(--color-primary); flex-shrink: 0; }
+
+  .route-start {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .route-start svg { color: var(--color-primary); flex-shrink: 0; }
+
+  .route-notes {
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+    background: var(--color-neutral-50);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-sm) 0 0;
+  }
+
+  .seasonal-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.875rem;
+    color: #92400e;
+    background: #fef3c7;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-sm) 0 0;
+    border-left: 3px solid #f59e0b;
+  }
+
+  .seasonal-note svg { color: #f59e0b; flex-shrink: 0; margin-top: 2px; }
+
+  /* Safety */
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .safety-card {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid #f59e0b;
+    font-size: 0.875rem;
+  }
+
+  .safety-card svg {
+    color: #f59e0b;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .safety-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-neutral-900);
+    font-size: 0.9rem;
+  }
+
+  .safety-card p {
+    margin: 0;
+    color: var(--color-neutral-600);
+    line-height: 1.5;
+  }
+
+  .safety-card--emergency {
+    border-left-color: #dc2626;
+    background: #fff5f5;
+  }
+
+  .safety-card--emergency svg { color: #dc2626; }
+
+  /* Nearby inline */
+  .nearby-inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm) var(--spacing-xl);
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-neutral-700);
+  }
+
+  /* FAQs */
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .faq-item {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+  }
+
+  .faq-item:hover { border-color: var(--color-primary); }
+
+  .faq-item summary {
+    padding: var(--spacing-md) var(--spacing-lg);
     font-weight: 600;
+    font-size: 0.95rem;
     color: var(--color-neutral-900);
     cursor: pointer;
     list-style: none;
@@ -1677,74 +1130,63 @@ const faqSchemaData = {
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    padding-right: var(--spacing-lg);
   }
 
-  .faq-item-detail summary::-webkit-details-marker {
-    display: none;
-  }
+  .faq-item summary::-webkit-details-marker { display: none; }
 
-  .faq-item-detail summary::after {
+  .faq-item summary::after {
     content: '+';
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
-    transition: transform var(--transition-base);
     flex-shrink: 0;
     margin-left: var(--spacing-md);
   }
 
-  .faq-item-detail[open] summary::after {
-    transform: rotate(45deg);
+  .faq-item[open] summary {
+    background: var(--color-neutral-50);
+    border-bottom: 1px solid var(--color-neutral-100);
   }
 
-  .faq-item-detail p {
-    margin-top: var(--spacing-md);
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+
+  .faq-item p {
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: 0;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: var(--color-neutral-700);
-    font-size: 1.05rem;
   }
 
-  /* SEO FOOTER */
-  .seo-footer {
-    margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-2xl);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-lg);
-  }
-
-  .seo-summary h2 {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .seo-summary p {
-    font-size: 1.05rem;
-    line-height: 1.6;
+  /* SEO section */
+  .seo-section p {
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--color-neutral-700);
-    margin-bottom: var(--spacing-xl);
+    margin: 0 0 var(--spacing-md) 0;
   }
 
   .related-mountains h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--color-neutral-700);
   }
 
   .related-links {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xl);
   }
 
   .related-link {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 5px 12px;
     background: white;
-    border: 2px solid var(--color-neutral-200);
+    border: 1px solid var(--color-neutral-200);
     border-radius: var(--radius-md);
     text-decoration: none;
     color: var(--color-primary);
+    font-size: 0.875rem;
     font-weight: 600;
-    transition: all var(--transition-base);
+    transition: all var(--transition-fast);
   }
 
   .related-link:hover {
@@ -1753,62 +1195,37 @@ const faqSchemaData = {
     border-color: var(--color-primary);
   }
 
-  .classifications-footer {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-  }
-
-  .classification-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-  }
-
-  .classification-tag {
-    padding: 4px 12px;
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .hero-section {
-      height: 500px;
-    }
-
-    .hero-content h1 {
-      font-size: 1.75rem;
-      line-height: 1.3;
-    }
-
-    .hero-subtitle {
-      font-size: 1.125rem;
-    }
-
-    .hero-stats {
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
-
-    .info-grid-layout {
+  /* ── Responsive ─────────────────────────── */
+  @media (max-width: 900px) {
+    .page-body {
       grid-template-columns: 1fr;
     }
 
-    .gallery-row {
-      grid-template-columns: 1fr;
+    .sidebar {
+      position: static;
+      order: 1;
     }
 
-    .gallery-item {
-      height: 220px;
+    .main-content {
+      order: 2;
     }
 
-    .activities-grid, .nearby-grid, .safety-grid {
+    .safety-grid {
       grid-template-columns: 1fr;
     }
+  }
+
+  @media (max-width: 640px) {
+    .hero-section { height: 420px; }
+
+    .hero-content h1 { font-size: 2rem; }
+
+    .hero-stats { gap: var(--spacing-lg); }
+
+    .gallery-row { grid-template-columns: 1fr; }
+
+    .gallery-item { height: 200px; }
+
+    .content-section { padding: var(--spacing-lg); }
   }
 </style>
