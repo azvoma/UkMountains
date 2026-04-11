@@ -125,6 +125,20 @@ export function searchMountains(
   return filtered.sort((a, b) => b.height_meters - a.height_meters);
 }
 
+export function getNearbyPeaks(mountain: Mountain, count: number = 4): Mountain[] {
+  const others = mountains.filter(m => m.id !== mountain.id);
+  const sameRegion = others.filter(m => m.region === mountain.region);
+  const pool = sameRegion.length >= count ? sameRegion : others;
+  return pool
+    .map(m => ({
+      m,
+      dist: Math.pow(m.latitude - mountain.latitude, 2) + Math.pow(m.longitude - mountain.longitude, 2)
+    }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, count)
+    .map(x => x.m);
+}
+
 export function getMountainsWithImages(limit?: number): (Mountain & { image_url?: string })[] {
   const mountainsWithImages = mountains.map(m => {
     const mountainImages = getMountainImages(m.id);

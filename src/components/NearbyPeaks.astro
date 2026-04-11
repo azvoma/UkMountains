@@ -1,0 +1,184 @@
+---
+import type { Mountain } from '../lib/data';
+import { getMountainImages } from '../lib/data';
+
+interface Props {
+  peaks: Mountain[];
+  currentName: string;
+}
+
+const { peaks, currentName } = Astro.props;
+
+const peaksWithImages = peaks.map(p => {
+  const imgs = getMountainImages(p.id);
+  return { ...p, image_url: imgs[0]?.image_url || null };
+});
+---
+
+{peaks.length > 0 && (
+  <section class="nearby-peaks">
+    <h2>Nearby Peaks to Explore</h2>
+    <p class="np-intro">Looking beyond {currentName}? These peaks are close by and worth exploring.</p>
+    <div class="np-grid">
+      {peaksWithImages.map(peak => (
+        <a href={`/mountain/${peak.slug}`} class="np-card">
+          <div class="np-image">
+            {peak.image_url ? (
+              <img src={peak.image_url} alt={peak.name} loading="lazy" />
+            ) : (
+              <div class="np-image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                </svg>
+              </div>
+            )}
+          </div>
+          <div class="np-info">
+            <h3>{peak.name}</h3>
+            <div class="np-meta">
+              <span class="np-height">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                {peak.height_meters}m
+              </span>
+              <span class="np-region">{peak.region}</span>
+            </div>
+            {peak.difficulty_rating && (
+              <span class={`np-diff np-diff--${peak.difficulty_rating.toLowerCase()}`}>{peak.difficulty_rating}</span>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .nearby-peaks {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .nearby-peaks h2 {
+    font-size: 1.5rem;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-sm) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-neutral-100);
+  }
+
+  .np-intro {
+    font-size: 0.95rem;
+    color: var(--color-neutral-600);
+    margin: 0 0 var(--spacing-lg) 0;
+  }
+
+  .np-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .np-card {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-fast);
+  }
+
+  .np-card:hover {
+    border-color: var(--color-primary);
+    background: var(--color-neutral-50);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .np-image {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--color-neutral-100);
+  }
+
+  .np-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .np-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-neutral-400);
+  }
+
+  .np-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .np-info h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    margin: 0 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .np-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: 4px;
+  }
+
+  .np-height {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .np-region {
+    font-size: 0.78rem;
+    color: var(--color-neutral-500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .np-diff {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: var(--radius-full);
+  }
+
+  .np-diff--easy    { background: #d1fae5; color: #065f46; }
+  .np-diff--moderate { background: #fed7aa; color: #9a3412; }
+  .np-diff--hard    { background: #fecaca; color: #991b1b; }
+
+  @media (max-width: 600px) {
+    .np-grid { grid-template-columns: 1fr; }
+  }
+</style>

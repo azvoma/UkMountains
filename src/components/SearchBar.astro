@@ -1,8 +1,9 @@
 ---
 interface Props {
   mountainNames?: string;
+  mountainSlugs?: string;
 }
-const { mountainNames = '[]' } = Astro.props;
+const { mountainNames = '[]', mountainSlugs = '{}' } = Astro.props;
 ---
 
 <div class="search-container">
@@ -11,17 +12,21 @@ const { mountainNames = '[]' } = Astro.props;
       <circle cx="11" cy="11" r="8"></circle>
       <path d="m21 21-4.35-4.35"></path>
     </svg>
+
+    <!-- Ghost text layer sits behind the real input -->
+    <div class="ghost-layer" aria-hidden="true">
+      <span class="ghost-typed" id="ghost-typed"></span><span class="ghost-completion" id="ghost-completion"></span>
+    </div>
+
     <input
       type="search"
       id="search-input"
       class="search-input"
-      placeholder="Search for mountains by name or location..."
+      placeholder="Search mountains by name or location..."
       autocomplete="off"
+      spellcheck="false"
       aria-label="Search mountains"
-      aria-autocomplete="list"
-      aria-controls="search-prediction"
-      aria-expanded="false"
-      role="combobox"
+      aria-autocomplete="inline"
     />
     <button id="near-me-btn" class="near-me-btn" aria-label="Find mountains near me">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -30,25 +35,6 @@ const { mountainNames = '[]' } = Astro.props;
       </svg>
       Near Me
     </button>
-
-    <div id="search-prediction" class="search-prediction" role="listbox" aria-label="Search suggestions" hidden>
-      <div id="prediction-item" class="prediction-item" role="option" aria-selected="false">
-        <svg class="prediction-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.35-4.35"></path>
-        </svg>
-        <span id="prediction-text" class="prediction-text"></span>
-        <span class="prediction-hint">Press Enter</span>
-      </div>
-      <div id="no-results-item" class="no-results-item" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        No peaks found
-      </div>
-    </div>
   </div>
 
   <div class="filters-section" role="group" aria-label="Filter mountains">
@@ -89,88 +75,91 @@ const { mountainNames = '[]' } = Astro.props;
   </div>
 </div>
 
-<script define:vars={{ mountainNames }}>
+<script define:vars={{ mountainNames, mountainSlugs }}>
   const mountains = JSON.parse(mountainNames);
+  const slugMap = JSON.parse(mountainSlugs);
 
   const input = document.getElementById('search-input');
-  const prediction = document.getElementById('search-prediction');
-  const predictionItem = document.getElementById('prediction-item');
-  const predictionText = document.getElementById('prediction-text');
-  const noResults = document.getElementById('no-results-item');
+  const ghostTyped = document.getElementById('ghost-typed');
+  const ghostCompletion = document.getElementById('ghost-completion');
 
   let currentMatch = null;
+  let currentCompletion = '';
 
   function findBestMatch(query) {
     if (!query || query.length < 2) return null;
     const lower = query.toLowerCase();
-    return mountains.find(name => name.toLowerCase().includes(lower)) || null;
+    const startsWith = mountains.find(n => n.toLowerCase().startsWith(lower));
+    if (startsWith) return startsWith;
+    return mountains.find(n => n.toLowerCase().includes(lower)) || null;
   }
 
-  function showPrediction(match) {
-    currentMatch = match;
-    predictionText.textContent = match;
-    predictionItem.hidden = false;
-    noResults.hidden = true;
-    prediction.hidden = false;
-    input.setAttribute('aria-expanded', 'true');
-  }
-
-  function showNoResults() {
-    currentMatch = null;
-    predictionItem.hidden = true;
-    noResults.hidden = false;
-    prediction.hidden = false;
-    input.setAttribute('aria-expanded', 'true');
-  }
-
-  function hidePrediction() {
-    prediction.hidden = true;
-    predictionItem.hidden = true;
-    noResults.hidden = true;
-    input.setAttribute('aria-expanded', 'false');
-    currentMatch = null;
-  }
-
-  function acceptMatch(matchName) {
-    input.value = matchName;
-    hidePrediction();
-    input.dispatchEvent(new Event('input', { bubbles: true }));
-    input.focus();
-  }
-
-  input.addEventListener('input', () => {
-    const val = input.value.trim();
+  function updateGhost() {
+    const val = input.value;
     if (!val || val.length < 2) {
-      hidePrediction();
+      clearGhost();
       return;
     }
     const match = findBestMatch(val);
-    if (match) {
-      showPrediction(match);
+    if (match && match.toLowerCase().startsWith(val.toLowerCase())) {
+      currentMatch = match;
+      currentCompletion = match.slice(val.length);
+      ghostTyped.textContent = val;
+      ghostCompletion.textContent = currentCompletion;
     } else {
-      showNoResults();
+      currentMatch = match;
+      currentCompletion = '';
+      ghostTyped.textContent = '';
+      ghostCompletion.textContent = '';
     }
-  });
+  }
+
+  function clearGhost() {
+    currentMatch = null;
+    currentCompletion = '';
+    ghostTyped.textContent = '';
+    ghostCompletion.textContent = '';
+  }
+
+  function acceptCompletion() {
+    if (currentMatch) {
+      input.value = currentMatch;
+      clearGhost();
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }
+
+  function navigateToMatch() {
+    const val = input.value.trim();
+    const target = currentMatch || val;
+    const slug = slugMap[target];
+    if (slug) {
+      window.location.href = `/mountain/${slug}`;
+    } else {
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }
+
+  input.addEventListener('input', updateGhost);
 
   input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && currentMatch) {
+    if ((e.key === 'ArrowRight' || e.key === 'Tab') && currentCompletion) {
       e.preventDefault();
-      acceptMatch(currentMatch);
+      acceptCompletion();
+      return;
+    }
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      navigateToMatch();
+      return;
     }
     if (e.key === 'Escape') {
-      hidePrediction();
+      clearGhost();
     }
-  });
-
-  predictionItem.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    if (currentMatch) acceptMatch(currentMatch);
   });
 
   document.addEventListener('click', (e) => {
-    if (!input.contains(e.target) && !prediction.contains(e.target)) {
-      hidePrediction();
-    }
+    if (!input.contains(e.target)) clearGhost();
   });
 </script>
 
@@ -191,6 +180,7 @@ const { mountainNames = '[]' } = Astro.props;
     padding: var(--spacing-sm);
     gap: var(--spacing-sm);
     transition: box-shadow var(--transition-base);
+    overflow: hidden;
   }
 
   .search-wrapper:focus-within {
@@ -202,10 +192,39 @@ const { mountainNames = '[]' } = Astro.props;
     left: 20px;
     color: var(--color-neutral-400);
     pointer-events: none;
+    z-index: 3;
+    flex-shrink: 0;
+  }
+
+  /* Ghost text layer */
+  .ghost-layer {
+    position: absolute;
+    left: 52px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
     z-index: 1;
+    overflow: hidden;
+    padding: 16px 20px 16px 0;
+    font-size: 1rem;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  .ghost-typed {
+    color: transparent;
+  }
+
+  .ghost-completion {
+    color: var(--color-neutral-400);
   }
 
   .search-input {
+    position: relative;
+    z-index: 2;
     flex: 1;
     padding: 16px 20px 16px 52px;
     border: none;
@@ -221,6 +240,8 @@ const { mountainNames = '[]' } = Astro.props;
   }
 
   .near-me-btn {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
@@ -247,74 +268,6 @@ const { mountainNames = '[]' } = Astro.props;
 
   .near-me-btn:active {
     transform: translateY(0);
-  }
-
-  .search-prediction {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 0;
-    right: 0;
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    border: 1px solid var(--color-neutral-200);
-    overflow: hidden;
-    z-index: 50;
-    animation: fadeSlideIn 0.12s ease;
-  }
-
-  @keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .prediction-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 18px;
-    cursor: pointer;
-    transition: background var(--transition-fast);
-    color: var(--color-neutral-800);
-    font-size: 0.975rem;
-  }
-
-  .prediction-item:hover {
-    background: var(--color-neutral-50);
-  }
-
-  .prediction-icon {
-    color: var(--color-primary);
-    flex-shrink: 0;
-  }
-
-  .prediction-text {
-    flex: 1;
-    font-weight: 500;
-  }
-
-  .prediction-hint {
-    font-size: 0.75rem;
-    color: var(--color-neutral-400);
-    background: var(--color-neutral-100);
-    padding: 2px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-
-  .no-results-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 18px;
-    color: var(--color-neutral-400);
-    font-size: 0.9rem;
-    font-style: italic;
-  }
-
-  .no-results-item svg {
-    flex-shrink: 0;
-    color: var(--color-neutral-300);
   }
 
   .filters-section {
@@ -383,13 +336,15 @@ const { mountainNames = '[]' } = Astro.props;
       top: 18px;
     }
 
+    .ghost-layer {
+      left: 48px;
+      top: 0;
+      padding: 14px 20px 14px 0;
+    }
+
     .near-me-btn {
       width: 100%;
       justify-content: center;
-    }
-
-    .prediction-hint {
-      display: none;
     }
 
     .filter-chips {

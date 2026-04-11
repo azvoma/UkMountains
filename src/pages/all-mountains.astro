@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllMountains } from '../lib/data';
+
+const allMountains = getAllMountains().sort((a, b) => a.name.localeCompare(b.name));
+
+const byLetter: Record<string, typeof allMountains> = {};
+for (const m of allMountains) {
+  const letter = m.name[0].toUpperCase();
+  if (!byLetter[letter]) byLetter[letter] = [];
+  byLetter[letter].push(m);
+}
+const letters = Object.keys(byLetter).sort();
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukmountainsdirectory.co.uk/" },
+    { "@type": "ListItem", "position": 2, "name": "All Mountains", "item": "https://ukmountainsdirectory.co.uk/all-mountains" }
+  ]
+};
+
+const collectionPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Complete List of UK Mountains A–Z",
+  "description": `A complete alphabetical directory of all ${allMountains.length} UK mountains including Munros, Corbetts, Wainwrights, Hewitts, and more.`,
+  "url": "https://ukmountainsdirectory.co.uk/all-mountains",
+  "numberOfItems": allMountains.length
+};
+---
+
+<Layout
+  title={`All UK Mountains A–Z – Complete Directory of ${allMountains.length} Peaks`}
+  description={`Browse all ${allMountains.length} UK mountains alphabetically. Full directory of Munros, Corbetts, Wainwrights, Hewitts, Marilyns, and every named peak in the United Kingdom.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageSchema)} />
+
+  <div class="all-mountains-page">
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span>All Mountains</span>
+        </nav>
+        <h1>Complete UK Mountains Directory A–Z</h1>
+        <p class="page-intro">
+          A full alphabetical listing of all <strong>{allMountains.length} mountains</strong> in the United Kingdom — from England, Scotland, Wales, and Northern Ireland — including Munros, Corbetts, Grahams, Wainwrights, Hewitts, Nuttalls, and Marilyns.
+        </p>
+        <div class="letter-nav" aria-label="Jump to letter">
+          {letters.map(letter => (
+            <a href={`#letter-${letter}`} class="letter-link">{letter}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="container page-body">
+      {letters.map(letter => (
+        <div class="letter-group" id={`letter-${letter}`}>
+          <h2 class="letter-heading">{letter}</h2>
+          <ul class="mountain-list">
+            {byLetter[letter].map(m => (
+              <li>
+                <a href={`/mountain/${m.slug}`} class="mountain-link">
+                  <span class="ml-name">{m.name}</span>
+                  <span class="ml-meta">
+                    <span class="ml-height">{m.height_meters}m</span>
+                    <span class="ml-region">{m.region}</span>
+                    {m.is_munro && <span class="ml-badge">Munro</span>}
+                    {m.is_corbett && <span class="ml-badge">Corbett</span>}
+                    {m.is_wainwright && <span class="ml-badge">Wainwright</span>}
+                    {m.is_hewitt && <span class="ml-badge">Hewitt</span>}
+                    {m.is_marilyn && <span class="ml-badge ml-badge--marilyn">Marilyn</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <div class="back-top">
+        <a href="#" class="back-top-link">Back to top</a>
+        <span class="total-count">{allMountains.length} mountains listed</span>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .all-mountains-page {
+    background: var(--color-neutral-50);
+    min-height: 100vh;
+  }
+
+  .page-header {
+    background: var(--color-neutral-900);
+    color: white;
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: var(--spacing-sm);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-md);
+    color: rgba(255,255,255,0.6);
+  }
+
+  .breadcrumb a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover { color: white; }
+
+  .page-header h1 {
+    font-size: 2rem;
+    margin: 0 0 var(--spacing-md) 0;
+    color: white;
+  }
+
+  .page-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+    max-width: 680px;
+    margin: 0 0 var(--spacing-lg) 0;
+  }
+
+  .letter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .letter-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-sm);
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+  }
+
+  .letter-link:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .page-body {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    max-width: 900px;
+  }
+
+  .letter-group {
+    margin-bottom: var(--spacing-2xl);
+    scroll-margin-top: 80px;
+  }
+
+  .letter-heading {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0 0 var(--spacing-md) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    min-width: 48px;
+    text-align: center;
+  }
+
+  .mountain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .mountain-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: 10px 14px;
+    background: white;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--color-neutral-900);
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+    font-size: 0.95rem;
+  }
+
+  .mountain-link:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: #f0fdf9;
+  }
+
+  .ml-name {
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .ml-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+  }
+
+  .ml-height {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    min-width: 48px;
+    text-align: right;
+  }
+
+  .ml-region {
+    font-size: 0.8rem;
+    color: var(--color-neutral-500);
+    min-width: 80px;
+  }
+
+  .ml-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: var(--radius-full);
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--color-primary);
+    white-space: nowrap;
+  }
+
+  .ml-badge--marilyn {
+    background: rgba(217, 119, 6, 0.1);
+    color: #b45309;
+  }
+
+  .back-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--color-neutral-200);
+    margin-top: var(--spacing-xl);
+  }
+
+  .back-top-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .back-top-link:hover { text-decoration: underline; }
+
+  .total-count {
+    font-size: 0.875rem;
+    color: var(--color-neutral-500);
+  }
+
+  @media (max-width: 640px) {
+    .page-header h1 { font-size: 1.5rem; }
+
+    .ml-meta { display: none; }
+
+    .mountain-link { padding: 10px 12px; }
+  }
+</style>
