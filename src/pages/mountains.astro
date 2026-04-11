@@ -5,6 +5,7 @@ import MountainCard from '../components/MountainCard.astro';
 import { getAllMountains, getMountainImages } from '../lib/data';
 
 const allMountains = getAllMountains();
+const allMountainNames = JSON.stringify(allMountains.map(m => m.name));
 const mountainsWithImages = allMountains.map(m => {
   const images = getMountainImages(m.id);
   return {
@@ -26,7 +27,7 @@ const mountainsWithImages = allMountains.map(m => {
         <p class="hero-description">
           Browse our comprehensive database of UK mountains. Use the search and filters below to find your next adventure.
         </p>
-        <SearchBar />
+        <SearchBar mountainNames={allMountainNames} />
       </div>
     </section>
 

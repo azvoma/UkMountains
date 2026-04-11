@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
-import { getMountainsWithImages } from '../lib/data';
+import { getMountainsWithImages, getAllMountains } from '../lib/data';
 
 const mountainsWithImages = getMountainsWithImages(6);
+const allMountainNames = JSON.stringify(getAllMountains().map(m => m.name));
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -91,7 +92,7 @@ const faqSchema = {
         <p class="hero-subtitle">
           Discover the beauty, scale, and history of UK mountains with the most complete peak directory online. Whether you're planning your next hike, researching the highest mountains in the UK, or simply exploring iconic peaks, our platform provides accurate data, maps, rankings, and adventure tips.
         </p>
-        <SearchBar />
+        <SearchBar mountainNames={allMountainNames} />
       </div>
     </div>
   </section>
