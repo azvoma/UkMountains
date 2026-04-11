@@ -192,23 +192,43 @@ const faqSchema = {
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-icon">⛰️</div>
-          <div class="stat-number" id="munros-count">21</div>
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+            </svg>
+          </div>
+          <div class="stat-number" id="munros-count">41</div>
           <div class="stat-label">Munros</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">🏔️</div>
-          <div class="stat-number" id="corbetts-count">9</div>
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 20L8 8l4 6 4-8 5 14H3z"/>
+              <path d="M8 8l2-5"/>
+            </svg>
+          </div>
+          <div class="stat-number" id="corbetts-count">11</div>
           <div class="stat-label">Corbetts</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">🗻</div>
-          <div class="stat-number" id="marilyns-count">37</div>
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 20h20L12 2z"/>
+              <path d="M12 8v5"/>
+              <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="stat-number" id="marilyns-count">63</div>
           <div class="stat-label">Marilyns</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">📍</div>
-          <div class="stat-number" id="total-count">71</div>
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="stat-number" id="total-count">120</div>
           <div class="stat-label">Total Mountains</div>
         </div>
       </div>
@@ -755,8 +775,11 @@ const faqSchema = {
   }
 
   .stat-icon {
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: var(--spacing-md);
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .stat-number {
