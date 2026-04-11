@@ -4,8 +4,8 @@ import Layout from '../layouts/Layout.astro';
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "name": "Contact Us – Top 10 Highest Mountains in UK",
-  "description": "Contact our team for information about the top 10 highest mountains in UK, including beginner routes and easy mountains to climb UK."
+  "name": "Contact Us – UK Mountains Directory",
+  "description": "Get in touch with UK Mountains Directory for questions about UK mountains, hiking tips, route planning, and more."
 };
 
 const faqSchema = {
@@ -33,7 +33,7 @@ const faqSchema = {
       "name": "How long does it take to receive a reply?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We respond to all contact form messages within 24–48 hours."
+        "text": "We aim to respond to all email enquiries within 2 business days."
       }
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       "name": "Can I submit corrections or new mountain data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, if you spot errors or want to contribute new information, simply contact us using the form above."
+        "text": "Yes, if you spot errors or want to contribute new information, simply email us directly."
       }
     }
   ]
@@ -49,161 +49,67 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Top 10 Highest Mountains in UK – Contact Our Team"
-  description="Contact us for questions about the top 10 highest mountains in UK, hiking tips, and guides to easy mountains to climb in the UK. We're here to help."
+  title="Contact Us – UK Mountains Directory"
+  description="Get in touch with UK Mountains Directory. Email us for questions about UK mountains, hiking routes, data corrections, or partnership enquiries."
 >
   <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="contact-page">
-    <div class="container">
-      <div class="contact-header">
-        <h1>Contact Us About the Top 10 Highest Mountains in UK</h1>
-        <p class="lead-intro">
-          If you have questions about the top 10 highest mountains in UK, need help planning your next hiking trip, or want guidance on easy mountains to climb UK, our team is here to support you. Whether you're a beginner, an experienced climber, or a directory contributor, we'd love to hear from you.
+
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Contact UK Mountains Directory</h1>
+        <p class="hero-lead">
+          Have a question about UK mountains, want to suggest a correction, or interested in contributing to the directory? We'd love to hear from you.
         </p>
-        <p class="mission-text">Our mission is to make exploring UK mountains easier, safer, and more enjoyable for everyone.</p>
       </div>
+    </section>
 
-      <div class="contact-grid">
-        <div class="contact-form-section">
-          <form
-            id="contact-form"
-            class="contact-form"
-            method="POST"
-            name="contact"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="to-email" value="ayzvoma@gmail.com" />
-            <p style="display: none;">
-              <label>
-                Don't fill this out if you're human: <input name="bot-field" />
-              </label>
-            </p>
+    <div class="container">
 
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your name"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Reason for Contact *</label>
-              <select id="subject" name="subject" required>
-                <option value="">Select a reason</option>
-                <option value="top-10-mountains">Top 10 Highest Mountains Info</option>
-                <option value="beginner-routes">Easy Mountains to Climb UK</option>
-                <option value="route-advice">Route Planning & Advice</option>
-                <option value="correction">Data Correction</option>
-                <option value="contribution">Submit Photos/Information</option>
-                <option value="partnership">Partnership Inquiry</option>
-                <option value="general">General Inquiry</option>
-                <option value="technical">Technical Issue</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="mountain">Optional: Mountain or Route You're Enquiring About</label>
-              <input
-                type="text"
-                id="mountain"
-                name="mountain"
-                placeholder="e.g., Ben Nevis, Snowdon, Scafell Pike"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="6"
-                placeholder="Tell us how we can help..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary submit-btn">
-              <span class="btn-text">Send Message</span>
-              <span class="btn-loading" style="display: none;">Sending...</span>
-            </button>
-
-            <div id="form-message" class="form-message" style="display: none;"></div>
-          </form>
-
-          <div class="info-card help-card-inline">
-            <h3>Quick Tips</h3>
-            <ul>
-              <li>Response time: 24-48 hours</li>
-              <li>Include mountain names for data corrections</li>
-              <li>Photos welcome in common formats (JPG, PNG)</li>
-              <li>Check FAQ section below before contacting</li>
-            </ul>
+      <section class="contact-main">
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 7L2 7"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <h2>Get in Touch</h2>
+            <p>The best way to reach us is by email. We respond to all enquiries within 2 business days.</p>
+            <a href="mailto:azvoma@gmail.com" class="email-link">azvoma@gmail.com</a>
           </div>
         </div>
 
-        <div class="contact-info">
-          <div class="info-card">
-            <div class="info-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
+        <div class="contact-details-row">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
               </svg>
             </div>
-            <h3>Email Us</h3>
-            <p>For general inquiries:</p>
-            <a href="mailto:info@ukmountains.directory">info@ukmountains.directory</a>
-            <p style="margin-top: 1rem;">For data corrections:</p>
-            <a href="mailto:corrections@ukmountains.directory">corrections@ukmountains.directory</a>
+            <div>
+              <strong>Response Time</strong>
+              <span>Within 2 business days</span>
+            </div>
           </div>
-
-          <div class="info-card">
-            <div class="info-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <h3>Response Time</h3>
-            <p>
-              We aim to respond to all inquiries within 24-48 hours during business days.
-              Thank you for your patience.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
+            <div>
+              <strong>Based In</strong>
+              <span>United Kingdom</span>
             </div>
-            <h3>Get Involved</h3>
-            <p>
-              We welcome contributions from mountain enthusiasts. If you have photos,
-              corrections, or additional information about UK mountains, please reach out.
-            </p>
           </div>
         </div>
-      </div>
+      </section>
 
       <section class="help-section">
         <h2>How We Can Help</h2>
@@ -211,64 +117,65 @@ const faqSchema = {
         <div class="help-grid">
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
             <span>Info about the <strong>top 10 highest mountains in the UK</strong></span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
             </svg>
             <span>Route suggestions for beginners and families</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              <line x1="12" y1="22" x2="12" y2="5"/>
+              <polyline points="8 9 12 5 16 9"/>
             </svg>
             <span>Advice on <strong>easy mountains to climb UK</strong></span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
             </svg>
             <span>Corrections or updates to our mountain database</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
             <span>Partnership or collaboration enquiries</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 7L2 7"/>
             </svg>
             <span>Listing or featuring your hiking group or service</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
             </svg>
             <span>Media and press information</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
             <span>General mountain advice and safety tips</span>
           </div>
           <div class="help-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
             <span>Access and parking information for specific peaks</span>
           </div>
@@ -289,7 +196,7 @@ const faqSchema = {
           </div>
           <div class="why-contact-card">
             <h3>Family Hiking</h3>
-            <p>Tips for kids & family hiking trips with distance, duration, and terrain advice.</p>
+            <p>Tips for kids and family hiking trips with distance, duration, and terrain advice.</p>
           </div>
           <div class="why-contact-card">
             <h3>Weather & Seasonal Guidance</h3>
@@ -304,7 +211,7 @@ const faqSchema = {
             <p>Questions about Munros, Corbetts, Hewitts, Wainwrights, and other mountain classifications.</p>
           </div>
         </div>
-        <p class="help-footer">If it's about mountains—we can help.</p>
+        <p class="help-footer">If it's about mountains — we can help.</p>
       </section>
 
       <section class="contribute-section">
@@ -319,408 +226,363 @@ const faqSchema = {
           <div class="contribute-tag">Outdoor Organisations</div>
         </div>
         <p>
-          If you want to submit new mountain info, photos, routes, or corrections, contact us anytime. We value community contributions and aim to make this the most comprehensive UK mountains resource available.
+          If you want to submit new mountain info, photos, routes, or corrections, email us anytime. We value community contributions and aim to make this the most comprehensive UK mountains resource available.
         </p>
       </section>
 
-      <div class="container">
-        <section class="faq-section">
-          <h2>Frequently Asked Questions</h2>
-          <div class="faq-container">
-            <details class="faq-item">
-              <summary>Can you help me plan a route for the top 10 highest mountains in UK?</summary>
-              <p>
-                Yes, we can guide you on suitable routes, difficulty levels, and preparation tips for climbing the highest UK peaks. Contact us with details about your experience level, fitness, and timeline, and we'll provide tailored recommendations.
-              </p>
-            </details>
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>Can you help me plan a route for the top 10 highest mountains in UK?</summary>
+            <p>
+              Yes, we can guide you on suitable routes, difficulty levels, and preparation tips for climbing the highest UK peaks. Email us with details about your experience level, fitness, and timeline, and we'll provide tailored recommendations.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>Do you recommend any easy mountains to climb UK for beginners?</summary>
-              <p>
-                Absolutely! We can suggest scenic, beginner-friendly mountains perfect for families and new hikers. Our directory includes detailed information about difficulty levels, time estimates, and facilities to help you choose the right mountain for your first climb.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>Do you recommend any easy mountains to climb UK for beginners?</summary>
+            <p>
+              Absolutely! We can suggest scenic, beginner-friendly mountains perfect for families and new hikers. Our directory includes detailed information about difficulty levels, time estimates, and facilities to help you choose the right mountain for your first climb.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>How long does it take to receive a reply?</summary>
-              <p>
-                We respond to all contact form messages within 24–48 hours during business days. Complex inquiries or data verification may take slightly longer, but we'll acknowledge your message and keep you updated on progress.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>How long does it take to receive a reply?</summary>
+            <p>
+              We respond to all email enquiries within 2 business days. Complex enquiries or data verification may take slightly longer, but we'll acknowledge your message and keep you updated on progress.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>Can I submit corrections or new mountain data?</summary>
-              <p>
-                Yes! If you spot errors or want to contribute new information, simply contact us using the form above. Select "Data Correction" or "Submit Photos/Information" as your reason for contact, and include as much detail as possible including mountain name and specific corrections needed.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>Can I submit corrections or new mountain data?</summary>
+            <p>
+              Yes! If you spot errors or want to contribute new information, simply email us directly. Include the mountain name and specific corrections needed. Providing OS grid references or other verification sources helps us update information more quickly.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>How do I report incorrect mountain information?</summary>
-              <p>
-                Use the contact form above and select "Data Correction" as the subject. Please include the mountain name,
-                specific information that needs correcting, and the correct information if you know it. Providing OS grid
-                references or other verification sources helps us update information more quickly.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>Can I submit my own mountain photos?</summary>
+            <p>
+              Yes! We welcome high-quality photos from the mountain community. Email us with the mountain name, date taken, and any relevant information. Photos should be your own work, and by submitting them, you grant us permission to use them on our website with credit to you.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>Can I submit my own mountain photos?</summary>
-              <p>
-                Yes! We welcome high-quality photos from the mountain community. Please contact us with details about the
-                photos including mountain name, date taken, and any relevant information. Photos should be your own work,
-                and by submitting them, you grant us permission to use them on our website with credit to you.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>Do you offer guided mountain walks or tours?</summary>
+            <p>
+              No, UK Mountains Directory is an information resource only. We don't organise or lead mountain walks, tours, or guided expeditions. However, we can point you towards reputable guide services and mountaineering clubs.
+            </p>
+          </details>
 
-            <details class="faq-item">
-              <summary>How long does it take to get a response?</summary>
-              <p>
-                We aim to respond to all inquiries within 24-48 hours during business days (Monday-Friday). Complex technical
-                issues or data verification may take longer. If your inquiry is urgent, please mention this in your message.
-                We appreciate your patience as our small team works to maintain this comprehensive directory.
-              </p>
-            </details>
+          <details class="faq-item">
+            <summary>How can I support UK Mountains Directory?</summary>
+            <p>
+              The best way to support us is by using and sharing our directory with fellow mountain enthusiasts. Provide feedback, report errors, contribute photos, and help spread the word. If you represent an organisation interested in sponsorship or partnership opportunities, please get in touch.
+            </p>
+          </details>
+        </div>
+      </section>
 
-            <details class="faq-item">
-              <summary>Do you offer guided mountain walks or tours?</summary>
-              <p>
-                No, UK Mountains Directory is an information resource only. We don't organize or lead mountain walks, tours,
-                or guided expeditions. However, we can point you towards reputable guide services and mountaineering clubs.
-                Always ensure any guide or organization you choose is properly qualified and insured.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can I suggest new features for the website?</summary>
-              <p>
-                Absolutely! We value feedback from our users and are always looking to improve. Use the contact form and
-                select "Suggestion" as the subject. Tell us what features you'd like to see, what would improve your
-                experience, or any other ideas you have. While we can't implement every suggestion, we carefully consider
-                all feedback.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Do you have an API for developers?</summary>
-              <p>
-                We're currently exploring the possibility of offering an API for developers who want to integrate mountain
-                data into their applications. If you're interested in this, please contact us with details about your project
-                and how you'd like to use the data. This helps us understand developer needs and prioritize API development.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>How can I support UK Mountains Directory?</summary>
-              <p>
-                The best way to support us is by using and sharing our directory with fellow mountain enthusiasts. Provide
-                feedback, report errors, contribute photos, and help spread the word about our resource. If you represent
-                an organization interested in sponsorship or partnership opportunities, please contact us to discuss possibilities.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can you provide information for commercial projects?</summary>
-              <p>
-                For commercial use of our data, photography, or other resources, please contact us with details about your
-                project, intended use, and timeline. We'll review your request and discuss appropriate arrangements. Personal,
-                non-commercial use of information found on our website for trip planning and research is always free.
-              </p>
-            </details>
-          </div>
-        </section>
-      </div>
     </div>
   </div>
 </Layout>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const submitBtn = form?.querySelector('.submit-btn') as HTMLButtonElement;
-  const btnText = submitBtn?.querySelector('.btn-text') as HTMLSpanElement;
-  const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLSpanElement;
-  const formMessage = document.getElementById('form-message') as HTMLDivElement;
-
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('success') === 'true') {
-    if (formMessage) {
-      formMessage.style.display = 'block';
-      formMessage.className = 'form-message success';
-      formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-      window.history.replaceState({}, document.title, window.location.pathname);
-
-      setTimeout(() => {
-        formMessage.style.display = 'none';
-      }, 8000);
-    }
-  }
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      btnText.style.display = 'none';
-      btnLoading.style.display = 'inline';
-    }
-
-    try {
-      const formData = new FormData(form);
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      });
-
-      if (response.ok) {
-        if (formMessage) {
-          formMessage.style.display = 'block';
-          formMessage.className = 'form-message success';
-          formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-          form.reset();
-
-          setTimeout(() => {
-            formMessage.style.display = 'none';
-          }, 8000);
-        }
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      if (formMessage) {
-        formMessage.style.display = 'block';
-        formMessage.className = 'form-message error';
-        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at ayzvoma@gmail.com.';
-      }
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        btnText.style.display = 'inline';
-        btnLoading.style.display = 'none';
-      }
-    }
-  });
-</script>
-
 <style>
   .contact-page {
-    padding: var(--spacing-3xl) 0;
     background: var(--color-neutral-50);
     min-height: calc(100vh - 400px);
   }
 
-  .contact-header {
+  .contact-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
     text-align: center;
-    margin-bottom: var(--spacing-3xl);
   }
 
-  .contact-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
-    color: var(--color-neutral-900);
+  .contact-hero h1 {
+    color: white;
+    font-size: 2.75rem;
+    margin-bottom: var(--spacing-md);
     line-height: 1.2;
   }
 
-  .contact-header .lead-intro {
-    font-size: 1.125rem;
-    color: var(--color-neutral-700);
+  .hero-lead {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.2rem;
+    max-width: 680px;
+    margin: 0 auto;
     line-height: 1.7;
-    max-width: 900px;
-    margin: 0 auto var(--spacing-md) auto;
   }
 
-  .contact-header .mission-text {
-    font-size: 1rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .contact-main {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+  }
+
+  .contact-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-2xl);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .contact-card-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+  }
+
+  .contact-card-body h2 {
+    font-size: 1.5rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .contact-card-body p {
+    color: var(--color-neutral-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .email-link {
+    display: inline-block;
     color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition-fast);
+  }
+
+  .email-link:hover {
+    border-bottom-color: var(--color-primary);
+  }
+
+  .contact-details-row {
+    display: flex;
+    gap: var(--spacing-xl);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: white;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    min-width: 240px;
+  }
+
+  .detail-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 118, 110, 0.1);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .detail-item div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .detail-item strong {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-neutral-500);
     font-weight: 600;
-    margin-top: var(--spacing-md);
   }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: var(--spacing-2xl);
+  .detail-item span {
+    font-size: 1rem;
+    color: var(--color-neutral-800);
+    font-weight: 500;
   }
 
-  .contact-form-section {
+  .help-section {
+    margin-bottom: var(--spacing-3xl);
     background: white;
     padding: var(--spacing-2xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
   }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group label {
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-700);
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 12px 16px;
-    border: 2px solid var(--color-neutral-300);
-    border-radius: var(--radius-md);
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color var(--transition-fast);
-  }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-
-  .form-message {
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    text-align: center;
-    font-weight: 500;
-  }
-
-  .form-message.success {
-    background: #d1fae5;
-    color: #065f46;
-    border: 2px solid #10b981;
-  }
-
-  .form-message.error {
-    background: #fee2e2;
-    color: #991b1b;
-    border: 2px solid #ef4444;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-  }
-
-  .info-card {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .info-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--color-primary);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .help-section h2 {
+    font-size: 2rem;
     margin-bottom: var(--spacing-md);
-  }
-
-  .info-icon svg {
-    color: white;
-  }
-
-  .info-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-sm);
+    text-align: center;
     color: var(--color-neutral-900);
   }
 
-  .info-card p {
+  .help-section > p {
+    text-align: center;
+    font-size: 1.125rem;
     color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .help-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-primary);
+    transition: all var(--transition-base);
+  }
+
+  .help-item:hover {
+    background: var(--color-neutral-100);
+    transform: translateX(4px);
+  }
+
+  .help-item svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+  }
+
+  .help-item span {
     line-height: 1.5;
-  }
-
-  .info-card a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .info-card a:hover {
-    text-decoration: underline;
-  }
-
-  .help-card {
-    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-  }
-
-  .help-card ul {
-    list-style: none;
-    padding: 0;
-    margin: var(--spacing-md) 0;
-  }
-
-  .help-card li {
-    padding: var(--spacing-sm) 0;
     color: var(--color-neutral-700);
-    position: relative;
-    padding-left: var(--spacing-lg);
   }
 
-  .help-card li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: bold;
-  }
-
-  .help-card-inline {
-    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-    padding: var(--spacing-xl);
+  .why-contact-section {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: white;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    margin-top: var(--spacing-xl);
   }
 
-  .help-card-inline h3 {
-    font-size: 1.25rem;
+  .why-contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    color: var(--color-neutral-900);
+  }
+
+  .why-contact-section > p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .why-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .why-contact-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
+  }
+
+  .why-contact-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .why-contact-card h3 {
+    font-size: 1.125rem;
     margin-bottom: var(--spacing-sm);
     color: var(--color-neutral-900);
   }
 
-  .help-card-inline ul {
-    list-style: none;
-    padding: 0;
-    margin: var(--spacing-md) 0;
+  .why-contact-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-neutral-600);
+    margin: 0;
   }
 
-  .help-card-inline li {
-    padding: var(--spacing-sm) 0;
-    color: var(--color-neutral-700);
-    position: relative;
-    padding-left: var(--spacing-lg);
-  }
-
-  .help-card-inline li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
+  .help-footer {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--color-primary);
-    font-weight: bold;
+    margin-top: var(--spacing-lg);
+  }
+
+  .contribute-section {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contribute-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    color: var(--color-neutral-900);
+  }
+
+  .contribute-section > p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .contribute-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .contribute-tag {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
   }
 
   .faq-section {
@@ -789,263 +651,42 @@ const faqSchema = {
     color: var(--color-neutral-700);
   }
 
-  /* HELP SECTION */
-  .help-section {
-    margin-bottom: var(--spacing-3xl);
-    background: white;
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .help-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
-    color: var(--color-neutral-900);
-  }
-
-  .help-section > p {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .help-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .help-item {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-    border-left: 3px solid var(--color-primary);
-    transition: all var(--transition-base);
-  }
-
-  .help-item:hover {
-    background: var(--color-neutral-100);
-    transform: translateX(4px);
-  }
-
-  .help-item svg {
-    flex-shrink: 0;
-    color: var(--color-primary);
-    margin-top: 2px;
-  }
-
-  .help-item span {
-    line-height: 1.5;
-    color: var(--color-neutral-700);
-  }
-
-  /* WHY CONTACT SECTION */
-  .why-contact-section {
-    margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-2xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .why-contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
-    color: var(--color-neutral-900);
-  }
-
-  .why-contact-section > p {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .why-contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .why-contact-card {
-    padding: var(--spacing-lg);
-    background: var(--color-neutral-50);
-    border-radius: var(--radius-md);
-    border: 2px solid var(--color-neutral-200);
-    transition: all var(--transition-base);
-  }
-
-  .why-contact-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
-
-  .why-contact-card h3 {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-neutral-900);
-  }
-
-  .why-contact-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--color-neutral-600);
-    margin: 0;
-  }
-
-  .help-footer {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-top: var(--spacing-lg);
-  }
-
-  /* BEGINNER PEAKS SECTION */
-  .beginner-peaks-section {
-    margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-2xl);
-    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .beginner-peaks-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-neutral-900);
-  }
-
-  .beginner-peaks-section > p {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--color-neutral-700);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .beginner-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .beginner-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
-    background: white;
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    color: var(--color-neutral-700);
-  }
-
-  .beginner-item svg {
-    flex-shrink: 0;
-    color: #10b981;
-  }
-
-  .explore-btn {
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  /* CONTRIBUTE SECTION */
-  .contribute-section {
-    margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-2xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .contribute-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
-    color: var(--color-neutral-900);
-  }
-
-  .contribute-section > p {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .contribute-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    justify-content: center;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .contribute-tag {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  @media (max-width: 1024px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-      order: -1;
-    }
-  }
-
   @media (max-width: 768px) {
-    .contact-header h1 {
-      font-size: 1.75rem;
-      line-height: 1.3;
+    .contact-hero h1 {
+      font-size: 1.9rem;
     }
 
-    .contact-header .lead-intro {
+    .hero-lead {
       font-size: 1rem;
     }
 
-    .contact-form-section {
-      padding: var(--spacing-lg);
+    .contact-card {
+      flex-direction: column;
+      gap: var(--spacing-lg);
     }
 
-    .help-grid {
-      grid-template-columns: 1fr;
+    .contact-details-row {
+      flex-direction: column;
+      align-items: stretch;
     }
 
+    .detail-item {
+      min-width: unset;
+    }
+
+    .help-grid,
     .why-contact-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .beginner-list {
       grid-template-columns: 1fr;
     }
 
     .help-section,
     .why-contact-section,
-    .beginner-peaks-section,
     .contribute-section {
       padding: var(--spacing-lg);
     }
 
     .help-section h2,
     .why-contact-section h2,
-    .beginner-peaks-section h2,
     .contribute-section h2 {
       font-size: 1.5rem;
     }
