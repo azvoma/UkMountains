@@ -687,7 +687,7 @@
     "id": "sgd1",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
     "mountain_name": "Sgurr Dearg",
-    "image_url": "/sgurr_dearg_1.jpg",
+    "image_url": "https://www.fraser-king.com/wp-content/uploads/2023/09/389-sgurr-dearg-and-the-inaccessible-pinnacle-2.jpg",
     "alt_text": "Sgurr Dearg - Climber on the Inaccessible Pinnacle",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -696,7 +696,7 @@
     "id": "sgd2",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
     "mountain_name": "Sgurr Dearg",
-    "image_url": "/sgurr_dearg_2.jpg",
+    "image_url": "https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvOTgwNDMyNjAvOTgzZGZkYmViZGQyNjA5ODVmMzRiZDQzNjBmZWMwNzUuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoiNTAwIiwiaGVpZ2h0IjoiNTAwIiwiZml0IjoiaW5zaWRlIn0sInJvdGF0ZSI6bnVsbCwianBlZyI6eyJ0cmVsbGlzUXVhbnRpc2F0aW9uIjp0cnVlLCJvdmVyc2hvb3REZXJpbmdpbmciOnRydWUsIm9wdGltaXNlU2NhbnMiOnRydWUsInF1YW50aXNhdGlvblRhYmxlIjozfX19",
     "alt_text": "Sgurr Dearg - The Inaccessible Pinnacle rock tower",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
