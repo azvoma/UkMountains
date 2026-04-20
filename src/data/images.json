@@ -1,153 +1,9 @@
 [
   {
-    "id": "bn1",
-    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "mountain_name": "Ben Nevis",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis - Scotland's highest peak",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bn2",
-    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "mountain_name": "Ben Nevis",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis mountain landscape",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bn3",
-    "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "mountain_name": "Ben Nevis",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Ben Nevis summit view",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sn1",
-    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "mountain_name": "Snowdon",
-    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Snowdon - Highest peak in Wales",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sn2",
-    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "mountain_name": "Snowdon",
-    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Snowdon mountain peak",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sn3",
-    "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "mountain_name": "Snowdon",
-    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Snowdon hiking path",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sp1",
-    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "mountain_name": "Scafell Pike",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Scafell Pike - England's highest mountain",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sp2",
-    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "mountain_name": "Scafell Pike",
-    "image_url": "https://images.pexels.com/photos/1567069/pexels-photo-1567069.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Scafell Pike rocky terrain",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "sp3",
-    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "mountain_name": "Scafell Pike",
-    "image_url": "https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Scafell Pike summit approach",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bm1",
-    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "mountain_name": "Ben Macdui",
-    "image_url": "/ben macdui 1.jpeg",
-    "alt_text": "Ben Macdui - Second highest UK mountain with Loch Etchachan",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bm2",
-    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "mountain_name": "Ben Macdui",
-    "image_url": "/ben macdui 2.jpg",
-    "alt_text": "Ben Macdui hiking trail with mountain views",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "bm3",
-    "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "mountain_name": "Ben Macdui",
-    "image_url": "/ben macdui 3.webp",
-    "alt_text": "Ben Macdui winter landscape in the Cairngorms",
-    "order": 2,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "br1",
-    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
-    "mountain_name": "Braeriach",
-    "image_url": "/Braeriach 1.jpg",
-    "alt_text": "Braeriach - Third highest UK mountain with dramatic corries",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "br2",
-    "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
-    "mountain_name": "Braeriach",
-    "image_url": "/Braeriach 2.jpg",
-    "alt_text": "Braeriach snowy summit plateau in the Cairngorms",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "hv1",
-    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "mountain_name": "Helvellyn",
-    "image_url": "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Helvellyn - Lake District peak",
-    "order": 0,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
-    "id": "hv2",
-    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "mountain_name": "Helvellyn",
-    "image_url": "https://images.pexels.com/photos/1761280/pexels-photo-1761280.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "alt_text": "Helvellyn ridge walk",
-    "order": 1,
-    "created_at": "2025-12-04T00:00:00.000Z"
-  },
-  {
     "id": "hv3",
     "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
     "mountain_name": "Helvellyn",
-    "image_url": "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Helvellyn.jpg",
     "alt_text": "Helvellyn mountain path",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -174,7 +30,7 @@
     "id": "cg1",
     "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
     "mountain_name": "Cairn Gorm",
-    "image_url": "https://images.pexels.com/photos/1624438/pexels-photo-1624438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cairn_Gorm.jpg",
     "alt_text": "Cairn Gorm - Cairngorms mountain",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -183,7 +39,7 @@
     "id": "cg2",
     "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
     "mountain_name": "Cairn Gorm",
-    "image_url": "https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cairn_Gorm_summit.jpg",
     "alt_text": "Cairn Gorm plateau",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -192,7 +48,7 @@
     "id": "cg3",
     "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
     "mountain_name": "Cairn Gorm",
-    "image_url": "https://images.pexels.com/photos/1612455/pexels-photo-1612455.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cairngorm_Plateau.jpg",
     "alt_text": "Cairn Gorm summit",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -219,7 +75,7 @@
     "id": "pf3",
     "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
     "mountain_name": "Pen y Fan",
-    "image_url": "https://images.pexels.com/photos/1655329/pexels-photo-1655329.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pen_y_Fan.jpg",
     "alt_text": "Pen y Fan summit",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -228,7 +84,7 @@
     "id": "tf1",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
     "mountain_name": "Tryfan",
-    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Tryfan.jpg",
     "alt_text": "Tryfan - Iconic Welsh peak",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -237,7 +93,7 @@
     "id": "tf2",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
     "mountain_name": "Tryfan",
-    "image_url": "https://images.pexels.com/photos/1166413/pexels-photo-1166413.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Tryfan_from_Llyn_Ogwen.jpg",
     "alt_text": "Tryfan rocky scramble",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -246,7 +102,7 @@
     "id": "tf3",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
     "mountain_name": "Tryfan",
-    "image_url": "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Tryfan_Summit.jpg",
     "alt_text": "Tryfan summit rocks",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -750,7 +606,7 @@
     "id": "sd1",
     "mountain_id": "a1b2c3d4-0001-4001-8001-000000000001",
     "mountain_name": "Slieve Donard",
-    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Slieve_Donard.jpg",
     "alt_text": "Slieve Donard - Highest peak in Northern Ireland",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -759,7 +615,7 @@
     "id": "sd2",
     "mountain_id": "a1b2c3d4-0001-4001-8001-000000000001",
     "mountain_name": "Slieve Donard",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Slieve_Donard_summit.jpg",
     "alt_text": "Slieve Donard mountain landscape",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -768,7 +624,7 @@
     "id": "sc1",
     "mountain_id": "a1b2c3d4-0002-4001-8001-000000000002",
     "mountain_name": "Slieve Commedagh",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Slieve_Commedagh.jpg",
     "alt_text": "Slieve Commedagh in the Mourne Mountains",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -777,7 +633,7 @@
     "id": "sb1",
     "mountain_id": "a1b2c3d4-0003-4001-8001-000000000003",
     "mountain_name": "Slieve Binnian",
-    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Slieve_Binnian.jpg",
     "alt_text": "Slieve Binnian with dramatic granite tors",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -786,7 +642,7 @@
     "id": "sbn1",
     "mountain_id": "a1b2c3d4-0004-4001-8001-000000000004",
     "mountain_name": "Slieve Bearnagh",
-    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Slieve_Bearnagh.jpg",
     "alt_text": "Slieve Bearnagh with Mourne Wall",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -795,7 +651,7 @@
     "id": "tcob1",
     "mountain_id": "a1b2c3d4-0005-4001-8001-000000000005",
     "mountain_name": "The Cobbler",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/The_Cobbler.jpg",
     "alt_text": "The Cobbler - Ben Arthur near Arrochar",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -804,7 +660,7 @@
     "id": "suil1",
     "mountain_id": "a1b2c3d4-0006-4001-8001-000000000006",
     "mountain_name": "Suilven",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Suilven.jpg",
     "alt_text": "Suilven - Iconic silhouette in the Scottish Highlands",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -813,7 +669,7 @@
     "id": "bhope1",
     "mountain_id": "a1b2c3d4-0007-4001-8001-000000000007",
     "mountain_name": "Ben Hope",
-    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ben_Hope.jpg",
     "alt_text": "Ben Hope - Northernmost Munro in Scotland",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -822,7 +678,7 @@
     "id": "blui1",
     "mountain_id": "a1b2c3d4-0008-4001-8001-000000000008",
     "mountain_name": "Ben Lui",
-    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ben_Lui.jpg",
     "alt_text": "Ben Lui - One of Scotland's most beautiful mountains",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -831,7 +687,7 @@
     "id": "catb1",
     "mountain_id": "a1b2c3d4-0009-4001-8001-000000000009",
     "mountain_name": "Catbells",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Catbells.jpg",
     "alt_text": "Catbells above Derwentwater in the Lake District",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -840,7 +696,7 @@
     "id": "pyg1",
     "mountain_id": "a1b2c3d4-0010-4001-8001-000000000010",
     "mountain_name": "Pen-y-ghent",
-    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pen-y-ghent.jpg",
     "alt_text": "Pen-y-ghent - Yorkshire Three Peaks",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -849,7 +705,7 @@
     "id": "mamt1",
     "mountain_id": "a1b2c3d4-0011-4001-8001-000000000011",
     "mountain_name": "Mam Tor",
-    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Mam_Tor.jpg",
     "alt_text": "Mam Tor - The Shivering Mountain in the Peak District",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -858,7 +714,7 @@
     "id": "pyow1",
     "mountain_id": "a1b2c3d4-0012-4001-8001-000000000012",
     "mountain_name": "Pen y Ole Wen",
-    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pen_y_Ole_Wen.jpg",
     "alt_text": "Pen y Ole Wen - Gatekeeper of the Ogwen Valley",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -867,7 +723,7 @@
     "id": "mheb1",
     "mountain_id": "a1b2c3d4-0013-4001-8001-000000000013",
     "mountain_name": "Moel Hebog",
-    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Moel_Hebog.jpg",
     "alt_text": "Moel Hebog above Beddgelert in Snowdonia",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -881,7 +737,7 @@
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
-    {
+  {
     "id": "fyb1",
     "mountain_id": "a1b2c3d4-0014-4001-8001-000000000014",
     "mountain_name": "Fan y Big",
@@ -903,7 +759,7 @@
     "id": "bvle1",
     "mountain_id": "a1b2c3d4-0016-4001-8001-000000000016",
     "mountain_name": "Ben Vorlich (Loch Earn)",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ben_Vorlich_Loch_Earn.jpg",
     "alt_text": "Ben Vorlich above Loch Earn",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -912,7 +768,7 @@
     "id": "helv1",
     "mountain_id": "a1b2c3d4-0017-4001-8001-000000000017",
     "mountain_name": "Helvellyn",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Helvellyn.jpg",
     "alt_text": "Helvellyn - Third highest mountain in England",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -921,7 +777,7 @@
     "id": "cros1",
     "mountain_id": "a1b2c3d4-0018-4001-8001-000000000018",
     "mountain_name": "Cross Fell",
-    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cross_Fell.jpg",
     "alt_text": "Cross Fell - Highest point in the Pennines",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -930,7 +786,7 @@
     "id": "blen1",
     "mountain_id": "a1b2c3d4-0019-4001-8001-000000000019",
     "mountain_name": "Blencathra",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Blencathra.jpg",
     "alt_text": "Blencathra - Also known as Saddleback",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -939,7 +795,7 @@
     "id": "lohi1",
     "mountain_id": "a1b2c3d4-0020-4001-8001-000000000020",
     "mountain_name": "Lose Hill",
-    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Lose_Hill.jpg",
     "alt_text": "Lose Hill - Eastern end of the Great Ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -948,7 +804,7 @@
     "id": "bach1",
     "mountain_id": "a1b2c3d4-0021-4001-8001-000000000021",
     "mountain_name": "Beinn a Chlachair",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_a_Chlachair.jpg",
     "alt_text": "Beinn a Chlachair in the Monadhliath",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -957,7 +813,7 @@
     "id": "bdor1",
     "mountain_id": "a1b2c3d4-0022-4001-8001-000000000022",
     "mountain_name": "Beinn Dorain",
-    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Dorain.jpg",
     "alt_text": "Beinn Dorain - Conical mountain at Bridge of Orchy",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -966,7 +822,7 @@
     "id": "buem1",
     "mountain_id": "a1b2c3d4-0023-4001-8001-000000000023",
     "mountain_name": "Buachaille Etive Mor",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Buachaille_Etive_Mor.jpg",
     "alt_text": "Buachaille Etive Mor - Iconic pyramid of Glencoe",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -975,7 +831,7 @@
     "id": "bghl1",
     "mountain_id": "a1b2c3d4-0024-4001-8001-000000000024",
     "mountain_name": "Beinn Ghlas",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Ghlas.jpg",
     "alt_text": "Beinn Ghlas in the Ben Lawers group",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -984,7 +840,7 @@
     "id": "mgrl1",
     "mountain_id": "a1b2c3d4-0025-4001-8001-000000000025",
     "mountain_name": "Meall Garbh",
-    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Meall_Garbh.jpg",
     "alt_text": "Meall Garbh in the Ben Lawers massif",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -993,7 +849,7 @@
     "id": "bagl1",
     "mountain_id": "a1b2c3d4-0026-4001-8001-000000000026",
     "mountain_name": "Beinn a' Ghlo",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_a'_Ghlo.jpg",
     "alt_text": "Beinn a Ghlo - Mountain complex in the Highlands",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1002,7 +858,7 @@
     "id": "sgio1",
     "mountain_id": "a1b2c3d4-0027-4001-8001-000000000027",
     "mountain_name": "Sgor Gaoith",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sgor_Gaoith.jpg",
     "alt_text": "Sgor Gaoith on the Cairngorm plateau edge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1011,7 +867,7 @@
     "id": "bime1",
     "mountain_id": "a1b2c3d4-0028-4001-8001-000000000028",
     "mountain_name": "Beinn Ime",
-    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Ime.jpg",
     "alt_text": "Beinn Ime - Highest of the Arrochar Alps",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1020,7 +876,7 @@
     "id": "bsta1",
     "mountain_id": "a1b2c3d4-0029-4001-8001-000000000029",
     "mountain_name": "Ben Starav",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ben_Starav.jpg",
     "alt_text": "Ben Starav above Loch Etive",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1029,7 +885,7 @@
     "id": "bfh1",
     "mountain_id": "a1b2c3d4-0030-4001-8001-000000000030",
     "mountain_name": "Beinn Fhionnlaidh",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Fhionnlaidh.jpg",
     "alt_text": "Beinn Fhionnlaidh above Loch Mullardoch",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1038,7 +894,7 @@
     "id": "cberw1",
     "mountain_id": "a1b2c3d4-0031-4001-8001-000000000031",
     "mountain_name": "Cadair Berwyn",
-    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cadair_Berwyn.jpg",
     "alt_text": "Cadair Berwyn in the Berwyn Mountains",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1047,7 +903,7 @@
     "id": "myndu1",
     "mountain_id": "a1b2c3d4-0032-4001-8001-000000000032",
     "mountain_name": "Mynydd Du",
-    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Mynydd_Du.jpg",
     "alt_text": "Mynydd Du - Black Mountain in the Brecon Beacons",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1056,7 +912,7 @@
     "id": "plumon1",
     "mountain_id": "a1b2c3d4-0033-4001-8001-000000000033",
     "mountain_name": "Plynlimon",
-    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Plynlimon.jpg",
     "alt_text": "Plynlimon - Source of the Severn and Wye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1065,7 +921,7 @@
     "id": "pyca1",
     "mountain_id": "a1b2c3d4-0034-4001-8001-000000000034",
     "mountain_name": "Pen y Cadair",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pen_y_Cadair.jpg",
     "alt_text": "Pen y Cadair - True summit of Cadair Idris",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1074,7 +930,7 @@
     "id": "bnar1",
     "mountain_id": "a1b2c3d4-0035-4001-8001-000000000035",
     "mountain_name": "Beinn Narnain",
-    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Narnain.jpg",
     "alt_text": "Beinn Narnain in the Arrochar Alps",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1083,12 +939,12 @@
     "id": "ball1",
     "mountain_id": "a1b2c3d4-0036-4001-8001-000000000036",
     "mountain_name": "Beinn Alligin",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Alligin.jpg",
     "alt_text": "Beinn Alligin - Jewelled Mountain of Torridon",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
- {
+  {
     "id": "bderg1",
     "mountain_id": "a1b2c3d4-0037-4001-8001-000000000037",
     "mountain_name": "Beinn Dearg",
@@ -1097,7 +953,7 @@
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
- {
+  {
     "id": "bderg1",
     "mountain_id": "a1b2c3d4-0037-4001-8001-000000000037",
     "mountain_name": "Beinn Dearg",
@@ -1106,14 +962,11 @@
     "order": 2,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
-
-
-  
   {
     "id": "bmhan1",
     "mountain_id": "a1b2c3d4-0038-4001-8001-000000000038",
     "mountain_name": "Beinn Mhanach",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Mhanach.jpg",
     "alt_text": "Beinn Mhanach - Remote Munro in Glen Lyon",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1122,7 +975,7 @@
     "id": "omas1",
     "mountain_id": "a1b2c3d4-0039-4001-8001-000000000039",
     "mountain_name": "Old Man of Storr",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Old_Man_of_Storr.jpg",
     "alt_text": "Old Man of Storr - Iconic pinnacle on the Isle of Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1131,7 +984,7 @@
     "id": "quir1",
     "mountain_id": "a1b2c3d4-0040-4001-8001-000000000040",
     "mountain_name": "The Quiraing",
-    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Quiraing.jpg",
     "alt_text": "The Quiraing - Extraordinary landscape on Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1140,7 +993,7 @@
     "id": "linm1",
     "mountain_id": "a1b2c3d4-0041-4001-8001-000000000041",
     "mountain_name": "Lingmell",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Lingmell.jpg",
     "alt_text": "Lingmell above Wasdale in the Lake District",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1149,7 +1002,7 @@
     "id": "kids1",
     "mountain_id": "a1b2c3d4-0042-4001-8001-000000000042",
     "mountain_name": "Kidsty Pike",
-    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Kidsty_Pike.jpg",
     "alt_text": "Kidsty Pike above Haweswater",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1158,7 +1011,7 @@
     "id": "cats1",
     "mountain_id": "a1b2c3d4-0043-4001-8001-000000000043",
     "mountain_name": "Catstycam",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Catstycam.jpg",
     "alt_text": "Catstycam - Pyramid peak beside Helvellyn",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1167,7 +1020,7 @@
     "id": "ffras1",
     "mountain_id": "a1b2c3d4-0044-4001-8001-000000000044",
     "mountain_name": "Foel Fras",
-    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Foel_Fras.jpg",
     "alt_text": "Foel Fras - Most northerly Carneddau Hewitt",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1176,7 +1029,7 @@
     "id": "pyhd1",
     "mountain_id": "a1b2c3d4-0045-4001-8001-000000000045",
     "mountain_name": "Pen yr Helgi Du",
-    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pen_yr_Helgi_Du.jpg",
     "alt_text": "Pen yr Helgi Du in the Carneddau",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1185,7 +1038,7 @@
     "id": "mmaw1",
     "mountain_id": "a1b2c3d4-0046-4001-8001-000000000046",
     "mountain_name": "Moelwyn Mawr",
-    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Moelwyn_Mawr.jpg",
     "alt_text": "Moelwyn Mawr in the Moelwyn Mountains",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1194,7 +1047,7 @@
     "id": "rpb1",
     "mountain_id": "a1b2c3d4-0047-4001-8001-000000000047",
     "mountain_name": "Red Pike (Buttermere)",
-    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Red_Pike_Buttermere.jpg",
     "alt_text": "Red Pike above Buttermere in the Lake District",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1203,7 +1056,7 @@
     "id": "tncr1",
     "mountain_id": "a1b2c3d4-0048-4001-8001-000000000048",
     "mountain_name": "Thornthwaite Crag",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Thornthwaite_Crag.jpg",
     "alt_text": "Thornthwaite Crag with its distinctive beacon",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1212,7 +1065,7 @@
     "id": "snba1",
     "mountain_id": "a1b2c3d4-0049-4001-8001-000000000049",
     "mountain_name": "Sgurr na Banachdich",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sgurr_na_Banachdich.jpg",
     "alt_text": "Sgurr na Banachdich on the Cuillin Ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1221,7 +1074,7 @@
     "id": "smco1",
     "mountain_id": "a1b2c3d4-0050-4001-8001-000000000050",
     "mountain_name": "Sgurr Mhic Choinnich",
-    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sgurr_Mhic_Choinnich.jpg",
     "alt_text": "Sgurr Mhic Choinnich on the Cuillin Ridge, Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1230,7 +1083,7 @@
     "id": "bmhe1",
     "mountain_id": "a1b2c3d4-0051-4001-8001-000000000051",
     "mountain_name": "Beinn Mheadhoin",
-    "image_url": "https://lh5.googleusercontent.com/proxy/mfLkIo_dQMc6k5F1ukJtu2kydKBCTwy-WSGkvjD0DLvgxuz0LtfnOXPlGeDoLABR_pTSppTF6qzuhNt_QhF9OEBkfOhJVz8",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Mheadhoin.jpg",
     "alt_text": "Beinn Mheadhoin with its distinctive granite tors",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1239,7 +1092,7 @@
     "id": "bbhr1",
     "mountain_id": "a1b2c3d4-0052-4001-8001-000000000052",
     "mountain_name": "Beinn Bhrotain",
-    "image_url": "https://lh5.googleusercontent.com/proxy/mfLkIo_dQMc6k5F1ukJtu2kydKBCTwy-WSGkvjD0DLvgxuz0LtfnOXPlGeDoLABR_pTSppTF6qzuhNt_QhF9OEBkfOhJVz8",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Beinn_Bhrotain.jpg",
     "alt_text": "Beinn Bhrotain on the edge of the Great Moss",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1248,7 +1101,7 @@
     "id": "culb1",
     "mountain_id": "a1b2c3d4-0053-4001-8001-000000000053",
     "mountain_name": "Cul Beag",
- "image_url": "https://lh5.googleusercontent.com/proxy/mfLkIo_dQMc6k5F1ukJtu2kydKBCTwy-WSGkvjD0DLvgxuz0LtfnOXPlGeDoLABR_pTSppTF6qzuhNt_QhF9OEBkfOhJVz8",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Cul_Beag.jpg",
     "alt_text": "Cul Beag in the Assynt landscape",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1257,7 +1110,7 @@
     "id": "snco1",
     "mountain_id": "a1b2c3d4-0054-4001-8001-000000000054",
     "mountain_name": "Sgurr nan Coireachan",
-    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sgurr_nan_Coireachan.jpg",
     "alt_text": "Sgurr nan Coireachan above Glenfinnan",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
