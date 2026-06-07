@@ -1226,7 +1226,7 @@
   {
     "id": "94dabf53-ade5-47d4-bff2-fa5eafdd4c63",
     "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
-    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://s3-us-west-1.amazonaws.com/peakery-media/images/items/users/cache/aonach-beag-united-kingdom-1233m_67216d63-9b80-4aed-88bb-641e9fd4b4f0.jpeg.1920x1440_q95_crop.jpg",
     "alt_text": "Aonach Beag - Mountain view 2",
     "order": 1,
     "created_at": "2025-11-03T19:25:04.964514+00:00"
