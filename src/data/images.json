@@ -26,7 +26,7 @@
   {
     "id": "sn1",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "/snowdon_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Snowdon_from_Llyn_Llydaw_crop.jpg/1280px-Snowdon_from_Llyn_Llydaw_crop.jpg",
     "alt_text": "Snowdon summit - Yr Wyddfa, highest peak in Wales at 1085m",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -122,7 +122,7 @@
   {
     "id": "blom1",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
-    "image_url": "/ben_lomond_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Ben_Lomond_from_Loch_Lomond.jpg/1280px-Ben_Lomond_from_Loch_Lomond.jpg",
     "alt_text": "Ben Lomond reflected in Loch Lomond - southernmost Munro in Scotland",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -186,7 +186,7 @@
   {
     "id": "gg1",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
-    "image_url": "/great_gable_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Great_Gable_from_Lingmell.jpg/1280px-Great_Gable_from_Lingmell.jpg",
     "alt_text": "Great Gable above Wastwater - iconic Lake District peak at 899m",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -202,7 +202,7 @@
   {
     "id": "ct1",
     "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
-    "image_url": "/cairn_toul_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Cairn_Toul_from_Braeriach.jpg/1280px-Cairn_Toul_from_Braeriach.jpg",
     "alt_text": "Cairn Toul - fourth highest mountain in Scotland with winter snow in the Cairngorms",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -218,7 +218,7 @@
   {
     "id": "slu1",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
-    "image_url": "/sgor_an_lochain_uaine_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Angel%27s_Peak_-_geograph.org.uk_-_1640396.jpg/1280px-Angel%27s_Peak_-_geograph.org.uk_-_1640396.jpg",
     "alt_text": "Sgor an Lochain Uaine - The Angel's Peak at 1258m in the Cairngorms",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -242,7 +242,7 @@
   {
     "id": "ab1",
     "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
-    "image_url": "/aonach_beag_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Aonach_Beag_from_the_north.jpg/1280px-Aonach_Beag_from_the_north.jpg",
     "alt_text": "Aonach Beag - dramatic snow-covered mountain ridge near Ben Nevis at 1234m",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -258,7 +258,7 @@
   {
     "id": "am1",
     "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
-    "image_url": "/aonach_mor_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Aonach_Mor_Gondola_-_geograph.org.uk_-_1607925.jpg/1280px-Aonach_Mor_Gondola_-_geograph.org.uk_-_1607925.jpg",
     "alt_text": "Aonach Mor - snow-capped peak from valley with Nevis Range forests",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -274,7 +274,7 @@
   {
     "id": "cmd1",
     "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
-    "image_url": "/carn_mor_dearg_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carn_Mor_Dearg_from_Aonach_Beag.jpg/1280px-Carn_Mor_Dearg_from_Aonach_Beag.jpg",
     "alt_text": "Carn Mor Dearg - dramatic knife-edge arete ridge connecting to Ben Nevis",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -290,7 +290,7 @@
   {
     "id": "bl1",
     "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
-    "image_url": "/ben_lawers_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ben_Lawers_from_Loch_Tay.jpg/1280px-Ben_Lawers_from_Loch_Tay.jpg",
     "alt_text": "Ben Lawers - highest mountain in the Southern Highlands at 1214m with summit approach",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -306,7 +306,7 @@
   {
     "id": "bab1",
     "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
-    "image_url": "/beinn_a'_bhuird_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Beinn_a_Bhuird_-_geograph.org.uk_-_1638848.jpg/1280px-Beinn_a_Bhuird_-_geograph.org.uk_-_1638848.jpg",
     "alt_text": "Beinn a' Bhuird - snow-covered Cairngorm peaks with hiker approaching summit",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -322,7 +322,7 @@
   {
     "id": "ln1",
     "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
-    "image_url": "/lochnagar_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lochnagar_-_geograph.org.uk_-_469949.jpg/1280px-Lochnagar_-_geograph.org.uk_-_469949.jpg",
     "alt_text": "Lochnagar - dramatic corrie with mountain lake on Royal Deeside",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -338,7 +338,7 @@
   {
     "id": "bnb1",
     "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
-    "image_url": "/bidean_nam_bian_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bidean_nam_Bian_from_Stob_Coire_Sgreamhach.jpg/1280px-Bidean_nam_Bian_from_Stob_Coire_Sgreamhach.jpg",
     "alt_text": "Bidean nam Bian - dramatic rocky ridge and peaks above Glencoe",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -354,7 +354,7 @@
   {
     "id": "ba1",
     "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
-    "image_url": "/ben_alder_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ben_Alder_from_Loch_Ericht.jpg/1280px-Ben_Alder_from_Loch_Ericht.jpg",
     "alt_text": "Ben Alder - remote Munro summit trig point with panoramic Highland views",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -370,7 +370,7 @@
   {
     "id": "cl1",
     "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
-    "image_url": "/carnedd_llewelyn_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Carnedd_Llewelyn_-_geograph.org.uk_-_1296619.jpg/1280px-Carnedd_Llewelyn_-_geograph.org.uk_-_1296619.jpg",
     "alt_text": "Carnedd Llewelyn - highest peak in the Carneddau range with mountain lake",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -386,7 +386,7 @@
   {
     "id": "cd1",
     "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
-    "image_url": "/carnedd_dafydd_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Carnedd_Dafydd_-_geograph.org.uk_-_1296618.jpg/1280px-Carnedd_Dafydd_-_geograph.org.uk_-_1296618.jpg",
     "alt_text": "Carnedd Dafydd - ridge approach with mountain views across the Carneddau",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -402,7 +402,7 @@
   {
     "id": "hs1",
     "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
-    "image_url": "/haystack_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Haystacks_from_Buttermere.jpg/1280px-Haystacks_from_Buttermere.jpg",
     "alt_text": "Haystacks - mountain peak with tarn in golden light above Buttermere",
     "order": 0,
     "created_at": "2025-12-06T00:00:00.000Z"
@@ -418,7 +418,7 @@
   {
     "id": "cc1",
     "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
-    "image_url": "/crinkle_crags_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Crinkle_Crags_from_Bowfell.jpg/1280px-Crinkle_Crags_from_Bowfell.jpg",
     "alt_text": "Crinkle Crags - iconic rocky ridge with five distinct summits above Langdale",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -434,7 +434,7 @@
   {
     "id": "hstr1",
     "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
-    "image_url": "/high_street_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/High_Street_from_Kidsty_Pike.jpg/1280px-High_Street_from_Kidsty_Pike.jpg",
     "alt_text": "High Street - ancient Roman road ridge with dramatic Haweswater tarn view",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -450,7 +450,7 @@
   {
     "id": "wh1",
     "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
-    "image_url": "/whernside_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Whernside_from_Ribblehead_Viaduct.jpg/1280px-Whernside_from_Ribblehead_Viaduct.jpg",
     "alt_text": "Whernside - Yorkshire Three Peaks summit cairn and trig point in snow",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -466,7 +466,7 @@
   {
     "id": "sng1",
     "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
-    "image_url": "/sgurr_nan_gillean_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Sgurr_nan_Gillean_from_Sligachan.jpg/1280px-Sgurr_nan_Gillean_from_Sligachan.jpg",
     "alt_text": "Sgurr nan Gillean - dramatic Black Cuillin peak on the Isle of Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -482,7 +482,7 @@
   {
     "id": "sce1",
     "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
-    "image_url": "/stob_coire_easain_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Stob_Coire_Easain_-_geograph.org.uk_-_1635036.jpg/1280px-Stob_Coire_Easain_-_geograph.org.uk_-_1635036.jpg",
     "alt_text": "Stob Coire Easain - snow-covered peak with dramatic Lochaber ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -498,7 +498,7 @@
   {
     "id": "sch1",
     "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
-    "image_url": "/schiehallion_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Schiehallion_from_Kinloch_Rannoch.jpg/1280px-Schiehallion_from_Kinloch_Rannoch.jpg",
     "alt_text": "Schiehallion - perfect conical shape viewed from Loch Rannoch valley",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -514,7 +514,7 @@
   {
     "id": "at1",
     "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
-    "image_url": "/an_teallach_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/An_Teallach_from_Sail_Liath.jpg/1280px-An_Teallach_from_Sail_Liath.jpg",
     "alt_text": "An Teallach - dramatic rocky pinnacles on the ridge in the Northwest Highlands",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -522,7 +522,7 @@
   {
     "id": "lia1",
     "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
-    "image_url": "/liathach_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Liathach_from_Loch_Clair.jpg/1280px-Liathach_from_Loch_Clair.jpg",
     "alt_text": "Liathach - impressive quartzite ridge and steep slopes above Glen Torridon",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -538,7 +538,7 @@
   {
     "id": "yg1",
     "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
-    "image_url": "/y_garn_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Y_Garn_from_Llyn_Ogwen.jpg/1280px-Y_Garn_from_Llyn_Ogwen.jpg",
     "alt_text": "Y Garn - aerial view with mountain lakes and ridges above Ogwen Valley",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -554,7 +554,7 @@
   {
     "id": "ski1",
     "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
-    "image_url": "/skiddaw_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Skiddaw_from_Derwentwater.jpg/1280px-Skiddaw_from_Derwentwater.jpg",
     "alt_text": "Skiddaw from Derwentwater - Lake District's fourth highest fell",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -570,7 +570,7 @@
   {
     "id": "sgd1",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
-    "image_url": "/sgurr_dearg_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Inaccessible_Pinnacle%2C_Sgurr_Dearg.jpg/1280px-Inaccessible_Pinnacle%2C_Sgurr_Dearg.jpg",
     "alt_text": "Sgurr Dearg - climber on the Inaccessible Pinnacle in the Black Cuillin, Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -586,7 +586,7 @@
   {
     "id": "eli1",
     "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
-    "image_url": "/elidir_fawr_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Elidir_Fawr_-_geograph.org.uk_-_1297736.jpg/1280px-Elidir_Fawr_-_geograph.org.uk_-_1297736.jpg",
     "alt_text": "Elidir Fawr - mountain ridge overlooking Llyn Padarn in Snowdonia",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -602,7 +602,7 @@
   {
     "id": "ff1",
     "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
-    "image_url": "/fan_fawr_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Fan_Fawr_-_geograph.org.uk_-_1597268.jpg/1280px-Fan_Fawr_-_geograph.org.uk_-_1597268.jpg",
     "alt_text": "Fan Fawr - mountain reflection in still reservoir in the Brecon Beacons",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -618,7 +618,7 @@
   {
     "id": "bs1",
     "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
-    "image_url": "/ben_stack_1.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ben_Stack_-_geograph.org.uk_-_1497802.jpg/1280px-Ben_Stack_-_geograph.org.uk_-_1497802.jpg",
     "alt_text": "Ben Stack - distinctive pyramidal peak in Sutherland, Scottish Highlands",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1724,6 +1724,14 @@
     "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Stac_Pollaidh_from_the_east.jpg/1280px-Stac_Pollaidh_from_the_east.jpg",
     "alt_text": "Stac Pollaidh from the east - spectacular sandstone pinnacles in Assynt at 612m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "beighe1",
+    "mountain_id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Beinn_Eighe_from_Loch_Maree.jpg/1280px-Beinn_Eighe_from_Loch_Maree.jpg",
+    "alt_text": "Beinn Eighe from Loch Maree - Britain's first National Nature Reserve at 1010m",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   }
