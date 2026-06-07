@@ -2,128 +2,144 @@
   {
     "id": "bn1",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Ben_Nevis_from_Corpach.jpg",
-    "alt_text": "Ben Nevis from Corpach - Scotland's highest mountain at 1345m in the Highlands",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Nevis - Scotland's highest peak",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bn2",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Ben_nevis_from_glen_nevis_rib.jpg",
-    "alt_text": "Ben Nevis north face from Glen Nevis showing the classic ridge approach",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Nevis mountain landscape",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bn3",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ben_Nevis_summit.jpg",
-    "alt_text": "Ben Nevis summit plateau with ruins of the old meteorological observatory",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Nevis summit view",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "sn1",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "/snowdon_1.jpg",
-    "alt_text": "Snowdon summit - Yr Wyddfa, highest peak in Wales at 1085m",
+    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon - Highest peak in Wales",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "sn2",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "/snowdon_2.jpg",
-    "alt_text": "Snowdon from the Pyg Track showing the dramatic ridge to the summit",
+    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon mountain peak",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "sn3",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
-    "alt_text": "Snowdon panoramic view across Snowdonia National Park",
+    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Snowdon hiking path",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "sp1",
     "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Scafell_Pike.JPG",
-    "alt_text": "Scafell Pike summit - England's highest mountain at 978m in the Lake District",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike - England's highest mountain",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "sp2",
     "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Scafell_Pike_-_geograph.org.uk_-_4622897.jpg",
-    "alt_text": "Scafell Pike rocky terrain and approach from Wasdale Head",
+    "image_url": "https://images.pexels.com/photos/1567069/pexels-photo-1567069.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike rocky terrain",
     "order": 1,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "sp3",
+    "mountain_id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
+    "image_url": "https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Scafell Pike summit approach",
+    "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bm1",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Ben_Macdui_from_Cairn_Gorm.jpg",
-    "alt_text": "Ben Macdui from Cairn Gorm - second highest UK mountain in the Cairngorms at 1309m",
+    "image_url": "/ben macdui 1.jpeg",
+    "alt_text": "Ben Macdui - Second highest UK mountain with Loch Etchachan",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bm2",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ben_MacDui_-_geograph.org.uk_-_109022.jpg",
-    "alt_text": "Ben Macdui summit plateau with Loch Etchachan - highest point in the Cairngorms",
+    "image_url": "/ben macdui 2.jpg",
+    "alt_text": "Ben Macdui hiking trail with mountain views",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "bm3",
     "mountain_id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Ben_Macdui_from_Beinn_Mheadhoin.jpg",
-    "alt_text": "Ben Macdui winter landscape across the Cairngorms plateau",
+    "image_url": "/ben macdui 3.webp",
+    "alt_text": "Ben Macdui winter landscape in the Cairngorms",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "br1",
     "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Braeriach_from_Sron_na_Lairige.jpg",
-    "alt_text": "Braeriach from Sron na Lairige - third highest UK mountain with dramatic corries",
+    "image_url": "/Braeriach 1.jpg",
+    "alt_text": "Braeriach - Third highest UK mountain with dramatic corries",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "br2",
     "mountain_id": "2ece2f67-5603-40d7-8d8e-671871029a60",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Braeriach_summit_-_geograph.org.uk_-_3284978.jpg",
-    "alt_text": "Braeriach summit plateau in the Cairngorms National Park",
+    "image_url": "/Braeriach 2.jpg",
+    "alt_text": "Braeriach snowy summit plateau in the Cairngorms",
     "order": 1,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "hv1",
     "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Helvellyn%28SimonLedingham%29Dec2004.jpg",
-    "alt_text": "Helvellyn in winter - Lake District's third highest peak at 950m",
+    "image_url": "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Lake District peak",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "hv2",
     "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Helvellyn_Striding_Edge_360_Panorama%2C_Lake_District_-_June_09.jpg",
-    "alt_text": "Helvellyn Striding Edge panorama - iconic Lake District ridge walk",
+    "image_url": "https://images.pexels.com/photos/1761280/pexels-photo-1761280.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn ridge walk",
     "order": 1,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "hv3",
+    "mountain_id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
+    "image_url": "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn mountain path",
+    "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "blom1",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
     "image_url": "/ben_lomond_1.jpg",
-    "alt_text": "Ben Lomond reflected in Loch Lomond - southernmost Munro in Scotland",
+    "alt_text": "Ben Lomond - Mountain view from Loch Lomond",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -131,63 +147,87 @@
     "id": "blom2",
     "mountain_id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
     "image_url": "/ben_lomond_2.jpg",
-    "alt_text": "Ben Lomond summit panoramic view over Loch Lomond and the Trossachs",
+    "alt_text": "Ben Lomond - Summit panoramic view over Loch Lomond",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "cg1",
     "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Cairn_gorm.jpg",
-    "alt_text": "Cairn Gorm summit - Cairngorms mountain plateau in the Scottish Highlands",
+    "image_url": "https://images.pexels.com/photos/1624438/pexels-photo-1624438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm - Cairngorms mountain",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "cg2",
     "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Path_to_Cairn_Gorm_Summit.jpg",
-    "alt_text": "Path to Cairn Gorm summit across the high Cairngorms plateau",
+    "image_url": "https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm plateau",
     "order": 1,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "cg3",
+    "mountain_id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
+    "image_url": "https://images.pexels.com/photos/1612455/pexels-photo-1612455.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cairn Gorm summit",
+    "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "pf1",
     "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Pen_y_Fan_from_Cribyn.jpg",
-    "alt_text": "Pen y Fan from Cribyn - highest peak in the Brecon Beacons at 886m",
+    "image_url": "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan - Brecon Beacons peak",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "pf2",
     "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Pen_y_Fan_from_The_Brecon_Beacons_National_Visitor_Centre.jpg",
-    "alt_text": "Pen y Fan from the Brecon Beacons National Park Visitor Centre",
+    "image_url": "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan ridge walk",
     "order": 1,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "pf3",
+    "mountain_id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
+    "image_url": "https://images.pexels.com/photos/1655329/pexels-photo-1655329.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Fan summit",
+    "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "tf1",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
-    "alt_text": "Tryfan - iconic rocky peak in Snowdonia with Adam and Eve summit rocks",
+    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan - Iconic Welsh peak",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "tf2",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Tryfan_02442.jpg",
-    "alt_text": "Tryfan north ridge scramble - one of Wales' most challenging mountain routes",
+    "image_url": "https://images.pexels.com/photos/1166413/pexels-photo-1166413.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan rocky scramble",
     "order": 1,
+    "created_at": "2025-12-04T00:00:00.000Z"
+  },
+  {
+    "id": "tf3",
+    "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
+    "image_url": "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Tryfan summit rocks",
+    "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
   },
   {
     "id": "gg1",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
     "image_url": "/great_gable_1.jpg",
-    "alt_text": "Great Gable above Wastwater - iconic Lake District peak at 899m",
+    "alt_text": "Great Gable - Waswater lake view with iconic peak",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -195,7 +235,7 @@
     "id": "gg2",
     "mountain_id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
     "image_url": "/great_gable_2.jpg",
-    "alt_text": "Great Gable distinctive pyramid shape viewed from Wasdale valley",
+    "alt_text": "Great Gable - Distinctive pyramid shape from valley",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -203,7 +243,7 @@
     "id": "ct1",
     "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
     "image_url": "/cairn_toul_1.jpg",
-    "alt_text": "Cairn Toul - fourth highest mountain in Scotland with winter snow in the Cairngorms",
+    "alt_text": "Cairn Toul - Fourth highest mountain in Scotland with winter snow",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -211,7 +251,7 @@
     "id": "ct2",
     "mountain_id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
     "image_url": "/cairn_toul_2.jpg",
-    "alt_text": "Cairn Toul rocky terrain and dramatic cliffs above Glen Geusachan",
+    "alt_text": "Cairn Toul rocky terrain and dramatic cliffs",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -219,7 +259,7 @@
     "id": "slu1",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
     "image_url": "/sgor_an_lochain_uaine_1.jpg",
-    "alt_text": "Sgor an Lochain Uaine - The Angel's Peak at 1258m in the Cairngorms",
+    "alt_text": "Sgor an Lochain Uaine - The Angel's Peak in the Cairngorms",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -227,7 +267,7 @@
     "id": "slu2",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
     "image_url": "/sgor_an_lochain_uaine_2.jpg",
-    "alt_text": "Sgor an Lochain Uaine steep faces and climbing routes from Cairn Toul",
+    "alt_text": "Sgor an Lochain Uaine - Steep faces and climbing routes",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -235,7 +275,7 @@
     "id": "slu3",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
     "image_url": "/sgor_an_lochain_uaine_3.jpg",
-    "alt_text": "Sgor an Lochain Uaine winter ascent showing the summit approach",
+    "alt_text": "Sgor an Lochain Uaine - Winter ascent showing the summit approach",
     "order": 2,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -243,7 +283,7 @@
     "id": "ab1",
     "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
     "image_url": "/aonach_beag_1.jpg",
-    "alt_text": "Aonach Beag - dramatic snow-covered mountain ridge near Ben Nevis at 1234m",
+    "alt_text": "Aonach Beag - Dramatic snow-covered mountain ridge",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -251,7 +291,7 @@
     "id": "ab2",
     "mountain_id": "864293b9-a6b7-4ec5-a36d-6d0ff03ab2ba",
     "image_url": "/aonach_beag_2.jpg",
-    "alt_text": "Aonach Beag summit ridge and mountain views towards Ben Nevis",
+    "alt_text": "Aonach Beag - Summit ridge and mountain views",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -259,7 +299,7 @@
     "id": "am1",
     "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
     "image_url": "/aonach_mor_1.jpg",
-    "alt_text": "Aonach Mor - snow-capped peak from valley with Nevis Range forests",
+    "alt_text": "Aonach Mòr - Snow-capped peak from valley with forests",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -267,7 +307,7 @@
     "id": "am2",
     "mountain_id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
     "image_url": "/aonach_mor_2.jpg",
-    "alt_text": "Aonach Mor with rainbow and Nevis Range gondola mountain backdrop",
+    "alt_text": "Aonach Mòr - Rainbow and gondola with mountain backdrop",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -275,7 +315,7 @@
     "id": "cmd1",
     "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
     "image_url": "/carn_mor_dearg_1.jpg",
-    "alt_text": "Carn Mor Dearg - dramatic knife-edge arete ridge connecting to Ben Nevis",
+    "alt_text": "Carn Mòr Dearg - Dramatic knife-edge arête ridge",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -283,7 +323,7 @@
     "id": "cmd2",
     "mountain_id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
     "image_url": "/carn_mor_dearg_3.jpg",
-    "alt_text": "Carn Mor Dearg winter snow-covered ridge at sunset in the Nevis Range",
+    "alt_text": "Carn Mòr Dearg - Winter snow-covered ridge at sunset",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -291,15 +331,15 @@
     "id": "bl1",
     "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
     "image_url": "/ben_lawers_1.jpg",
-    "alt_text": "Ben Lawers - highest mountain in the Southern Highlands at 1214m with summit approach",
+    "alt_text": "Ben Lawers - Summit approach with hikers on ridge",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "bl2",
     "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
-    "image_url": "/ben_lawers_3.jpg",
-    "alt_text": "Ben Lawers panoramic mountain ridge view over Loch Tay",
+    "image_url": "/ben_lawers_3 copy.jpg",
+    "alt_text": "Ben Lawers - Panoramic mountain ridge view",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -307,7 +347,7 @@
     "id": "bab1",
     "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
     "image_url": "/beinn_a'_bhuird_1.jpg",
-    "alt_text": "Beinn a' Bhuird - snow-covered Cairngorm peaks with hiker approaching summit",
+    "alt_text": "Beinn a' Bhuird - Snow-covered peaks with hiker approaching",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -315,7 +355,7 @@
     "id": "bab2",
     "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
     "image_url": "/beinn_a'_bhuird_2.jpg",
-    "alt_text": "Beinn a' Bhuird north face climbing routes and dramatic corries",
+    "alt_text": "Beinn a' Bhuird - Climbing routes on north face",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -323,7 +363,7 @@
     "id": "ln1",
     "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
     "image_url": "/lochnagar_1.jpg",
-    "alt_text": "Lochnagar - dramatic corrie with mountain lake on Royal Deeside",
+    "alt_text": "Lochnagar - Dramatic corrie with mountain lake",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -331,7 +371,7 @@
     "id": "ln2",
     "mountain_id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
     "image_url": "/lochnagar_2.jpg",
-    "alt_text": "Lochnagar snow-covered cliffs and corrie in winter near Balmoral",
+    "alt_text": "Lochnagar - Snow-covered cliffs and corrie in winter",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -339,7 +379,7 @@
     "id": "bnb1",
     "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
     "image_url": "/bidean_nam_bian_1.jpg",
-    "alt_text": "Bidean nam Bian - dramatic rocky ridge and peaks above Glencoe",
+    "alt_text": "Bidean nam Bian - Dramatic rocky ridge and peaks",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -347,7 +387,7 @@
     "id": "bnb2",
     "mountain_id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
     "image_url": "/bidean_nam_bian_2.jpg",
-    "alt_text": "Bidean nam Bian valley view with snow-capped peak from Glencoe",
+    "alt_text": "Bidean nam Bian - Valley view with snow-capped peak",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -355,7 +395,7 @@
     "id": "ba1",
     "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
     "image_url": "/ben_alder_1.jpg",
-    "alt_text": "Ben Alder - remote Munro summit trig point with panoramic Highland views",
+    "alt_text": "Ben Alder - Summit trig point with panoramic views",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -363,23 +403,23 @@
     "id": "ba2",
     "mountain_id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
     "image_url": "/ben_alder_2.jpg",
-    "alt_text": "Ben Alder mountain ridge and cliff face above Loch Ericht",
+    "alt_text": "Ben Alder - Mountain ridge and cliff face",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "cl1",
     "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
-    "image_url": "/carnedd_llewelyn_1.jpg",
-    "alt_text": "Carnedd Llewelyn - highest peak in the Carneddau range with mountain lake",
+    "image_url": "/carnedd_llewelyn_1 copy.jpg",
+    "alt_text": "Carnedd Llewelyn - Mountain lake and rocky terrain",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "cl2",
     "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
-    "image_url": "/carnedd_llewelyn_3.jpg",
-    "alt_text": "Carnedd Llewelyn snow-covered winter landscape in Snowdonia",
+    "image_url": "/carnedd_llewelyn_3 copy.jpg",
+    "alt_text": "Carnedd Llewelyn - Snow-covered winter landscape",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -387,7 +427,7 @@
     "id": "cd1",
     "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
     "image_url": "/carnedd_dafydd_1.jpg",
-    "alt_text": "Carnedd Dafydd - ridge approach with mountain views across the Carneddau",
+    "alt_text": "Carnedd Dafydd - Ridge approach with mountain view",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
@@ -395,23 +435,23 @@
     "id": "cd2",
     "mountain_id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
     "image_url": "/carnedd_dafydd_3.jpg",
-    "alt_text": "Carnedd Dafydd snow-covered peaks in winter above Ogwen Valley",
+    "alt_text": "Carnedd Dafydd - Snow-covered peaks in winter",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
   },
   {
     "id": "hs1",
     "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
-    "image_url": "/haystack_1.jpg",
-    "alt_text": "Haystacks - mountain peak with tarn in golden light above Buttermere",
+    "image_url": "/haystack_1 copy copy.jpg",
+    "alt_text": "Haystacks - Mountain peak with tarn in golden light",
     "order": 0,
     "created_at": "2025-12-06T00:00:00.000Z"
   },
   {
     "id": "hs2",
     "mountain_id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
-    "image_url": "/haystack_3.jpg",
-    "alt_text": "Haystacks valley view with Buttermere and Crummock Water from summit",
+    "image_url": "/haystack_3 copy copy.jpg",
+    "alt_text": "Haystacks - Valley view with lakes from summit",
     "order": 1,
     "created_at": "2025-12-06T00:00:00.000Z"
   },
@@ -419,7 +459,7 @@
     "id": "cc1",
     "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
     "image_url": "/crinkle_crags_1.jpg",
-    "alt_text": "Crinkle Crags - iconic rocky ridge with five distinct summits above Langdale",
+    "alt_text": "Crinkle Crags - Iconic rocky ridge and five summits",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -427,23 +467,23 @@
     "id": "cc2",
     "mountain_id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
     "image_url": "/crinkle_crags_2.jpg",
-    "alt_text": "Crinkle Crags mountain range with distinctive crinkled peaks in the Lake District",
+    "alt_text": "Crinkle Crags - Mountain range with distinctive crinkled peaks",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
-    "id": "hstr1",
+    "id": "hs1",
     "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
     "image_url": "/high_street_1.jpg",
-    "alt_text": "High Street - ancient Roman road ridge with dramatic Haweswater tarn view",
+    "alt_text": "High Street - Lake District ridge with dramatic tarn view",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
-    "id": "hstr2",
+    "id": "hs2",
     "mountain_id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
     "image_url": "/high_street_2.jpg",
-    "alt_text": "High Street summit trig point with mountain views across the Eastern Fells",
+    "alt_text": "High Street - Summit trig point with mountain views",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -451,7 +491,7 @@
     "id": "wh1",
     "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
     "image_url": "/whernside_1.jpg",
-    "alt_text": "Whernside - Yorkshire Three Peaks summit cairn and trig point in snow",
+    "alt_text": "Whernside - Summit cairn and trig point in snow",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -459,7 +499,7 @@
     "id": "wh2",
     "mountain_id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
     "image_url": "/whernside_2.jpg",
-    "alt_text": "Whernside stone wall gateway with panoramic Yorkshire Dales views",
+    "alt_text": "Whernside - Stone wall gateway with panoramic views",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -467,7 +507,7 @@
     "id": "sng1",
     "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
     "image_url": "/sgurr_nan_gillean_1.jpg",
-    "alt_text": "Sgurr nan Gillean - dramatic Black Cuillin peak on the Isle of Skye",
+    "alt_text": "Sgurr nan Gillean - Dramatic Black Cuillin peak on Skye",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -475,7 +515,7 @@
     "id": "sng2",
     "mountain_id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
     "image_url": "/sgurr_nan_gillean_2.jpg",
-    "alt_text": "Sgurr nan Gillean rocky peak and classic scrambling routes in the Cuillin",
+    "alt_text": "Sgurr nan Gillean - Rocky peak and scrambling routes",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -483,7 +523,7 @@
     "id": "sce1",
     "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
     "image_url": "/stob_coire_easain_1.jpg",
-    "alt_text": "Stob Coire Easain - snow-covered peak with dramatic Lochaber ridge",
+    "alt_text": "Stob Coire Easain - Snow-covered peak with dramatic ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -491,7 +531,7 @@
     "id": "sce2",
     "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
     "image_url": "/stob_coire_easain_2.jpg",
-    "alt_text": "Stob Coire Easain Highland mountain with snow patches above Glen Spean",
+    "alt_text": "Stob Coire Easain - Highland mountain with snow patches",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -499,7 +539,7 @@
     "id": "sch1",
     "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
     "image_url": "/schiehallion_1.jpg",
-    "alt_text": "Schiehallion - perfect conical shape viewed from Loch Rannoch valley",
+    "alt_text": "Schiehallion - Perfect cone shape from valley",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -507,7 +547,7 @@
     "id": "sch2",
     "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
     "image_url": "/schiehallion_2.jpg",
-    "alt_text": "Schiehallion lochside view with distinctive pyramid peak - Perthshire",
+    "alt_text": "Schiehallion - Lochside view with distinctive pyramid peak",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -515,7 +555,7 @@
     "id": "at1",
     "mountain_id": "a570f7f7-9d57-4556-a154-baf390c1b315",
     "image_url": "/an_teallach_1.jpg",
-    "alt_text": "An Teallach - dramatic rocky pinnacles on the ridge in the Northwest Highlands",
+    "alt_text": "An Teallach - Dramatic rocky pinnacles on the ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -523,7 +563,7 @@
     "id": "lia1",
     "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
     "image_url": "/liathach_1.jpg",
-    "alt_text": "Liathach - impressive quartzite ridge and steep slopes above Glen Torridon",
+    "alt_text": "Liathach - Impressive ridge and steep slopes",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -531,7 +571,7 @@
     "id": "lia2",
     "mountain_id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
     "image_url": "/liathach_2.jpg",
-    "alt_text": "Liathach mountain view from Torridon loch with golden evening light",
+    "alt_text": "Liathach - Mountain view from loch with golden light",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -539,7 +579,7 @@
     "id": "yg1",
     "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
     "image_url": "/y_garn_1.jpg",
-    "alt_text": "Y Garn - aerial view with mountain lakes and ridges above Ogwen Valley",
+    "alt_text": "Y Garn - Aerial view with mountain lakes and ridges",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -547,7 +587,7 @@
     "id": "yg2",
     "mountain_id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
     "image_url": "/y_garn_2.jpg",
-    "alt_text": "Y Garn summit view showing Llyn y Cwm and Glyderau mountain lakes",
+    "alt_text": "Y Garn - View from summit showing Glyderau lakes",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -555,7 +595,7 @@
     "id": "ski1",
     "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
     "image_url": "/skiddaw_1.jpg",
-    "alt_text": "Skiddaw from Derwentwater - Lake District's fourth highest fell",
+    "alt_text": "Skiddaw - View from Derwentwater with boat",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -563,7 +603,7 @@
     "id": "ski2",
     "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
     "image_url": "/skiddaw_2.jpg",
-    "alt_text": "Skiddaw distant view across the Northern Fells of the Lake District",
+    "alt_text": "Skiddaw - Distant view of mountain range",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -571,7 +611,7 @@
     "id": "sgd1",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
     "image_url": "/sgurr_dearg_1.jpg",
-    "alt_text": "Sgurr Dearg - climber on the Inaccessible Pinnacle in the Black Cuillin, Skye",
+    "alt_text": "Sgurr Dearg - Climber on the Inaccessible Pinnacle",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -579,7 +619,7 @@
     "id": "sgd2",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
     "image_url": "/sgurr_dearg_2.jpg",
-    "alt_text": "Sgurr Dearg Inaccessible Pinnacle rock tower - hardest Munro on the Isle of Skye",
+    "alt_text": "Sgurr Dearg - The Inaccessible Pinnacle rock tower",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -587,7 +627,7 @@
     "id": "eli1",
     "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
     "image_url": "/elidir_fawr_1.jpg",
-    "alt_text": "Elidir Fawr - mountain ridge overlooking Llyn Padarn in Snowdonia",
+    "alt_text": "Elidir Fawr - Mountain ridge overlooking lake",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -595,23 +635,23 @@
     "id": "eli2",
     "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
     "image_url": "/elidir_fawr_2.jpg",
-    "alt_text": "Elidir Fawr rocky summit cairn above Llanberis in Snowdonia National Park",
+    "alt_text": "Elidir Fawr - Rocky summit cairn",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "ff1",
     "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
-    "image_url": "/fan_fawr_1.jpg",
-    "alt_text": "Fan Fawr - mountain reflection in still reservoir in the Brecon Beacons",
+    "image_url": "/fan_fawr_1 copy.jpg",
+    "alt_text": "Fan Fawr - Mountain reflection in still loch",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "ff2",
     "mountain_id": "75add98a-f19e-4500-a65e-e1fc4605f969",
-    "image_url": "/fan_fawr_2.webp",
-    "alt_text": "Fan Fawr dramatic cliffs and plateau edge in the Brecon Beacons",
+    "image_url": "/fan_fawr_2 copy.webp",
+    "alt_text": "Fan Fawr - Dramatic cliffs and plateau",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
@@ -619,872 +659,456 @@
     "id": "bs1",
     "mountain_id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
     "image_url": "/ben_stack_1.jpg",
-    "alt_text": "Ben Stack - distinctive pyramidal peak in Sutherland, Scottish Highlands",
+    "alt_text": "Ben Stack - Distinctive pyramidal peak",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sd1",
     "mountain_id": "a1b2c3d4-0001-4001-8001-000000000001",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Slieve_Donard_in_the_clouds_%28Northern_Ireland%29_-_geograph.org.uk_-_891891.jpg",
-    "alt_text": "Slieve Donard - highest peak in Northern Ireland at 850m in the Mourne Mountains",
+    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Slieve Donard - Highest peak in Northern Ireland",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sd2",
     "mountain_id": "a1b2c3d4-0001-4001-8001-000000000001",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/The_northern_spur_of_Slieve_Donard_-_geograph.org.uk_-_1980471.jpg",
-    "alt_text": "Slieve Donard northern spur and Mourne Wall in County Down",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Slieve Donard mountain landscape",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sc1",
     "mountain_id": "a1b2c3d4-0002-4001-8001-000000000002",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/The_Mourne_Wall%2C_Slieve_Commedagh_-_geograph.org.uk_-_2130425.jpg",
-    "alt_text": "Slieve Commedagh - the Mourne Wall crossing the summit in the Mourne Mountains",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Slieve Commedagh in the Mourne Mountains",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "sc2",
-    "mountain_id": "a1b2c3d4-0002-4001-8001-000000000002",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Shan_Slieve_and_Slieve_Commedagh_from_Bryansford_Place_-_geograph.org.uk_-_4761309.jpg",
-    "alt_text": "Slieve Commedagh viewed from Bryansford in the Mourne Mountains, County Down",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sb1",
     "mountain_id": "a1b2c3d4-0003-4001-8001-000000000003",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Slieve_Binnian%2C_Mourne_Mountains%2C_Co_Down_-_geograph.org.uk_-_2033373.jpg",
-    "alt_text": "Slieve Binnian with dramatic granite tors above the Mournes in County Down",
+    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Slieve Binnian with dramatic granite tors",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "sb2",
-    "mountain_id": "a1b2c3d4-0003-4001-8001-000000000003",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Slieve_Binnian_from_Mourne_Wood_on_Knockchree_-_geograph.org.uk_-_4645223.jpg",
-    "alt_text": "Slieve Binnian viewed from Mourne Wood on Knockchree hillside",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sbn1",
     "mountain_id": "a1b2c3d4-0004-4001-8001-000000000004",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Slieve_Bearnagh_-_geograph.org.uk_-_1980251.jpg",
-    "alt_text": "Slieve Bearnagh with the iconic Mourne Wall crossing the summit",
+    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Slieve Bearnagh with Mourne Wall",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "sbn2",
-    "mountain_id": "a1b2c3d4-0004-4001-8001-000000000004",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Slieve_Bearnagh_Mourne_Mts_Wall_Oct_2016.jpg",
-    "alt_text": "Slieve Bearnagh Mourne Mountains Wall in autumn colours",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "tcob1",
     "mountain_id": "a1b2c3d4-0005-4001-8001-000000000005",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Ben_Arthur%2C_Arrochar_Alps%2C_Scotland_02.jpg",
-    "alt_text": "The Cobbler / Ben Arthur - iconic three-peaked mountain in the Arrochar Alps",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "The Cobbler - Ben Arthur near Arrochar",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "tcob2",
-    "mountain_id": "a1b2c3d4-0005-4001-8001-000000000005",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Cobbler_from_Arrochar_-_geograph.org.uk_-_2023009.jpg",
-    "alt_text": "The Cobbler from Arrochar village above Loch Long, Argyll",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "suil1",
     "mountain_id": "a1b2c3d4-0006-4001-8001-000000000006",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Suilven_looking_east.jpg",
-    "alt_text": "Suilven looking east - iconic sandstone inselberg in Assynt, Northwest Highlands",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Suilven - Iconic silhouette in the Scottish Highlands",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "suil2",
-    "mountain_id": "a1b2c3d4-0006-4001-8001-000000000006",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Fionn_Loch_and_Suilven_-_geograph.org.uk_-_3143601.jpg",
-    "alt_text": "Suilven reflected in Fionn Loch - Assynt landscape of Sutherland",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bhope1",
     "mountain_id": "a1b2c3d4-0007-4001-8001-000000000007",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/BenHopefromLochEriboll.jpg",
-    "alt_text": "Ben Hope from Loch Eriboll - northernmost Munro in Scotland at 927m",
+    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Hope - Northernmost Munro in Scotland",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bhope2",
-    "mountain_id": "a1b2c3d4-0007-4001-8001-000000000007",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Reflection_of_Ben_Hope_-_geograph.org.uk_-_4422402.jpg",
-    "alt_text": "Ben Hope reflection in Highland loch in Sutherland",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "blui1",
     "mountain_id": "a1b2c3d4-0008-4001-8001-000000000008",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ben_Lui_-_geograph.org.uk_-_4491599.jpg",
-    "alt_text": "Ben Lui - one of Scotland's most beautiful mountains in Argyll at 1130m",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Lui - One of Scotland's most beautiful mountains",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "blui2",
-    "mountain_id": "a1b2c3d4-0008-4001-8001-000000000008",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ben_Lui_from_the_west_-_geograph.org.uk_-_6967600.jpg",
-    "alt_text": "Ben Lui from the west showing the classic corrie on the northeast face",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "catb1",
     "mountain_id": "a1b2c3d4-0009-4001-8001-000000000009",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Catbells_Northern_Ascent%2C_Lake_District_-_June_2009.jpg",
-    "alt_text": "Catbells northern ascent path above Derwentwater in the Lake District",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Catbells above Derwentwater in the Lake District",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "catb2",
-    "mountain_id": "a1b2c3d4-0009-4001-8001-000000000009",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Ascending_Catbells_%284568661069%29.jpg",
-    "alt_text": "Ascending Catbells ridge above Derwentwater near Keswick, Lake District",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "pyg1",
     "mountain_id": "a1b2c3d4-0010-4001-8001-000000000010",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/2014_Pen-y-ghent_from_South.jpg",
-    "alt_text": "Pen-y-ghent from the south - Yorkshire Three Peaks challenge mountain at 694m",
+    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen-y-ghent - Yorkshire Three Peaks",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "pyg2",
-    "mountain_id": "a1b2c3d4-0010-4001-8001-000000000010",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/2014_Pen-y-ghent_from_East.jpg",
-    "alt_text": "Pen-y-ghent from the east showing the dramatic gritstone escarpment",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "mamt1",
     "mountain_id": "a1b2c3d4-0011-4001-8001-000000000011",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mam_Tor_%28245190661%29.jpeg",
-    "alt_text": "Mam Tor - the Shivering Mountain in the Peak District near Castleton",
+    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Mam Tor - The Shivering Mountain in the Peak District",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "mamt2",
-    "mountain_id": "a1b2c3d4-0011-4001-8001-000000000011",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Mam_Tor_%2825247426697%29.jpg",
-    "alt_text": "Mam Tor ridge walk above the Hope Valley in the Peak District",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "pyow1",
     "mountain_id": "a1b2c3d4-0012-4001-8001-000000000012",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Pen_yr_Ole_Wen_7fed_mynydd_uchaf_Cymru%2C_Eryri_National_Park_01.jpg",
-    "alt_text": "Pen yr Ole Wen - gatekeeper of the Ogwen Valley in Eryri National Park",
+    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Ole Wen - Gatekeeper of the Ogwen Valley",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "pyow2",
-    "mountain_id": "a1b2c3d4-0012-4001-8001-000000000012",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pen_yr_Ole_Wen_7fed_mynydd_uchaf_Cymru%2C_Eryri_National_Park_02.jpg",
-    "alt_text": "Pen yr Ole Wen summit views across Eryri National Park, Wales",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "mheb1",
     "mountain_id": "a1b2c3d4-0013-4001-8001-000000000013",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Moel_Hebog.jpg",
-    "alt_text": "Moel Hebog - Hill of the Hawk above Beddgelert village in Snowdonia",
+    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moel Hebog above Beddgelert in Snowdonia",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "mheb2",
-    "mountain_id": "a1b2c3d4-0013-4001-8001-000000000013",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Moel_Hebog_From_Beddgelert_-_geograph.org.uk_-_3080136.jpg",
-    "alt_text": "Moel Hebog from Beddgelert village in Snowdonia National Park",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "fyb1",
     "mountain_id": "a1b2c3d4-0014-4001-8001-000000000014",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/The_Brecon_Beacons_from_Fan_y_Big_-_geograph.org.uk_-_3390081.jpg",
-    "alt_text": "Brecon Beacons panorama from Fan y Big summit with the famous diving board rock",
+    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Fan y Big with the famous diving board rock",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "fyb2",
-    "mountain_id": "a1b2c3d4-0014-4001-8001-000000000014",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Heading_towards_Fan_y_Big_-_geograph.org.uk_-_3284506.jpg",
-    "alt_text": "Heading towards Fan y Big along the Brecon Beacons ridge",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bcru1",
     "mountain_id": "a1b2c3d4-0015-4001-8001-000000000015",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Ben_Cruachan_%2848144530166%29.jpg",
-    "alt_text": "Ben Cruachan - the Hollow Mountain of Argyll above Loch Awe at 1126m",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Cruachan - The Hollow Mountain of Argyll",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bcru2",
-    "mountain_id": "a1b2c3d4-0015-4001-8001-000000000015",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Cruachan.jpg",
-    "alt_text": "Ben Cruachan mountain range above Loch Awe in Argyll",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bvle1",
     "mountain_id": "a1b2c3d4-0016-4001-8001-000000000016",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Ben_Vorlich_from_Loch_Earn_-_geograph.org.uk_-_2682813.jpg",
-    "alt_text": "Ben Vorlich from Loch Earn - popular Munro in Perthshire at 985m",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Vorlich above Loch Earn",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bvle2",
-    "mountain_id": "a1b2c3d4-0016-4001-8001-000000000016",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Cross_Fell%2C_Pennines%2C_Cumbria_-_geograph.org.uk_-_60504.jpg",
-    "alt_text": "Ben Vorlich summit ridge approach in the Southern Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "helv1",
     "mountain_id": "a1b2c3d4-0017-4001-8001-000000000017",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Helvellyn%28SimonLedingham%29Dec2004.jpg",
-    "alt_text": "Helvellyn in winter snow - third highest mountain in England at 950m",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Helvellyn - Third highest mountain in England",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "helv2",
-    "mountain_id": "a1b2c3d4-0017-4001-8001-000000000017",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Helvellyn_Striding_Edge_360_Panorama%2C_Lake_District_-_June_09.jpg",
-    "alt_text": "Helvellyn Striding Edge panorama across the Lake District fells",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "cros1",
     "mountain_id": "a1b2c3d4-0018-4001-8001-000000000018",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Cross_Fell%2C_Pennines%2C_Cumbria_-_geograph.org.uk_-_60504.jpg",
-    "alt_text": "Cross Fell - highest point in the Pennines and highest in England outside the Lake District",
+    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cross Fell - Highest point in the Pennines",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "cros2",
-    "mountain_id": "a1b2c3d4-0018-4001-8001-000000000018",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Crossfell.jpg",
-    "alt_text": "Cross Fell summit plateau in Cumbria - the highest Pennine fell at 893m",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "blen1",
     "mountain_id": "a1b2c3d4-0019-4001-8001-000000000019",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Blencathra_from_Castlerigg.jpg",
-    "alt_text": "Blencathra from Castlerigg Stone Circle - also known as Saddleback in the Lake District",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Blencathra - Also known as Saddleback",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "blen2",
-    "mountain_id": "a1b2c3d4-0019-4001-8001-000000000019",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/On_Blencathra_-_geograph.org.uk_-_3292633.jpg",
-    "alt_text": "On the ridge of Blencathra above the Northern Lake District",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "lohi1",
     "mountain_id": "a1b2c3d4-0020-4001-8001-000000000020",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Lose_Hill_from_Barber_Booth.jpg",
-    "alt_text": "Lose Hill from Barber Booth - eastern end of the Great Ridge in the Peak District",
+    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lose Hill - Eastern end of the Great Ridge",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "lohi2",
-    "mountain_id": "a1b2c3d4-0020-4001-8001-000000000020",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Lose_Hill%2C_Peak_District%2C_Derbyshire_-_geograph.org.uk_-_4601021.jpg",
-    "alt_text": "Lose Hill peak in the Peak District, Derbyshire with Hope Valley views",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bach1",
     "mountain_id": "a1b2c3d4-0021-4001-8001-000000000021",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Beinn_a%27_Chlachair_from_Geal_Charn_-_geograph.org.uk_-_2378795.jpg",
-    "alt_text": "Beinn a' Chlachair from Geal Charn - remote Munro in the Monadhliath mountains",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a Chlachair in the Monadhliath",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bach2",
-    "mountain_id": "a1b2c3d4-0021-4001-8001-000000000021",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Beinn_a%27_Chlachair_viewed_from_Geal_Charn_-_geograph.org.uk_-_2810231.jpg",
-    "alt_text": "Beinn a' Chlachair viewed from Geal Charn in the Scottish Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bdor1",
     "mountain_id": "a1b2c3d4-0022-4001-8001-000000000022",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Beinn_Dorain_-_geograph.org.uk_-_641036.jpg",
-    "alt_text": "Beinn Dorain - conical mountain at Bridge of Orchy above the West Highland Way",
+    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dorain - Conical mountain at Bridge of Orchy",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bdor2",
-    "mountain_id": "a1b2c3d4-0022-4001-8001-000000000022",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Summit_of_Beinn_Dorain_-_geograph.org.uk_-_664680.jpg",
-    "alt_text": "Summit of Beinn Dorain in Argyll with views across Rannoch Moor",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "buem1",
     "mountain_id": "a1b2c3d4-0023-4001-8001-000000000023",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Buachaille_Etive_Mor_from_the_Glencoe_road_-_geograph.org.uk_-_335832.jpg",
-    "alt_text": "Buachaille Etive Mor - iconic pyramid of Glencoe from the A82 road",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Buachaille Etive Mor - Iconic pyramid of Glencoe",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "buem2",
-    "mountain_id": "a1b2c3d4-0023-4001-8001-000000000023",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Glencoe_-_Buachaille_Etive_Mor_panorama_%2814493230351%29.jpg",
-    "alt_text": "Buachaille Etive Mor panorama over Glencoe - Scotland's most photographed mountain",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bghl1",
     "mountain_id": "a1b2c3d4-0024-4001-8001-000000000024",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Beinn_Ghlas_and_Ben_Lawers%2C_Scotland.jpg",
-    "alt_text": "Beinn Ghlas and Ben Lawers - twin Munros in the Ben Lawers massif, Perthshire",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Ghlas in the Ben Lawers group",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bghl2",
-    "mountain_id": "a1b2c3d4-0024-4001-8001-000000000024",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Beinn_Ghlas_from_Ben_Lawers_-_geograph.org.uk_-_3693548.jpg",
-    "alt_text": "Beinn Ghlas viewed from Ben Lawers summit in Perthshire",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "mgrl1",
     "mountain_id": "a1b2c3d4-0025-4001-8001-000000000025",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Meall_Garbh_-_geograph.org.uk_-_475933.jpg",
-    "alt_text": "Meall Garbh in the Ben Lawers massif above Loch Tay, Perthshire",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Meall Garbh in the Ben Lawers massif",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "mgrl2",
-    "mountain_id": "a1b2c3d4-0025-4001-8001-000000000025",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Ben_Lawers_from_Meall_Garbh_-_geograph.org.uk_-_434530.jpg",
-    "alt_text": "Ben Lawers from Meall Garbh summit - views across the Ben Lawers range",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bagl1",
     "mountain_id": "a1b2c3d4-0026-4001-8001-000000000026",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/The_northern_two_munros_of_Beinn_a_Ghlo.jpg",
-    "alt_text": "Beinn a' Ghlo - northern two Munros of this mountain complex in Highland Perthshire",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn a Ghlo - Mountain complex in the Highlands",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bagl2",
-    "mountain_id": "a1b2c3d4-0026-4001-8001-000000000026",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Beinn-a-ghlo-from-geal-charn.jpg",
-    "alt_text": "Beinn a' Ghlo from Geal Charn showing the mountain group in the Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "sgio1",
     "mountain_id": "a1b2c3d4-0027-4001-8001-000000000027",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Sgor_gaoith.jpg",
-    "alt_text": "Sgor Gaoith on the Cairngorm plateau edge above Glen Feshie",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgor Gaoith on the Cairngorm plateau edge",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "sgio2",
-    "mountain_id": "a1b2c3d4-0027-4001-8001-000000000027",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Sgoran_ridge_with_Munro_Sgor_Gaoith.jpg",
-    "alt_text": "Sgoran ridge with Munro Sgor Gaoith in the Cairngorms National Park",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bime1",
     "mountain_id": "a1b2c3d4-0028-4001-8001-000000000028",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Beinn_%C3%8Cme%2C_Arrochar_Alps%2C_Scotland_10.jpg",
-    "alt_text": "Beinn Ime - highest of the Arrochar Alps in Argyll at 1011m",
+    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Ime - Highest of the Arrochar Alps",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bime2",
-    "mountain_id": "a1b2c3d4-0028-4001-8001-000000000028",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Summit_of_Beinn_Ime_04.jpg",
-    "alt_text": "Summit of Beinn Ime in the Arrochar Alps with views across the Southern Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bsta1",
     "mountain_id": "a1b2c3d4-0029-4001-8001-000000000029",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ben_Starav_and_the_head_of_Loch_Etive_-_geograph.org.uk_-_2006826.jpg",
-    "alt_text": "Ben Starav and the head of Loch Etive in Argyll",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Ben Starav above Loch Etive",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bsta2",
-    "mountain_id": "a1b2c3d4-0029-4001-8001-000000000029",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ben_Starav_viewed_across_the_head_of_Loch_Etive_-_geograph.org.uk_-_3476784.jpg",
-    "alt_text": "Ben Starav viewed across the head of Loch Etive in Argyll",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bfh1",
     "mountain_id": "a1b2c3d4-0030-4001-8001-000000000030",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Beinn_Fhionnlaidh_-_geograph.org.uk_-_5190776.jpg",
-    "alt_text": "Beinn Fhionnlaidh above Loch Mullardoch in Glen Cannich, Highlands",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Fhionnlaidh above Loch Mullardoch",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bfh2",
-    "mountain_id": "a1b2c3d4-0030-4001-8001-000000000030",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Loch_Mullardoch_from_the_summit_of_Beinn_Fhionnlaidh_-_geograph.org.uk_-_1727394.jpg",
-    "alt_text": "Loch Mullardoch from the summit of Beinn Fhionnlaidh in the Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "cberw1",
     "mountain_id": "a1b2c3d4-0031-4001-8001-000000000031",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cadair_Berwyn.jpg",
-    "alt_text": "Cadair Berwyn - highest point in the Berwyn Mountains of northeast Wales",
+    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cadair Berwyn in the Berwyn Mountains",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "cberw2",
-    "mountain_id": "a1b2c3d4-0031-4001-8001-000000000031",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/A_view_from_Cadair_Berwyn._-_geograph.org.uk_-_552655.jpg",
-    "alt_text": "View from Cadair Berwyn across the Berwyn Mountains landscape",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "myndu1",
     "mountain_id": "a1b2c3d4-0032-4001-8001-000000000032",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Carmarthen_Fan_in_snow.jpg",
-    "alt_text": "Mynydd Du Black Mountain - Carmarthen Fan escarpment in winter snow",
+    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Mynydd Du - Black Mountain in the Brecon Beacons",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "myndu2",
-    "mountain_id": "a1b2c3d4-0032-4001-8001-000000000032",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bannaubrych.JPG",
-    "alt_text": "Mynydd Du Black Mountain escarpment - Bannau Brycheiniog in south Wales",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "plumon1",
     "mountain_id": "a1b2c3d4-0033-4001-8001-000000000033",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pumlumon_Fawr.jpg",
-    "alt_text": "Plynlimon / Pumlumon Fawr - source of the Rivers Severn and Wye in mid Wales",
+    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Plynlimon - Source of the Severn and Wye",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "plumon2",
-    "mountain_id": "a1b2c3d4-0033-4001-8001-000000000033",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Pumlumon_in_winter_-_geograph.org.uk_-_699800.jpg",
-    "alt_text": "Plynlimon / Pumlumon in winter - highest point of the Cambrian Mountains",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "pyca1",
     "mountain_id": "a1b2c3d4-0034-4001-8001-000000000034",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Cadair_Idris_from_Carnedd_L%C5%B5yd_-_geograph.org.uk_-_6734721.jpg",
-    "alt_text": "Cadair Idris from Carnedd Lwyd - Pen y Gadair summit above the Fox's Path",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen y Cadair - True summit of Cadair Idris",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "pyca2",
-    "mountain_id": "a1b2c3d4-0034-4001-8001-000000000034",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Llyn_Cau%2C_Cadair_Idris_-_geograph.org.uk_-_3238322.jpg",
-    "alt_text": "Llyn Cau glacial lake on Cadair Idris - one of Wales' finest mountain landscapes",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bnar1",
     "mountain_id": "a1b2c3d4-0035-4001-8001-000000000035",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Beinn_Narnain%2C_Arrochar_Alps%2C_Scotland_08.jpg",
-    "alt_text": "Beinn Narnain in the Arrochar Alps above Loch Long, Argyll",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Narnain in the Arrochar Alps",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bnar2",
-    "mountain_id": "a1b2c3d4-0035-4001-8001-000000000035",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Beinn_Narnain%2C_Arrochar_Alps%2C_Scotland_09.jpg",
-    "alt_text": "Beinn Narnain summit ridge in the Arrochar Alps, Argyll and Bute",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "ball1",
     "mountain_id": "a1b2c3d4-0036-4001-8001-000000000036",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beinn_Alligin_from_the_Beinn_Damh_path._-_geograph.org.uk_-_7056.jpg",
-    "alt_text": "Beinn Alligin - Jewelled Mountain of Torridon from the Beinn Damh path",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Alligin - Jewelled Mountain of Torridon",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "ball2",
-    "mountain_id": "a1b2c3d4-0036-4001-8001-000000000036",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Beinn_Alligin_from_the_other_side_of_Loch_Torridon._-_geograph.org.uk_-_6271249.jpg",
-    "alt_text": "Beinn Alligin from the other side of Loch Torridon in Wester Ross",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bderg1",
     "mountain_id": "a1b2c3d4-0037-4001-8001-000000000037",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Beinn_Dearg_-_geograph.org.uk_-_231634.jpg",
-    "alt_text": "Beinn Dearg above Loch Glascarnoch in Ross-shire at 1084m",
+    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Dearg above Loch Glascarnoch",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bderg2",
-    "mountain_id": "a1b2c3d4-0037-4001-8001-000000000037",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/The_Summit_Cairn_of_Beinn_Dearg_%28Ullapool%29_-_geograph.org.uk_-_22731.jpg",
-    "alt_text": "Summit cairn of Beinn Dearg near Ullapool in the Northwest Highlands",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bmhan1",
     "mountain_id": "a1b2c3d4-0038-4001-8001-000000000038",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Western_approach_to_Beinn_Mhanach_-_geograph.org.uk_-_503787.jpg",
-    "alt_text": "Beinn Mhanach western approach - remote Munro in Glen Lyon, Perthshire",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Mhanach - Remote Munro in Glen Lyon",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bmhan2",
-    "mountain_id": "a1b2c3d4-0038-4001-8001-000000000038",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Beinn_Mhanach_summit_-_geograph.org.uk_-_3410080.jpg",
-    "alt_text": "Beinn Mhanach summit in Glen Lyon - one of Scotland's most remote Munros",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "omas1",
     "mountain_id": "a1b2c3d4-0039-4001-8001-000000000039",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Old_Man_of_Storr%2C_Isle_of_Skye%2C_Scotland.jpg",
-    "alt_text": "Old Man of Storr - iconic rock pinnacle on the Trotternish Ridge, Isle of Skye",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Old Man of Storr - Iconic pinnacle on the Isle of Skye",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "omas2",
-    "mountain_id": "a1b2c3d4-0039-4001-8001-000000000039",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Old_Man_of_Storr%2C_Trottenish_Peninsula%2C_Isle_of_Skye.jpg",
-    "alt_text": "Old Man of Storr on the Trotternish Peninsula, Isle of Skye",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "quir1",
     "mountain_id": "a1b2c3d4-0040-4001-8001-000000000040",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Quiraing%2C_Isle_of_Skye%2C_Scotland_-_Diliff.jpg",
-    "alt_text": "The Quiraing - extraordinary landslip landscape on the Isle of Skye",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "The Quiraing - Extraordinary landscape on Skye",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "quir2",
-    "mountain_id": "a1b2c3d4-0040-4001-8001-000000000040",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Quiraing_Isle_of_Skye_Pano.jpg",
-    "alt_text": "Quiraing panorama on the Trotternish Ridge, Isle of Skye",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "linm1",
     "mountain_id": "a1b2c3d4-0041-4001-8001-000000000041",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Lingmell_-_geograph.org.uk_-_7860287.jpg",
-    "alt_text": "Lingmell above Wasdale in the Lake District with views to Scafell Pike",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Lingmell above Wasdale in the Lake District",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "linm2",
-    "mountain_id": "a1b2c3d4-0041-4001-8001-000000000041",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Great_End_from_the_summit_of_Lingmell_-_geograph.org.uk_-_780660.jpg",
-    "alt_text": "Great End from the summit of Lingmell above Wasdale Head",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "kids1",
     "mountain_id": "a1b2c3d4-0042-4001-8001-000000000042",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kidsty_Pike.jpg",
-    "alt_text": "Kidsty Pike above Haweswater - the pointed summit at the head of Riggindale",
+    "image_url": "https://images.pexels.com/photos/1770775/pexels-photo-1770775.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Kidsty Pike above Haweswater",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "cats1",
     "mountain_id": "a1b2c3d4-0043-4001-8001-000000000043",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Catstycam_%287257747806%29.jpg",
-    "alt_text": "Catstycam - elegant pyramid peak beside Helvellyn above Red Tarn",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Catstycam - Pyramid peak beside Helvellyn",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "cats2",
-    "mountain_id": "a1b2c3d4-0043-4001-8001-000000000043",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/The_summit_of_Catstycam_-_geograph.org.uk_-_5349482.jpg",
-    "alt_text": "Catstycam summit above Red Tarn with Helvellyn in the background",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "ffras1",
     "mountain_id": "a1b2c3d4-0044-4001-8001-000000000044",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Foel_Fras_from_Foel_Grach_-_geograph.org.uk_-_75329.jpg",
-    "alt_text": "Foel Fras from Foel Grach - most northerly Carneddau Hewitt in Snowdonia",
+    "image_url": "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Foel Fras - Most northerly Carneddau Hewitt",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "ffras2",
-    "mountain_id": "a1b2c3d4-0044-4001-8001-000000000044",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Foel_Fras_from_Garnedd_Uchaf_Summit_-_geograph.org.uk_-_223074.jpg",
-    "alt_text": "Foel Fras from Garnedd Uchaf summit in the Carneddau, North Wales",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "pyhd1",
     "mountain_id": "a1b2c3d4-0045-4001-8001-000000000045",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/A_Frosty_Pen_yr_Helgi_Du_and_the_Carneddau_-_geograph.org.uk_-_223930.jpg",
-    "alt_text": "Pen yr Helgi Du in frost - Carneddau mountain above the Ogwen Valley",
+    "image_url": "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Pen yr Helgi Du in the Carneddau",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "pyhd2",
-    "mountain_id": "a1b2c3d4-0045-4001-8001-000000000045",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Glyderau_o_Pen_yr_Helgi_Du.jpg",
-    "alt_text": "Glyderau range viewed from Pen yr Helgi Du in the Carneddau",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "mmaw1",
     "mountain_id": "a1b2c3d4-0046-4001-8001-000000000046",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Moelwyn_Mawr_and_Moelwyn_Bach%2C_Snowdonia_-_geograph.org.uk_-_4686988.jpg",
-    "alt_text": "Moelwyn Mawr and Moelwyn Bach in the Moelwyn Mountains of Snowdonia",
+    "image_url": "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Moelwyn Mawr in the Moelwyn Mountains",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "mmaw2",
-    "mountain_id": "a1b2c3d4-0046-4001-8001-000000000046",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Moelwyn_Bach_as_seen_from_the_summit_of_Moelwyn_Mawr_-_geograph.org.uk_-_6488715.jpg",
-    "alt_text": "Moelwyn Bach viewed from Moelwyn Mawr summit in Snowdonia",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "rpb1",
     "mountain_id": "a1b2c3d4-0047-4001-8001-000000000047",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Red_Pike_-_geograph.org.uk_-_1464424.jpg",
-    "alt_text": "Red Pike above Buttermere - one of the finest ridges in the Lake District",
+    "image_url": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Red Pike above Buttermere in the Lake District",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "rpb2",
-    "mountain_id": "a1b2c3d4-0047-4001-8001-000000000047",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/View_from_Red_Pike_towards_High_Stile_-_geograph.org.uk_-_320318.jpg",
-    "alt_text": "View from Red Pike towards High Stile above Buttermere in the Lake District",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "tncr1",
     "mountain_id": "a1b2c3d4-0048-4001-8001-000000000048",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Beacon_on_Thornthwaite_Crag.jpg",
-    "alt_text": "Thornthwaite Crag distinctive stone beacon - landmark on the High Street range",
+    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Thornthwaite Crag with its distinctive beacon",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "tncr2",
-    "mountain_id": "a1b2c3d4-0048-4001-8001-000000000048",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Heading_for_Thornthwaite_Crag_-_geograph.org.uk_-_4004857.jpg",
-    "alt_text": "Heading for Thornthwaite Crag across the High Street fells",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "snba1",
     "mountain_id": "a1b2c3d4-0049-4001-8001-000000000049",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Cuillin_ridge_at_Sgurr_na_Banachdich_-_geograph.org.uk_-_457809.jpg",
-    "alt_text": "The Cuillin Ridge at Sgurr na Banachdich - challenging Munro on the Isle of Skye",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr na Banachdich on the Cuillin Ridge",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "snba2",
-    "mountain_id": "a1b2c3d4-0049-4001-8001-000000000049",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Sgurr_ghreadaidh.jpg",
-    "alt_text": "Sgurr a' Ghreadaidh and Sgurr na Banachdich on the Black Cuillin Ridge, Skye",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "smco1",
     "mountain_id": "a1b2c3d4-0050-4001-8001-000000000050",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sgurr_Mhic_Choinnich_-_geograph.org.uk_-_239695.jpg",
-    "alt_text": "Sgurr Mhic Choinnich on the Cuillin Ridge - a serious mountaineering peak on Skye",
+    "image_url": "https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr Mhic Choinnich on the Cuillin Ridge, Skye",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "smco2",
-    "mountain_id": "a1b2c3d4-0050-4001-8001-000000000050",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Helvellyn%28SimonLedingham%29Dec2004.jpg",
-    "alt_text": "Sgurr Mhic Choinnich steep routes on the Black Cuillin Ridge, Isle of Skye",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bmhe1",
     "mountain_id": "a1b2c3d4-0051-4001-8001-000000000051",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Beinn_Mheadhoin_-_geograph.org.uk_-_3268856.jpg",
-    "alt_text": "Beinn Mheadhoin with distinctive granite tors above Loch Avon in the Cairngorms",
+    "image_url": "https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Mheadhoin with its distinctive granite tors",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bmhe2",
-    "mountain_id": "a1b2c3d4-0051-4001-8001-000000000051",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Beinn_Mheadhoin_summit_-_geograph.org.uk_-_3079030.jpg",
-    "alt_text": "Beinn Mheadhoin summit granite tor in the Cairngorms National Park",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "bbhr1",
     "mountain_id": "a1b2c3d4-0052-4001-8001-000000000052",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/View_towards_Beinn_Bhrotain_-_geograph.org.uk_-_1676851.jpg",
-    "alt_text": "Beinn Bhrotain on the edge of the Great Moss in the southern Cairngorms",
+    "image_url": "https://images.pexels.com/photos/1650462/pexels-photo-1650462.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Beinn Bhrotain on the edge of the Great Moss",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "bbhr2",
-    "mountain_id": "a1b2c3d4-0052-4001-8001-000000000052",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Ancient_woodland_on_nether_slopes_of_Beinn_Bhrotain_in_the_Cairngorms_-_geograph.org.uk_-_5944624.jpg",
-    "alt_text": "Ancient woodland on the lower slopes of Beinn Bhrotain in the Cairngorms",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "culb1",
     "mountain_id": "a1b2c3d4-0053-4001-8001-000000000053",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Cul_Beag_-_geograph.org.uk_-_83152.jpg",
-    "alt_text": "Cul Beag in the Assynt landscape of Sutherland - a Corbett at 769m",
+    "image_url": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Cul Beag in the Assynt landscape",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "snco1",
     "mountain_id": "a1b2c3d4-0054-4001-8001-000000000054",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Sgurr_nan_Coireachan_-_geograph.org.uk_-_636485.jpg",
-    "alt_text": "Sgurr nan Coireachan above Glenfinnan - a remote Munro in the Rough Bounds",
+    "image_url": "https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Sgurr nan Coireachan above Glenfinnan",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "snco2",
-    "mountain_id": "a1b2c3d4-0054-4001-8001-000000000054",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/The_ridge_to_Sgurr_nan_Coireachan_-_geograph.org.uk_-_297740.jpg",
-    "alt_text": "The ridge to Sgurr nan Coireachan above Glenfinnan in Lochaber",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   },
   {
     "id": "conwm1",
     "mountain_id": "a1b2c3d4-0055-4001-8001-000000000055",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_North_Wales_Path_on_Conwy_Mountain_-_geograph.org.uk_-_1477951.jpg",
-    "alt_text": "North Wales Path on Conwy Mountain above the medieval walled town of Conwy",
+    "image_url": "https://images.pexels.com/photos/1761271/pexels-photo-1761271.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "alt_text": "Conwy Mountain above the medieval town of Conwy",
     "order": 0,
-    "created_at": "2025-12-07T00:00:00.000Z"
-  },
-  {
-    "id": "conwm2",
-    "mountain_id": "a1b2c3d4-0055-4001-8001-000000000055",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/North_Wales_Path_south_west_of_Conwy_Mountain_-_geograph.org.uk_-_1478694.jpg",
-    "alt_text": "North Wales Path south west of Conwy Mountain with coastal views",
-    "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
   }
 ]
