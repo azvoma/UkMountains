@@ -1486,5 +1486,245 @@
     "alt_text": "North Wales Path south west of Conwy Mountain with coastal views",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "aranf1",
+    "mountain_id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Aran_Fawddwy_from_Glasgwm.jpg/1280px-Aran_Fawddwy_from_Glasgwm.jpg",
+    "alt_text": "Aran Fawddwy from Glasgwm - highest peak in southern Snowdonia at 905m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bdtorr1",
+    "mountain_id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Beinn_Dearg%2C_Torridon_-_geograph.org.uk_-_887124.jpg/1280px-Beinn_Dearg%2C_Torridon_-_geograph.org.uk_-_887124.jpg",
+    "alt_text": "Beinn Dearg in Torridon - rugged Corbett in the Northwest Highlands",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "blmhor1",
+    "mountain_id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Beinn_Liath_Mhor_-_geograph.org.uk_-_1073827.jpg/1280px-Beinn_Liath_Mhor_-_geograph.org.uk_-_1073827.jpg",
+    "alt_text": "Beinn Liath Mhor - Big Grey Hill above Loch Torridon in Wester Ross",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bcrua1",
+    "mountain_id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ben_Cruachan_from_Loch_Awe.jpg/1280px-Ben_Cruachan_from_Loch_Awe.jpg",
+    "alt_text": "Ben Cruachan from Loch Awe - the Hollow Mountain in Argyll at 1126m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bloyal1",
+    "mountain_id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ben_Loyal_from_the_south.jpg/1280px-Ben_Loyal_from_the_south.jpg",
+    "alt_text": "Ben Loyal from the south - the Queen of Scottish Mountains in Sutherland",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bmcoig1",
+    "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ben_More_Coigach_-_geograph.org.uk_-_1404220.jpg/1280px-Ben_More_Coigach_-_geograph.org.uk_-_1404220.jpg",
+    "alt_text": "Ben More Coigach above the Coigach peninsula in Sutherland at 743m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bleak1",
+    "mountain_id": "215212dc-2bf4-4258-af0d-0e201478767f",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Bleaklow_Head_-_geograph.org.uk_-_1504994.jpg/1280px-Bleaklow_Head_-_geograph.org.uk_-_1504994.jpg",
+    "alt_text": "Bleaklow Head - high moorland peak in the Dark Peak, Peak District",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "bowf1",
+    "mountain_id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bowfell_from_Crinkle_Crags.jpg/1280px-Bowfell_from_Crinkle_Crags.jpg",
+    "alt_text": "Bowfell from Crinkle Crags - classic Lakeland peak at the head of Great Langdale",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "buach1",
+    "mountain_id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Buachaille_Etive_M%C3%B2r_from_the_A82.jpg/1280px-Buachaille_Etive_M%C3%B2r_from_the_A82.jpg",
+    "alt_text": "Buachaille Etive Mor from the A82 - iconic pyramid peak at the entrance to Glencoe",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "conold1",
+    "mountain_id": "56868213-04fd-4f62-b19e-cf3f54f00597",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/The_Old_Man_of_Coniston.jpg/1280px-The_Old_Man_of_Coniston.jpg",
+    "alt_text": "The Old Man of Coniston - iconic Lakeland fell overlooking Coniston Water at 803m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "corndu1",
+    "mountain_id": "d04aa449-44e0-4056-8943-546517d8fa6c",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Corn_Du_from_Pen_y_Fan.jpg/1280px-Corn_Du_from_Pen_y_Fan.jpg",
+    "alt_text": "Corn Du from Pen y Fan - flat-topped Brecon Beacon at 873m in South Wales",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "cribg1",
+    "mountain_id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Crib_Goch_from_Pyg_Track.jpg/1280px-Crib_Goch_from_Pyg_Track.jpg",
+    "alt_text": "Crib Goch from the Pyg Track - exhilarating knife-edge ridge on Snowdon at 923m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "cribn1",
+    "mountain_id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Cribyn_from_Pen_y_Fan.jpg/1280px-Cribyn_from_Pen_y_Fan.jpg",
+    "alt_text": "Cribyn from Pen y Fan - shapely Brecon Beacon at 795m in South Wales",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "culbg1",
+    "mountain_id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Cul_Beag_-_geograph.org.uk_-_1630137.jpg/1280px-Cul_Beag_-_geograph.org.uk_-_1630137.jpg",
+    "alt_text": "Cul Beag in the Assynt landscape - a Corbett at 769m in Sutherland",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "culm1",
+    "mountain_id": "f929cff9-910b-437a-a947-e5f447164fef",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cul_Mor_-_geograph.org.uk_-_1630159.jpg/1280px-Cul_Mor_-_geograph.org.uk_-_1630159.jpg",
+    "alt_text": "Cul Mor in Assynt - Big Back Hill at 849m dominating the Coigach landscape",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "fairf1",
+    "mountain_id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Fairfield_from_Great_Rigg.jpg/1280px-Fairfield_from_Great_Rigg.jpg",
+    "alt_text": "Fairfield from Great Rigg - the central peak of the Fairfield Horseshoe at 873m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "foinv1",
+    "mountain_id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Foinaven_-_geograph.org.uk_-_1531365.jpg/1280px-Foinaven_-_geograph.org.uk_-_1531365.jpg",
+    "alt_text": "Foinaven - rugged Corbett at 911m in the far northwest of Sutherland",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "glydf1",
+    "mountain_id": "516c4794-ac77-4638-bc83-01f4d750eeae",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Glyder_Fach_-_geograph.org.uk_-_1209507.jpg/1280px-Glyder_Fach_-_geograph.org.uk_-_1209507.jpg",
+    "alt_text": "Glyder Fach - rugged summit plateau in the Glyderau range of Snowdonia at 994m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "glydfw1",
+    "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Glyder_Fawr_-_geograph.org.uk_-_1209551.jpg/1280px-Glyder_Fawr_-_geograph.org.uk_-_1209551.jpg",
+    "alt_text": "Glyder Fawr - highest peak in the Glyderau at 1001m above the Ogwen Valley",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "grasm1",
+    "mountain_id": "7188549e-446d-4d03-a012-39b77bcc26ed",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Grasmoor_from_Whiteless_Pike.jpg/1280px-Grasmoor_from_Whiteless_Pike.jpg",
+    "alt_text": "Grasmoor from Whiteless Pike - highest fell in the northwestern Lakes at 852m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "grend1",
+    "mountain_id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Great_End_from_Esk_Hause.jpg/1280px-Great_End_from_Esk_Hause.jpg",
+    "alt_text": "Great End from Esk Hause - the most northerly summit of the Scafell massif at 910m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "illcr1",
+    "mountain_id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ill_Crag_-_geograph.org.uk_-_1601313.jpg/1280px-Ill_Crag_-_geograph.org.uk_-_1601313.jpg",
+    "alt_text": "Ill Crag on the Scafell massif - rocky satellite summit at 930m in the Lake District",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "ingle1",
+    "mountain_id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ingleborough_from_Horton_in_Ribblesdale.jpg/1280px-Ingleborough_from_Horton_in_Ribblesdale.jpg",
+    "alt_text": "Ingleborough from Horton in Ribblesdale - one of the Yorkshire Three Peaks at 723m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "kinds1",
+    "mountain_id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kinder_Scout_from_Ringing_Roger.jpg/1280px-Kinder_Scout_from_Ringing_Roger.jpg",
+    "alt_text": "Kinder Scout from Ringing Roger - highest point in the Peak District at 636m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "msiabd1",
+    "mountain_id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Moel_Siabod_from_Capel_Curig.jpg/1280px-Moel_Siabod_from_Capel_Curig.jpg",
+    "alt_text": "Moel Siabod from Capel Curig - shapely mountain above the Llugwy Valley at 872m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "pillar1",
+    "mountain_id": "d8d92836-7c31-47f5-b293-d6d7620f1f04",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Pillar_from_Black_Sail_Pass.jpg/1280px-Pillar_from_Black_Sail_Pass.jpg",
+    "alt_text": "Pillar from Black Sail Pass - remote Lakeland fell at 892m above Ennerdale",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "quinag1",
+    "mountain_id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Quinag_-_geograph.org.uk_-_1124913.jpg/1280px-Quinag_-_geograph.org.uk_-_1124913.jpg",
+    "alt_text": "Quinag - spectacular multi-summited Corbett at 808m in Sutherland",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "sgorrd1",
+    "mountain_id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sgorr_Dhearg_-_geograph.org.uk_-_1081523.jpg/1280px-Sgorr_Dhearg_-_geograph.org.uk_-_1081523.jpg",
+    "alt_text": "Sgorr Dhearg - Red Peak of Beinn a' Bheithir above Ballachulish at 1024m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "smcho1",
+    "mountain_id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sgurr_Mhic_Choinnich_-_geograph.org.uk_-_457757.jpg/1280px-Sgurr_Mhic_Choinnich_-_geograph.org.uk_-_457757.jpg",
+    "alt_text": "Sgurr Mhic Choinnich on the Black Cuillin Ridge - technical Munro at 948m on Skye",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "id": "stacpo1",
+    "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Stac_Pollaidh_from_the_east.jpg/1280px-Stac_Pollaidh_from_the_east.jpg",
+    "alt_text": "Stac Pollaidh from the east - spectacular sandstone pinnacles in Assynt at 612m",
+    "order": 0,
+    "created_at": "2025-12-07T00:00:00.000Z"
   }
 ]
