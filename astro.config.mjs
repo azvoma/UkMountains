@@ -5,6 +5,15 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ukmountainsdirectory.co.uk',
   output: 'static',
+  
+  // Add the image block right here:
+  image: {
+    domains: [
+      'upload.wikimedia.org', 
+      'live.staticflickr.com'
+    ],
+  },
+
   integrations: [
     sitemap({
       changefreq: 'weekly',
