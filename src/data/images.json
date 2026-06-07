@@ -314,7 +314,7 @@
   {
     "id": "bab2",
     "mountain_id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
-    "image_url": "/beinn_a'_bhuird_2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Beinn-a-bhuird-01.jpg",
     "alt_text": "Beinn a' Bhuird north face climbing routes and dramatic corries",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
