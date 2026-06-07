@@ -2250,7 +2250,7 @@
   {
     "id": "c3bdd577-39ee-4b1a-a709-8e4b82abac8c",
     "mountain_id": "ffd317f8-e51a-46e1-b469-0b9f6fd61543",
-    "image_url": "/Ben Nevis 2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Ben_Nevis.jpg",
     "alt_text": "Ben Nevis snow-capped mountain view from across the loch",
     "order": 1,
     "created_at": "2025-11-03T19:25:04.964514+00:00"
