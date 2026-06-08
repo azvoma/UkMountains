@@ -298,7 +298,7 @@
   {
     "id": "bl2",
     "mountain_id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
-    "image_url": "/ben_lawers_3.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Ben_Lawers_in_Scotland_-_2008.jpg",
     "alt_text": "Ben Lawers panoramic mountain ridge view over Loch Tay",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
