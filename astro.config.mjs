@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://ukmountainsdirectory.co.uk',
   output: 'static',
   
-  // Add the image block right here:
+  // This authorizes your remote image sources
   image: {
     domains: [
       'upload.wikimedia.org', 
