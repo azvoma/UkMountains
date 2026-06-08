@@ -6,15 +6,7 @@ const currentPath = Astro.url.pathname;
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
       <a href="/" class="logo" aria-label="UK Mountains home page">
-        <span class="logo-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-            <path d="M3 30L12 10L18 19L24 8L31 30H3Z" fill="currentColor" opacity="0.12"/>
-            <path d="M3 30L12 10L18 19L24 8L31 30H3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
-            <path d="M22 8L24 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="24" cy="6" r="2" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="logo-text">UK Mountains Directory</span>
+        <img src="/Main_Logo.png" alt="UK Mountains Directory" class="logo-image" />
       </a>
 
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -85,10 +77,6 @@ const currentPath = Astro.url.pathname;
   .logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-neutral-900);
     text-decoration: none;
     transition: transform var(--transition-fast);
     z-index: 101;
@@ -101,13 +89,12 @@ const currentPath = Astro.url.pathname;
 
   .logo:hover {
     transform: scale(1.05);
-    color: var(--color-primary);
   }
 
-  .logo-icon {
-    display: flex;
-    align-items: center;
-    color: var(--color-primary);
+  .logo-image {
+    height: 48px;
+    width: auto;
+    display: block;
   }
 
   .menu-toggle {
@@ -212,12 +199,8 @@ const currentPath = Astro.url.pathname;
       border-radius: 0;
     }
 
-    .logo-text {
-      font-size: 1.1rem;
-    }
-
-    .logo-icon {
-      font-size: 1.5rem;
+    .logo-image {
+      height: 40px;
     }
   }
 
@@ -231,8 +214,8 @@ const currentPath = Astro.url.pathname;
       font-size: 0.95rem;
     }
 
-    .logo-text {
-      font-size: 1.3rem;
+    .logo-image {
+      height: 44px;
     }
   }
 </style>
