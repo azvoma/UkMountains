@@ -562,7 +562,7 @@
   {
     "id": "ski2",
     "mountain_id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
-    "image_url": "/skiddaw_2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Skiddaw_%28cropped%29.JPG",
     "alt_text": "Skiddaw distant view across the Northern Fells of the Lake District",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
