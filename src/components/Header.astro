@@ -7,12 +7,7 @@ const currentPath = Astro.url.pathname;
     <nav class="nav" aria-label="Main navigation">
       <a href="/" class="logo" aria-label="UK Mountains home page">
         <span class="logo-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-            <path d="M3 30L12 10L18 19L24 8L31 30H3Z" fill="currentColor" opacity="0.12"/>
-            <path d="M3 30L12 10L18 19L24 8L31 30H3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
-            <path d="M22 8L24 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="24" cy="6" r="2" fill="currentColor"/>
-          </svg>
+          <img src="/Main_Logo.png" alt="UK Mountains Directory logo" width="40" height="40" />
         </span>
         <span class="logo-text">UK Mountains Directory</span>
       </a>
@@ -107,7 +102,11 @@ const currentPath = Astro.url.pathname;
   .logo-icon {
     display: flex;
     align-items: center;
-    color: var(--color-primary);
+  }
+
+  .logo-icon img {
+    display: block;
+    object-fit: contain;
   }
 
   .menu-toggle {
