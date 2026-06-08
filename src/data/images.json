@@ -226,7 +226,7 @@
   {
     "id": "slu2",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
-    "image_url": "/sgor_an_lochain_uaine_2.jpg",
+    "image_url": "",
     "alt_text": "Sgor an Lochain Uaine steep faces and climbing routes from Cairn Toul",
     "order": 1,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -234,7 +234,7 @@
   {
     "id": "slu3",
     "mountain_id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
-    "image_url": "/sgor_an_lochain_uaine_3.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Sgor_an_Lochan_Uaine_from_Ben_Macdui_-_geograph.org.uk_-_3591282.jpg",
     "alt_text": "Sgor an Lochain Uaine winter ascent showing the summit approach",
     "order": 2,
     "created_at": "2025-12-05T00:00:00.000Z"
