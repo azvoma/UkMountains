@@ -42,7 +42,7 @@
   {
     "id": "sn3",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jp",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
     "alt_text": "Snowdon panoramic view across Snowdonia National Park",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -170,7 +170,7 @@
   {
     "id": "tf1",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Tryfan_-_geograph.org.uk_-_1454299.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
     "alt_text": "Tryfan - iconic rocky peak in Snowdonia with Adam and Eve summit rocks",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -370,7 +370,7 @@
   {
     "id": "cl1",
     "mountain_id": "32262237-2045-463a-b660-1faadb5a65ae",
-    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_v0QFaYnK36Q9h0km4D-IKciv5iRiVzUM9syCtIupAC5jy0FGNkD0_NjzBwaUAGIXLAMdUxlQAVhN88nUt13uwOROJTptkIanQK02fKONwv_XYkRzFMMypXnkhj1vGC5UDBS-S-eNIIc/s1600/IMG_3083.JPG",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Carnedd_Llewelyn_-_geograph.org.uk_-_1296619.jpg/1280px-Carnedd_Llewelyn_-_geograph.org.uk_-_1296619.jpg",
     "alt_text": "Carnedd Llewelyn - highest peak in the Carneddau range with mountain lake",
     "order": 0,
     "created_at": "2025-12-05T00:00:00.000Z"
@@ -482,7 +482,7 @@
   {
     "id": "sce1",
     "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
-    "image_url": "https://www.themountainguide.co.uk/public/geophotos/586522.webp",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Stob_Coire_Easain_-_geograph.org.uk_-_1635036.jpg/1280px-Stob_Coire_Easain_-_geograph.org.uk_-_1635036.jpg",
     "alt_text": "Stob Coire Easain - snow-covered peak with dramatic Lochaber ridge",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -490,7 +490,7 @@
   {
     "id": "sce2",
     "mountain_id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
-    "image_url": "https://live.staticflickr.com/65535/48847834498_96e548d8b3_b.jpg",
+    "image_url": "/stob_coire_easain_2.jpg",
     "alt_text": "Stob Coire Easain Highland mountain with snow patches above Glen Spean",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1530,7 +1530,7 @@
   {
     "id": "bmcoig1",
     "mountain_id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Ben_More%2C_Crainlarich.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ben_More_Coigach_-_geograph.org.uk_-_1404220.jpg/1280px-Ben_More_Coigach_-_geograph.org.uk_-_1404220.jpg",
     "alt_text": "Ben More Coigach above the Coigach peninsula in Sutherland at 743m",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1634,7 +1634,7 @@
   {
     "id": "glydfw1",
     "mountain_id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
-    "image_url": "https://scontent.ffab1-2.fna.fbcdn.net/v/t39.30808-6/488573862_3022897664545554_7306623655745563211_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1904x1428&ctp=s1904x1428&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LBKkvbI1SuEQ7kNvwFQ9Ugk&_nc_oc=AdqfhiyCE-INrn1NNqYWIAKZZG3bAk-ydDvUrkZ2jAKmerMimRX84R4j4GkOfEsVuB0&_nc_zt=23&_nc_ht=scontent.ffab1-2.fna&_nc_gid=9INXnA2_dlPTvd2Bvf5x7Q&_nc_ss=7b2a8&oh=00_Af-GZC4G3-_860boZE9Z6XHM_6tFl6Z_L4SLOfiLu0b9CA&oe=6A2DD68C",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Glyder_Fawr_-_geograph.org.uk_-_1209551.jpg/1280px-Glyder_Fawr_-_geograph.org.uk_-_1209551.jpg",
     "alt_text": "Glyder Fawr - highest peak in the Glyderau at 1001m above the Ogwen Valley",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
@@ -1722,7 +1722,7 @@
   {
     "id": "stacpo1",
     "mountain_id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
-    "image_url": "https://images.squarespace-cdn.com/content/v1/62a05cee8477f63b6685dc3d/0d78a452-471e-40e6-8840-9b9bdd07b088/A-Complete-Guide-to-Hiking-Stac-Pollaidh-in-Scotland-%E2%80%93-All-You-Need-to-Know-7.jpg?format=2500w",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Stac_Pollaidh_from_the_east.jpg/1280px-Stac_Pollaidh_from_the_east.jpg",
     "alt_text": "Stac Pollaidh from the east - spectacular sandstone pinnacles in Assynt at 612m",
     "order": 0,
     "created_at": "2025-12-07T00:00:00.000Z"
