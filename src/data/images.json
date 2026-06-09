@@ -42,7 +42,7 @@
   {
     "id": "sn3",
     "mountain_id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jp",
     "alt_text": "Snowdon panoramic view across Snowdonia National Park",
     "order": 2,
     "created_at": "2025-12-04T00:00:00.000Z"
@@ -170,7 +170,7 @@
   {
     "id": "tf1",
     "mountain_id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tryfan%2C_Snowdonia_02439.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Tryfan_-_geograph.org.uk_-_1454299.jpg",
     "alt_text": "Tryfan - iconic rocky peak in Snowdonia with Adam and Eve summit rocks",
     "order": 0,
     "created_at": "2025-12-04T00:00:00.000Z"
