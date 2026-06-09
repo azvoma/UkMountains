@@ -506,7 +506,7 @@
   {
     "id": "sch2",
     "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
-    "image_url": "/schiehallion_2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Schiehallion_NW_ridge.jpg",
     "alt_text": "Schiehallion lochside view with distinctive pyramid peak - Perthshire",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
