@@ -578,7 +578,7 @@
   {
     "id": "sgd2",
     "mountain_id": "d98d9322-6c04-4313-a9e6-654db6916570",
-    "image_url": "/sgurr_dearg_2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sgurr_Dearg_-_geograph.org.uk_-_1258334.jpg",
     "alt_text": "Sgurr Dearg Inaccessible Pinnacle rock tower - hardest Munro on the Isle of Skye",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
