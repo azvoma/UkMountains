@@ -610,7 +610,7 @@
   {
     "id": "6a67dcd3-ad74-4d27-8292-4c2b7f99a1cb",
     "mountain_id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
-    "image_url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Schiehallion_01.jpg",
     "alt_text": "Schiehallion - Mountain view 1",
     "order": 0,
     "created_at": "2025-11-04T00:50:40.030673+00:00"
