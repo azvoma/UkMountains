@@ -594,7 +594,7 @@
   {
     "id": "eli2",
     "mountain_id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
-    "image_url": "/elidir_fawr_2.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/ElidirFawrWales.jpg",
     "alt_text": "Elidir Fawr rocky summit cairn above Llanberis in Snowdonia National Park",
     "order": 1,
     "created_at": "2025-12-07T00:00:00.000Z"
