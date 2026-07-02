@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ukmountainsdirectory.co.uk',
   output: 'static',
+  trailingSlash: 'always',
   
   // This authorizes your remote image sources
   image: {
@@ -31,5 +32,10 @@ export default defineConfig({
   ],
   build: {
     inlineStylesheets: 'auto',
+  },
+  vite: {
+    build: {
+      minify: 'esbuild',
+    },
   },
 });

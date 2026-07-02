@@ -97,6 +97,11 @@ const touristAttractionSchema = {
   }
 };
 
+const fullTitle = `Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`;
+const pageTitle = fullTitle.length > 60
+  ? `${mountain.name} – UK Mountain Guide`
+  : fullTitle;
+
 const faqSchemaData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -130,7 +135,7 @@ const faqSchemaData = {
 ---
 
 <Layout
-  title={`Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`}
+  title={pageTitle}
   description={`Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`}
   image={displayImages[0]}
 >
@@ -142,7 +147,7 @@ const faqSchemaData = {
   <!-- HERO -->
   <div class="hero-section">
     <div class="hero-image">
-      <img src={displayImages[0]} alt={`${mountain.name} Summit`} />
+      <img src={displayImages[0]} alt={`${mountain.name} Summit`} onerror="this.onerror=null;this.src='https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200'" />
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content page-wrap">
@@ -372,7 +377,7 @@ const faqSchemaData = {
           <div class="gallery-row">
             {displayImages.map((imageUrl, index) => (
               <div class="gallery-item">
-                <img src={imageUrl} alt={`${mountain.name} – view ${index + 1}`} loading="lazy" />
+                <img src={imageUrl} alt={`${mountain.name} – view ${index + 1}`} loading="lazy" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200'" />
               </div>
             ))}
           </div>

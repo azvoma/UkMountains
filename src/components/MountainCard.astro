@@ -24,6 +24,7 @@ const defaultImage = 'https://images.pexels.com/photos/417074/pexels-photo-41707
       loading="lazy"
       width="400"
       height="220"
+      onerror={`this.onerror=null;this.src='${defaultImage}'`}
     />
     {mountain.classification && (
       <span class="badge">{mountain.classification}</span>
