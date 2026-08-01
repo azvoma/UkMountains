@@ -1,0 +1,93 @@
+---
+interface Props {
+  name: string;
+  credentials: string;
+  bio: string;
+}
+
+const { name, credentials, bio } = Astro.props;
+---
+
+<div class="author-bio">
+  <div class="author-avatar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+  </div>
+  <div class="author-content">
+    <div class="author-header">
+      <h4>{name}</h4>
+      <span class="author-credentials">{credentials}</span>
+    </div>
+    <p>{bio}</p>
+  </div>
+</div>
+
+<style>
+  .author-bio {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-neutral-200);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .author-avatar {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .author-content {
+    flex: 1;
+  }
+
+  .author-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .author-header h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--color-neutral-900);
+  }
+
+  .author-credentials {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .author-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+  }
+
+  @media (max-width: 640px) {
+    .author-bio {
+      flex-direction: column;
+      gap: var(--spacing-md);
+      padding: var(--spacing-lg);
+    }
+
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+    }
+  }
+</style>

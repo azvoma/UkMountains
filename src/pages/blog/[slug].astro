@@ -1,0 +1,660 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import { getAllBlogArticles, getBlogArticleBySlug, getRelatedArticles } from '../../data/blog';
+
+export async function getStaticPaths() {
+  const articles = getAllBlogArticles();
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const article = getBlogArticleBySlug(slug);
+
+if (!article) {
+  return Astro.redirect('/404');
+}
+
+const related = getRelatedArticles(article.slug, 3);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukmountains.directory/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ukmountains.directory/blog" },
+    { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://ukmountains.directory/blog/${article.slug}` }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.title,
+  "description": article.metaDescription,
+  "image": article.heroImage,
+  "datePublished": article.publishedDate,
+  "dateModified": article.publishedDate,
+  "keywords": [article.focusKeyphrase, ...article.secondaryKeywords, ...article.clusterKeywords].join(', '),
+  "url": `https://ukmountains.directory/blog/${article.slug}`,
+  "author": {
+    "@type": "Person",
+    "name": article.authorName,
+    "description": article.authorCredentials
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "UK Mountains Directory",
+    "url": "https://ukmountains.directory"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": article.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<Layout
+  title={article.title}
+  description={article.metaDescription}
+  image={article.heroImage}
+  type="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="article-hero">
+    <div class="hero-image">
+      <img src={article.heroImage} alt={article.heroImageAlt} />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content page-wrap">
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'Blog', url: '/blog' },
+        { name: article.title }
+      ]} />
+      <span class="hero-category">{article.category}</span>
+      <h1>{article.title}</h1>
+      <div class="hero-meta">
+        <span class="meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          {article.readTime}
+        </span>
+        <span class="meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          {article.authorName}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <div class="page-body">
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Trail Facts
+          </h3>
+          <dl class="fact-list">
+            <dt>Elevation</dt>
+            <dd>{article.sidebar.elevation}</dd>
+            <dt>OS Grid Ref</dt>
+            <dd class="mono">{article.sidebar.osGridRef}</dd>
+            <dt>Ascent Time</dt>
+            <dd>{article.sidebar.ascentDuration}</dd>
+            <dt>Difficulty</dt>
+            <dd>{article.sidebar.terrainDifficulty}</dd>
+            <dt>Best Season</dt>
+            <dd>{article.sidebar.bestSeason}</dd>
+          </dl>
+        </div>
+
+        <div class="sidebar-card sidebar-parking">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Trailhead Parking
+          </h3>
+          <p class="parking-text">{article.sidebar.trailheadParking}</p>
+        </div>
+
+        <div class="sidebar-card sidebar-os">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+            Ordnance Survey Data
+          </h3>
+          <p class="os-text">{article.sidebar.keyFact}</p>
+          <p class="os-note">All elevation data sourced from Ordnance Survey mapping.</p>
+        </div>
+
+        <div class="sidebar-card sidebar-emergency">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            Mountain Rescue
+          </h3>
+          <p class="emergency-text">{article.sidebar.mountainRescue}</p>
+        </div>
+
+        <div class="sidebar-card sidebar-conservation">
+          <h3 class="sidebar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+            Conservation
+          </h3>
+          <p class="conservation-text">{article.sidebar.conservationNotes}</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section class="content-section intro-section">
+          <div class="intro-text" set:html={article.intro} />
+        </section>
+
+        {article.sections.map((section) => (
+          <section class="content-section">
+            {section.headingLevel === 'h2' ? (
+              <h2>{section.heading}</h2>
+            ) : (
+              <h3>{section.heading}</h3>
+            )}
+            <div class="section-body" set:html={section.body} />
+          </section>
+        ))}
+
+        <section class="content-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faqs">
+            {article.faqs.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>About the Author</h2>
+          <AuthorBio
+            name={article.authorName}
+            credentials={article.authorCredentials}
+            bio={article.authorBio}
+          />
+        </section>
+
+        <section class="content-section related-section">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            {related.map((rel) => (
+              <a href={`/blog/${rel.slug}`} class="related-card">
+                <span class="related-category">{rel.category}</span>
+                <h3>{rel.title}</h3>
+                <span class="related-read-time">{rel.readTime}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .page-body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--spacing-2xl);
+    align-items: start;
+    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+  }
+
+  .article-hero {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: var(--spacing-2xl);
+    width: 100%;
+  }
+
+  .hero-category {
+    display: inline-block;
+    padding: 5px 14px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin: 0 0 var(--spacing-sm) 0;
+    color: white !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+    line-height: 1.15;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .hero-meta .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-meta .meta-item svg {
+    color: rgba(255, 255, 255, 0.7);
+    flex-shrink: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: sticky;
+    top: 24px;
+    order: 2;
+  }
+
+  .sidebar-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-neutral-200);
+  }
+
+  .sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-title svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .fact-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .fact-list dt {
+    font-weight: 600;
+    color: var(--color-neutral-600);
+    white-space: nowrap;
+  }
+
+  .fact-list dd {
+    margin: 0;
+    color: var(--color-neutral-900);
+    word-break: break-word;
+  }
+
+  .mono {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8rem;
+    background: var(--color-neutral-100);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .sidebar-parking {
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .parking-text {
+    font-size: 0.85rem;
+    color: var(--color-neutral-700);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .sidebar-os {
+    border-left: 4px solid #2563eb;
+  }
+
+  .sidebar-os .sidebar-title svg {
+    color: #2563eb;
+  }
+
+  .os-text {
+    font-size: 0.85rem;
+    color: var(--color-neutral-800);
+    margin: 0 0 var(--spacing-sm) 0;
+    font-weight: 600;
+  }
+
+  .os-note {
+    font-size: 0.75rem;
+    color: var(--color-neutral-500);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .sidebar-emergency {
+    background: #fff5f5;
+    border-color: #fecaca;
+  }
+
+  .sidebar-emergency .sidebar-title {
+    color: #991b1b;
+  }
+
+  .sidebar-emergency .sidebar-title svg {
+    color: #dc2626;
+  }
+
+  .emergency-text {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .sidebar-conservation {
+    border-left: 4px solid #16a34a;
+  }
+
+  .sidebar-conservation .sidebar-title svg {
+    color: #16a34a;
+  }
+
+  .conservation-text {
+    font-size: 0.85rem;
+    color: var(--color-neutral-700);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    order: 1;
+  }
+
+  .content-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-neutral-100);
+  }
+
+  .content-section h3 {
+    font-size: 1.25rem;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  .intro-section {
+    background: var(--color-neutral-50);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .intro-text :global(p) {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--color-neutral-700);
+    margin: 0;
+  }
+
+  .section-body {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-neutral-700);
+  }
+
+  .section-body :global(p) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .section-body :global(a) {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .section-body :global(a:hover) {
+    color: var(--color-primary-dark);
+  }
+
+  .section-body :global(ol),
+  .section-body :global(ul) {
+    margin: 0 0 var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+  }
+
+  .section-body :global(li) {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+  }
+
+  .section-body :global(strong) {
+    color: var(--color-neutral-900);
+  }
+
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .faq-item {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+  }
+
+  .faq-item:hover {
+    border-color: var(--color-primary);
+  }
+
+  .faq-item summary {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+  }
+
+  .faq-item[open] summary {
+    background: var(--color-neutral-50);
+    border-bottom: 1px solid var(--color-neutral-100);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+  }
+
+  .related-section h2 {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--color-neutral-200);
+    transition: all var(--transition-fast);
+  }
+
+  .related-card:hover {
+    border-color: var(--color-primary);
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .related-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--color-neutral-900);
+    line-height: 1.3;
+  }
+
+  .related-read-time {
+    font-size: 0.8rem;
+    color: var(--color-neutral-500);
+    margin-top: auto;
+  }
+
+  @media (max-width: 900px) {
+    .page-body {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      position: static;
+      order: 1;
+    }
+
+    .main-content {
+      order: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .article-hero {
+      height: 380px;
+    }
+
+    .hero-content h1 {
+      font-size: 1.75rem;
+    }
+
+    .content-section {
+      padding: var(--spacing-lg);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
