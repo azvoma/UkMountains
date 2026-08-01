@@ -22,6 +22,17 @@ export default defineConfig({
       lastmod: new Date(),
       filter: (page) => !page.includes('/404'),
       customPages: [],
+      serialize(item) {
+        if (item.url.includes('/blog/')) {
+          item.priority = 0.8;
+          item.changefreq = 'monthly';
+        }
+        if (item.url.endsWith('/blog')) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        }
+        return item;
+      },
       i18n: {
         defaultLocale: 'en',
         locales: {
