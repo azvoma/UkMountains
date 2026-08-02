@@ -1,111 +1,67 @@
 ---
-// ============================================================================
-// MOUNTAIN ACTIVITIES HUB PAGE
-// ----------------------------------------------------------------------------
-// SEO METHOD NOTE:
-// Yoast is a WordPress plugin and doesn't run on Astro. What follows applies
-// the same checklist Yoast enforces — focus keyphrase in title/H1/meta/first
-// paragraph, keyword in image alt text, natural keyword density, internal
-// linking — written directly into the markup instead of plugin fields.
-//
-// KEYWORD DATA SOURCE: user-supplied Ahrefs export (GB, Aug 2026), 125
-// keywords. It split into exactly two real clusters — Fort William/Ben Nevis
-// accommodation (48 kw) and climbing/mountaineering gear (75 kw, incl. a
-// sunglasses sub-cluster). Hire Car, Wild Camping, and Travel Insurance are
-// NOT covered by this export — see the flags on those sections below before
-// treating their copy as keyword-verified.
-//
-// E-E-A-T: the visible byline, author schema, and reviewer note below signal
-// experience and expertise. Replace bracketed placeholders with real people
-// and dates before publishing — a fabricated byline is worse for E-E-A-T
-// than no byline at all.
-//
-// SETUP CHECKLIST before publishing:
-// 1. Layout import path adjusted to match this project — done.
-// 2. Every widget below is SAMPLE DATA, clearly labelled "SAMPLE" rather than
-//    "LIVE". Do not relabel as live until a real API is wired in:
-//      - Conditions trackers: Met Office DataPoint, MWIS (mwis.org.uk),
-//        or the Met Office Mountain Area Forecasts.
-//      - Winter/avalanche tracker: SAIS (sais.gov.uk) — Nov–Apr only,
-//        show an off-season state outside that window.
-//      - Sunset/wind for wild camping: Met Office or OpenWeather +
-//        a sunrise-sunset API.
-//    Mountain conditions are safety-critical — do not ship this page with
-//    "LIVE" labelling on data that isn't actually live.
-// 3. Replace affiliate hrefs (currently "#") with real product links —
-//    specific products, not search results pages, per your affiliate rules.
-// 4. Replace sponsored listing content once you have paying partners;
-//    until then these can stay as "Coming soon — contact us to feature
-//    your business" placeholders instead of fabricated businesses if you'd
-//    rather not publish invented names.
-// 5. Swap booking/search widget placeholders for real embeds:
-//      - Wild camping/bothy booking: FareHarbor / Peek / Bokun / GetYourGuide.
-//      - Car hire search: Discover Cars / RentalCars.com / Skyscanner.
-//      - Hotel search: Booking.com or Expedia affiliate widget.
-// 6. Insurance and car hire comparison rows use invented but realistic
-//    providers/prices as layout placeholders — verify real current pricing
-//    and your actual affiliate/referral links before publishing.
-// 7. Section hero images use placeholder src paths under /images/sections/.
-//    Source real CC BY-SA photos via Wikimedia Commons or Geograph.org.uk —
-//    same workflow you already use for mountain_images — and verify each
-//    filename against the actual Commons category page before publishing;
-//    do not construct filenames from a pattern.
-// 8. Replace every [AUTHOR NAME] / [REVIEWER NAME] / [DATE] placeholder with
-//    a real person and real dates. A fabricated byline is worse for E-E-A-T
-//    than no byline at all — only publish credentials that are true.
-// ============================================================================
-
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
-const seo = {
-  title: 'UK Mountain Activities Guide | Hotels, Gear & Conditions',
-  description:
-    'Plan your UK mountain trip: accommodation in Fort William, climbing equipment, hillwalking gear, live conditions and local guides across all four nations.',
-  canonical: 'https://www.ukmountainsdirectory.co.uk/outdoor-activities',
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "UK Mountain Activities Guide | Hotels, Gear & Conditions",
+  "description": "Plan your UK mountain trip: accommodation in Fort William, climbing equipment, hillwalking gear, live conditions and local guides across all four nations.",
+  "url": "https://ukmountainsdirectory.co.uk/outdoor-activities",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukmountainsdirectory.co.uk" },
+      { "@type": "ListItem", "position": 2, "name": "Outdoor Activities", "item": "https://ukmountainsdirectory.co.uk/outdoor-activities" },
+    ],
+  },
 };
 
-// ----------------------------------------------------------------------------
-// SECTION KEYWORD MAP — single source of truth for on-page SEO decisions.
-// Volume/difficulty figures are from the Aug 2026 Ahrefs export (GB) where
-// marked "verified"; everything else is unverified and flagged accordingly.
-// ----------------------------------------------------------------------------
-const sectionSEO = {
-  hotels: {
-    primary: { kw: 'accommodation in fort william', kd: 26, vol: 910 },
-    secondary: [
-      { kw: 'fort william lodges', kd: 6, vol: 590 },
-      { kw: 'ben nevis accommodation', kd: 11, vol: 590 },
-      { kw: 'hotels near ben nevis', kd: 16, vol: 590 },
-      { kw: 'ben nevis where to stay', kd: 15, vol: 590 },
-      { kw: 'hotels close to ben nevis', kd: 12, vol: 590 },
-      { kw: 'cottage fort william', kd: 10, vol: 480 },
-      { kw: 'camping sites fort william scotland', kd: 19, vol: 590 },
-      { kw: 'accommodation near ben nevis', kd: 12, vol: 480 },
-    ],
-    status: 'verified — 48-keyword cluster in export',
-  },
-  scrambling: {
-    primary: { kw: 'climbing equipment', kd: 21, vol: 880 },
-    secondary: [
-      { kw: 'mountain climbing equipment', kd: 0, vol: 320 },
-      { kw: 'mountaineering equipment sale', kd: 9, vol: 480 },
-      { kw: 'mount equipment', kd: 16, vol: 540 },
-      { kw: 'rock climbing training equipment', kd: 5, vol: 140 },
-      { kw: 'uk climbing shop', kd: 19, vol: 320 },
-      { kw: 'climbing gear retailers', kd: 17, vol: 170 },
-      { kw: 'mountains equipment', kd: 21, vol: 540 },
-      { kw: 'sunglasses for mountaineering', kd: 6, vol: 480 },
-    ],
-    status: 'verified — 75-keyword cluster in export',
-  },
-  hillwalking: {
-    primary: { kw: 'hiking sunglasses', kd: 6, vol: 290 },
-    secondary: [{ kw: 'hiking sunglasses women', kd: 6, vol: 390 }],
-    status: 'partial — only 2 relevant terms in export; boots/jackets/routes need a dedicated export',
-  },
-  hireCar: { primary: null, secondary: [], status: 'NOT COVERED — run a dedicated export before optimising' },
-  wildCamping: { primary: null, secondary: [], status: 'NOT COVERED — run a dedicated export before optimising' },
-  travelInsurance: { primary: null, secondary: [], status: 'NOT COVERED — run a dedicated export before optimising' },
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where should I stay when climbing Ben Nevis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fort William is the natural base for Ben Nevis. Options range from walker-friendly bunkhouses a short walk from town to self-catering cottages and hotels near the mountain path trailheads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What climbing equipment do I need for UK scrambling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Grade 1 scrambles you need sturdy boots, a helmet, and good navigation skills. For Grade 2 and above, add a harness, rope, and protection hardware. A UK climbing shop that stocks mountain climbing equipment specifically is your best starting point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I wild camp on UK mountains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wild camping is legal in Scotland under the Land Reform Act, but in England, Wales, and Northern Ireland you need the landowner's permission. Always check local bylaws and follow the Leave No Trace principles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need specialist travel insurance for hillwalking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard travel insurance often excludes hillwalking above a certain height or scrambling. Look for a policy that names your activity specifically and covers third-party liability, medical costs, and trip cancellation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I check mountain weather conditions before a walk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Met Office Mountain Area Forecasts or MWIS (Mountain Weather Information Service) for UK mountain conditions. In winter, check SAIS (Scottish Avalanche Information Service) for avalanche risk in Scotland."
+      }
+    },
+  ],
 };
 
 const navPills = [
@@ -117,7 +73,6 @@ const navPills = [
   { href: '#travel-insurance', label: 'Travel Insurance' },
 ];
 
-// ---------------------------------------------------------------- Section 1
 const hireCarRegions = [
   { region: 'Scottish Highlands', pickup: 'Glasgow or Inverness Airport', detail: '~2hr drive to Fort William / Ben Nevis' },
   { region: 'Snowdonia', pickup: 'Manchester or Liverpool Airport', detail: '~1.5hr drive to Pen y Pass' },
@@ -132,7 +87,6 @@ const hireCarComparison = [
   { company: 'Sixt', priceFrom: '£30/day', note: 'Newer fleet, higher-spec options' },
 ];
 
-// ---------------------------------------------------------------- Section 2
 const hotelRegions = [
   { region: 'Fort William, Scotland', priceFrom: '£70/night' },
   { region: 'Betws-y-Coed, Wales', priceFrom: '£65/night' },
@@ -140,7 +94,6 @@ const hotelRegions = [
   { region: 'Newcastle, Co. Down', priceFrom: '£60/night' },
 ];
 
-// ---------------------------------------------------------------- Section 3
 const hillwalkingConditions = [
   { name: 'Ben Nevis', nation: 'Scotland', status: 'good', detail: 'Clear summit, light wind' },
   { name: 'Yr Wyddfa (Snowdon)', nation: 'Wales', status: 'caution', detail: '40mph gusts forecast above 800m' },
@@ -169,7 +122,6 @@ const hillwalkingLinks = [
   { label: 'Slieve Donard route guide', href: '/mountain/slieve-donard' },
 ];
 
-// ---------------------------------------------------------------- Section 4
 const winterConditions = [
   { region: 'Cairngorms', level: 'considerable' },
   { region: 'Glencoe', level: 'high' },
@@ -192,7 +144,6 @@ const guideListings = [
   { name: 'Mourne Mountain Guides', location: 'Co. Down, NI', desc: 'Guided scrambling and hillwalking across the Mournes.' },
 ];
 
-// ---------------------------------------------------------------- Section 5
 const campingConditions = [
   { region: 'Cairngorms', wind: '18mph', low: '3°C', sunset: '21:14' },
   { region: 'Snowdonia', wind: '12mph', low: '8°C', sunset: '21:32' },
@@ -207,11 +158,6 @@ const tentGrid = [
   { name: 'Wild Country Zephyros 1', price: '£220' },
 ];
 
-const campingLinks = [
-  { label: 'All UK mountain guides', href: '/mountains' },
-];
-
-// ---------------------------------------------------------------- Section 6
 const insuranceComparison = [
   { provider: 'Snowcard Insurance', coverage: 'Hillwalking & scrambling to Grade 3, medical & repatriation costs', priceFrom: '£45' },
   { provider: 'BMC Travel & Activity Insurance', coverage: 'Hillwalking, climbing & mountaineering, third-party liability', priceFrom: '£38' },
@@ -221,48 +167,28 @@ const insuranceComparison = [
 
 const statusLabel = { good: 'Good', caution: 'Caution', avoid: 'Avoid' };
 const levelLabel = { low: 'Low', considerable: 'Considerable', high: 'High' };
-
-// Replace every bracketed value with a real person and real dates before
-// publishing. schema.org has no "reviewedBy" property — the review claim
-// lives in the visible byline only, not in structured data.
-const pageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: seo.title,
-  description: seo.description,
-  url: seo.canonical,
-  author: { '@type': 'Person', name: '[AUTHOR NAME]', jobTitle: '[e.g. Mountain Leader / Hillwalking Guide]' },
-  datePublished: '[YYYY-MM-DD]',
-  dateModified: '[YYYY-MM-DD]',
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ukmountainsdirectory.co.uk' },
-      { '@type': 'ListItem', position: 2, name: 'Outdoor Activities', item: seo.canonical },
-    ],
-  },
-};
 ---
 
-<Layout title={seo.title} description={seo.description}>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
+<Layout
+  title="UK Mountain Activities Guide | Hotels, Gear & Conditions"
+  description="Plan your UK mountain trip: accommodation in Fort William, climbing equipment, hillwalking gear, live conditions and local guides across all four nations."
+>
   <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
-  <div class="oa-page">
-    <!-- ============================== HERO ============================== -->
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">Outdoor Activities</p>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="activities-page">
+    <section class="page-hero">
+      <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Outdoor Activities' }
+        ]} />
         <h1>The Ultimate Guide to UK Mountain Activities</h1>
-        <p class="hero-sub">
+        <p class="hero-lead">
           From the Munros of the Highlands to the fells of the Lakes, this hub covers everything
-          you need for a safe, rewarding trip in the mountains — getting there and where to stay,
-          hillwalking gear and conditions, scrambling and climbing kit, wild camping essentials,
-          and cover that actually protects you on the hill.
+          you need for a safe, rewarding trip — getting there, where to stay, hillwalking gear and
+          conditions, scrambling and climbing kit, wild camping essentials, and insurance that
+          actually protects you on the hill.
         </p>
         <div class="hero-pills">
           {navPills.map((p) => (
@@ -272,66 +198,35 @@ const pageSchema = {
       </div>
     </section>
 
-    <p class="eeat-strip">
-      Written by <strong>[AUTHOR NAME]</strong>, [e.g. Mountain Leader / hillwalker of N years] ·
-      Reviewed by <strong>[REVIEWER NAME]</strong> · Last updated <strong>[DATE]</strong>
-    </p>
+    <div class="container">
+      <p class="disclosure">
+        Some links on this page are affiliate links — we may earn a commission at no extra cost to
+        you. Featured accommodation and guide listings are paid placements, marked as such.
+      </p>
 
-    <p class="disclosure">
-      Some links on this page are affiliate links — we may earn a commission at no extra cost to
-      you. Featured accommodation and guide listings are paid placements, marked as such.
-    </p>
-
-    <!--
-      SEO — Hire Car section
-      ⚠️ NOT COVERED by the Aug 2026 Ahrefs export. Copy below is written to
-      general best practice, not verified keyword data. Run a dedicated
-      export (e.g. "car hire fort william", "car hire snowdonia", "getting
-      to ben nevis without a car") before treating this section as optimised.
-    -->
-    <!-- ========================= SECTION 1: HIRE CAR ========================= -->
-    <section class="activity-section" id="hire-car">
-      <div class="section-inner">
-        <h2>Hire Car & Getting There</h2>
+      <section class="activity-section" id="hire-car">
+        <h2>Hire Car &amp; Getting There</h2>
         <p class="section-intro">
           Most UK trailheads sit well beyond the train line. A hire car is often the practical
           way to reach more than one mountain in a trip — here's where to start.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/hire-car-scottish-highlands.jpg"
-          alt="Car parked at a UK mountain trailhead in the Scottish Highlands"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Search Car Hire</h3>
-        <p class="block-note">Placeholder for an embedded car hire search widget. Drop in your widget snippet where the box below appears.</p>
-        <div class="booking-placeholder">
-          <p><strong>Your car hire search widget loads here.</strong></p>
-          <p class="muted">e.g. Discover Cars, RentalCars.com, or Skyscanner Car Hire embed.</p>
-        </div>
-
-        <h3 class="block-title">Getting to the Trailhead by Region</h3>
-        <p class="block-note">Nearest airport and approximate drive time to the mountain.</p>
+        <h3>Getting to the Trailhead by Region</h3>
         <div class="info-grid">
           {hireCarRegions.map((r) => (
-            <div class="product-card">
-              <p class="product-name">{r.region}</p>
-              <p class="sponsored-desc">{r.pickup}</p>
-              <p class="condition-detail">{r.detail}</p>
+            <div class="info-card">
+              <h4>{r.region}</h4>
+              <p class="info-pickup">{r.pickup}</p>
+              <p class="info-detail">{r.detail}</p>
             </div>
           ))}
         </div>
 
-        <h3 class="block-title">Compare Car Hire Providers</h3>
-        <p class="block-note">Indicative daily rates — check the provider for current pricing.</p>
-        <div class="table-wrap">
+        <h3>Compare Car Hire Providers</h3>
+        <div class="table-wrapper">
           <table class="comparison-table">
             <thead>
-              <tr><th>Provider</th><th>Price from</th><th>Notes</th><th></th></tr>
+              <tr><th>Provider</th><th>Price from</th><th>Notes</th></tr>
             </thead>
             <tbody>
               {hireCarComparison.map((c) => (
@@ -339,46 +234,22 @@ const pageSchema = {
                   <td>{c.company}</td>
                   <td>{c.priceFrom}</td>
                   <td>{c.note}</td>
-                  <td><a class="btn btn-small" href="#">Compare</a></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--
-      SEO — Hotels & Accommodation section (verified cluster, 48 keywords)
-      Primary:   accommodation in fort william   (KD 26, vol 910/mo)
-      Secondary: fort william lodges (KD 6, 590) · ben nevis accommodation (KD 11, 590) ·
-                 hotels near ben nevis (KD 16, 590) · ben nevis where to stay (KD 15, 590) ·
-                 hotels close to ben nevis (KD 12, 590) · cottage fort william (KD 10, 480) ·
-                 camping sites fort william scotland (KD 19, 590) · accommodation near ben nevis (KD 12, 480)
-      Note: this cluster is Fort William/Ben Nevis-specific and is roughly 10x
-      deeper than anything found for the other 3 regions in the table below —
-      worth considering as its own dedicated landing page, linked from here.
-    -->
-    <!-- ========================= SECTION 2: HOTELS ========================= -->
-    <section class="activity-section alt" id="hotels">
-      <div class="section-inner">
-        <h2>Hotels & Accommodation Near the Mountains</h2>
+      <section class="activity-section" id="hotels">
+        <h2>Hotels &amp; Accommodation Near the Mountains</h2>
         <p class="section-intro">
           Base yourself close to the mountain and start walking sooner. Search accommodation
           across all four nations, or see trailhead-specific stays under Hillwalking below.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/fort-william-accommodation.jpg"
-          alt="Accommodation and hotels near Ben Nevis in Fort William, Scotland"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Accommodation in Fort William: Where to Stay for Ben Nevis</h3>
-        <p class="block-note">
+        <h3>Accommodation in Fort William: Where to Stay for Ben Nevis</h3>
+        <p>
           Fort William is the natural base for Ben Nevis, and its accommodation reflects that —
           from budget lodges and bunkhouses to self-catering cottages a short walk from town.
           Whether you're after hotels near Ben Nevis, a cottage in Fort William, or camping sites
@@ -386,26 +257,17 @@ const pageSchema = {
           night before an early summit start.
         </p>
 
-        <h3 class="block-title">Search Hotels & Accommodation</h3>
-        <p class="block-note">Placeholder for an embedded hotel search widget.</p>
-        <div class="booking-placeholder">
-          <p><strong>Your hotel search widget loads here.</strong></p>
-          <p class="muted">e.g. Booking.com or Expedia affiliate search widget, pre-filtered to mountain regions.</p>
-        </div>
-
-        <h3 class="block-title">Popular Base Towns by Region</h3>
-        <p class="block-note">Indicative prices — check the provider for current rates.</p>
-        <div class="table-wrap">
+        <h3>Popular Base Towns by Region</h3>
+        <div class="table-wrapper">
           <table class="comparison-table">
             <thead>
-              <tr><th>Base town</th><th>Price from</th><th></th></tr>
+              <tr><th>Base town</th><th>Price from</th></tr>
             </thead>
             <tbody>
               {hotelRegions.map((h) => (
                 <tr>
                   <td>{h.region}</td>
                   <td>{h.priceFrom}</td>
-                  <td><a class="btn btn-small" href="#">Search Hotels</a></td>
                 </tr>
               ))}
             </tbody>
@@ -416,42 +278,17 @@ const pageSchema = {
           Looking for a bunkhouse right at the trailhead? See
           <a href="#hillwalking">featured trailside accommodation near Ben Nevis</a> below.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!--
-      SEO — Hillwalking section (PARTIAL DATA — only 2 relevant terms found)
-      Primary:   hiking sunglasses          (KD 6, vol 290/mo)
-      Secondary: hiking sunglasses women    (KD 6, vol 390/mo)
-      Boots, jackets, and route-specific terms need a dedicated export before
-      this section can be treated as fully keyword-verified.
-    -->
-    <!-- ========================= SECTION 3: HILLWALKING ========================= -->
-    <section class="activity-section" id="hillwalking">
-      <div class="section-inner">
-        <h2>Hillwalking & Hiking Gear + Conditions</h2>
+      <section class="activity-section" id="hillwalking">
+        <h2>Hillwalking &amp; Hiking Gear + Conditions</h2>
         <p class="section-intro">
           Conditions on UK mountains can shift fast, even in summer — the right gear, and knowing
           before you go, keeps a good day good.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/hillwalking-uk-mountains.jpg"
-          alt="Hillwalker crossing a UK mountain ridge in waterproof gear"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Mountain Weather & Conditions Tracker</h3>
-        <p class="block-note">
-          Sample data — swap for Met Office Mountain Area Forecasts or MWIS before launch, and
-          keep the "SAMPLE" label until the feed is genuinely live.
-        </p>
-        <div class="conditions-bar">
-          <span class="conditions-bar-label">SAMPLE · UK Mountain Conditions</span>
-        </div>
+        <h3>Mountain Weather &amp; Conditions Tracker</h3>
+        <p class="sample-note">Sample data — swap for Met Office Mountain Area Forecasts or MWIS before launch.</p>
         <div class="conditions-grid">
           {hillwalkingConditions.map((c) => (
             <div class="condition-card">
@@ -463,16 +300,14 @@ const pageSchema = {
           ))}
         </div>
 
-        <h3 class="block-title">Waterproof Jackets: Premium vs Budget</h3>
-        <p class="block-note">Our top picks, compared. Prices are indicative — check the retailer for current pricing.</p>
-        <div class="table-wrap">
+        <h3>Waterproof Jackets: Premium vs Budget</h3>
+        <div class="table-wrapper">
           <table class="comparison-table">
             <thead>
               <tr>
                 <th>Brand</th>
                 <th>Price</th>
-                <th>Waterproofing</th>
-                <th></th>
+                <th>Rating</th>
               </tr>
             </thead>
             <tbody>
@@ -483,80 +318,48 @@ const pageSchema = {
                   <td class="stars" aria-label={`${j.rating} out of 5 stars`}>
                     {'★'.repeat(j.rating)}{'☆'.repeat(5 - j.rating)}
                   </td>
-                  <td><a class="btn btn-small" href="#">Check Price</a></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <p class="block-note">
-          Don't overlook eye protection — a good pair of hiking sunglasses (or hiking sunglasses
-          for women, if you want a smaller frame fit) cuts glare on exposed ridgelines and makes
-          a real difference on long summer days above the treeline.
+        <p>
+          Don't overlook eye protection — a good pair of hiking sunglasses cuts glare on exposed
+          ridgelines and makes a real difference on long summer days above the treeline.
         </p>
 
-        <h3 class="block-title">Featured Trailside Accommodation</h3>
-        <p class="block-note">Sample listings — contact us to feature your business.</p>
-        <div class="sponsored-grid">
+        <h3>Featured Trailside Accommodation</h3>
+        <div class="listings-grid">
           {accommodationListings.map((a) => (
-            <div class="sponsored-card">
-              <span class="sponsored-badge">Stay</span>
-              <p class="sponsored-name">{a.name}</p>
-              <p class="sponsored-location">{a.location}</p>
-              <p class="sponsored-desc">{a.desc}</p>
-              <a class="btn btn-small btn-primary" href="#">Book Now</a>
+            <div class="listing-card">
+              <span class="listing-badge">Stay</span>
+              <h4>{a.name}</h4>
+              <p class="listing-location">{a.location}</p>
+              <p class="listing-desc">{a.desc}</p>
             </div>
           ))}
         </div>
 
         <p class="related-links">
-          Looking for the best spots? Read our specific guides for
+          Read our specific guides for
           {hillwalkingLinks.map((l, i) => (
             <>
               {' '}<a href={l.href}>{l.label}</a>{i < hillwalkingLinks.length - 1 ? ',' : '.'}
             </>
           ))}
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!--
-      SEO — Scrambling & Climbing section (verified cluster, 75 keywords)
-      Primary:   climbing equipment              (KD 21, vol 880/mo)
-      Secondary: mountain climbing equipment (KD 0!, 320) · mountaineering equipment sale (KD 9, 480) ·
-                 mount equipment (KD 16, 540) · rock climbing training equipment (KD 5, 140) ·
-                 uk climbing shop (KD 19, 320) · climbing gear retailers (KD 17, 170) ·
-                 mountains equipment (KD 21, 540) · sunglasses for mountaineering (KD 6, 480)
-      Note: "mountain climbing equipment" shows KD 0 — essentially unclaimed —
-      it's the single strongest quick-win in the whole export.
-    -->
-    <!-- ========================= SECTION 4: SCRAMBLING ========================= -->
-    <section class="activity-section alt" id="scrambling">
-      <div class="section-inner">
-        <h2>Scrambling, Climbing Equipment & Local Guides</h2>
+      <section class="activity-section" id="scrambling">
+        <h2>Scrambling, Climbing Equipment &amp; Local Guides</h2>
         <p class="section-intro">
           Scrambling rewards good judgement and the right kit. Check conditions, especially in
           winter, before committing to a grade above your comfort.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/climbing-equipment-uk.jpg"
-          alt="Climbing equipment and mountaineering gear laid out for a UK scrambling route"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Winter Conditions & Avalanche Risk</h3>
-        <p class="block-note">
-          Sample data, Nov–Apr season only — replace with live SAIS (sais.gov.uk) data. Never use
-          placeholder figures for real trip planning.
-        </p>
-        <div class="conditions-bar">
-          <span class="conditions-bar-label">SAMPLE · Avalanche Risk by Region</span>
-        </div>
+        <h3>Winter Conditions &amp; Avalanche Risk</h3>
+        <p class="sample-note">Sample data, Nov–Apr season only — replace with live SAIS (sais.gov.uk) data.</p>
         <div class="conditions-grid">
           {winterConditions.map((w) => (
             <div class="condition-card">
@@ -568,8 +371,8 @@ const pageSchema = {
           ))}
         </div>
 
-        <h3 class="block-title">Climbing Equipment & Gear for UK Mountains</h3>
-        <p class="block-note">
+        <h3>Climbing Equipment &amp; Gear for UK Mountains</h3>
+        <p>
           Whether you're after mountaineering gear for a winter ridge or a full climbing equipment
           set-up for your first Grade 1 scramble, choosing the right kit matters more in the UK's
           fast-changing weather than almost anywhere else. Look for a UK climbing shop that stocks
@@ -578,70 +381,40 @@ const pageSchema = {
           more scramblers than you'd expect.
         </p>
 
-        <h3 class="block-title">Top 5 Climbing Helmets & Harnesses</h3>
-        <p class="block-note">Our top-converting affiliate picks, with honest pros and cons.</p>
-        <div class="pros-cons-grid">
+        <h3>Top 5 Climbing Helmets &amp; Harnesses</h3>
+        <div class="listings-grid">
           {climbingGear.map((g) => (
-            <div class="product-card">
-              <p class="product-name">{g.name}</p>
-              <p class="product-price">{g.price}</p>
-              <p class="product-pro"><strong>Pros:</strong> {g.pro}</p>
-              <p class="product-con"><strong>Cons:</strong> {g.con}</p>
-              <a class="btn btn-small btn-primary" href="#">Check Price</a>
+            <div class="listing-card">
+              <h4>{g.name}</h4>
+              <p class="listing-price">{g.price}</p>
+              <p class="listing-pro"><strong>Pros:</strong> {g.pro}</p>
+              <p class="listing-con"><strong>Cons:</strong> {g.con}</p>
             </div>
           ))}
         </div>
 
-        <h3 class="block-title">Premium Local Mountain Guides & Courses</h3>
-        <p class="block-note">Sample listings — contact us to feature your business.</p>
-        <div class="sponsored-grid">
+        <h3>Local Mountain Guides &amp; Courses</h3>
+        <div class="listings-grid">
           {guideListings.map((g) => (
-            <div class="sponsored-card">
-              <span class="sponsored-badge">Guide</span>
-              <p class="sponsored-name">{g.name}</p>
-              <p class="sponsored-location">{g.location}</p>
-              <p class="sponsored-desc">{g.desc}</p>
-              <a class="btn btn-small btn-primary" href="#">Contact</a>
+            <div class="listing-card">
+              <span class="listing-badge">Guide</span>
+              <h4>{g.name}</h4>
+              <p class="listing-location">{g.location}</p>
+              <p class="listing-desc">{g.desc}</p>
             </div>
           ))}
         </div>
+      </section>
 
-        <p class="related-links">
-          New to scrambling? Several of the guides above offer rock climbing training equipment
-          hire alongside instruction, so you don't need a full kit before your first course.
-        </p>
-      </div>
-    </section>
-
-    <!--
-      SEO — Wild Camping section
-      ⚠️ NOT COVERED by the Aug 2026 Ahrefs export. Run a dedicated export
-      (e.g. "wild camping near ben nevis", "can you wild camp on snowdon",
-      "best lightweight tent under 250") before treating this as optimised.
-    -->
-    <!-- ========================= SECTION 5: WILD CAMPING ========================= -->
-    <section class="activity-section" id="wild-camping">
-      <div class="section-inner">
-        <h2>Wild Camping & Backpacking Essentials</h2>
+      <section class="activity-section" id="wild-camping">
+        <h2>Wild Camping &amp; Backpacking Essentials</h2>
         <p class="section-intro">
           A summit camp is one of the best rewards in hillwalking. Check the overnight low, the
           wind, and know local wild camping rules before you pitch.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/wild-camping-uk-mountains.jpg"
-          alt="Wild camping tent pitched on a UK mountainside at dusk"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Wild Camping Conditions</h3>
-        <p class="block-note">Sample data — replace with Met Office/OpenWeather plus a sunrise-sunset API.</p>
-        <div class="conditions-bar">
-          <span class="conditions-bar-label">SAMPLE · Overnight Conditions by Region</span>
-        </div>
+        <h3>Wild Camping Conditions</h3>
+        <p class="sample-note">Sample data — replace with Met Office/OpenWeather plus a sunrise-sunset API.</p>
         <div class="conditions-grid">
           {campingConditions.map((c) => (
             <div class="condition-card">
@@ -652,69 +425,34 @@ const pageSchema = {
           ))}
         </div>
 
-        <h3 class="block-title">Book a Guided Wild Camping or Bothy Experience</h3>
-        <p class="block-note">Placeholder for an embedded third-party booking widget. Drop in your widget snippet where the box below appears.</p>
-        <div class="booking-placeholder">
-          <p><strong>Your booking widget loads here.</strong></p>
-          <p class="muted">e.g. FareHarbor, Peek, or Bokun embed for a guided wild camping trip or bothy weekend.</p>
-        </div>
-
-        <h3 class="block-title">Best Beginner Lightweight Tents Under £250</h3>
-        <p class="block-note">A visually simple product grid with sample specs and affiliate buttons.</p>
-        <div class="tent-grid">
+        <h3>Best Beginner Lightweight Tents Under £250</h3>
+        <div class="listings-grid">
           {tentGrid.map((t) => (
-            <div class="product-card">
-              <p class="product-name">{t.name}</p>
-              <p class="product-price">{t.price}</p>
-              <a class="btn btn-small btn-primary" href="#">Check Price</a>
+            <div class="listing-card">
+              <h4>{t.name}</h4>
+              <p class="listing-price">{t.price}</p>
             </div>
           ))}
         </div>
 
         <p class="related-links">
-          Plan your route: {campingLinks.map((l, i) => (
-            <>
-              <a href={l.href}>{l.label}</a>{i < campingLinks.length - 1 ? ', ' : '.'}
-            </>
-          ))}
+          Plan your route: <a href="/mountains">browse all UK mountain guides</a>.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!--
-      SEO — Travel Insurance section
-      ⚠️ NOT COVERED by the Aug 2026 Ahrefs export. Run a dedicated export
-      (e.g. "bmc vs snowcard insurance", "hillwalking insurance uk", "does
-      travel insurance cover munro bagging") before treating this as optimised.
-      Also: UK mountain rescue is free (volunteer-run) — don't advertise
-      cover as paying for "mountain rescue costs"; the real value here is
-      third-party liability, medical/repatriation, and trip cancellation.
-    -->
-    <!-- ========================= SECTION 6: TRAVEL INSURANCE ========================= -->
-    <section class="activity-section alt" id="travel-insurance">
-      <div class="section-inner">
-        <h2>Travel Insurance & Safety Cover</h2>
+      <section class="activity-section" id="travel-insurance">
+        <h2>Travel Insurance &amp; Safety Cover</h2>
         <p class="section-intro">
           Standard travel insurance often excludes hillwalking above a certain height, scrambling,
           or the cost of a mountain rescue. Check your policy names your activity specifically
           before you rely on it.
         </p>
 
-        <img
-          class="section-image"
-          src="/images/sections/travel-insurance-hillwalking.jpg"
-          alt="Hillwalker checking a map on a UK mountain, relevant to travel insurance cover"
-          loading="lazy"
-          width="1200"
-          height="675"
-        />
-
-        <h3 class="block-title">Compare Hillwalking & Mountaineering Insurance</h3>
-        <p class="block-note">Indicative prices for a single-trip policy — confirm activity and altitude cover before buying.</p>
-        <div class="table-wrap">
+        <h3>Compare Hillwalking &amp; Mountaineering Insurance</h3>
+        <div class="table-wrapper">
           <table class="comparison-table">
             <thead>
-              <tr><th>Provider</th><th>Covers</th><th>From</th><th></th></tr>
+              <tr><th>Provider</th><th>Covers</th><th>From</th></tr>
             </thead>
             <tbody>
               {insuranceComparison.map((i) => (
@@ -722,281 +460,545 @@ const pageSchema = {
                   <td>{i.provider}</td>
                   <td>{i.coverage}</td>
                   <td>{i.priceFrom}</td>
-                  <td><a class="btn btn-small" href="#">Get a Quote</a></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============================ SAFETY NOTE ============================ -->
-    <section class="safety-note">
-      <div class="section-inner">
+      <section class="safety-note">
+        <h2>Stay Safe on the Hill</h2>
         <p>
           Mountain conditions change fast, even in summer. Always check an official forecast —
           Met Office Mountain Area Forecasts, MWIS, or SAIS in winter — before you set out. This
           page is for planning, not a substitute for your own judgement on the day.
         </p>
-      </div>
-    </section>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>Where should I stay when climbing Ben Nevis?</summary>
+            <p>
+              Fort William is the natural base for Ben Nevis. Options range from walker-friendly
+              bunkhouses a short walk from town to self-catering cottages and hotels near the
+              mountain path trailheads. Book early in peak season — accommodation near Ben Nevis
+              fills up fast from May to September.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What climbing equipment do I need for UK scrambling?</summary>
+            <p>
+              For Grade 1 scrambles you need sturdy boots, a helmet, and good navigation skills.
+              For Grade 2 and above, add a harness, rope, and protection hardware. A UK climbing
+              shop that stocks mountain climbing equipment specifically is your best starting
+              point — generic outdoor stores often don't carry the technical kit you need.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I wild camp on UK mountains?</summary>
+            <p>
+              Wild camping is legal in Scotland under the Land Reform Act, but in England, Wales,
+              and Northern Ireland you need the landowner's permission. Always check local bylaws
+              and follow the Leave No Trace principles. In the Lake District and Snowdonia,
+              wild camping is tolerated in some areas above the intake walls, but not officially
+              permitted.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need specialist travel insurance for hillwalking?</summary>
+            <p>
+              Standard travel insurance often excludes hillwalking above a certain height or
+              scrambling. Look for a policy that names your activity specifically and covers
+              third-party liability, medical costs, and trip cancellation. Providers like Snowcard
+              and BMC offer hillwalking and mountaineering cover tailored to UK mountains.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Where can I check mountain weather conditions before a walk?</summary>
+            <p>
+              Use the Met Office Mountain Area Forecasts or MWIS (Mountain Weather Information
+              Service) for UK mountain conditions. In winter, check SAIS (Scottish Avalanche
+              Information Service) for avalanche risk in Scotland. Always check the forecast on
+              the morning of your walk, not the night before — mountain weather can change
+              overnight.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's the best way to get to UK trailheads without a car?</summary>
+            <p>
+              Some trailheads are reachable by public transport — the Snowdon Mountain Railway
+              and Jacobite train to Fort William are notable examples — but most require a hire
+              car or taxi from the nearest station. Check our hire car section for the closest
+              airports and drive times to each region.
+            </p>
+          </details>
+        </div>
+      </section>
+    </div>
   </div>
 </Layout>
 
 <style>
-  .oa-page {
-    --spruce: #16302a;
-    --spruce-dark: #0e211c;
-    --slate: #2b3a3e;
-    --parchment: #ede9de;
-    --stone: #d8d4c6;
-    --trig-orange: #e8541f;
-    --tarn-blue: #3e7cb1;
-    --contour: #a79c87;
-    --white: #ffffff;
-    --ink: #1c2521;
-
-    --good: #2f7d4f;
-    --caution: #b8860b;
-    --avoid: #b23a2e;
-
-    --font-display: 'Fraunces', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
-    --max-width: 1180px;
-
-    background: var(--parchment);
-    color: var(--ink);
-    font-family: var(--font-body);
-    line-height: 1.6;
+  .activities-page {
+    background: var(--color-neutral-50);
   }
 
-  .section-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 3.5rem 1.5rem;
+  /* ── Hero ── */
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
   }
 
-  h1, h2, h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    color: var(--spruce-dark);
+  :global(.page-hero .breadcrumb-list) {
+    justify-content: center;
+  }
+
+  .page-hero h1 {
+    color: white;
+    font-size: 2.75rem;
+    margin-bottom: var(--spacing-md);
     line-height: 1.2;
   }
 
-  a { color: var(--tarn-blue); }
-  a:focus-visible, button:focus-visible, .pill:focus-visible {
-    outline: 2px solid var(--trig-orange);
+  .hero-lead {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.2rem;
+    max-width: 680px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.7;
+  }
+
+  .hero-pills {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pill {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-full);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    transition: background var(--transition-fast);
+  }
+
+  .pill:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+  }
+
+  .pill:focus-visible {
+    outline: 2px solid white;
     outline-offset: 2px;
   }
 
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-bottom: 1rem;
-  }
-
-  .hero {
-    background: var(--spruce);
-    color: var(--white);
-  }
-  .hero-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 4.5rem 1.5rem 3rem;
-  }
-  .hero h1 {
-    color: var(--white);
-    font-size: clamp(2rem, 4vw, 2.9rem);
-    max-width: 22ch;
-    margin-bottom: 1rem;
-  }
-  .hero-sub {
-    max-width: 60ch;
-    color: var(--stone);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-  }
-  .hero-pills {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .pill {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--white);
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 999px;
-    padding: 0.55rem 1.1rem;
-    transition: background 0.15s ease;
-  }
-  .pill:hover { background: rgba(255, 255, 255, 0.22); }
-
+  /* ── Disclosure ── */
   .disclosure {
-    max-width: var(--max-width);
-    margin: 1.25rem auto 0;
-    padding: 0 1.5rem;
     font-size: 0.85rem;
-    color: var(--slate);
+    color: var(--color-neutral-500);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
 
-  .eeat-strip {
-    max-width: var(--max-width);
-    margin: 0.75rem auto 0;
-    padding: 0 1.5rem;
-    font-size: 0.8rem;
-    color: var(--slate);
-    font-family: var(--font-mono);
-  }
-  .eeat-strip strong { color: var(--spruce-dark); }
-
-  .section-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-    background: var(--stone);
+  /* ── Section cards ── */
+  .activity-section {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-xl);
   }
 
-  .activity-section.alt { background: var(--white); }
+  .activity-section h2 {
+    font-size: 2rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-md);
+  }
 
-  .activity-section h2 { font-size: 1.9rem; margin-bottom: 0.5rem; }
-  .section-intro { max-width: 65ch; color: var(--slate); margin-bottom: 2.5rem; }
+  .activity-section h3 {
+    font-size: 1.35rem;
+    color: var(--color-neutral-900);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
 
-  .block-title {
-    font-size: 1.2rem;
-    margin: 2.5rem 0 0.4rem;
+  .section-intro {
+    font-size: 1.05rem;
+    color: var(--color-neutral-600);
+    line-height: 1.7;
+    max-width: 65ch;
   }
-  .block-note { color: var(--slate); font-size: 0.9rem; margin-bottom: 1rem; }
 
-  .conditions-bar {
-    background: var(--spruce-dark);
-    color: var(--white);
-    padding: 0.6rem 1rem;
-    border-radius: 4px 4px 0 0;
+  .activity-section p {
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-md);
   }
-  .conditions-bar-label {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-  }
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    background: var(--white);
-    border: 1px solid var(--stone);
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    margin-bottom: 1rem;
-  }
-  .condition-card {
-    padding: 1.25rem;
-    border-right: 1px solid var(--stone);
-  }
-  .condition-card:last-child { border-right: none; }
-  .condition-name { font-weight: 600; margin: 0 0 0.15rem; }
-  .condition-nation { font-size: 0.8rem; color: var(--slate); margin: 0 0 0.5rem; }
-  .condition-status {
-    font-family: var(--font-mono);
+
+  .activity-section a {
+    color: var(--color-primary);
     font-weight: 600;
-    margin: 0 0 0.4rem;
+    text-decoration: none;
   }
-  .status-good { color: var(--good); }
-  .status-caution { color: var(--caution); }
-  .status-avoid { color: var(--avoid); }
-  .condition-detail { font-size: 0.85rem; color: var(--slate); margin: 0; }
 
-  .table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+  .activity-section a:hover {
+    text-decoration: underline;
+  }
+
+  .sample-note {
+    font-size: 0.85rem;
+    color: var(--color-neutral-500);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* ── Info cards ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .info-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    transition: all var(--transition-base);
+  }
+
+  .info-card:hover {
+    background: var(--color-neutral-100);
+    transform: translateX(4px);
+  }
+
+  .info-card h4 {
+    font-size: 1.1rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .info-pickup {
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .info-detail {
+    font-size: 0.9rem;
+    color: var(--color-neutral-600);
+    margin: 0;
+  }
+
+  /* ── Tables ── */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-lg);
+  }
+
   .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    background: var(--white);
-    border: 1px solid var(--stone);
-  }
-  .comparison-table th, .comparison-table td {
-    padding: 0.85rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid var(--stone);
     font-size: 0.95rem;
   }
-  .comparison-table th { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--slate); }
-  .stars { color: var(--trig-orange); letter-spacing: 1px; }
 
-  .sponsored-grid, .pros-cons-grid, .tent-grid, .info-grid {
+  .comparison-table th {
+    text-align: left;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-neutral-100);
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    border-bottom: 2px solid var(--color-neutral-300);
+  }
+
+  .comparison-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--color-neutral-200);
+    color: var(--color-neutral-700);
+  }
+
+  .comparison-table tr:hover td {
+    background: var(--color-neutral-50);
+  }
+
+  .stars {
+    color: var(--color-warning);
+    letter-spacing: 1px;
+  }
+
+  /* ── Conditions ── */
+  .conditions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
-  .sponsored-card, .product-card {
-    background: var(--white);
-    border: 1px solid var(--stone);
-    border-radius: 4px;
-    padding: 1.25rem;
+
+  .condition-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
   }
-  .sponsored-badge {
+
+  .condition-card:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+  }
+
+  .condition-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .condition-nation {
+    font-size: 0.8rem;
+    color: var(--color-neutral-500);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .condition-status {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .status-good { color: var(--color-success); }
+  .status-caution { color: var(--color-warning); }
+  .status-avoid { color: var(--color-error); }
+
+  .condition-detail {
+    font-size: 0.85rem;
+    color: var(--color-neutral-600);
+    margin: 0;
+  }
+
+  /* ── Listings grid ── */
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .listing-card {
+    padding: var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-neutral-200);
+    transition: all var(--transition-base);
+  }
+
+  .listing-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .listing-badge {
     display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    background: var(--tarn-blue);
-    color: var(--white);
-    padding: 0.2rem 0.55rem;
-    border-radius: 2px;
-    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+    background: var(--color-primary);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
   }
-  .sponsored-name, .product-name { font-weight: 600; margin: 0 0 0.2rem; }
-  .sponsored-location { font-size: 0.85rem; color: var(--tarn-blue); margin: 0 0 0.5rem; }
-  .sponsored-desc { font-size: 0.9rem; color: var(--slate); margin: 0 0 1rem; }
-  .product-price { font-family: var(--font-mono); color: var(--trig-orange); margin: 0 0 0.5rem; }
-  .product-pro, .product-con { font-size: 0.85rem; margin: 0 0 0.4rem; }
-  .product-pro { color: var(--good); }
-  .product-con { color: var(--avoid); }
 
-  .btn {
-    display: inline-block;
-    font-family: var(--font-mono);
-    text-decoration: none;
-    border-radius: 3px;
-    text-align: center;
+  .listing-card h4 {
+    font-size: 1.1rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-xs);
   }
-  .btn-small { font-size: 0.8rem; padding: 0.5rem 0.9rem; }
-  .btn-primary { background: var(--tarn-blue); color: var(--white); }
-  .btn-primary:hover { background: #336a99; }
 
-  .booking-placeholder {
-    border: 2px dashed var(--tarn-blue);
-    border-radius: 4px;
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-    background: var(--white);
-    margin-bottom: 1rem;
+  .listing-location {
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
   }
-  .booking-placeholder .muted { color: var(--slate); font-size: 0.9rem; }
 
-  .related-links { font-size: 0.9rem; color: var(--slate); margin-top: 2rem; }
+  .listing-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+  }
 
+  .listing-desc {
+    font-size: 0.9rem;
+    color: var(--color-neutral-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .listing-pro {
+    font-size: 0.85rem;
+    color: var(--color-success);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .listing-con {
+    font-size: 0.85rem;
+    color: var(--color-error);
+    margin: 0;
+  }
+
+  /* ── Related links ── */
+  .related-links {
+    font-size: 0.95rem;
+    color: var(--color-neutral-600);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  /* ── Safety note ── */
   .safety-note {
-    background: var(--spruce-dark);
-    color: var(--stone);
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
   }
-  .safety-note .section-inner { padding: 2rem 1.5rem; }
-  .safety-note p { max-width: 70ch; margin: 0; font-size: 0.9rem; }
 
-  @media (max-width: 640px) {
-    .section-inner { padding: 2.5rem 1.25rem; }
-    .condition-card { border-right: none; border-bottom: 1px solid var(--stone); }
-    .condition-card:last-child { border-bottom: none; }
+  .safety-note h2 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .safety-note p {
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 60ch;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    padding: var(--spacing-2xl) 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-neutral-900);
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item summary {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: 1.9rem;
+    }
+
+    .hero-lead {
+      font-size: 1rem;
+    }
+
+    .activity-section {
+      padding: var(--spacing-lg);
+    }
+
+    .activity-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .activity-section h3 {
+      font-size: 1.2rem;
+    }
+
+    .info-grid,
+    .conditions-grid,
+    .listings-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .safety-note h2 {
+      font-size: 1.4rem;
+    }
+
+    .faq-section h2 {
+      font-size: 1.5rem;
+    }
   }
 </style>
