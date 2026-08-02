@@ -1,7 +1,6 @@
 ---
 // ============================================================================
 // MOUNTAIN ACTIVITIES HUB PAGE
-// Place this file at: src/pages/outdoor-activities.astro
 // ----------------------------------------------------------------------------
 // SEO METHOD NOTE:
 // Yoast is a WordPress plugin and doesn't run on Astro. What follows applies
@@ -16,8 +15,13 @@
 // NOT covered by this export — see the flags on those sections below before
 // treating their copy as keyword-verified.
 //
+// E-E-A-T: the visible byline, author schema, and reviewer note below signal
+// experience and expertise. Replace bracketed placeholders with real people
+// and dates before publishing — a fabricated byline is worse for E-E-A-T
+// than no byline at all.
+//
 // SETUP CHECKLIST before publishing:
-// 1. Adjust the Layout import path/props to match your real layout.
+// 1. Layout import path adjusted to match this project — done.
 // 2. Every widget below is SAMPLE DATA, clearly labelled "SAMPLE" rather than
 //    "LIVE". Do not relabel as live until a real API is wired in:
 //      - Conditions trackers: Met Office DataPoint, MWIS (mwis.org.uk),
@@ -41,26 +45,23 @@
 // 6. Insurance and car hire comparison rows use invented but realistic
 //    providers/prices as layout placeholders — verify real current pricing
 //    and your actual affiliate/referral links before publishing.
-// 7. Uses the same design tokens as partner-with-us.astro for site-wide
-//    consistency — keep both files' CSS custom properties in sync, or
-//    better, move them into a shared global stylesheet.
-// 8. Section hero images use placeholder src paths under /images/sections/.
+// 7. Section hero images use placeholder src paths under /images/sections/.
 //    Source real CC BY-SA photos via Wikimedia Commons or Geograph.org.uk —
 //    same workflow you already use for mountain_images — and verify each
 //    filename against the actual Commons category page before publishing;
 //    do not construct filenames from a pattern.
-// 9. Replace every [AUTHOR NAME] / [REVIEWER NAME] / [DATE] placeholder with
+// 8. Replace every [AUTHOR NAME] / [REVIEWER NAME] / [DATE] placeholder with
 //    a real person and real dates. A fabricated byline is worse for E-E-A-T
 //    than no byline at all — only publish credentials that are true.
 // ============================================================================
 
-import Layout from '../layouts/Layout.astro'; // adjust path if different
+import Layout from '../layouts/Layout.astro';
 
 const seo = {
   title: 'UK Mountain Activities Guide | Hotels, Gear & Conditions',
   description:
     'Plan your UK mountain trip: accommodation in Fort William, climbing equipment, hillwalking gear, live conditions and local guides across all four nations.',
-  canonical: 'https://www.ukmountainsdirectory.co.uk/outdoor-activities/',
+  canonical: 'https://www.ukmountainsdirectory.co.uk/outdoor-activities',
 };
 
 // ----------------------------------------------------------------------------
@@ -162,10 +163,10 @@ const accommodationListings = [
 ];
 
 const hillwalkingLinks = [
-  { label: 'Ben Nevis route guide', href: '/mountains/ben-nevis/' },
-  { label: 'Yr Wyddfa (Snowdon) route guide', href: '/mountains/snowdon/' },
-  { label: 'Scafell Pike route guide', href: '/mountains/scafell-pike/' },
-  { label: 'Slieve Donard route guide', href: '/mountains/slieve-donard/' },
+  { label: 'Ben Nevis route guide', href: '/mountain/ben-nevis' },
+  { label: 'Yr Wyddfa (Snowdon) route guide', href: '/mountain/snowdon' },
+  { label: 'Scafell Pike route guide', href: '/mountain/scafell-pike' },
+  { label: 'Slieve Donard route guide', href: '/mountain/slieve-donard' },
 ];
 
 // ---------------------------------------------------------------- Section 4
@@ -207,8 +208,7 @@ const tentGrid = [
 ];
 
 const campingLinks = [
-  { label: 'Wild camping in Scotland: know before you go', href: '/guides/wild-camping-scotland/' },
-  { label: 'All UK mountain guides', href: '/mountains/' },
+  { label: 'All UK mountain guides', href: '/mountains' },
 ];
 
 // ---------------------------------------------------------------- Section 6
@@ -237,7 +237,7 @@ const pageSchema = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ukmountainsdirectory.co.uk/' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ukmountainsdirectory.co.uk' },
       { '@type': 'ListItem', position: 2, name: 'Outdoor Activities', item: seo.canonical },
     ],
   },
@@ -245,8 +245,14 @@ const pageSchema = {
 ---
 
 <Layout title={seo.title} description={seo.description}>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
-  <main class="oa-page">
+  <div class="oa-page">
     <!-- ============================== HERO ============================== -->
     <section class="hero">
       <div class="hero-inner">
@@ -735,16 +741,7 @@ const pageSchema = {
         </p>
       </div>
     </section>
-
-    <!-- ============================ CROSS-LINK ============================ -->
-    <section class="cross-link">
-      <div class="section-inner">
-        <p>
-          Run an outdoor business? <a href="/partner-with-us/">See how to get featured on this page →</a>
-        </p>
-      </div>
-    </section>
-  </main>
+  </div>
 </Layout>
 
 <style>
@@ -996,9 +993,6 @@ const pageSchema = {
   }
   .safety-note .section-inner { padding: 2rem 1.5rem; }
   .safety-note p { max-width: 70ch; margin: 0; font-size: 0.9rem; }
-
-  .cross-link { background: var(--parchment); border-top: 1px solid var(--stone); }
-  .cross-link .section-inner { padding: 2rem 1.5rem; text-align: center; }
 
   @media (max-width: 640px) {
     .section-inner { padding: 2.5rem 1.25rem; }
