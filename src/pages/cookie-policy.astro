@@ -1,15 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <Layout
   title="Cookie Policy | UK Mountains Directory"
   description="Learn about how UK Mountains Directory uses cookies and similar technologies."
 >
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'Cookie Policy' }
+      ]} />
+      <h1>Cookie Policy</h1>
+      <p class="hero-subtitle">How UK Mountains Directory uses cookies and similar technologies.</p>
+    </div>
+  </section>
+
   <div class="legal-page">
     <div class="container">
       <div class="legal-content">
-        <h1>Cookie Policy</h1>
         <p class="last-updated">Last Updated: November 3, 2025</p>
 
         <section>
@@ -127,6 +138,30 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  :global(.page-hero .breadcrumb-list) {
+    justify-content: center;
+  }
+
   .legal-page {
     padding: var(--spacing-3xl) 0;
     background: var(--color-neutral-50);

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import NearbyPeaks from '../../components/NearbyPeaks.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoutes, getNearbyPeaks, type Mountain } from '../../lib/data';
 
 export async function getStaticPaths() {
@@ -159,13 +160,11 @@ const faqSchemaData = {
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content page-wrap">
-      <div class="breadcrumb">
-        <a href="/">Home</a>
-        <span>/</span>
-        <a href="/mountains">Mountains</a>
-        <span>/</span>
-        <span>{mountain.name}</span>
-      </div>
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'Mountains', url: '/mountains' },
+        { name: mountain.name }
+      ]} />
       <h1>{mountain.name}</h1>
       {mountain.national_park && <div class="hero-subtitle">{mountain.national_park}</div>}
       <div class="hero-stats">

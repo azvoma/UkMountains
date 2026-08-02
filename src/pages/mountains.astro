@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getAllMountains, getMountainImages } from '../lib/data';
 
 const allMountains = getAllMountains();
@@ -24,6 +25,10 @@ const mountainsWithImages = allMountains.map(m => {
   <div class="mountains-page">
     <section class="page-hero">
       <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Mountains' }
+        ]} />
         <h1>Explore All UK Mountains</h1>
         <p class="hero-description">
           This UK mountains list covers every major peak across Scotland, Wales, England, and Northern Ireland, ranked and filterable by height, region, and classification. Whether you're after the highest mountains in England or the full run of Scotland's Munros, use the filters below to narrow the list, or read on for how the classifications work and where the UK's real mountain ranges actually are.
@@ -428,6 +433,10 @@ const mountainsWithImages = allMountains.map(m => {
     background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
     padding: var(--spacing-3xl) 0;
     text-align: center;
+  }
+
+  :global(.page-hero .breadcrumb-list) {
+    justify-content: center;
   }
 
   .page-hero h1 {

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogCard from '../../components/BlogCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getAllBlogArticles } from '../../data/blog';
 
 const articles = getAllBlogArticles();
@@ -38,11 +39,10 @@ const blogSchema = {
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="container">
-        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>/</span>
-          <span aria-current="page">Blog</span>
-        </nav>
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog' }
+        ]} />
         <h1>UK Mountains Blog</h1>
         <p class="hero-subtitle">
           Expert hiking guides, route descriptions, height rankings, and safety advice for exploring the peaks of Britain. Written by qualified mountain leaders with real UK mountaineering experience.
@@ -92,26 +92,7 @@ const blogSchema = {
     z-index: 1;
     width: 100%;
     padding: var(--spacing-3xl) 0;
-  }
-
-  .hero-breadcrumb {
-    display: flex;
-    gap: var(--spacing-sm);
-    font-size: 0.85rem;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .hero-breadcrumb a {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-  }
-
-  .hero-breadcrumb a:hover {
-    color: white;
-  }
-
-  .hero-breadcrumb span {
-    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
   }
 
   .hero-content h1 {
@@ -127,6 +108,11 @@ const blogSchema = {
     font-size: 1.15rem;
     max-width: 800px;
     line-height: 1.7;
+    margin: 0 auto;
+  }
+
+  :global(.hero-content .breadcrumb-list) {
+    justify-content: center;
   }
 
   .blog-listing {

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const contactPageSchema = {
   "@context": "https://schema.org",
@@ -59,6 +60,10 @@ const faqSchema = {
 
     <section class="contact-hero">
       <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Contact' }
+        ]} />
         <h1>Contact UK Mountains Directory</h1>
         <p class="hero-lead">
           Have a question about UK mountains, want to suggest a correction, or interested in contributing to the directory? We'd love to hear from you.
@@ -305,6 +310,10 @@ const faqSchema = {
     font-size: 2.75rem;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
+  }
+
+  :global(.contact-hero .breadcrumb-list) {
+    justify-content: center;
   }
 
   .hero-lead {
