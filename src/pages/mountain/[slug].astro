@@ -98,9 +98,9 @@ const touristAttractionSchema = {
 };
 
 const fullTitle = `Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`;
-const pageTitle = fullTitle.length > 60
+const pageTitle = mountain.seo_title || (fullTitle.length > 60
   ? `${mountain.name} – UK Mountain Guide`
-  : fullTitle;
+  : fullTitle);
 
 const faqSchemaData = {
   "@context": "https://schema.org",
@@ -129,14 +129,22 @@ const faqSchemaData = {
         "@type": "Answer",
         "text": `The best season to climb ${mountain.name} is ${seasonText}. Always check the forecast before visiting.`
       }
-    }
+    },
+    ...(mountain.faqs || []).map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
   ]
 };
 ---
 
 <Layout
   title={pageTitle}
-  description={`Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`}
+  description={mountain.seo_description || `Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`}
   image={displayImages[0]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -369,6 +377,12 @@ const faqSchemaData = {
                 <p>{mountain.history}</p>
               </details>
             )}
+            {mountain.about_extra && (
+              <Fragment>
+                <p class="lead" set:html={mountain.about_extra.replace(/\n\n/g, '</p><p class="lead">')} />
+                {mountain.about_image_todo && <Fragment set:html={mountain.about_image_todo} />}
+              </Fragment>
+            )}
           </section>
         )}
 
@@ -454,7 +468,18 @@ const faqSchemaData = {
                 </div>
               ))}
             </div>
+            {mountain.routes_image_todo && <Fragment set:html={mountain.routes_image_todo} />}
           </section>
+        )}
+
+        <!-- Extra Sections -->
+        {mountain.extra_sections && mountain.extra_sections.length > 0 && (
+          mountain.extra_sections.map((sec: any) => (
+            <section class="content-section">
+              <h2>{sec.title}</h2>
+              <div set:html={sec.body.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+            </section>
+          ))
         )}
 
         <!-- Safety Tips -->

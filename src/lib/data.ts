@@ -34,6 +34,18 @@ export type Mountain = {
   is_hewitt: boolean;
   is_nuttall: boolean;
   is_marilyn: boolean;
+  parking_postcode: string | null;
+  best_season: string | null;
+  famous_for: string | null;
+  related_mountains: string[] | null;
+  walking_guide: string | null;
+  faqs: { question: string; answer: string }[] | null;
+  seo_title: string | null;
+  seo_description: string | null;
+  about_extra: string | null;
+  about_image_todo: string | null;
+  extra_sections: { title: string; body: string }[] | null;
+  routes_image_todo: string | null;
   created_at: string;
   updated_at: string;
 };

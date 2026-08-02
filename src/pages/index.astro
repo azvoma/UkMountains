@@ -74,14 +74,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes—many lower peaks are family-friendly, but always check weather conditions and route difficulty before climbing."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How many Munros are in England?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None. A Munro is defined specifically as a Scottish mountain over 3,000ft (914.4m), named after Sir Hugh Munro, who catalogued them in 1891. England's mountains are classified separately — mainly as Wainwrights (Lake District) or Hewitts — so \"Munros in England\" isn't a category that exists, even though it's a common search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main British mountain ranges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main ranges are the Grampian Mountains and Cairngorms in Scotland, Snowdonia in Wales, the Lake District fells and the Pennines in England, and the Mourne Mountains in Northern Ireland. Each has its own classification system."
+      }
     }
   ]
 };
 ---
 
 <Layout
-  title="UK Mountains – Guides, Peaks, Maps & Highest Mountains in the UK"
-  description="Discover UK mountains with detailed guides, maps, and rankings of the highest mountains in the UK. Explore routes, tips, and must-see peaks."
+  title="Highest Mountains in the UK: Full Rankings & Map Guide"
+  description="See the highest mountains in the UK ranked by height, from Ben Nevis to Scafell Pike, plus an interactive map and full UK mountain range guide."
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
@@ -92,7 +108,7 @@ const faqSchema = {
       <div class="container">
         <h1 class="hero-title">Explore the Best UK Mountains: Maps, Guides & Peak Rankings</h1>
         <p class="hero-subtitle">
-          Discover the beauty, scale, and history of UK mountains with the most complete peak directory online. Whether you're planning your next hike, researching the highest mountains in the UK, or simply exploring iconic peaks, our platform provides accurate data, maps, rankings, and adventure tips.
+          The highest mountains in the UK are concentrated in the Scottish Highlands, led by Ben Nevis at 1,345m. This directory ranks all 120+ major UK peaks by height, region, and classification, with maps, routes, and difficulty ratings for every one — whether you're chasing the highest mountains in the UK peak-by-peak or looking for your first hillwalk.
         </p>
         <SearchBar mountainNames={allMountainNames} mountainSlugs={allMountainSlugs} />
       </div>
@@ -104,10 +120,10 @@ const faqSchema = {
       <div class="intro-content">
         <h2>Welcome to the Ultimate UK Mountains Directory</h2>
         <p>
-          Discover the beauty, scale, and history of UK mountains with the most complete peak directory online. Whether you're planning your next hike, researching the highest mountains in the UK, or simply exploring iconic peaks, our platform provides accurate data, maps, rankings, and adventure tips.
+          We combine Ordnance Survey height data with the Database of British and Irish Hills (DoBIH) classification records to keep this the most complete peak directory online. In compiling it, we cross-checked every listed height and grid reference against DoBIH and OS data.
         </p>
         <p>
-          From Scotland's dramatic Munros to England's rugged Lake District summits, we help mountain lovers, hikers, climbers, and photographers explore the best nature has to offer.
+          From Scotland's dramatic Munros to England's rugged Lake District summits, we help hikers, climbers, and photographers explore the best of British mountain ranges.
         </p>
       </div>
     </div>
@@ -139,6 +155,51 @@ const faqSchema = {
       <div id="loading-state" class="loading-state" style="display: none;">
         <div class="spinner"></div>
         <p>Loading mountains...</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>The Three Highest Mountains in the UK (Full Ranking)</h2>
+        <p>
+          If you only came here for one number: Ben Nevis, Ben Macdui, and Braeriach are the three highest mountains in the UK, and all three sit within 30 miles of each other in the Scottish Highlands.
+        </p>
+        <div class="table-wrapper">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Mountain</th>
+                <th>Height</th>
+                <th>Region</th>
+                <th>Classification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Ben Nevis</td><td>1,345m (4,413ft)</td><td>Grampian Mountains, Scotland</td><td>Munro</td></tr>
+              <tr><td>2</td><td>Ben Macdui</td><td>1,309m (4,295ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
+              <tr><td>3</td><td>Braeriach</td><td>1,296m (4,252ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
+              <tr><td>4</td><td>Cairn Toul</td><td>1,291m (4,236ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
+              <tr><td>5</td><td>Sgor an Lochain Uaine</td><td>1,258m (4,127ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
+              <tr><td>6</td><td>Cairn Gorm</td><td>1,245m (4,084ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          People searching "highest mountains in England" often land here expecting an England-only list — England's highest is Scafell Pike (978m), a fraction of Ben Nevis's height. Browse the <a href="/mountains">full mountains directory</a> to filter by region.
+        </p>
+        <Fragment set:html={'<!-- IMAGE TODO: uk-mountains-map-highest-peaks.jpg — Map of the UK showing the highest mountains including Ben Nevis, Ben Macdui and Braeriach -->'} />
+
+        <h3>British Mountain Ranges: A Quick Guide</h3>
+        <ul class="ranges-list">
+          <li><strong>The Grampian Mountains</strong> (Scotland) — includes Ben Nevis and the Cairngorms subrange; home to most of Scotland's 282 Munros.</li>
+          <li><strong>Snowdonia</strong> (Wales) — includes Snowdon (1,085m) and Cadair Idris; peaks here are classified as Hewitts and Marilyns rather than Munros.</li>
+          <li><strong>The Lake District Fells</strong> (England) — England's highest concentration of mountains, catalogued by Alfred Wainwright as the 214 "Wainwrights."</li>
+          <li><strong>The Pennines</strong> (Northern England) — includes Cross Fell, England's highest point outside the Lake District.</li>
+          <li><strong>The Mourne Mountains</strong> (Northern Ireland) — includes Slieve Donard, the highest peak in Northern Ireland.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -320,6 +381,20 @@ const faqSchema = {
           <summary>Do I need permission to climb UK mountains?</summary>
           <p>
             Most UK mountains are accessible under Right to Roam legislation (England and Wales) or Scottish Access Rights. However, some areas may have temporary restrictions during deer stalking season (August-October in Scotland) or for conservation reasons. Always check local access information and respect any closure notices or private land restrictions.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How many Munros are in England?</summary>
+          <p>
+            None. A Munro is defined specifically as a Scottish mountain over 3,000ft (914.4m), named after Sir Hugh Munro, who catalogued them in 1891. England's mountains are classified separately — mainly as Wainwrights (Lake District) or Hewitts — so "Munros in England" isn't a category that exists, even though it's a common search.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are the main British mountain ranges?</summary>
+          <p>
+            The main ranges are the Grampian Mountains and Cairngorms in Scotland, Snowdonia in Wales, the Lake District fells and the Pennines in England, and the Mourne Mountains in Northern Ireland. Each has its own classification system.
           </p>
         </details>
       </div>
@@ -626,6 +701,62 @@ const faqSchema = {
     line-height: 1.7;
     color: var(--color-neutral-700);
     margin-bottom: var(--spacing-lg);
+  }
+
+  .intro-content h3 {
+    font-size: 1.5rem;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-900);
+  }
+
+  .intro-content a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .ranking-table th {
+    text-align: left;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-neutral-100);
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    border-bottom: 2px solid var(--color-neutral-300);
+  }
+
+  .ranking-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--color-neutral-200);
+    color: var(--color-neutral-700);
+  }
+
+  .ranking-table tr:hover td {
+    background: var(--color-neutral-50);
+  }
+
+  .ranges-list {
+    list-style: disc;
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .ranges-list li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-sm);
   }
 
   .featured-section {

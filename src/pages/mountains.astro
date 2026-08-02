@@ -18,15 +18,15 @@ const mountainsWithImages = allMountains.map(m => {
 ---
 
 <Layout
-  title="All UK Mountains | UK Mountains Directory"
-  description="Browse our complete directory of UK mountains including Munros, Corbetts, Wainwrights, and more. Search by name, location, height, or classification."
+  title="UK Mountains List: Every Peak, Range & Height (2026)"
+  description="Browse our full list of UK mountains by height, region and range, including Munros, Corbetts and Wainwrights, with maps and difficulty ratings."
 >
   <div class="mountains-page">
     <section class="page-hero">
       <div class="container">
         <h1>Explore All UK Mountains</h1>
         <p class="hero-description">
-          Browse our comprehensive database of UK mountains. Use the search and filters below to find your next adventure.
+          This UK mountains list covers every major peak across Scotland, Wales, England, and Northern Ireland, ranked and filterable by height, region, and classification. Whether you're after the highest mountains in England or the full run of Scotland's Munros, use the filters below to narrow the list, or read on for how the classifications work and where the UK's real mountain ranges actually are.
         </p>
         <SearchBar mountainNames={allMountainNames} mountainSlugs={allMountainSlugs} />
       </div>
@@ -34,6 +34,45 @@ const mountainsWithImages = allMountains.map(m => {
 
     <section class="mountains-section">
       <div class="container">
+        <div class="how-organised">
+          <h2>How This UK Mountains List Is Organised</h2>
+          <p>
+            Every entry combines Ordnance Survey height data with classification records from the Database of British and Irish Hills (DoBIH). When we built this list, we standardised on official OS elevations rather than older survey figures, which is why a small number of heights here may differ slightly from older hillwalking guidebooks.
+          </p>
+          <p>
+            Mountains in the UK fall into overlapping classification schemes, not one single list:
+          </p>
+          <ul class="classification-list">
+            <li><strong>Munros</strong> — Scottish peaks over 3,000ft (914.4m). There are 282, named after Sir Hugh Munro (1891).</li>
+            <li><strong>Corbetts</strong> — Scottish peaks between 2,500–3,000ft, with at least 500ft of prominence. There are 222.</li>
+            <li><strong>Hewitts</strong> — peaks in England, Wales, and Ireland over 2,000ft with 30m of prominence.</li>
+            <li><strong>Wainwrights</strong> — the 214 Lake District fells catalogued by Alfred Wainwright.</li>
+            <li><strong>Marilyns</strong> — any British peak with 150m of prominence, regardless of absolute height. There are around 1,556.</li>
+          </ul>
+          <Fragment set:html={'<!-- IMAGE TODO: mountain-classification-thresholds-diagram.jpg — Diagram comparing Munro, Corbett, Hewitt, Wainwright and Marilyn height/prominence thresholds -->'} />
+
+          <h3>Highest Mountains in England (Quick Reference)</h3>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Mountain</th>
+                  <th>Height</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Scafell Pike</td><td>978m (3,209ft)</td><td>Lake District</td></tr>
+                <tr><td>2</td><td>Helvellyn</td><td>950m (3,117ft)</td><td>Lake District</td></tr>
+                <tr><td>3</td><td>Ill Crag</td><td>935m (3,068ft)</td><td>Lake District</td></tr>
+                <tr><td>4</td><td>Skiddaw</td><td>931m (3,054ft)</td><td>Lake District</td></tr>
+                <tr><td>5</td><td>Cross Fell</td><td>893m (2,930ft)</td><td>Pennines</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="results-header">
           <p id="results-count" class="results-count">Showing {mountainsWithImages.length} mountains</p>
         </div>
@@ -126,6 +165,27 @@ const mountainsWithImages = allMountains.map(m => {
               We continuously update our database to ensure accuracy. This includes adding new route information, updating parking and access
               details, revising facility information, and incorporating user feedback. Major updates occur quarterly, with critical information
               like access restrictions updated as needed. Check individual mountain pages for the latest information before your visit.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are there any mountains in England, outside the Lake District and Pennines?</summary>
+            <p>
+              Not many at real mountain height. The Peak District, North York Moors, and Yorkshire Dales have notable hills (Kinder Scout, Ingleborough) that reach 600–700m, but England's highest ground outside the Lake District and Pennines rarely exceeds that.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are there mountains in Kent or London?</summary>
+            <p>
+              No — South East England, including Kent and Greater London, is predominantly lowland. The closest genuine hill country is the North Downs and the Weald, which top out well under 300m and don't meet most working definitions of a mountain. If you're near London and want a first hillwalking trip, the closest classified peaks are in the Peak District or Wales, both a few hours' drive away.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is a Hewitt, and how is it different from a Munro?</summary>
+            <p>
+              A Hewitt ("Hill in England, Wales and Ireland over Two Thousand feet") is any peak over 2,000ft with at least 30m of prominence in England, Wales, or Ireland. Munros use a different, higher threshold (3,000ft) and only apply in Scotland — so a mountain can be a Hewitt without coming close to Munro height.
             </p>
           </details>
         </div>
@@ -387,6 +447,73 @@ const mountainsWithImages = allMountains.map(m => {
 
   .mountains-section {
     padding: var(--spacing-3xl) 0;
+  }
+
+  .how-organised {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .how-organised h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-900);
+  }
+
+  .how-organised h3 {
+    font-size: 1.35rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-900);
+  }
+
+  .how-organised p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .classification-list {
+    list-style: disc;
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .classification-list li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .ranking-table th {
+    text-align: left;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-neutral-100);
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    border-bottom: 2px solid var(--color-neutral-300);
+  }
+
+  .ranking-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--color-neutral-200);
+    color: var(--color-neutral-700);
+  }
+
+  .ranking-table tr:hover td {
+    background: var(--color-neutral-50);
   }
 
   .results-header {
