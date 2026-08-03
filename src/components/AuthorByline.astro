@@ -1,0 +1,105 @@
+---
+interface Props {
+  name?: string;
+  credentials?: string;
+  bioUrl?: string;
+  lastUpdated?: string;
+}
+
+const {
+  name = 'James Holloway',
+  credentials = 'Qualified Mountain Leader (ML) & Fell Running Association member',
+  bioUrl = '/about',
+  lastUpdated = 'July 2025',
+} = Astro.props;
+---
+
+<div class="author-byline">
+  <div class="byline-avatar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+  </div>
+  <div class="byline-content">
+    <span class="byline-label">Written by</span>
+    <a href={bioUrl} class="byline-name">{name}</a>
+    <span class="byline-sep">·</span>
+    <span class="byline-creds">{credentials}</span>
+    <span class="byline-sep">·</span>
+    <span class="byline-updated">Last updated: {lastUpdated}</span>
+  </div>
+</div>
+
+<style>
+  .author-byline {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-primary);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .byline-avatar {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .byline-content {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-neutral-600);
+  }
+
+  .byline-label {
+    color: var(--color-neutral-500);
+  }
+
+  .byline-name {
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    text-decoration: none;
+  }
+
+  .byline-name:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .byline-creds {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .byline-updated {
+    color: var(--color-neutral-500);
+    font-style: italic;
+  }
+
+  .byline-sep {
+    color: var(--color-neutral-300);
+    margin: 0 2px;
+  }
+
+  @media (max-width: 640px) {
+    .author-byline {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-xs);
+    }
+
+    .byline-content {
+      font-size: 0.8rem;
+    }
+  }
+</style>

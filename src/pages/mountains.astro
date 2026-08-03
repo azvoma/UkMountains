@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AuthorByline from '../components/AuthorByline.astro';
 import { getAllMountains, getMountainImages } from '../lib/data';
 
 const allMountains = getAllMountains();
@@ -16,6 +17,30 @@ const mountainsWithImages = allMountains.map(m => {
     mountain_images: images
   };
 });
+
+const topTen = [...allMountains].sort((a, b) => b.height_meters - a.height_meters).slice(0, 10);
+
+const rangesByNation = [
+  { nation: 'Scotland', ranges: [
+    { name: 'Grampian Mountains', desc: 'Includes Ben Nevis and the Cairngorms subrange; home to most of Scotland\'s 282 Munros.' },
+    { name: 'Cairngorms', desc: 'A vast sub-range of the Grampians, containing five of the UK\'s six highest peaks including Ben Macdui and Braeriach.' },
+    { name: 'Torridon Hills', desc: 'Distinctive quartzite-capped peaks in the north-west Highlands, including Liathach and Beinn Alligin.' },
+    { name: 'Northwest Highlands', desc: 'Remote peaks north of Glen Shiel, including Foinaven and Ben Stack.' },
+  ]},
+  { nation: 'Wales', ranges: [
+    { name: 'Snowdonia (Eryri)', desc: 'Includes Yr Wyddfa (Snowdon) and Cadair Idris; peaks here are classified as Hewitts and Marilyns.' },
+    { name: 'Brecon Beacons (Bannau Brycheiniog)', desc: 'South Wales upland area including Pen y Fan, the highest peak in southern Britain.' },
+  ]},
+  { nation: 'England', ranges: [
+    { name: 'Lake District Fells', desc: 'England\'s highest concentration of mountains, catalogued by Alfred Wainwright as the 214 "Wainwrights."' },
+    { name: 'Pennines', desc: 'The "backbone of England," including Cross Fell, England\'s highest point outside the Lake District.' },
+    { name: 'Cheviot Hills', desc: 'Rolling hills on the Anglo-Scottish border, including The Cheviot (815m).' },
+  ]},
+  { nation: 'Northern Ireland', ranges: [
+    { name: 'Mourne Mountains', desc: 'Includes Slieve Donard, the highest peak in Northern Ireland (850m).' },
+    { name: 'Sperrin Mountains', desc: 'A remote upland area in County Tyrone and Londonderry, peaking at Sawel Mountain (678m).' },
+  ]},
+];
 ---
 
 <Layout
@@ -39,10 +64,15 @@ const mountainsWithImages = allMountains.map(m => {
 
     <section class="mountains-section">
       <div class="container">
+        <AuthorByline lastUpdated="July 2025" />
+
         <div class="how-organised">
-          <h2>How This UK Mountains List Is Organised</h2>
+          <h2>What Is a Mountain?</h2>
           <p>
-            Every entry combines Ordnance Survey height data with classification records from the Database of British and Irish Hills (DoBIH). When we built this list, we standardised on official OS elevations rather than older survey figures, which is why a small number of heights here may differ slightly from older hillwalking guidebooks.
+            There is no single universally agreed definition of a mountain in the UK. The most widely used threshold is 600 metres (1,968 feet) above sea level — the height used by the Ordnance Survey to distinguish mountains from hills. However, the classification that matters to most hillwalkers depends on prominence (how far a peak rises above the col connecting it to the next higher summit), not absolute height alone.
+          </p>
+          <p>
+            This is why a relatively modest peak like Cross Fell (893m) is a significant Marilyn — its prominence is 742m, making it one of the most prominent peaks in England — while some higher summits in the Cairngorms don't qualify as Marilyns at all because they sit on a high plateau with little drop between them.
           </p>
           <p>
             Mountains in the UK fall into overlapping classification schemes, not one single list:
@@ -55,6 +85,37 @@ const mountainsWithImages = allMountains.map(m => {
             <li><strong>Marilyns</strong> — any British peak with 150m of prominence, regardless of absolute height. There are around 1,556.</li>
           </ul>
           <Fragment set:html={'<!-- IMAGE TODO: mountain-classification-thresholds-diagram.jpg — Diagram comparing Munro, Corbett, Hewitt, Wainwright and Marilyn height/prominence thresholds -->'} />
+        </div>
+
+        <div class="how-organised">
+          <h2>List of Mountains in the UK by Height</h2>
+          <p>
+            Below are the ten highest mountains in the UK, all of which are Munros in the Scottish Highlands. Click any mountain name for a full route guide, difficulty rating, parking information, and live weather links.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Mountain</th>
+                  <th>Height</th>
+                  <th>Range</th>
+                  <th>Nearest Town</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topTen.map((m, i) => (
+                  <tr>
+                    <td>{i + 1}</td>
+                    <td><a href={`/mountain/${m.slug}`}>{m.name}</a></td>
+                    <td>{m.height_meters}m ({m.height_feet}ft)</td>
+                    <td>{m.parent_range || m.area || m.region}</td>
+                    <td>{m.nearby_places && m.nearby_places.length > 0 ? m.nearby_places[0] : '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <h3>Highest Mountains in England (Quick Reference)</h3>
           <div class="table-wrapper">
@@ -68,14 +129,28 @@ const mountainsWithImages = allMountains.map(m => {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>Scafell Pike</td><td>978m (3,209ft)</td><td>Lake District</td></tr>
-                <tr><td>2</td><td>Helvellyn</td><td>950m (3,117ft)</td><td>Lake District</td></tr>
+                <tr><td>1</td><td><a href="/mountain/scafell-pike">Scafell Pike</a></td><td>978m (3,209ft)</td><td>Lake District</td></tr>
+                <tr><td>2</td><td><a href="/mountain/helvellyn">Helvellyn</a></td><td>950m (3,117ft)</td><td>Lake District</td></tr>
                 <tr><td>3</td><td>Ill Crag</td><td>935m (3,068ft)</td><td>Lake District</td></tr>
-                <tr><td>4</td><td>Skiddaw</td><td>931m (3,054ft)</td><td>Lake District</td></tr>
+                <tr><td>4</td><td><a href="/mountain/skiddaw">Skiddaw</a></td><td>931m (3,054ft)</td><td>Lake District</td></tr>
                 <tr><td>5</td><td>Cross Fell</td><td>893m (2,930ft)</td><td>Pennines</td></tr>
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="how-organised">
+          <h2>Mountain Ranges of England, Scotland, Wales &amp; Northern Ireland</h2>
+          {rangesByNation.map((group) => (
+            <Fragment>
+              <h3>{group.nation}</h3>
+              <ul class="classification-list">
+                {group.ranges.map((r) => (
+                  <li><strong>{r.name}</strong> — {r.desc}</li>
+                ))}
+              </ul>
+            </Fragment>
+          ))}
         </div>
 
         <div class="results-header">
@@ -174,16 +249,16 @@ const mountainsWithImages = allMountains.map(m => {
           </details>
 
           <details class="faq-item">
-            <summary>Are there any mountains in England, outside the Lake District and Pennines?</summary>
+            <summary>Is there a mountain in Kent or London?</summary>
             <p>
-              Not many at real mountain height. The Peak District, North York Moors, and Yorkshire Dales have notable hills (Kinder Scout, Ingleborough) that reach 600–700m, but England's highest ground outside the Lake District and Pennines rarely exceeds that.
+              No. South East England, including Kent and Greater London, is predominantly lowland. The highest point in Greater London is Westerham Heights (245m), and the highest in Kent is Betsom's Hill (251m) — neither meets any working definition of a mountain. The closest genuine mountain country to London is the Peak District (roughly 3 hours by car) or the Brecon Beacons in Wales (about 3.5 hours).
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Are there mountains in Kent or London?</summary>
+            <summary>How many Munros are in England?</summary>
             <p>
-              No — South East England, including Kent and Greater London, is predominantly lowland. The closest genuine hill country is the North Downs and the Weald, which top out well under 300m and don't meet most working definitions of a mountain. If you're near London and want a first hillwalking trip, the closest classified peaks are in the Peak District or Wales, both a few hours' drive away.
+              None. A Munro is defined specifically as a Scottish mountain over 3,000ft (914.4m), named after Sir Hugh Munro who catalogued them in 1891. England has no peaks above 3,000ft — Scafell Pike, England's highest, is 978m (3,209ft). England's mountains are classified separately as Wainwrights (Lake District), Hewitts, or Marilyns. "Munros in England" isn't a category that exists, even though it's a common search.
             </p>
           </details>
 

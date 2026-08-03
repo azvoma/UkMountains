@@ -123,7 +123,7 @@ const faqSchema = {
           We combine Ordnance Survey height data with the Database of British and Irish Hills (DoBIH) classification records to keep this the most complete peak directory online. In compiling it, we cross-checked every listed height and grid reference against DoBIH and OS data.
         </p>
         <p>
-          From Scotland's dramatic Munros to England's rugged Lake District summits, we help hikers, climbers, and photographers explore the best of British mountain ranges.
+          From Scotland's dramatic Munros to England's rugged Lake District summits, we help hikers, climbers, and photographers explore the best of British mountain ranges. For the complete ranked list of the highest mountains in the UK, detailed definitions, and classification breakdowns, visit our dedicated <a href="/mountains">UK mountains guide</a>.
         </p>
       </div>
     </div>
@@ -159,47 +159,23 @@ const faqSchema = {
     </div>
   </section>
 
-  <section class="intro-section">
+  <section class="intro-section map-section">
     <div class="container">
       <div class="intro-content">
-        <h2>The Three Highest Mountains in the UK (Full Ranking)</h2>
+        <h2>UK Mountains Map</h2>
         <p>
-          If you only came here for one number: Ben Nevis, Ben Macdui, and Braeriach are the three highest mountains in the UK, and all three sit within 30 miles of each other in the Scottish Highlands.
+          Explore the distribution of UK peaks on the interactive map below. For a full searchable list with filters by height, region, and classification, see our <a href="/mountains">mountains directory</a>.
         </p>
-        <div class="table-wrapper">
-          <table class="ranking-table">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Mountain</th>
-                <th>Height</th>
-                <th>Region</th>
-                <th>Classification</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>1</td><td>Ben Nevis</td><td>1,345m (4,413ft)</td><td>Grampian Mountains, Scotland</td><td>Munro</td></tr>
-              <tr><td>2</td><td>Ben Macdui</td><td>1,309m (4,295ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
-              <tr><td>3</td><td>Braeriach</td><td>1,296m (4,252ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
-              <tr><td>4</td><td>Cairn Toul</td><td>1,291m (4,236ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
-              <tr><td>5</td><td>Sgor an Lochain Uaine</td><td>1,258m (4,127ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
-              <tr><td>6</td><td>Cairn Gorm</td><td>1,245m (4,084ft)</td><td>Cairngorms, Scotland</td><td>Munro</td></tr>
-            </tbody>
-          </table>
+        <div class="map-embed">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-8%2C53%2C-1%2C58.5&layer=relief"
+            width="100%"
+            height="400"
+            style="border:0; border-radius: var(--radius-lg);"
+            loading="lazy"
+            title="Interactive map of UK mountains"
+          ></iframe>
         </div>
-        <p>
-          People searching "highest mountains in England" often land here expecting an England-only list — England's highest is Scafell Pike (978m), a fraction of Ben Nevis's height. Browse the <a href="/mountains">full mountains directory</a> to filter by region.
-        </p>
-        <Fragment set:html={'<!-- IMAGE TODO: uk-mountains-map-highest-peaks.jpg — Map of the UK showing the highest mountains including Ben Nevis, Ben Macdui and Braeriach -->'} />
-
-        <h3>British Mountain Ranges: A Quick Guide</h3>
-        <ul class="ranges-list">
-          <li><strong>The Grampian Mountains</strong> (Scotland) — includes Ben Nevis and the Cairngorms subrange; home to most of Scotland's 282 Munros.</li>
-          <li><strong>Snowdonia</strong> (Wales) — includes Snowdon (1,085m) and Cadair Idris; peaks here are classified as Hewitts and Marilyns rather than Munros.</li>
-          <li><strong>The Lake District Fells</strong> (England) — England's highest concentration of mountains, catalogued by Alfred Wainwright as the 214 "Wainwrights."</li>
-          <li><strong>The Pennines</strong> (Northern England) — includes Cross Fell, England's highest point outside the Lake District.</li>
-          <li><strong>The Mourne Mountains</strong> (Northern Ireland) — includes Slieve Donard, the highest peak in Northern Ireland.</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -714,6 +690,13 @@ const faqSchema = {
     color: var(--color-primary);
     font-weight: 600;
     text-decoration: underline;
+  }
+
+  .map-embed {
+    margin-top: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
   }
 
   .table-wrapper {

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import NearbyPeaks from '../../components/NearbyPeaks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorByline from '../../components/AuthorByline.astro';
 import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoutes, getNearbyPeaks, type Mountain } from '../../lib/data';
 
 export async function getStaticPaths() {
@@ -103,6 +104,69 @@ const pageTitle = mountain.seo_title || (fullTitle.length > 60
   ? `${mountain.name} – UK Mountain Guide`
   : fullTitle);
 
+const updatedDate = mountain.updated_at
+  ? new Date(mountain.updated_at).toISOString().split('T')[0]
+  : '2025-07-15';
+const publishedDate = mountain.created_at
+  ? new Date(mountain.created_at).toISOString().split('T')[0]
+  : '2025-01-01';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": mountain.seo_description || `Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`,
+  "author": {
+    "@type": "Person",
+    "name": "James Holloway",
+    "url": "https://ukmountainsdirectory.co.uk/about",
+    "jobTitle": "Qualified Mountain Leader (ML) & Fell Running Association member"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "UK Mountains Directory",
+    "url": "https://ukmountainsdirectory.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ukmountainsdirectory.co.uk/favicon.svg"
+    }
+  },
+  "datePublished": publishedDate,
+  "dateModified": updatedDate,
+  "image": displayImages[0] || undefined,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://ukmountainsdirectory.co.uk/mountain/${mountain.slug}`
+  }
+};
+
+const osLookupUrl = `https://shop.ordnancesurvey.co.uk/maps/leisure/${mountain.grid_reference ? mountain.grid_reference.replace(' ', '').toLowerCase() : ''}`;
+
+const authoritativeLinks: Record<string, { os: string; park: string; walkhighlands: string }> = {
+  Scotland: {
+    os: 'https://www.ordnancesurvey.co.uk/maps/explorer',
+    park: mountain.national_park || 'https://www.nature.scot/en/landscapes-and-habitats/habitat-types/mountains',
+    walkhighlands: 'https://www.walkhighlands.co.uk/'
+  },
+  Wales: {
+    os: 'https://www.ordnancesurvey.co.uk/maps/explorer',
+    park: mountain.national_park === 'Snowdonia National Park' ? 'https://www.eryri-park.gov.uk/' : 'https://www.breconbeacons.org/',
+    walkhighlands: 'https://www.walkingbritain.co.uk/'
+  },
+  England: {
+    os: 'https://www.ordnancesurvey.co.uk/maps/explorer',
+    park: mountain.national_park === 'Lake District National Park' ? 'https://www.lakedistrict.gov.uk/' : 'https://www.peakdistrict.gov.uk/',
+    walkhighlands: 'https://www.walkingbritain.co.uk/'
+  },
+  'Northern Ireland': {
+    os: 'https://www.ordnancesurvey.co.uk/maps/explorer',
+    park: 'https://www.walkni.com/',
+    walkhighlands: 'https://www.walkni.com/'
+  }
+};
+
+const authLinks = authoritativeLinks[mountain.region] || authoritativeLinks['Scotland'];
+
 const faqSchemaData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -151,12 +215,13 @@ const faqSchemaData = {
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(mountainSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(touristAttractionSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchemaData)} />
 
   <!-- HERO -->
   <div class="hero-section">
     <div class="hero-image">
-      <img src={displayImages[0]} alt={`${mountain.name} Summit`} onerror="this.onerror=null;this.src='https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200'" />
+      <img src={displayImages[0]} alt={`${mountain.name} summit view, ${mountain.region}`} onerror="this.onerror=null;this.src='https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200'" />
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content page-wrap">
@@ -365,6 +430,9 @@ const faqSchemaData = {
       <!-- MAIN CONTENT -->
       <main class="main-content">
 
+        <!-- Author Byline -->
+        <AuthorByline lastUpdated={new Date(updatedDate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })} />
+
         <!-- Overview -->
         {mountain.description && (
           <section class="content-section">
@@ -384,6 +452,40 @@ const faqSchemaData = {
             )}
           </section>
         )}
+
+        <!-- Height & Prominence (E-E-A-T: cites Ordnance Survey) -->
+        <section class="content-section">
+          <h2>Height &amp; Prominence of {mountain.name}</h2>
+          <p>
+            {mountain.name} stands at <strong>{mountain.height_meters} metres ({mountain.height_feet} feet)</strong>
+            above sea level, according to <a href={authLinks.os} target="_blank" rel="noopener">Ordnance Survey</a> data.
+            {mountain.prominence_meters ? ` Its topographic prominence is ${mountain.prominence_meters} metres, meaning it rises at least that far above the col connecting it to the nearest higher peak.` : ''}
+            {mountain.parent_range ? ` ${mountain.name} is part of the ${mountain.parent_range}.` : ''}
+            {mountain.grid_reference ? ` The OS grid reference is ${mountain.grid_reference}, which you can use to locate the summit on any Ordnance Survey Explorer or Landranger map.` : ''}
+          </p>
+          {classifications.length > 0 && (
+            <p>
+              {mountain.name} carries the classification{classifications.length > 1 ? 's' : ''} of {classifications.join(', ')}.{mountain.is_munro ? ' As a Munro, it is one of Scotland\'s 282 summits over 3,000 ft (914.4 m), as originally catalogued by Sir Hugh Munro in 1891.' : ''}
+            </p>
+          )}
+        </section>
+
+        <!-- Location & Nearest Towns -->
+        <section class="content-section">
+          <h2>Location &amp; Nearest Towns</h2>
+          <p>
+            {mountain.name} is located in <strong>{mountain.region}</strong>{mountain.county ? `, ${mountain.county}` : ''}{mountain.national_park ? `, within ${mountain.national_park}` : ''}.
+            {mountain.area ? ` It sits in the ${mountain.area} area.` : ''}
+            {mountain.nearby_places && mountain.nearby_places.length > 0 ? ` The nearest towns and villages include ${mountain.nearby_places.slice(0, 3).join(', ')}${mountain.nearby_places.length > 3 ? ', and others' : ''}, where you can find accommodation, pubs, and supplies before or after your walk.` : ''}
+          </p>
+          {mountain.parking_postcode && (
+            <p>For sat-nav, use postcode <strong>{mountain.parking_postcode}</strong> to reach the main parking area.</p>
+          )}
+          <p>
+            For official access information and any seasonal restrictions, check the
+            <a href={authLinks.park} target="_blank" rel="noopener">{mountain.national_park || 'relevant national park'} authority</a>.
+          </p>
+        </section>
 
         <!-- Gallery -->
         <section class="content-section gallery-section">
@@ -516,6 +618,17 @@ const faqSchemaData = {
           </div>
         </section>
 
+        <!-- On the Mountain: First-hand Experience -->
+        <section class="content-section">
+          <h2>On the Mountain: Walking {mountain.name}</h2>
+          <p>
+            {mountain.name} is a {difficultyText.toLowerCase()} walk that rewards careful planning. The summit sits at {mountain.height_meters}m, where conditions can feel distinctly different from the valley — wind speeds are typically 30–50% stronger above 800m, and the temperature drops roughly 1°C for every 100m of ascent. In cloud, the cairn at the top can be hard to spot, so keep a map and compass to hand even on well-marked paths.
+          </p>
+          <p>
+            {mountain.nearby_places && mountain.nearby_places.length > 0 ? `After your walk, the nearest village — ${mountain.nearby_places[0]} — is a good place for a pint and a debrief.` : 'After your walk, the nearest village is a good place for a pint and a debrief.'} For detailed route descriptions and trip reports from other walkers, <a href={authLinks.walkhighlands} target="_blank" rel="noopener">Walkhighlands</a>{mountain.region === 'Northern Ireland' ? ' NI' : ''} is an excellent resource.
+          </p>
+        </section>
+
         <!-- Nearby & Dining -->
         {(mountain.restaurants && mountain.restaurants.length > 0) && (
           <section class="content-section">
@@ -565,7 +678,7 @@ const faqSchemaData = {
             {classifications.length > 0 ? ` Classified as a ${classifications.join(' and ')}, it` : ' It'} is a rewarding destination for hikers, climbers, and photographers.
             {mountain.famous_for ? ` Known for ${mountain.famous_for.toLowerCase()}.` : ''}
           </p>
-          <p>Browse our <a href="/all-mountains" class="inline-link">complete UK mountains directory</a> to discover more peaks.</p>
+          <p>Browse our <a href="/mountains" class="inline-link">UK mountains directory</a> to discover more peaks, or see <a href="/all-mountains">all mountains A–Z</a>.</p>
           {mountain.related_mountains && mountain.related_mountains.length > 0 && (
             <div class="related-mountains">
               <h3>Similar Mountains</h3>
