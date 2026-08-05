@@ -44,8 +44,8 @@ const rangesByNation = [
 ---
 
 <Layout
-  title="List of UK Mountains by Height: Every Peak, Range & Classification"
-  description="Complete list of UK mountains ranked by height, region and classification. Browse Munros, Corbetts, Wainwrights and Marilyns with maps, routes and difficulty ratings."
+  title="List of Mountains in the UK: Full Directory & Names"
+  description="Browse our full list of mountains in the UK, with mountain names, ranges and heights across England, Scotland and Wales. Find your peak today."
 >
   <div class="mountains-page">
     <section class="page-hero">
@@ -54,9 +54,9 @@ const rangesByNation = [
           { name: 'Home', url: '/' },
           { name: 'Mountains' }
         ]} />
-        <h1>List of Mountains in the UK by Height</h1>
+        <h1>List of Mountains in the UK: Names, Ranges and Heights</h1>
         <p class="hero-description">
-          This complete UK mountains list covers every major peak across Scotland, Wales, England, and Northern Ireland, ranked and filterable by height, region, and classification. Whether you're after the highest mountains in England, the full run of Scotland's 282 Munros, or the best Wainwrights in the Lake District, use the filters below to narrow the list, or read on for how the classifications work and where the UK's mountain ranges actually are.
+          Scafell Pike (978m) is the highest mountain in England, Snowdon/Yr Wyddfa (1,085m) is the highest in Wales, and Ben Nevis (1,345m) is the highest in the UK — and in this list you'll find all three plus every other major summit across Scotland, Wales, England and Northern Ireland, filterable by height, region and classification. Whether you're working through the Munros, Corbetts, Wainwrights or Marilyns, or just looking for a hillwalk near you, use the filters below to narrow the list.
         </p>
         <SearchBar mountainNames={allMountainNames} mountainSlugs={allMountainSlugs} />
       </div>
@@ -65,6 +65,41 @@ const rangesByNation = [
     <section class="mountains-section">
       <div class="container">
         <AuthorByline lastUpdated="July 2025" />
+
+        <div class="how-organised">
+          <h2>The Three Highest Mountains in the UK</h2>
+          <p>
+            The three highest mountains in the UK are all in the Scottish Highlands, and the gap between first and second is wider than many people realise.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Rank</th><th>Mountain</th><th>Range</th><th>Height</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><a href="/mountain/ben-nevis/">Ben Nevis</a></td><td>Grampian Mountains</td><td>1,345m</td></tr>
+                <tr><td>2</td><td><a href="/mountain/ben-macdui/">Ben Macdui</a></td><td>Cairngorms</td><td>1,309m</td></tr>
+                <tr><td>3</td><td><a href="/mountain/braeriach/">Braeriach</a></td><td>Cairngorms</td><td>1,296m</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><small>Source: Ordnance Survey</small></p>
+        </div>
+
+        <div class="how-organised">
+          <h2>Easy Mountains to Climb in the UK</h2>
+          <p>
+            Not every UK mountain requires scrambling experience or full winter kit. Several of the most popular peaks have well-graded paths with no technical difficulty in summer conditions, making them ideal for first-timers and families.
+          </p>
+          <ul class="classification-list">
+            <li><strong><a href="/mountain/snowdon/">Snowdon/Yr Wyddfa</a></strong> (1,085m) — the Llanberis Path is a 14.5km round trip on a clear, well-maintained track with no scrambling.</li>
+            <li><strong><a href="/mountain/skiddaw/">Skiddaw</a></strong> (931m) — a straightforward 8km ascent from Keswick on a clear path.</li>
+            <li><strong><a href="/mountain/catbells/">Cat Bells</a></strong> (451m) — one of the Lake District's most popular introductory fells, with a short 5km round trip.</li>
+          </ul>
+          <p>
+            Always check the weather before setting out, even on easier peaks — conditions on the summit can be very different from the valley.
+          </p>
+        </div>
 
         <div class="how-organised">
           <h2>What Is a Mountain in the UK?</h2>
@@ -173,6 +208,15 @@ const rangesByNation = [
     <section class="faq-section">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
+        <div class="key-takeaways">
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>The UK's highest mountain is Ben Nevis at 1,345m; the three highest are all in the Scottish Highlands.</li>
+            <li>There are 282 Munros in Scotland and none in England — the classification only applies to Scottish peaks over 3,000ft.</li>
+            <li>Snowdon (1,085m) is higher than Scafell Pike (978m) — Snowdon is the highest in Wales, Scafell Pike the highest in England.</li>
+            <li>UK mountains cluster in four main areas: the Scottish Highlands, Snowdonia/Eryri, the Lake District/Pennines, and the Mourne Mountains.</li>
+          </ul>
+        </div>
         <div class="faq-container">
           <details class="faq-item">
             <summary>How many mountains are in the UK?</summary>
@@ -266,6 +310,13 @@ const rangesByNation = [
             <summary>What is a Hewitt, and how is it different from a Munro?</summary>
             <p>
               A Hewitt ("Hill in England, Wales and Ireland over Two Thousand feet") is any peak over 2,000ft with at least 30m of prominence in England, Wales, or Ireland. Munros use a different, higher threshold (3,000ft) and only apply in Scotland — so a mountain can be a Hewitt without coming close to Munro height.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which is higher: Scafell Pike or Snowdon?</summary>
+            <p>
+              Snowdon (Yr Wyddfa) is higher. Snowdon stands at 1,085m (3,560ft) in Snowdonia, Wales, while Scafell Pike reaches 978m (3,209ft) in the Lake District, England. Snowdon is the highest mountain in Wales and the highest in England or Wales; Scafell Pike is the highest mountain in England.
             </p>
           </details>
         </div>
@@ -666,6 +717,32 @@ const rangesByNation = [
 
   .empty-state p {
     color: var(--color-neutral-500);
+  }
+
+  .key-takeaways {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-2xl) auto;
+    background: var(--color-neutral-50);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+  }
+
+  .key-takeaways h3 {
+    font-size: 1.25rem;
+    color: var(--color-neutral-900);
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  .key-takeaways ul {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    color: var(--color-neutral-700);
+    line-height: 1.7;
+  }
+
+  .key-takeaways li {
+    margin-bottom: var(--spacing-sm);
   }
 
   .faq-section {

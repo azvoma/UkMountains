@@ -230,7 +230,7 @@ const faqSchemaData = {
         { name: 'Mountains', url: '/mountains/' },
         { name: mountain.name }
       ]} />
-      <h1>{mountain.name}</h1>
+      <h1>{mountain.seo_h1 || mountain.name}</h1>
       {mountain.national_park && <div class="hero-subtitle">{mountain.national_park}</div>}
       <div class="hero-stats">
         <div class="hero-stat">
