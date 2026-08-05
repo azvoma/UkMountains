@@ -61,15 +61,35 @@
       "braeriach",
       "carn-mor-dearg"
     ],
-    "walking_guide": null,
+    "walking_guide": "The standard Mountain Track (also called the Pony Track or Tourist Route) is the most popular path to the summit of Ben Nevis, the highest mountain in the UK. It begins at the Glen Nevis visitor centre car park (PH33 6ST) and follows a clear stone path up the western slopes, passing the Halfway Lochan and the old observatory ruins before reaching the 1,345m summit cairn. The round trip is approximately 17 km and takes 5-7 hours for fit walkers. The path is well-built but relentless - roughly 1,300m of ascent over 6.5 km each way. In summer the track is straightforward underfoot, but the summit plateau is notoriously featureless and dangerous in poor visibility: always carry a map and compass, and know how to take a bearing. The alternative CMD Arete route approaches from the north-east via the Carn Mor Dearg ridge and is one of the finest moderate scrambles in Scotland - grade 2-3 in summer conditions, but a serious winter climb from November to March. For the full experience, acclimatise in Glen Nevis the day before, start early to avoid afternoon clouds on the summit, and check the Met Office mountain forecast before setting out.",
     "faqs": [
+      {
+        "question": "How high is Ben Nevis?",
+        "answer": "Ben Nevis stands at 1,345 metres (4,413 feet) above sea level, making it the highest mountain in the UK and the tallest peak in the British Isles. The summit is roughly 1,300m above the Glen Nevis start point."
+      },
+      {
+        "question": "How long does it take to climb Ben Nevis?",
+        "answer": "The standard Mountain Track takes 5–7 hours for a fit walker to complete the round trip of roughly 17 km. Allow extra time for rests, photos, and slower conditions on the summit plateau. Start early to avoid afternoon cloud and crowds."
+      },
+      {
+        "question": "What is the easiest route up Ben Nevis?",
+        "answer": "The Mountain Track (also called the Pony Track or Tourist Route) is the easiest and most popular path. It starts from Glen Nevis visitor centre car park (PH33 6ST) and follows a well-built stone path to the summit with no scrambling required in summer conditions."
+      },
       {
         "question": "Is Ben Nevis the same mountain as Ben Wyvis?",
         "answer": "No. They're separate Munros roughly 70 miles apart — Ben Nevis (1,345m) near Fort William is the UK's highest mountain, while Ben Wyvis (1,046m) near Dingwall in Easter Ross is a different, lower peak with no connection to Ben Nevis beyond sharing the Gaelic \"Beinn\" element in its name."
+      },
+      {
+        "question": "When is the best time to climb Ben Nevis?",
+        "answer": "May to September offers the most stable conditions, longest daylight, and snow-free paths on the standard Mountain Track. October and April are shoulder season with possible snow on the summit plateau. From November to March, Ben Nevis is a genuine winter mountaineering objective requiring ice axe, crampons, and winter skills."
+      },
+      {
+        "question": "Where do I park for Ben Nevis?",
+        "answer": "The main starting point is the Glen Nevis visitor centre car park (postcode PH33 6ST). There is also a lower car park at the foot of the Mountain Track. Both fill quickly on summer weekends — arrive before 8am to guarantee a space."
       }
     ],
-    "seo_title": "Ben Nevis Guide: Height, Routes, Map & Best Time to Climb",
-    "seo_description": "Plan your Ben Nevis climb with route options, the 1,345m height, live weather links, safety tips and the best time to reach the UK's highest summit.",
+    "seo_title": "Ben Nevis: UK's Highest Mountain – Height, Routes & Walking Guide",
+    "seo_description": "Ben Nevis is the UK's highest mountain at 1,345m. Find route guides, parking, weather links, safety tips and the best time to climb Ben Nevis near Fort William.",
     "about_extra": "Ben Nevis draws over 150,000 walkers a year, more than any other Scottish mountain, which makes route choice and timing more important here than on quieter peaks — the Mountain Track can be genuinely congested on a clear summer weekend. In practice, the busiest window is 10am–2pm on the lower half of the Mountain Track; setting off before 8am avoids most of the crowding and gives more daylight buffer for the descent.\n\nUnderestimating the summit plateau in poor visibility is a common mistake — the flat, featureless top has claimed lives from walkers who wandered off-path near Five Finger Gully in cloud. Even on the \"Moderate\" tourist route, a map, compass (or reliable GPS), and the confidence to use them are not optional extras.\n\nBen Nevis is sometimes confused with Ben Wyvis, a separate 1,046m mountain in the northern Highlands near Dingwall. The two are entirely different peaks — Ben Wyvis is a Corbett roughly 40 miles north-east of Fort William, while Ben Nevis is the UK's highest summit at 1,345m in Lochaber. If you're planning a trip, make sure your map, accommodation and route guide refer to the right one.",
     "about_image_todo": "<!-- IMAGE TODO: ben-nevis-mountain-track-route.jpg — Hikers on the Ben Nevis Mountain Track, the most popular route up the UK's highest mountain -->",
     "extra_sections": [
@@ -307,14 +327,27 @@
       "cairn-toul"
     ],
     "walking_guide": null,
+    "walking_guide": "The most popular route to the summit of Cairn Gorm starts from the Coire Cas car park at the foot of the ski area, near Aviemore. The path climbs north-west through the ski developments, passing the Ptarmigan Station at 1,097m before continuing to the true summit at 1,245m - a round trip of roughly 8 km taking 3-4 hours for fit walkers. For a quieter and more scenic approach, the Windy Ridge Path follows the north-western ridge from the same car park, avoiding the ski infrastructure and offering fine views across the Cairngorm Plateau. In winter, Cairn Gorm becomes Scotland's busiest ski resort with 22 runs served by the funicular and chairlifts, and the northern corries - particularly Coire an t-Sneachda and Coire Domhain - are renowned for ice and mixed climbing from December to March. The summit sits on the edge of the Cairngorm Plateau, a vast arctic-alpine landscape and one of the wildest areas in the British Isles; navigation can be challenging in poor visibility, so always carry a map and compass. Check the Mountain Weather Information Service forecast before setting out, as the plateau can be dangerously icy in winter and surprisingly cold even in midsummer.",
     "faqs": [
+      {
+        "question": "How high is Cairn Gorm?",
+        "answer": "Cairn Gorm stands at 1,245 metres (4,084 feet) above sea level, making it the sixth-highest mountain in the UK and the most prominent peak in the Cairngorm range. Despite giving its name to the range, it is not the highest - Ben Macdui (1,309m) is higher."
+      },
+      {
+        "question": "How long does it take to climb Cairn Gorm?",
+        "answer": "The standard route from Coire Cas car park takes 3-4 hours for the round trip of roughly 8 km, with 600m of ascent. The Windy Ridge Path takes a similar time but offers a quieter, more scenic route avoiding the ski area."
+      },
+      {
+        "question": "Is Cairn Gorm the highest mountain in the Cairngorms?",
+        "answer": "No. Ben Macdui (1,309m) is the highest mountain in the Cairngorms and the second-highest in the UK. Cairn Gorm (1,245m) is the sixth-highest in the UK and gives its name to the range, but four other Cairngorm summits - Ben Macdui, Braeriach, Cairn Toul, and Sgor an Lochain Uaine - are all higher."
+      },
       {
         "question": "Can I get to the Cairn Gorm summit by funicular?",
         "answer": "The funicular takes you as far as the Ptarmigan Station (1,097m), leaving a short walk to the true summit — it doesn't run directly to the top. The railway has also had repeated multi-month and multi-year closures for structural repairs since 2018, so check Cairngorm Mountain's live status before basing a visit around it; the walking routes are unaffected by funicular closures."
       }
     ],
-    "seo_title": "Cairn Gorm Guide: Height, Routes, Funicular & Weather",
-    "seo_description": "Explore Cairn Gorm's 1,245m summit with route options, funicular access, ski season info, weather links and safety tips for the Cairngorms today.",
+    "seo_title": "Cairn Gorm: 1,245m Summit – Routes, Funicular, Ski & Walking Guide",
+    "seo_description": "Cairn Gorm (1,245m) is the sixth-highest UK mountain in the Cairngorms near Aviemore. Find walking routes, funicular status, ski season info, weather and safety tips.",
     "about_extra": "Cairn Gorm rises dramatically above Aviemore and the Strathspey valley, its northern flanks carved into a series of corries that hold snow well into spring. The mountain's funicular railway, opened in 2001, runs from the Base Station at 637m to the Ptarmigan Station at 1,097m, giving visitors a taste of the high plateau without the climb — though walkers heading for the true summit still need to complete the final 150m on foot.\n\nThe summit of Cairn Gorm sits on the western edge of the Cairngorm Plateau, a vast arctic-alpine landscape that is one of the wildest areas in the British Isles. The plateau is home to rare wildlife including ptarmigan, mountain hare, and the UK's only herd of reindeer, reintroduced in 1952. The plateau's sheer size means navigation can be challenging in poor visibility, and walkers should carry a map and compass even on seemingly straightforward summer days.\n\nIt is a common misconception that Cairn Gorm is the highest mountain in the Cairngorms. That distinction belongs to Ben Macdui (1,309m), the second-highest mountain in the UK, approximately 5 km south-west of Cairn Gorm's summit. The Cairngorm range also contains Braeriach (1,296m), Cairn Toul (1,291m), and Sgor an Lochain Uaine (1,258m), all of which are higher than or comparable to Cairn Gorm itself. The range gets its name from An Càrn Gorm ('the blue-grey hill' in Gaelic), referring specifically to this peak.\n\nIn winter, Cairn Gorm is Scotland's busiest ski resort, with 22 runs and a vertical drop of 470m served by the funicular and several chairlifts. The Coire na Sgreuchaill and Coire Cas areas offer the most reliable snow, though conditions vary enormously from year to year. Winter climbers also flock to the northern corries — particularly Coire an t-Sneachda and Coire Domhain — for ice and mixed routes that form reliably from December to March.\n\nFor summer walkers, the most popular route to the summit starts from the Coire Cas car park and follows the path through the ski area to the top, a round trip of roughly 8 km taking 3–4 hours. For a quieter experience, the approach via the Lairig Ghru pass from the south offers a longer and more remote feel. Always check the <a href=\"https://www.mwis.org.uk/\">Mountain Weather Information Service</a> forecast before setting out, as the plateau can be dangerously icy in winter and surprisingly cold even in midsummer.",
     "about_image_todo": null,
     "extra_sections": null,
@@ -1879,15 +1912,23 @@
       "snowdon",
       "moel-siabod"
     ],
-    "walking_guide": null,
+    "walking_guide": "The Pony Path from Ty Nant is the most popular and easiest route up Cadair Idris, one of the finest mountains in Snowdonia National Park. It starts from the Ty Nant car park (LL40 1TN) near Dolgellau and follows a well-graded path northwards through bracken and oak woodland before emerging onto open hillside. The trail climbs steadily to a broad ridge, then turns west to reach Penygadair, the 893m summit, in roughly 3-4 hours. The round trip is about 9 km and takes 5-6 hours. The Minffordd Path from the south is shorter but steeper, climbing alongside Llyn Cau before a short scramble to the summit - arguably the most scenic route, with dramatic views of the glacial corrie and Llyn Cau far below. Fox's Path is the steepest and most direct, with loose scree near the summit; it should be ascended rather than descended. All three routes reward you with panoramic views across Cardigan Bay to the Llyn Peninsula, and on a clear day you can see the Preseli Hills in Pembrokeshire and the Wicklow Mountains in Ireland. Check the Met Office mountain forecast before setting out, as Cadair Idris catches weather from both the Irish Sea and the interior of Snowdonia.",
     "faqs": [
+      {
+        "question": "How high is Cadair Idris?",
+        "answer": "Cadair Idris stands at 893 metres (2,930 feet) above sea level. Its summit, Penygadair, is the highest point in southern Snowdonia and one of the most prominent peaks in Wales, with 608m of topographic prominence."
+      },
+      {
+        "question": "How long does it take to climb Cadair Idris?",
+        "answer": "The Pony Path round trip takes 5-6 hours for fit walkers, covering roughly 9 km with 720m of ascent. The Minffordd Path is similar in time but shorter in distance with steeper terrain. Allow extra time for the summit views and the scramble above Llyn Cau on the Minffordd route."
+      },
       {
         "question": "Which is the easiest route up Cadair Idris?",
         "answer": "The Pony Path from Ty Nant is the easiest of the three main routes — it has no scrambling, a steadier gradient, and is the standard choice for most walkers. The Minffordd Path is more scenic but harder, and Fox's Path is the steepest and should generally be climbed, not descended, because of loose scree near the summit."
       }
     ],
-    "seo_title": "Cadair Idris Guide: Height, Routes, Map & Walking Tips",
-    "seo_description": "Climb Cadair Idris with our guide to its 893m height, three main routes, difficulty ratings, parking, weather and the legend behind its name.",
+    "seo_title": "Cadair Idris: Snowdonia's 893m Peak – Routes, Map & Walking Guide",
+    "seo_description": "Cadair Idris is a 893m Marilyn in Snowdonia National Park, Wales. Find the Pony Path, Minffordd Path and Fox's Path routes, parking, weather and the legend of Idris.",
     "about_extra": null,
     "about_image_todo": null,
     "extra_sections": null,
