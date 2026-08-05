@@ -8,7 +8,7 @@ interface Props {
 const { article } = Astro.props;
 ---
 
-<a href={`/blog/${article.slug}`} class="blog-card" aria-label={`Read article: ${article.title}`}>
+<a href={`/blog/${article.slug}/`} class="blog-card" aria-label={`Read article: ${article.title}`}>
   <div class="card-image">
     <img
       src={article.heroImage}

@@ -16,7 +16,7 @@ const { mountain } = Astro.props;
 const defaultImage = 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800';
 ---
 
-<a href={`/mountain/${mountain.slug}`} class="mountain-card" aria-label={`View details for ${mountain.name}, ${mountain.height_meters} meters in ${mountain.region}`}>
+<a href={`/mountain/${mountain.slug}/`} class="mountain-card" aria-label={`View details for ${mountain.name}, ${mountain.height_meters} meters in ${mountain.region}`}>
   <div class="card-image">
     <img
       src={mountain.image_url || defaultImage}

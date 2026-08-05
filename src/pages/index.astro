@@ -123,7 +123,7 @@ const faqSchema = {
           We combine Ordnance Survey height data with the Database of British and Irish Hills (DoBIH) classification records to keep this the most complete peak directory online. In compiling it, we cross-checked every listed height and grid reference against DoBIH and OS data.
         </p>
         <p>
-          From Scotland's dramatic Munros to England's rugged Lake District summits, we help hikers, climbers, and photographers explore the best of British mountain ranges. For the complete ranked list of the highest mountains in the UK, detailed definitions, and classification breakdowns, visit our dedicated <a href="/mountains">UK mountains guide</a>.
+          From Scotland's dramatic Munros to England's rugged Lake District summits, we help hikers, climbers, and photographers explore the best of British mountain ranges. For the complete ranked list of the highest mountains in the UK, detailed definitions, and classification breakdowns, visit our dedicated <a href="/mountains/">UK mountains guide</a>.
         </p>
       </div>
     </div>
@@ -164,7 +164,7 @@ const faqSchema = {
       <div class="intro-content">
         <h2>UK Mountains Map</h2>
         <p>
-          Explore the distribution of UK peaks on the interactive map below. For a full searchable list with filters by height, region, and classification, see our <a href="/mountains">mountains directory</a>.
+          Explore the distribution of UK peaks on the interactive map below. For a full searchable list with filters by height, region, and classification, see our <a href="/mountains/">mountains directory</a>.
         </p>
         <div class="map-embed">
           <iframe
@@ -224,7 +224,7 @@ const faqSchema = {
           <span>Solo hikers seeking accessible routes</span>
         </div>
       </div>
-      <a href="/mountains" class="btn btn-primary explore-btn">Explore Mountains Directory</a>
+      <a href="/mountains/" class="btn btn-primary explore-btn">Explore Mountains Directory</a>
     </div>
   </section>
 
@@ -293,8 +293,8 @@ const faqSchema = {
           We combine expert insights with real local knowledge for the most trustworthy content. Stay updated with mountain safety tips, seasonal climbing advice, gear reviews, hiking route breakdowns, and weather updates for popular mountains.
         </p>
         <div class="cta-buttons">
-          <a href="/mountains" class="btn btn-primary">View All Mountains</a>
-          <a href="/about" class="btn btn-secondary">Learn More About Us</a>
+          <a href="/mountains/" class="btn btn-primary">View All Mountains</a>
+          <a href="/about/" class="btn btn-secondary">Learn More About Us</a>
         </div>
       </div>
     </div>
@@ -314,7 +314,7 @@ const faqSchema = {
         <details class="faq-item">
           <summary>Where can I see the highest mountains in the UK in order?</summary>
           <p>
-            You can view a complete ranked list of the highest mountains in the UK in order on our dedicated <a href="/mountains">mountains page</a>. Our directory includes detailed height information, location data, and climbing difficulty for each peak, making it easy to plan your next mountain adventure.
+            You can view a complete ranked list of the highest mountains in the UK in order on our dedicated <a href="/mountains/">mountains page</a>. Our directory includes detailed height information, location data, and climbing difficulty for each peak, making it easy to plan your next mountain adventure.
           </p>
         </details>
 
@@ -432,7 +432,7 @@ const faqSchema = {
 
       if (mountainsWithImages && mountainsWithImages.length > 0) {
         mountainsGrid.innerHTML = mountainsWithImages.map((mountain: any) => `
-          <a href="/mountain/${mountain.slug}" class="mountain-card">
+          <a href="/mountain/${mountain.slug}/" class="mountain-card">
             <div class="card-image">
               <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
               ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
@@ -555,7 +555,7 @@ const faqSchema = {
                 mountainsGrid.style.display = 'grid';
 
                 mountainsGrid.innerHTML = mountainsWithDistance.map((mountain: any) => `
-                  <a href="/mountain/${mountain.slug}" class="mountain-card">
+                  <a href="/mountain/${mountain.slug}/" class="mountain-card">
                     <div class="card-image">
                       <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
                       ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}

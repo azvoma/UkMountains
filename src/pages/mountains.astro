@@ -90,7 +90,7 @@ const rangesByNation = [
         <div class="how-organised">
           <h2>List of Mountains in the UK by Height</h2>
           <p>
-            Below are the ten highest mountains in the UK, all of which are Munros in the Scottish Highlands. Click any mountain name for a full route guide, difficulty rating, parking information, and live weather links.
+            Below are the ten highest mountains in the UK, all of which are Munros in the Scottish Highlands. Click any mountain name for a full route guide, difficulty rating, parking information, and live weather links. You can also browse the <a href="/all-mountains/">complete A–Z mountain directory</a>.
           </p>
           <div class="table-wrapper">
             <table class="ranking-table">
@@ -107,7 +107,7 @@ const rangesByNation = [
                 {topTen.map((m, i) => (
                   <tr>
                     <td>{i + 1}</td>
-                    <td><a href={`/mountain/${m.slug}`}>{m.name}</a></td>
+                    <td><a href={`/mountain/${m.slug}/`}>{m.name}</a></td>
                     <td>{m.height_meters}m ({m.height_feet}ft)</td>
                     <td>{m.parent_range || m.area || m.region}</td>
                     <td>{m.nearby_places && m.nearby_places.length > 0 ? m.nearby_places[0] : '—'}</td>
@@ -129,10 +129,10 @@ const rangesByNation = [
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td><a href="/mountain/scafell-pike">Scafell Pike</a></td><td>978m (3,209ft)</td><td>Lake District</td></tr>
-                <tr><td>2</td><td><a href="/mountain/helvellyn">Helvellyn</a></td><td>950m (3,117ft)</td><td>Lake District</td></tr>
+                <tr><td>1</td><td><a href="/mountain/scafell-pike/">Scafell Pike</a></td><td>978m (3,209ft)</td><td>Lake District</td></tr>
+                <tr><td>2</td><td><a href="/mountain/helvellyn/">Helvellyn</a></td><td>950m (3,117ft)</td><td>Lake District</td></tr>
                 <tr><td>3</td><td>Ill Crag</td><td>935m (3,068ft)</td><td>Lake District</td></tr>
-                <tr><td>4</td><td><a href="/mountain/skiddaw">Skiddaw</a></td><td>931m (3,054ft)</td><td>Lake District</td></tr>
+                <tr><td>4</td><td><a href="/mountain/skiddaw/">Skiddaw</a></td><td>931m (3,054ft)</td><td>Lake District</td></tr>
                 <tr><td>5</td><td>Cross Fell</td><td>893m (2,930ft)</td><td>Pennines</td></tr>
               </tbody>
             </table>
@@ -335,7 +335,7 @@ const rangesByNation = [
 
       if (mountainsWithImages && mountainsWithImages.length > 0) {
         mountainsGrid.innerHTML = mountainsWithImages.map((mountain: any) => `
-          <a href="/mountain/${mountain.slug}" class="mountain-card">
+          <a href="/mountain/${mountain.slug}/" class="mountain-card">
             <div class="card-image">
               <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
               ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}
@@ -457,7 +457,7 @@ const rangesByNation = [
               updateResultsCount(mountainsWithDistance.length);
 
               mountainsGrid.innerHTML = mountainsWithDistance.map((mountain: any) => `
-                <a href="/mountain/${mountain.slug}" class="mountain-card">
+                <a href="/mountain/${mountain.slug}/" class="mountain-card">
                   <div class="card-image">
                     <img src="${mountain.mountain_images?.[0]?.image_url || 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800'}" alt="${mountain.name}" loading="lazy">
                     ${mountain.classification ? `<span class="badge">${mountain.classification}</span>` : ''}

@@ -21,7 +21,7 @@ const peaksWithImages = peaks.map(p => {
     <p class="np-intro">Looking beyond {currentName}? These peaks are close by and worth exploring.</p>
     <div class="np-grid">
       {peaksWithImages.map(peak => (
-        <a href={`/mountain/${peak.slug}`} class="np-card">
+        <a href={`/mountain/${peak.slug}/`} class="np-card">
           <div class="np-image">
             {peak.image_url ? (
               <img src={peak.image_url} alt={peak.name} loading="lazy" />
