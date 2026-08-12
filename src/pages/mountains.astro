@@ -44,8 +44,8 @@ const rangesByNation = [
 ---
 
 <Layout
-  title="List of Mountains in the UK: Full Directory & Names"
-  description="Browse our full list of mountains in the UK, with mountain names, ranges and heights across England, Scotland and Wales. Find your peak today."
+  title="Mountains: UK Mountain Names, Heights & Complete Directory"
+  description="Browse our complete list of mountains in the UK. Find mountain names, heights and ranges across England, Scotland, Wales and Northern Ireland."
 >
   <div class="mountains-page">
     <section class="page-hero">
@@ -54,9 +54,9 @@ const rangesByNation = [
           { name: 'Home', url: '/' },
           { name: 'Mountains' }
         ]} />
-        <h1>List of Mountains in the UK: Names, Ranges and Heights</h1>
+        <h1>UK Mountains: Complete List of Mountain Names and Heights</h1>
         <p class="hero-description">
-          Scafell Pike (978m) is the <strong>highest mountain in England</strong>, Snowdon/Yr Wyddfa (1,085m) is the <strong>highest in Wales</strong>, and <strong>Ben Nevis</strong> (1,345m) is the <strong>highest mountain in the UK</strong> — and in this list you'll find all three plus every other major summit across Scotland, Wales, England and Northern Ireland, filterable by height, region and classification. Whether you're working through the Munros, Corbetts, Wainwrights or Marilyns, or just looking for a hillwalk near you, use the filters below to narrow the list.
+          This directory lists every major mountain in the UK — from Ben Nevis (1,345m) to Scafell Pike (978m) — with mountain names, heights, ranges and classifications you can filter by region, height or difficulty. Whether you're working through the Munros, searching for a mountain near you, or browsing peaks in England, use the filters below to find your next climb.
         </p>
         <SearchBar mountainNames={allMountainNames} mountainSlugs={allMountainSlugs} />
       </div>
@@ -67,76 +67,36 @@ const rangesByNation = [
         <AuthorByline lastUpdated="July 2025" />
 
         <div class="how-organised">
-          <h2>The Three Highest Mountains in the UK by Height</h2>
+          <h2>How Mountains Are Classified in the UK</h2>
           <p>
-            The <strong>three highest mountains in the UK</strong> are all in the Scottish Highlands, and the gap between first and second is wider than many people realise. <strong>Ben Nevis</strong> at 1,345m dominates the ranking by a full 36m over Ben Macdui.
+            We track every named summit that meets a recognised classification threshold — from the 282 <strong>Munros</strong> of the Scottish Highlands to the <strong>Wainwrights</strong> of the Lake District. There is no single definition of a <strong>British mountain</strong>, but the most widely used height threshold is <strong>600 metres (1,968 feet)</strong> above sea level, the cutoff the Ordnance Survey uses to separate mountains from hills. What matters to most hillwalkers, though, is <strong>prominence</strong> — how far a peak rises above the col connecting it to the next higher summit — not absolute height alone.
+          </p>
+          <p>
+            The UK's <strong>mountains</strong> fall into several overlapping classification schemes. Here is a comparison of the main systems used to categorise <strong>famous mountains in the UK</strong>:
           </p>
           <div class="table-wrapper">
             <table class="ranking-table">
               <thead>
-                <tr><th>Rank</th><th>Mountain</th><th>Range</th><th>Height</th></tr>
+                <tr><th>Classification</th><th>Region</th><th>Min Height</th><th>Min Prominence</th><th>Count</th></tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td><a href="/mountain/ben-nevis/">Ben Nevis</a></td><td>Grampian Mountains</td><td>1,345m</td></tr>
-                <tr><td>2</td><td><a href="/mountain/ben-macdui/">Ben Macdui</a></td><td>Cairngorms</td><td>1,309m</td></tr>
-                <tr><td>3</td><td><a href="/mountain/braeriach/">Braeriach</a></td><td>Cairngorms</td><td>1,296m</td></tr>
+                <tr><td><strong>Munro</strong></td><td>Scotland</td><td>3,000ft (914m)</td><td>—</td><td>282</td></tr>
+                <tr><td><strong>Corbett</strong></td><td>Scotland</td><td>2,500ft (762m)</td><td>500ft (152m)</td><td>222</td></tr>
+                <tr><td><strong>Hewitt</strong></td><td>England, Wales, Ireland</td><td>2,000ft (610m)</td><td>30m</td><td>—</td></tr>
+                <tr><td><strong>Nuttall</strong></td><td>England &amp; Wales</td><td>2,000ft (610m)</td><td>15m</td><td>—</td></tr>
+                <tr><td><strong>Marilyn</strong></td><td>Britain &amp; Ireland</td><td>—</td><td>150m</td><td>~1,556</td></tr>
+                <tr><td><strong>Wainwright</strong></td><td>Lake District</td><td>—</td><td>—</td><td>214</td></tr>
               </tbody>
             </table>
           </div>
-          <p><small>Source: Ordnance Survey</small></p>
-        </div>
-
-        <div class="how-organised">
-          <h2>Easy Mountains to Climb in the UK for Beginners</h2>
+          <p><small>Source: Ordnance Survey; classification data from the Scottish Mountaineering Club and the Hill Database.</small></p>
           <p>
-            Not every UK mountain requires scrambling experience or full winter kit. Several of the most popular <strong>mountains to climb in the UK</strong> have well-graded paths with no technical difficulty in summer conditions, making them ideal for first-timers and families.
-          </p>
-          <ul class="classification-list">
-            <li><strong><a href="/mountain/snowdon/">Snowdon/Yr Wyddfa</a></strong> (1,085m) — the Llanberis Path is a 14.5km round trip on a clear, well-maintained track with no scrambling.</li>
-            <li><strong><a href="/mountain/skiddaw/">Skiddaw</a></strong> (931m) — a straightforward 8km ascent from Keswick on a clear path.</li>
-            <li><strong><a href="/mountain/catbells/">Cat Bells</a></strong> (451m) — one of the Lake District's most popular introductory fells, with a short 5km round trip.</li>
-          </ul>
-          <p>
-            Always check the weather before setting out, even on easier peaks — conditions on the summit can be very different from the valley.
-          </p>
-        </div>
-
-        <div class="how-organised">
-          <h2>What Is a Mountain in the UK? Height &amp; Classification</h2>
-          <p>
-            There is no single universally agreed definition of a <strong>mountain in the UK</strong>. The most widely used threshold is <strong>600 metres (1,968 feet)</strong> above sea level — the height used by the Ordnance Survey to distinguish mountains from hills. However, the classification that matters to most hillwalkers depends on <strong>prominence</strong> (how far a peak rises above the col connecting it to the next higher summit), not absolute height alone.
-          </p>
-          <p>
-            This is why a relatively modest peak like Cross Fell (893m) is a significant Marilyn — its prominence is 742m, making it one of the most prominent peaks in England — while some higher summits in the Cairngorms don't qualify as Marilyns at all because they sit on a high plateau with little drop between them.
-          </p>
-          <p>
-            Mountains in the UK fall into overlapping classification schemes, not one single list:
-          </p>
-          <ul class="classification-list">
-            <li><strong>Munros</strong> — Scottish peaks over 3,000ft (914.4m). There are 282, named after Sir Hugh Munro (1891).</li>
-            <li><strong>Corbetts</strong> — Scottish peaks between 2,500–3,000ft, with at least 500ft of prominence. There are 222.</li>
-            <li><strong>Hewitts</strong> — peaks in England, Wales, and Ireland over 2,000ft with 30m of prominence.</li>
-            <li><strong>Wainwrights</strong> — the 214 Lake District fells catalogued by Alfred Wainwright.</li>
-            <li><strong>Marilyns</strong> — any British peak with 150m of prominence, regardless of absolute height. There are around 1,556.</li>
-          </ul>
-          <Fragment set:html={'<!-- IMAGE TODO: mountain-classification-thresholds-diagram.jpg — Diagram comparing Munro, Corbett, Hewitt, Wainwright and Marilyn height/prominence thresholds -->'} />
-        </div>
-
-        <div class="how-organised">
-          <h2>Ten Highest Mountains in the UK by Height</h2>
-          <p>
-            Below are the <strong>ten highest mountains in the UK</strong>, all of which are Munros in the Scottish Highlands. Click any mountain name for a full route guide, difficulty rating, parking information, and live weather links. You can also browse the <a href="/all-mountains/">complete A–Z mountain directory</a>.
+            The <strong>highest mountains in the UK</strong> are all Munros in the Scottish Highlands. <strong>Ben Nevis</strong> at 1,345m dominates the ranking by a full 36m over Ben Macdui (1,309m). Below are the ten highest <strong>peaks in the UK</strong> — click any <strong>mountain name</strong> for detailed mountain info including route guides, difficulty ratings and parking details.
           </p>
           <div class="table-wrapper">
             <table class="ranking-table">
               <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Mountain</th>
-                  <th>Height</th>
-                  <th>Range</th>
-                  <th>Nearest Town</th>
-                </tr>
+                <tr><th>Rank</th><th>Mountain</th><th>Height</th><th>Range</th><th>Nearest Town</th></tr>
               </thead>
               <tbody>
                 {topTen.map((m, i) => (
@@ -151,17 +111,13 @@ const rangesByNation = [
               </tbody>
             </table>
           </div>
-
-          <h3>Highest Mountains in England</h3>
+          <p>
+            South of the border, the highest <strong>peaks in England</strong> are concentrated in the Lake District. <strong>Scafell Pike</strong> (978m) is the highest, followed by Helvellyn (950m) and Skiddaw (931m) — all featured in our directory with full route information.
+          </p>
           <div class="table-wrapper">
             <table class="ranking-table">
               <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Mountain</th>
-                  <th>Height</th>
-                  <th>Location</th>
-                </tr>
+                <tr><th>Rank</th><th>Mountain</th><th>Height</th><th>Location</th></tr>
               </thead>
               <tbody>
                 <tr><td>1</td><td><a href="/mountain/scafell-pike/">Scafell Pike</a></td><td>978m (3,209ft)</td><td>Lake District</td></tr>
@@ -175,17 +131,29 @@ const rangesByNation = [
         </div>
 
         <div class="how-organised">
-          <h2>Mountain Ranges in England, Scotland, Wales &amp; Northern Ireland</h2>
-          {rangesByNation.map((group) => (
-            <Fragment>
-              <h3>{group.nation}</h3>
-              <ul class="classification-list">
-                {group.ranges.map((r) => (
-                  <li><strong>{r.name}</strong> — {r.desc}</li>
-                ))}
-              </ul>
-            </Fragment>
-          ))}
+          <h2>Browse UK Mountains by Region</h2>
+          <p>
+            <strong>Mountains in the</strong> UK cluster in four main areas: the Scottish Highlands, Snowdonia (Eryri) in Wales, the Lake District and Pennines in England, and the Mourne Mountains in Northern Ireland. The table below shows the major <strong>mountains areas</strong> and the <strong>famous mountains in the UK</strong> each contains — the <strong>location of mountains</strong> across Britain ranges from the remote northwest Highlands to the rolling Cheviot Hills on the Anglo-Scottish border.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Mountain Area</th><th>Nation</th><th>Key Peaks &amp; Notes</th></tr>
+              </thead>
+              <tbody>
+                {rangesByNation.flatMap((group) => group.ranges.map((r) => (
+                  <tr>
+                    <td><strong>{r.name}</strong></td>
+                    <td>{group.nation}</td>
+                    <td>{r.desc}</td>
+                  </tr>
+                )))}
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Not every <strong>mountain located</strong> in the UK requires scrambling experience. Several of the most popular <strong>peaks in the UK</strong> have well-graded paths with no technical difficulty in summer — <strong><a href="/mountain/snowdon/">Snowdon/Yr Wyddfa</a></strong> (1,085m) via the Llanberis Path, <strong><a href="/mountain/skiddaw/">Skiddaw</a></strong> (931m) from Keswick, and <strong><a href="/mountain/catbells/">Cat Bells</a></strong> (451m) in the Lake District are all suitable for first-timers and families. Looking for a <strong>mountain near me</strong>? Use the "Near Me" button in the search bar above to find the closest peaks to your current location. You can also browse the <a href="/all-mountains/">complete A–Z directory of mountain names</a>.
+          </p>
         </div>
 
         <div class="results-header">
@@ -211,10 +179,10 @@ const rangesByNation = [
         <div class="key-takeaways">
           <h3>Key Takeaways</h3>
           <ul>
-            <li>The UK's highest mountain is <strong>Ben Nevis</strong> at 1,345m; the three highest are all in the Scottish Highlands.</li>
-            <li>There are <strong>282 Munros</strong> in Scotland and none in England — the classification only applies to Scottish peaks over 3,000ft (914m).</li>
-            <li><strong>Snowdon</strong> (1,085m) is higher than <strong>Scafell Pike</strong> (978m) — Snowdon is the highest in Wales, Scafell Pike the highest in England.</li>
-            <li>UK mountains cluster in <strong>four main areas</strong>: the Scottish Highlands, Snowdonia/Eryri, the Lake District/Pennines, and the Mourne Mountains.</li>
+            <li>This directory provides a full <strong>list of mountains</strong> in the UK — every major summit with <strong>mountain names</strong>, heights, ranges and classifications.</li>
+            <li>The <strong>highest mountains in the UK</strong> are all in the Scottish Highlands, led by <strong>Ben Nevis</strong> (1,345m); the highest <strong>peaks in England</strong> are in the Lake District, led by Scafell Pike (978m).</li>
+            <li>UK mountains are classified by height and prominence: <strong>Munros</strong> (282 Scottish peaks over 3,000ft), <strong>Corbetts</strong> (222), <strong>Hewitts</strong>, <strong>Marilyns</strong> (~1,556) and <strong>Wainwrights</strong> (214 Lake District fells).</li>
+            <li>The main <strong>mountains areas</strong> are the Scottish Highlands, Snowdonia/Eryri, the Lake District/Pennines, and the Mourne Mountains — use the filters above to find a <strong>mountain near me</strong> or browse by region.</li>
           </ul>
         </div>
         <div class="faq-container">
