@@ -9,14 +9,16 @@
     "longitude": -5.003508,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Ben Nevis is the highest mountain in the British Isles, standing at 1,345 meters above sea level. Located in the Scottish Highlands near Fort William, it attracts over 150,000 walkers annually.",
+    "description": "Ben Nevis mountain is 1,345 metres (4,413 feet) tall — the highest mountain in the UK and the British Isles. Located in Lochaber, Highland, Scotland near Fort William, it attracts 130,000–150,000 walkers each year and is the most climbed peak in the country.",
     "history": "The first recorded ascent was in 1771 by botanist James Robertson. The mountain's name comes from the Gaelic \"Beinn Nibheis\" meaning \"malicious mountain\" or \"mountain with its head in the clouds\". A meteorological observatory operated on the summit from 1883 to 1904.",
     "fun_facts": [
-      "Ben Nevis is the highest mountain in the British Isles",
-      "The summit plateau is the collapsed dome of an ancient volcano",
-      "Snow can remain on the mountain year-round",
-      "The famous Ben Nevis Race has been held since 1895",
-      "The first car was driven to the summit in 1911"
+      "Ben Nevis is the highest mountain in the UK and the British Isles at 1,345 metres",
+      "The summit plateau is the collapsed dome of an ancient volcano — Ben Nevis is a volcanic mountain",
+      "Snow can remain on the mountain year-round in sheltered gullies on the north face",
+      "The Ben Nevis Race has been held annually since 1895 — the record is under 1 hour 25 minutes",
+      "The first car was driven to the summit in 1911, a Model Ford that took three days",
+      "The summit hosted a continuously staffed weather observatory from 1883 to 1904 — its ruins remain today",
+      "Ben Nevis is classified as both a Munro and a Marilyn, reflecting its height and prominence"
     ],
     "nearby_places": [
       "Fort William (7 miles)",
@@ -61,11 +63,35 @@
       "braeriach",
       "carn-mor-dearg"
     ],
-    "walking_guide": "The standard Mountain Track (also called the Pony Track or Tourist Route) is the most popular path to the summit of Ben Nevis, the highest mountain in the UK. It begins at the Glen Nevis visitor centre car park (PH33 6ST) and follows a clear stone path up the western slopes, passing the Halfway Lochan and the old observatory ruins before reaching the 1,345m summit cairn. The round trip is approximately 17 km and takes 5-7 hours for fit walkers. The path is well-built but relentless - roughly 1,300m of ascent over 6.5 km each way. In summer the track is straightforward underfoot, but the summit plateau is notoriously featureless and dangerous in poor visibility: always carry a map and compass, and know how to take a bearing. The alternative CMD Arete route approaches from the north-east via the Carn Mor Dearg ridge and is one of the finest moderate scrambles in Scotland - grade 2-3 in summer conditions, but a serious winter climb from November to March. For the full experience, acclimatise in Glen Nevis the day before, start early to avoid afternoon clouds on the summit, and check the Met Office mountain forecast before setting out.",
+    "walking_guide": "The Ben Nevis Mountain Track (also called the Pony Track or Tourist Path) is the route most visitors take to the summit of Ben Nevis, the highest mountain in the UK. It begins at the Glen Nevis visitor centre car park (postcode PH33 6ST) and follows a clear stone path up the western slopes, passing the Halfway Lochan and the old observatory ruins before reaching the 1,345m summit cairn. The round trip is approximately 10.5 miles (17km) with roughly 1,345m of elevation gain, and takes 7–9 hours for a fit walker. The path is well-built but relentless — about 1,300m of ascent over 6.5km each way. In summer the Ben Nevis Mountain Track is straightforward underfoot, but the summit plateau is notoriously featureless and dangerous in poor visibility: always carry a map and compass, and know how to take a bearing. OS Explorer 392 (Ben Nevis & Fort William) is the recommended Ben Nevis route map. The alternative CMD Arete route approaches from the north-east via the Carn Mor Dearg ridge and is one of the finest moderate scrambles in Scotland — grade 2-3 in summer conditions, but a serious winter climb from November to March. For the full experience, acclimatise in Glen Nevis the day before, start early to avoid afternoon clouds on the summit, and check the Met Office mountain forecast before setting out. A Ben Nevis tourist path map is available at the visitor centre.",
     "faqs": [
+      {
+        "question": "How high is Ben Nevis in metres?",
+        "answer": "Ben Nevis is 1,345 metres (4,413 feet) above sea level, according to Ordnance Survey data confirmed in 2016. This makes it the highest mountain in the UK, Scotland, and the British Isles."
+      },
       {
         "question": "What is the exact Ben Nevis height in feet?",
         "answer": "Ben Nevis stands at 4,413 feet (1,345 metres) above sea level, making it the highest point in the UK and the British Isles."
+      },
+      {
+        "question": "Is Ben Nevis a mountain?",
+        "answer": "Yes, Ben Nevis is a mountain. At 1,345m it far exceeds the 600m (2,000ft) threshold used to distinguish mountains from hills in the UK. It is classified as a Munro (Scottish peak over 3,000ft/914m) and a Marilyn (150m+ prominence)."
+      },
+      {
+        "question": "What country is Ben Nevis in?",
+        "answer": "Ben Nevis is in Scotland, within the United Kingdom. It is located in Lochaber, Highland, near the town of Fort William."
+      },
+      {
+        "question": "What mountain range is Ben Nevis in?",
+        "answer": "Ben Nevis is part of the Grampian Mountains, the largest mountain range in Scotland. The Grampians stretch from the southwest Highlands through the central Highlands to the Cairngorms in the east."
+      },
+      {
+        "question": "What type of mountain is Ben Nevis?",
+        "answer": "Ben Nevis is a volcanic mountain — the summit sits on the collapsed dome of an ancient Devonian volcano. The dramatic north face cliffs are the eroded remains of the volcanic structure, making it geologically distinct from folded sedimentary mountains."
+      },
+      {
+        "question": "Where is Ben Nevis?",
+        "answer": "Ben Nevis is in Lochaber, Highland, Scotland, close to Fort William. The OS grid reference is NN 166 712, and the parking postcode for the Glen Nevis visitor centre is PH33 6ST."
       },
       {
         "question": "Is Ben Nevis the highest mountain in the whole UK, or just Scotland?",
@@ -81,35 +107,59 @@
       },
       {
         "question": "How long does it take to climb Ben Nevis?",
-        "answer": "The standard Mountain Track takes 5–7 hours for a fit walker to complete the round trip of roughly 17 km. Start early to avoid afternoon cloud and crowds."
+        "answer": "The Ben Nevis Mountain Track takes 7–9 hours for a fit walker to complete the round trip of roughly 10.5 miles (17km) with 1,345m of elevation gain. Start early to avoid afternoon cloud and crowds."
       },
       {
         "question": "When is the best time to climb Ben Nevis?",
         "answer": "May to September offers the most stable conditions, longest daylight, and snow-free paths on the standard Mountain Track. From November to March, Ben Nevis is a genuine winter mountaineering objective requiring ice axe, crampons, and winter skills."
+      },
+      {
+        "question": "What is the Ben Nevis postcode for parking?",
+        "answer": "The postcode for the Glen Nevis visitor centre car park, the starting point for the Ben Nevis Mountain Track, is PH33 6ST. Arrive early on weekends as the car park fills quickly."
       }
     ],
-    "seo_title": "Ben Nevis Height: How Tall Is the UK's Highest Peak?",
-    "seo_description": "Ben Nevis height is 1,345m, the UK's tallest mountain. Compare it to Ben Wyvis and other Munros, plus routes and facts. Explore Ben Nevis now.",
-    "seo_h1": "Ben Nevis Height: Facts About the UK's Highest Mountain",
+    "seo_title": "Ben Nevis Mountain: Height, Routes & Complete Guide",
+    "seo_description": "Ben Nevis mountain is the UK's highest peak at 1,345m (4,413ft). How high is Ben Nevis in metres? Discover its routes, maps, and climbing facts.",
+    "seo_h1": "Ben Nevis Mountain: The UK's Highest Peak",
     "seo_key_takeaways": [
-      "<strong>Ben Nevis height</strong> is 1,345m (4,413 ft) — the highest point in the UK and the whole of the British Isles.",
-      "It sits in the <strong>Grampian Mountains</strong> near Fort William, Scotland.",
-      "It's often confused in search results with <strong>Ben Wyvis</strong>, a separate, much lower Munro in Easter Ross — the two are compared below.",
-      "First ascended in 1771; today it's climbed by an estimated 150,000+ people a year."
+      "<strong>Ben Nevis mountain</strong> is 1,345 metres (4,413 feet) high — the highest mountain in the UK, Scotland, and the British Isles. <em>[Source: Ordnance Survey]</em>",
+      "It sits in the <strong>Grampian Mountains</strong> near Fort William in Lochaber, Highland, Scotland — postcode <strong>PH33 6ST</strong> for the Glen Nevis car park.",
+      "The <strong>Ben Nevis Mountain Track</strong> (also called the Pony Track or Tourist Path) is the standard route: ~17km round trip, 7–9 hours, roughly 1,345m of <strong>elevation gain</strong>.",
+      "It forms part of the <strong>National Three Peaks Challenge</strong> alongside Snowdon (1,085m) and Scafell Pike (978m), and is 36m taller than the UK's second-highest peak, Ben Macdui (1,309m)."
     ],
-    "about_extra": "Ben Nevis draws over 150,000 walkers a year, more than any other Scottish mountain, which makes route choice and timing more important here than on quieter peaks — the Mountain Track can be genuinely congested on a clear summer weekend. In practice, the busiest window is 10am–2pm on the lower half of the Mountain Track; setting off before 8am avoids most of the crowding and gives more daylight buffer for the descent.\n\nUnderestimating the summit plateau in poor visibility is a common mistake — the flat, featureless top has claimed lives from walkers who wandered off-path near Five Finger Gully in cloud. Even on the \"Moderate\" tourist route, a map, compass (or reliable GPS), and the confidence to use them are not optional extras.\n\nBen Nevis is sometimes confused with Ben Wyvis, a separate 1,046m mountain in the northern Highlands near Dingwall. The two are entirely different peaks — Ben Wyvis is a Corbett roughly 40 miles north-east of Fort William, while Ben Nevis is the UK's highest summit at 1,345m in Lochaber. If you're planning a trip, make sure your map, accommodation and route guide refer to the right one.",
-    "about_image_todo": "<!-- IMAGE TODO: ben-nevis-mountain-track-route.jpg — Hikers on the Ben Nevis Mountain Track, the most popular route up the UK's highest mountain -->",
+    "about_extra": "Ben Nevis mountain draws over 150,000 walkers a year, more than any other Scottish mountain, which makes route choice and timing more important here than on quieter peaks — the Ben Nevis Mountain Track can be genuinely congested on a clear summer weekend. In practice, the busiest window is 10am–2pm on the lower half of the Mountain Track; setting off before 8am avoids most of the crowding and gives more daylight buffer for the descent.\n\nUnderestimating the summit plateau in poor visibility is a common mistake — the flat, featureless top has claimed lives from walkers who wandered off-path near Five Finger Gully in cloud. Even on the \"Moderate\" tourist route, a map, compass (or reliable GPS), and the confidence to use them are not optional extras.\n\nWhat type of mountain is Ben Nevis? Geologically, the summit sits on the collapsed dome of an ancient Devonian volcano. The dramatic north face cliffs — up to 600m high — are the eroded remains of that volcanic structure, making Ben Nevis a volcanic mountain rather than a folded sedimentary peak. This geology also explains why the north face is one of the most important winter climbing venues in the UK, with classic routes like Point Five Gully and Zero Gully attracting climbers from across the world.\n\nBen Nevis is sometimes confused with Ben Wyvis, a separate 1,046m mountain in the northern Highlands near Dingwall. The two are entirely different peaks — Ben Wyvis is a Corbett roughly 40 miles north-east of Fort William, while mountain Ben Nevis is the UK's highest summit at 1,345m in Lochaber. If you're planning a trip, make sure your map, accommodation and route guide refer to the right one.",
+    "about_image_todo": "<!-- IMAGE TODO: ben-nevis-mountain-track-route.jpg — Hikers on the Ben Nevis Mountain Track, the most popular route up the UK's highest mountain. ALT text: Ben Nevis Mountain Track path looking up towards the summit -->",
     "extra_sections": [
       {
+        "title": "How High Is Ben Nevis in Metres and Feet?",
+        "body": "Ben Nevis is 1,345 metres (4,413 feet) above sea level, according to Ordnance Survey data confirmed in 2016. This makes it the highest mountain in Scotland, the UK, and the British Isles. In Ben Nevis metres, the figure is 1,345m; in feet, 4,413ft — roughly 260m taller than Snowdon, the tallest peak in Wales.\n\nTo put that in context, here is how Ben Nevis compares to the other two mountains in the National Three Peaks Challenge:\n\n<table style=\"width:100%;border-collapse:collapse;margin:1em 0;font-size:0.95rem\"><thead><tr style=\"background:#f5f5f5\"><th style=\"padding:8px 12px;text-align:left;border:1px solid #ddd\">Peak</th><th style=\"padding:8px 12px;text-align:left;border:1px solid #ddd\">Country</th><th style=\"padding:8px 12px;text-align:left;border:1px solid #ddd\">Height (metres)</th><th style=\"padding:8px 12px;text-align:left;border:1px solid #ddd\">Height (feet)</th></tr></thead><tbody><tr><td style=\"padding:8px 12px;border:1px solid #ddd\"><strong>Ben Nevis</strong></td><td style=\"padding:8px 12px;border:1px solid #ddd\">Scotland</td><td style=\"padding:8px 12px;border:1px solid #ddd\">1,345m</td><td style=\"padding:8px 12px;border:1px solid #ddd\">4,413ft</td></tr><tr><td style=\"padding:8px 12px;border:1px solid #ddd\">Snowdon / Yr Wyddfa</td><td style=\"padding:8px 12px;border:1px solid #ddd\">Wales</td><td style=\"padding:8px 12px;border:1px solid #ddd\">1,085m</td><td style=\"padding:8px 12px;border:1px solid #ddd\">3,560ft</td></tr><tr><td style=\"padding:8px 12px;border:1px solid #ddd\">Scafell Pike</td><td style=\"padding:8px 12px;border:1px solid #ddd\">England</td><td style=\"padding:8px 12px;border:1px solid #ddd\">978m</td><td style=\"padding:8px 12px;border:1px solid #ddd\">3,209ft</td></tr></tbody></table>\n\nBen Nevis is 36m taller than the UK's second-highest peak, Ben Macdui (1,309m) in the Cairngorms. The Ben Nevis elevation gain on the standard Mountain Track is roughly 1,345m — you climb the full height of the mountain from the Glen Nevis car park to the summit. <em>[Source: Ordnance Survey]</em>\n\n<!-- IMAGE TODO: ben-nevis-height-comparison.jpg — Bar chart comparing Ben Nevis, Snowdon and Scafell Pike heights. ALT text: Ben Nevis metres compared to the other UK Three Peaks -->"
+      },
+      {
+        "title": "Where Is Ben Nevis?",
+        "body": "Ben Nevis is in Lochaber, Highland, Scotland, close to the town of Fort William. What country is Ben Nevis in? It is in Scotland, within the United Kingdom. The mountain sits at the western end of the Grampian Mountains, overlooking Glen Nevis to the south and Loch Eil to the north.\n\nThe OS grid reference for the summit is NN 166 712. The nearest town is Fort William, roughly 5 miles from the summit, which serves as the main base for walkers climbing Ben Nevis. Fort William has a railway station, bus connections, and a full range of accommodation. The parking postcode for the Glen Nevis visitor centre car park is PH33 6ST.\n\nBen Nevis is within the Lochaber Geopark, a UNESCO-recognised area of outstanding geological interest. The mountain's dramatic north face — with cliffs up to 600m high — is visible from Fort William and is one of the most iconic mountain landscapes in Scotland."
+      },
+      {
+        "title": "What Mountain Range Is Ben Nevis In?",
+        "body": "Ben Nevis is part of the Grampian Mountains, the largest mountain range in Scotland. The Grampians stretch from the southwest Highlands through the central Highlands to the Cairngorms in the east, and include most of Scotland's highest peaks.\n\nThe Ben Nevis range of mountains specifically refers to a small cluster of peaks around Ben Nevis itself, including Carn Mor Dearg (1,220m), Carn Dearg Meadhonach (1,181m), and Aonach Beag (1,234m). These peaks form a horseshoe ridge around the north face of Ben Nevis, and the CMD Arete route connecting Carn Mor Dearg to Ben Nevis is widely regarded as one of the finest ridge walks in the UK.\n\nSo if you're asking which mountain range Ben Nevis is in, the answer is the Grampian Mountains — a broad range that also encompasses the Cairngorms, where Ben Macdui (1,309m) and Braeriach (1,296m), the UK's second and third highest peaks, are found.\n\n<!-- IMAGE TODO: ben-nevis-grampian-mountains-map.jpg — Map showing Ben Nevis within the Grampian Mountains range. ALT text: Ben Nevis range of mountains within the Grampian Mountains, Scotland -->"
+      },
+      {
+        "title": "Ben Nevis Routes and Track Map",
+        "body": "There are two main Ben Nevis hiking routes that walkers use to reach the summit:\n\n<strong>1. The Ben Nevis Mountain Track (Pony Track / Tourist Path)</strong> — the standard route for most walkers. It starts at the Glen Nevis visitor centre car park (postcode PH33 6ST), follows a well-built stone path up the western side of the mountain, and reaches the summit via the Halfway Lochan and the old observatory ruins. The round trip is about 10.5 miles (17km) with 1,345m of elevation gain, taking 7–9 hours for a fit walker. A Ben Nevis tourist path map is available at the visitor centre, and OS Explorer 392 covers the route in detail.\n\n<strong>2. The CMD Arete (Carn Mor Dearg Arete)</strong> — a spectacular ridge walk approaching Ben Nevis from the north-east. It begins from the North Face car park, ascends Carn Mor Dearg (1,220m), and follows a narrow rocky arete to the summit of Ben Nevis. This route is longer and more exposed, requiring scrambling skills and a head for heights. It is one of the finest moderate mountain routes in Scotland.\n\nFor a Ben Nevis routes map, we recommend carrying OS Explorer 392 (Ben Nevis & Fort William) or Harvey's Ben Nevis Superwalker map. Both show the Mountain Track, CMD Arete, and the surrounding peaks in clear detail. Always check the Met Office mountain forecast before setting out, and carry a Ben Nevis route map even on clear days — the summit plateau is notoriously featureless in cloud.\n\n<!-- IMAGE TODO: ben-nevis-routes-map.jpg — Route map showing the Mountain Track and CMD Arete on Ben Nevis. ALT text: Ben Nevis routes map showing the Mountain Track and CMD Arete path -->"
+      },
+      {
+        "title": "Is Ben Nevis a Mountain?",
+        "body": "Yes — Ben Nevis is unquestionably a mountain. At 1,345m (4,413ft) it far exceeds the 600m (2,000ft) threshold commonly used to distinguish mountains from hills in the UK, and it is classified as both a Munro (a Scottish peak over 3,000ft / 914m) and a Marilyn (a peak with 150m+ of topographic prominence).\n\nWhat type of mountain is Ben Nevis? Geologically, Ben Nevis is the remains of an ancient volcano. The summit sits on the collapsed inner dome of a Devonian volcanic centre, and the dramatic north face cliffs are the eroded remains of the volcanic structure. This makes Ben Nevis a volcanic mountain, distinct from the folded sedimentary mountains found in parts of the Lake District and Wales.\n\nThe mountain is named from the Gaelic \"Beinn Nibheis\", often translated as \"malicious mountain\" or \"mountain with its head in the clouds\" — a fitting description given how frequently the summit is shrouded in mist."
+      },
+      {
         "title": "Best Time to Climb Ben Nevis, Month by Month",
-        "body": "**May–September:** most stable window, longest daylight, both routes at their stated grade without winter skills required.\n\n**October & April:** shoulder season — expect some snow on the summit plateau even in a mild year; check current conditions before relying on the standard grade.\n\n**November–March:** a genuine winter mountaineering objective. The CMD Arête in particular becomes a Grade I/II winter climb requiring ice axe, crampons, and the experience to use them."
+        "body": "<strong>May–September:</strong> most stable window, longest daylight, both routes at their stated grade without winter skills required.\n\n<strong>October & April:</strong> shoulder season — expect some snow on the summit plateau even in a mild year; check current conditions before relying on the standard grade.\n\n<strong>November–March:</strong> a genuine winter mountaineering objective. The CMD Arete in particular becomes a Grade I/II winter climb requiring ice axe, crampons, and the experience to use them."
       },
       {
         "title": "Ben Nevis vs. Ben Wyvis — Quick Clarification",
         "body": "Ben Nevis and Ben Wyvis are two entirely different mountains. Ben Nevis (1,345m) is the UK's highest peak, near Fort William in the Lochaber Geopark. Ben Wyvis (1,046m) is a separate Munro roughly 70 miles north, near Dingwall in Easter Ross, known for its long whaleback ridge rather than any connection to Ben Nevis."
       }
     ],
-    "routes_image_todo": null
+    "routes_image_todo": "<!-- IMAGE TODO: ben-nevis-routes-map.jpg — Route map showing the Ben Nevis Mountain Track and CMD Arete. ALT text: Ben Nevis routes map showing the Mountain Track and CMD Arete path -->"
   },
   {
     "id": "cb6185e5-525a-444d-a6fd-2cce7590abf2",
