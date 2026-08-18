@@ -1,0 +1,429 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorByline from '../../components/AuthorByline.astro';
+import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
+import { getAllWoodlandWalks, type WoodlandWalk } from '../../lib/entity-data';
+
+const walks: WoodlandWalk[] = getAllWoodlandWalks();
+const walksJson = JSON.stringify(walks.map(w => ({
+  slug: w.slug,
+  name: w.name,
+  region: w.region,
+  nation: w.nation,
+  woodland_type: w.woodland_type,
+  difficulty: w.difficulty,
+  description: w.description,
+})));
+
+const regions = [...new Set(walks.map(w => w.nation))].sort();
+const woodlandTypes = [...new Set(walks.map(w => w.woodland_type))].sort();
+const difficulties = [...new Set(walks.map(w => w.difficulty))].sort();
+---
+
+<Layout
+  title="Woodland Walks: UK Woods & Forest Walks Directory"
+  description="Browse our complete list of UK woodland walks. Find woods and forests by region, woodland type and difficulty across England, Scotland, Wales and Northern Ireland."
+>
+  <div class="nr-page">
+    <section class="page-hero">
+      <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Woodland Walks' }
+        ]} />
+        <h1>UK Woodland Walks: Complete List of Woods and Forests</h1>
+        <p class="hero-description">
+          This directory lists {walks.length} of the finest <strong>woodland walks</strong> in the UK — from ancient semi-natural woods in the New Forest to community forests in Yorkshire. Whether you're searching for <strong>woodland walks near me</strong> or planning a day out exploring <strong>ancient woodland walks</strong>, browse by region, woodland type or difficulty below.
+        </p>
+      </div>
+    </section>
+
+    <section class="nr-section">
+      <div class="container">
+        <AuthorByline lastUpdated="August 2026" />
+
+        <div class="how-organised">
+          <h2>Types of Woodland in the UK</h2>
+          <p>
+            The UK's woodlands are a rich mosaic of <strong>ancient</strong>, <strong>broadleaf</strong>, <strong>plantation</strong> and <strong>community</strong> forests, each with distinct ecological character and walking experiences. Understanding the differences helps you choose the right woodland walk — whether you're seeking rare ground flora in an ancient wood or wide, family-friendly trails in a community forest.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Woodland Type</th><th>Characteristics</th><th>Best For</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Ancient Woodland</strong></td><td>Continuously wooded since at least 1600 AD; rich ground flora (bluebells, wood anemone); complex ecosystem</td><td>Wildlife watching, seasonal flowers, photography</td></tr>
+                <tr><td><strong>Broadleaf Woodland</strong></td><td>Deciduous trees (oak, beech, birch); seasonal canopy changes; diverse understorey</td><td>Autumn colour, family walks, birdwatching</td></tr>
+                <tr><td><strong>Plantation Forest</strong></td><td>Managed conifer or mixed woodland; waymarked trails; often Forestry England/Scotland managed</td><td>Longer walks, cycling, accessible trails</td></tr>
+                <tr><td><strong>Community Woodland</strong></td><td>Newly planted or restored woodland; community-managed; dog-friendly; educational trails</td><td>Dog walking, family outings, short walks</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><small>Source: Forestry England, Woodland Trust, Natural Resources Wales. [VERIFY: confirm woodland type definitions]</small></p>
+        </div>
+
+        <div class="how-organised">
+          <h2>Browse UK Woodland Walks by Region</h2>
+          <p>
+            <strong>Woodland walks</strong> in the UK span every nation — from ancient woods in Hampshire and Wiltshire to community forests in Yorkshire and native woods in Northern Ireland. Use the filters below to find woods near you, or browse the full directory of {walks.length} woodland walks further down this page.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Nation</th><th>Number of Woodland Walks</th><th>Key Woodland Types</th></tr>
+              </thead>
+              <tbody>
+                {regions.map(nation => {
+                  const count = walks.filter(w => w.nation === nation).length;
+                  const typeList = [...new Set(walks.filter(w => w.nation === nation).map(w => w.woodland_type))].slice(0, 3).join(', ');
+                  return (
+                    <tr>
+                      <td><strong>{nation}</strong></td>
+                      <td>{count}</td>
+                      <td>{typeList}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="filter-bar" role="region" aria-label="Filter woodland walks">
+          <div class="filter-group">
+            <label for="ww-region-filter" class="filter-label">Region</label>
+            <select id="ww-region-filter" class="filter-select region-filter" aria-label="Filter by region">
+              <option value="all">All Regions</option>
+              {regions.map(r => <option value={r}>{r}</option>)}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="ww-woodland-filter" class="filter-label">Woodland Type</label>
+            <select id="ww-woodland-filter" class="filter-select woodland-filter" aria-label="Filter by woodland type">
+              <option value="all">All Woodland Types</option>
+              {woodlandTypes.map(t => <option value={t}>{t}</option>)}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="ww-difficulty-filter" class="filter-label">Difficulty</label>
+            <select id="ww-difficulty-filter" class="filter-select difficulty-filter" aria-label="Filter by difficulty">
+              <option value="all">All Difficulties</option>
+              {difficulties.map(d => <option value={d}>{d}</option>)}
+            </select>
+          </div>
+          <button id="ww-near-me" class="btn btn-near-me" aria-label="Find woodland walks near me">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Near Me
+          </button>
+        </div>
+
+        <div class="results-header">
+          <p id="ww-results-count" class="results-count">Showing {walks.length} woodland walks</p>
+        </div>
+
+        <div id="ww-grid" class="entity-grid">
+          {walks.map((walk) => (
+            <a href={`/woodland-walks/${walk.slug}/`} class="entity-card">
+              <div class="card-image">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt={`${walk.name} - ${walk.region}`} loading="lazy" />
+                <span class="badge">{walk.woodland_type}</span>
+              </div>
+              <div class="card-content">
+                <h3>{walk.name}</h3>
+                <div class="card-meta">
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    {walk.region}
+                  </span>
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                    {walk.difficulty}
+                  </span>
+                </div>
+                <p class="card-description">{walk.description.substring(0, 120)}{walk.description.length > 120 ? '...' : ''}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div id="ww-loading" class="loading-state" style="display: none;">
+          <div class="spinner"></div>
+          <p>Loading woodland walks...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="key-takeaways">
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>This directory lists {walks.length} <strong>woodland walks</strong> across the UK, covering ancient woods, broadleaf forests, plantations and community woodlands.</li>
+            <li>UK woodlands are managed by organisations including the Woodland Trust, Forestry England, Forestry and Land Scotland, Natural Resources Wales and local wildlife trusts.</li>
+            <li>Use the filters above to find <strong>woodland walks near me</strong> by region, woodland type or difficulty.</li>
+            <li>Ancient woodlands are irreplaceable habitats — over 500 sites remain in the UK, dating back to at least 1600 AD.</li>
+          </ul>
+        </div>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>What is a woodland walk?</summary>
+            <p>A woodland walk is a walking route through a wooded area — whether ancient semi-natural woodland, broadleaf forest, conifer plantation or community woodland. The UK has thousands of woods open to the public, offering waymarked trails, wildlife watching and seasonal displays like bluebells and autumn colour.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How many woodland walks are there in the UK?</summary>
+            <p>The UK has around 1.4 million hectares of woodland, covering roughly 13% of the land area. Our directory features {walks.length} of the best woodland walks across England, Wales and Northern Ireland. [VERIFY: confirm total woodland coverage statistics]</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are woodland walks free to visit?</summary>
+            <p>Most woodland walks in the UK are free to visit. Woods managed by the Woodland Trust and Forestry England are typically free and open year-round. Some private estates and country parks may charge for parking. Always check before visiting.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I take my dog on a woodland walk?</summary>
+            <p>Dog policies vary by woodland. Many woods welcome dogs on leads, especially community woodlands and Forestry England sites. Ancient woodlands may have restrictions during ground-nesting bird season (March–August). Always check the specific woodland's dog policy before visiting.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the difference between ancient woodland and plantation forest?</summary>
+            <p>Ancient woodland has been continuously wooded since at least 1600 AD and supports rare ground flora and complex ecosystems that cannot be recreated. Plantation forests are managed woodlands, often conifer-dominated, planted for timber production but increasingly managed for recreation and biodiversity.</p>
+          </details>
+          <details class="faq-item">
+            <summary>When is the best time to go on a woodland walk?</summary>
+            <p>Spring (April–May) is ideal for bluebells and wildflowers. Summer offers full canopy shade and bird activity. Autumn (September–November) brings spectacular leaf colour. Winter walks reveal woodland structure and wildlife tracks. Each season offers a different experience.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I find woodland walks near me?</summary>
+            <p>Yes — use the "Near Me" button in the filter bar above to find woodland walks closest to your location. You'll need to grant location permissions to your browser. Note: this feature requires verified coordinate data for each woodland.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring on a woodland walk?</summary>
+            <p>Essential kit includes walking boots or sturdy shoes, a waterproof jacket, an OS map or trail app, water and snacks. For longer walks in plantation forests, consider a compass. In summer, bring insect repellent. A dog lead is essential if walking with your dog.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <CrossSectionLinks />
+  </div>
+</Layout>
+
+<script is:inline define:vars={{ walksJson }}>
+  const allWalks = JSON.parse(walksJson);
+  const grid = document.getElementById('ww-grid');
+  const loading = document.getElementById('ww-loading');
+  const resultsCount = document.getElementById('ww-results-count');
+  const regionFilter = document.getElementById('ww-region-filter');
+  const woodlandFilter = document.getElementById('ww-woodland-filter');
+  const difficultyFilter = document.getElementById('ww-difficulty-filter');
+  const nearMeBtn = document.getElementById('ww-near-me');
+
+  let currentRegion = 'all';
+  let currentWoodland = 'all';
+  let currentDifficulty = 'all';
+
+  function renderCards(list) {
+    if (list.length > 0) {
+      grid.innerHTML = list.map(w => `
+        <a href="/woodland-walks/${w.slug}/" class="entity-card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt="${w.name} - ${w.region}" loading="lazy">
+            <span class="badge">${w.woodland_type}</span>
+          </div>
+          <div class="card-content">
+            <h3>${w.name}</h3>
+            <div class="card-meta">
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                ${w.region}
+              </span>
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                ${w.difficulty}
+              </span>
+            </div>
+            <p class="card-description">${w.description.substring(0, 120)}${w.description.length > 120 ? '...' : ''}</p>
+          </div>
+        </a>
+      `).join('');
+    } else {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <h3>No Woodland Walks Found</h3>
+          <p>Try adjusting your filters.</p>
+        </div>
+      `;
+    }
+    resultsCount.textContent = `Showing ${list.length} woodland walk${list.length !== 1 ? 's' : ''}`;
+  }
+
+  function applyFilters() {
+    let filtered = allWalks;
+    if (currentRegion !== 'all') filtered = filtered.filter(w => w.nation === currentRegion);
+    if (currentWoodland !== 'all') filtered = filtered.filter(w => w.woodland_type === currentWoodland);
+    if (currentDifficulty !== 'all') filtered = filtered.filter(w => w.difficulty === currentDifficulty);
+    renderCards(filtered);
+  }
+
+  regionFilter.addEventListener('change', () => { currentRegion = regionFilter.value; applyFilters(); });
+  woodlandFilter.addEventListener('change', () => { currentWoodland = woodlandFilter.value; applyFilters(); });
+  difficultyFilter.addEventListener('change', () => { currentDifficulty = difficultyFilter.value; applyFilters(); });
+
+  nearMeBtn.addEventListener('click', () => {
+    if (!('geolocation' in navigator)) { alert('Location services are not supported by your browser.'); return; }
+    nearMeBtn.disabled = true;
+    nearMeBtn.textContent = 'Finding...';
+    navigator.geolocation.getCurrentPosition(
+      () => {
+        alert('Location-based filtering requires verified coordinate data for each woodland. [VERIFY: lat/long data needed]');
+        nearMeBtn.disabled = false;
+        nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+      },
+      () => {
+        alert('Unable to access your location. Please enable location permissions.');
+        nearMeBtn.disabled = false;
+        nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+      }
+    );
+  });
+</script>
+
+<style>
+  .nr-page { background: var(--color-neutral-50); }
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  :global(.page-hero .breadcrumb-list) { justify-content: center; }
+  .page-hero h1 { color: white; font-size: 3rem; margin-bottom: var(--spacing-md); }
+  .hero-description {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nr-section { padding: var(--spacing-3xl) 0; }
+  .how-organised { margin-bottom: var(--spacing-xl); }
+  .how-organised h2 { font-size: 1.75rem; margin-bottom: var(--spacing-md); color: var(--color-neutral-900); }
+  .how-organised p { font-size: 1rem; line-height: 1.7; color: var(--color-neutral-700); margin-bottom: var(--spacing-md); }
+  .table-wrapper { overflow-x: auto; margin-bottom: var(--spacing-lg); }
+  .ranking-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .ranking-table th { text-align: left; padding: var(--spacing-sm) var(--spacing-md); background: var(--color-neutral-100); font-weight: 700; color: var(--color-neutral-900); border-bottom: 2px solid var(--color-neutral-300); }
+  .ranking-table td { padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--color-neutral-200); color: var(--color-neutral-700); }
+  .ranking-table tr:hover td { background: var(--color-neutral-50); }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+  }
+  .filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .filter-label { font-size: 0.8rem; font-weight: 600; color: var(--color-neutral-600); }
+  .filter-select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--color-neutral-800);
+    background: white;
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+  }
+  .filter-select:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; border-color: var(--color-primary); }
+  .filter-select:hover { border-color: var(--color-primary); }
+  .btn-near-me {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+  }
+  .btn-near-me:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+  .btn-near-me:disabled { opacity: 0.6; cursor: wait; }
+
+  .results-header { margin-bottom: var(--spacing-xl); }
+  .results-count { font-size: 1.125rem; color: var(--color-neutral-700); font-weight: 600; }
+
+  .entity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+  }
+  .entity-card {
+    display: block;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  .entity-card:focus { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+  .entity-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-8px); }
+  .card-image { position: relative; width: 100%; height: 220px; overflow: hidden; }
+  .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+  .entity-card:hover .card-image img { transform: scale(1.1); }
+  .badge {
+    position: absolute; top: 12px; right: 12px;
+    padding: 6px 12px; background: rgba(15,118,110,0.95); color: white;
+    border-radius: var(--radius-md); font-size: 0.75rem; font-weight: 600;
+  }
+  .card-content { padding: var(--spacing-lg); }
+  .card-content h3 { margin: 0 0 var(--spacing-sm) 0; font-size: 1.25rem; color: var(--color-neutral-900); }
+  .card-meta { display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--color-neutral-600); }
+  .meta-item svg { color: var(--color-primary); flex-shrink: 0; }
+  .card-description { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--color-neutral-600); }
+
+  .loading-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--spacing-3xl); gap: var(--spacing-md); }
+  .spinner { width: 48px; height: 48px; border: 4px solid var(--color-neutral-200); border-top-color: var(--color-primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .empty-state { grid-column: 1 / -1; text-align: center; padding: var(--spacing-3xl); }
+  .empty-state h3 { color: var(--color-neutral-700); margin-bottom: var(--spacing-sm); }
+  .empty-state p { color: var(--color-neutral-500); }
+
+  .key-takeaways { max-width: 900px; margin: 0 auto var(--spacing-2xl) auto; background: var(--color-neutral-50); border-left: 4px solid var(--color-primary); border-radius: var(--radius-md); padding: var(--spacing-xl); }
+  .key-takeaways h3 { font-size: 1.25rem; color: var(--color-neutral-900); margin: 0 0 var(--spacing-md) 0; }
+  .key-takeaways ul { margin: 0; padding-left: var(--spacing-lg); color: var(--color-neutral-700); line-height: 1.7; }
+  .key-takeaways li { margin-bottom: var(--spacing-sm); }
+
+  .faq-section { padding: var(--spacing-3xl) 0; background: white; }
+  .faq-section h2 { font-size: 2.5rem; text-align: center; margin-bottom: var(--spacing-2xl); color: var(--color-neutral-900); }
+  .faq-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--spacing-md); }
+  .faq-item { background: var(--color-neutral-50); border-radius: var(--radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); transition: all var(--transition-base); border: 1px solid var(--color-neutral-200); }
+  .faq-item:hover { box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+  .faq-item summary { font-size: 1.125rem; font-weight: 600; color: var(--color-neutral-900); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--color-primary); transition: transform var(--transition-base); }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { margin-top: var(--spacing-md); line-height: 1.6; color: var(--color-neutral-700); }
+
+  @media (max-width: 768px) {
+    .page-hero h1 { font-size: 2rem; }
+    .hero-description { font-size: 1rem; }
+    .entity-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .filter-group { width: 100%; }
+    .filter-select { width: 100%; }
+    .btn-near-me { width: 100%; justify-content: center; }
+  }
+</style>

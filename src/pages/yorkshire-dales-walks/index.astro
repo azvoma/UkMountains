@@ -1,0 +1,400 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorByline from '../../components/AuthorByline.astro';
+import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
+import { getAllYorkshireDalesWalks, type YorkshireDalesWalk } from '../../lib/entity-data';
+
+const walks = getAllYorkshireDalesWalks();
+const walksJson = JSON.stringify(walks.map((w: YorkshireDalesWalk) => ({
+  slug: w.slug,
+  name: w.name,
+  region: w.region,
+  sub_region: w.sub_region,
+  difficulty_range: w.difficulty_range,
+  description: w.description,
+})));
+
+const subRegions = [...new Set(walks.map(w => w.sub_region))].sort();
+const difficulties = [...new Set(walks.map(w => w.difficulty_range))].sort();
+---
+
+<Layout
+  title="Yorkshire Dales Walks: Best Walks in the Dales Guide"
+  description="Browse our complete guide to Yorkshire Dales walks. Find the best walks in the dales by sub-region and difficulty, from Swaledale to Wensleydale."
+>
+  <div class="nr-page">
+    <section class="page-hero">
+      <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Yorkshire Dales Walks' }
+        ]} />
+        <h1>Yorkshire Dales Walks: Best Walks in the Dales</h1>
+        <p class="hero-description">
+          This guide covers every major walking area in the Yorkshire Dales — from <strong>Swaledale</strong> in the north to <strong>Wensleydale</strong>, <strong>Wharfedale</strong> and beyond. Whether you're looking for the <strong>best walks in yorkshire dales</strong> or planning your first <strong>yorkshire dales hiking</strong> adventure, browse by sub-region and difficulty to find the perfect route.
+        </p>
+      </div>
+    </section>
+
+    <section class="nr-section">
+      <div class="container">
+        <AuthorByline lastUpdated="August 2026" />
+
+        <div class="how-organised">
+          <h2>Understanding the Yorkshire Dales</h2>
+          <p>
+            A <strong>dale</strong> is a river valley — the word comes from the Old Norse <em>dalr</em>. The <strong>Yorkshire Dales National Park</strong>, designated in 1954, protects over 1,770 square kilometres of the finest of these valleys. But not every dale in Yorkshire lies within the Park boundary, and not every walk in our guide is inside the National Park. Understanding the distinction helps you choose the right walk.
+          </p>
+          <p>
+            The table below compares what's inside vs outside the National Park boundary:
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Feature</th><th>Inside the National Park</th><th>Outside the National Park</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Sub-regions</strong></td><td>Swaledale, Wensleydale, Wharfedale, Dentdale, Airedale</td><td>Yorkshire Wolds, Vale of York, South &amp; West Yorkshire</td></tr>
+                <tr><td><strong>Landscape</strong></td><td>Limestone pavements, waterfalls, open moorland, fell tops</td><td>Rolling farmland, chalk wolds, river valleys, urban fringe</td></tr>
+                <tr><td><strong>Protected since</strong></td><td>1954 (Yorkshire Dales National Park designated)</td><td>Various — AONBs, SSSIs, or undesignated countryside</td></tr>
+                <tr><td><strong>Walking character</strong></td><td>Classic Dales fell walks, riverside paths, the Three Peaks challenge</td><td>Lower-level countryside, wolds ridgeways, riverside town walks</td></tr>
+                <tr><td><strong>Managed by</strong></td><td>Yorkshire Dales National Park Authority</td><td>Local authorities, National Trust, private landowners</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            The Yorkshire Three Peaks — Ingleborough, Whernside and Pen-y-ghent — are among the most famous walks in the Dales. See our guides to <a href="/mountain/ingleborough/">Ingleborough</a>, <a href="/mountain/whernside/">Whernside</a>, and <a href="/mountain/pen-y-ghent/">Pen-y-ghent</a>.
+          </p>
+          <p><small>Source: Yorkshire Dales National Park Authority. [VERIFY: confirm boundary details]</small></p>
+        </div>
+
+        <div class="how-organised">
+          <h2>Browse Yorkshire Dales Walks by Sub-Region</h2>
+          <p>
+            <strong>Yorkshire Dales walks</strong> span 12 sub-regions, from the high fells of Swaledale to the gentle chalk hills of the Yorkshire Wolds. Use the filters below to find walks near you, or browse the full directory of {walks.length} walks further down this page.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Sub-Region</th><th>Number of Walks</th><th>Difficulty Range</th></tr>
+              </thead>
+              <tbody>
+                {subRegions.map(sr => {
+                  const count = walks.filter(w => w.sub_region === sr).length;
+                  const diffList = [...new Set(walks.filter(w => w.sub_region === sr).map(w => w.difficulty_range))].join(', ');
+                  return (
+                    <tr>
+                      <td><strong>{sr}</strong></td>
+                      <td>{count}</td>
+                      <td>{diffList}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="filter-bar" role="region" aria-label="Filter Yorkshire Dales walks">
+          <div class="filter-group">
+            <label for="ydw-subregion-filter" class="filter-label">Sub-Region</label>
+            <select id="ydw-subregion-filter" class="filter-select subregion-filter" aria-label="Filter by sub-region">
+              <option value="all">All Sub-Regions</option>
+              {subRegions.map(sr => <option value={sr}>{sr}</option>)}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="ydw-difficulty-filter" class="filter-label">Difficulty</label>
+            <select id="ydw-difficulty-filter" class="filter-select difficulty-filter" aria-label="Filter by difficulty">
+              <option value="all">All Difficulties</option>
+              {difficulties.map(d => <option value={d}>{d}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="results-header">
+          <p id="ydw-results-count" class="results-count">Showing {walks.length} Yorkshire Dales walks</p>
+        </div>
+
+        <div id="ydw-grid" class="entity-grid">
+          {walks.map((walk) => (
+            <a href={`/yorkshire-dales-walks/${walk.slug}/`} class="entity-card">
+              <div class="card-image">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt={`${walk.name} - ${walk.sub_region}`} loading="lazy" />
+                <span class="badge">{walk.sub_region}</span>
+              </div>
+              <div class="card-content">
+                <h3>{walk.name}</h3>
+                <div class="card-meta">
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    {walk.region}
+                  </span>
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                    {walk.difficulty_range}
+                  </span>
+                </div>
+                <p class="card-description">{walk.description.substring(0, 120)}{walk.description.length > 120 ? '...' : ''}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div id="ydw-loading" class="loading-state" style="display: none;">
+          <div class="spinner"></div>
+          <p>Loading Yorkshire Dales walks...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="key-takeaways">
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>This guide covers {walks.length} <strong>Yorkshire Dales walks</strong> across {subRegions.length} sub-regions, from Swaledale in the north to the Yorkshire Wolds in the east.</li>
+            <li>Walks range from easy riverside strolls to hard fell walks — use the filters above to find walks by sub-region and difficulty.</li>
+            <li>The Yorkshire Dales National Park was designated in 1954 and covers over 1,770 sq km of limestone country.</li>
+            <li>The Yorkshire Three Peaks — Ingleborough, Whernside and Pen-y-ghent — form a famous 24-mile challenge walk.</li>
+          </ul>
+        </div>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>What are the best walks in the Yorkshire Dales?</summary>
+            <p>Popular walks include the Malham Cove circular, the Ingleborough ascent, riverside paths in Wharfedale and Wensleydale, and the Yorkshire Three Peaks challenge. Our guide covers {subRegions.length} sub-regions from Swaledale to the Yorkshire Wolds, with walks for every ability.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How difficult are walks in the Yorkshire Dales?</summary>
+            <p>The Dales offer walks for all abilities, from easy riverside strolls to hard fell walks. Most sub-regions feature a mix of easy to moderate routes, while the Three Peaks and higher fells are rated hard. Use the difficulty filter above to find walks matched to your level.</p>
+          </details>
+          <details class="faq-item">
+            <summary>When is the best time to walk in the Yorkshire Dales?</summary>
+            <p>Spring to autumn offers the best conditions, with longer daylight hours and drier paths. Winter walks can be rewarding but require full winter gear and navigation skills, as weather on the fells can change rapidly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring for a Yorkshire Dales walk?</summary>
+            <p>Essentials include sturdy hiking boots, waterproofs, an OS Explorer map and compass, walking poles for steep descents, and plenty of water and snacks. For the Three Peaks, add a headtorch and extra warm layers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are dogs allowed on Yorkshire Dales walks?</summary>
+            <p>Dog policies vary by route and landowner. Most public footpaths welcome dogs on leads, especially during ground-nesting bird season (March–August). Some National Park areas have restrictions — always check before you go. [VERIFY: confirm dog policies per route]</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the Yorkshire Three Peaks challenge?</summary>
+            <p>The Yorkshire Three Peaks is a 24-mile (39 km) challenge walk taking in Pen-y-ghent, Whernside and Ingleborough, usually completed in under 12 hours. It is one of the most popular long-distance walks in the Dales. See our guides to <a href="/mountain/ingleborough/">Ingleborough</a>, <a href="/mountain/whernside/">Whernside</a>, and <a href="/mountain/pen-y-ghent/">Pen-y-ghent</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a map for walking in the Yorkshire Dales?</summary>
+            <p>Yes. An OS Explorer map (OL2 for the Yorkshire Dales southern area, OL30 for the northern area) is essential for all but the most waymarked routes. Even on popular paths, weather can reduce visibility quickly, so always carry a map and compass and know how to use them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I park for Yorkshire Dales walks?</summary>
+            <p>Most popular trailheads have car parks or roadside parking, though some are small and fill up quickly on weekends. National Park car parks may charge a fee. Check our individual walk guides for parking details. [VERIFY: confirm parking details per route]</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <CrossSectionLinks />
+  </div>
+</Layout>
+
+<script is:inline define:vars={{ walksJson }}>
+  const allWalks = JSON.parse(walksJson);
+  const grid = document.getElementById('ydw-grid');
+  const loading = document.getElementById('ydw-loading');
+  const resultsCount = document.getElementById('ydw-results-count');
+  const subregionFilter = document.getElementById('ydw-subregion-filter');
+  const difficultyFilter = document.getElementById('ydw-difficulty-filter');
+
+  let currentSubRegion = 'all';
+  let currentDifficulty = 'all';
+
+  function renderCards(list) {
+    if (list.length > 0) {
+      grid.innerHTML = list.map(w => `
+        <a href="/yorkshire-dales-walks/${w.slug}/" class="entity-card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt="${w.name} - ${w.sub_region}" loading="lazy">
+            <span class="badge">${w.sub_region}</span>
+          </div>
+          <div class="card-content">
+            <h3>${w.name}</h3>
+            <div class="card-meta">
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                ${w.region}
+              </span>
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                ${w.difficulty_range}
+              </span>
+            </div>
+            <p class="card-description">${w.description.substring(0, 120)}${w.description.length > 120 ? '...' : ''}</p>
+          </div>
+        </a>
+      `).join('');
+    } else {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <h3>No Yorkshire Dales Walks Found</h3>
+          <p>Try adjusting your filters.</p>
+        </div>
+      `;
+    }
+    resultsCount.textContent = `Showing ${list.length} Yorkshire Dales walk${list.length !== 1 ? 's' : ''}`;
+  }
+
+  function applyFilters() {
+    let filtered = allWalks;
+    if (currentSubRegion !== 'all') filtered = filtered.filter(w => w.sub_region === currentSubRegion);
+    if (currentDifficulty !== 'all') filtered = filtered.filter(w => w.difficulty_range === currentDifficulty);
+    renderCards(filtered);
+  }
+
+  subregionFilter.addEventListener('change', () => { currentSubRegion = subregionFilter.value; applyFilters(); });
+  difficultyFilter.addEventListener('change', () => { currentDifficulty = difficultyFilter.value; applyFilters(); });
+</script>
+
+<style>
+  .nr-page { background: var(--color-neutral-50); }
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  :global(.page-hero .breadcrumb-list) { justify-content: center; }
+  .page-hero h1 { color: white; font-size: 3rem; margin-bottom: var(--spacing-md); }
+  .hero-description {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nr-section { padding: var(--spacing-3xl) 0; }
+  .how-organised { margin-bottom: var(--spacing-xl); }
+  .how-organised h2 { font-size: 1.75rem; margin-bottom: var(--spacing-md); color: var(--color-neutral-900); }
+  .how-organised p { font-size: 1rem; line-height: 1.7; color: var(--color-neutral-700); margin-bottom: var(--spacing-md); }
+  .table-wrapper { overflow-x: auto; margin-bottom: var(--spacing-lg); }
+  .ranking-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .ranking-table th { text-align: left; padding: var(--spacing-sm) var(--spacing-md); background: var(--color-neutral-100); font-weight: 700; color: var(--color-neutral-900); border-bottom: 2px solid var(--color-neutral-300); }
+  .ranking-table td { padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--color-neutral-200); color: var(--color-neutral-700); }
+  .ranking-table tr:hover td { background: var(--color-neutral-50); }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+  }
+  .filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .filter-label { font-size: 0.8rem; font-weight: 600; color: var(--color-neutral-600); }
+  .filter-select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--color-neutral-800);
+    background: white;
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+  }
+  .filter-select:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; border-color: var(--color-primary); }
+  .filter-select:hover { border-color: var(--color-primary); }
+  .btn-near-me {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+  }
+  .btn-near-me:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+  .btn-near-me:disabled { opacity: 0.6; cursor: wait; }
+
+  .results-header { margin-bottom: var(--spacing-xl); }
+  .results-count { font-size: 1.125rem; color: var(--color-neutral-700); font-weight: 600; }
+
+  .entity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+  }
+  .entity-card {
+    display: block;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  .entity-card:focus { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+  .entity-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-8px); }
+  .card-image { position: relative; width: 100%; height: 220px; overflow: hidden; }
+  .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+  .entity-card:hover .card-image img { transform: scale(1.1); }
+  .badge {
+    position: absolute; top: 12px; right: 12px;
+    padding: 6px 12px; background: rgba(15,118,110,0.95); color: white;
+    border-radius: var(--radius-md); font-size: 0.75rem; font-weight: 600;
+  }
+  .card-content { padding: var(--spacing-lg); }
+  .card-content h3 { margin: 0 0 var(--spacing-sm) 0; font-size: 1.25rem; color: var(--color-neutral-900); }
+  .card-meta { display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--color-neutral-600); }
+  .meta-item svg { color: var(--color-primary); flex-shrink: 0; }
+  .card-description { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--color-neutral-600); }
+
+  .loading-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--spacing-3xl); gap: var(--spacing-md); }
+  .spinner { width: 48px; height: 48px; border: 4px solid var(--color-neutral-200); border-top-color: var(--color-primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .empty-state { grid-column: 1 / -1; text-align: center; padding: var(--spacing-3xl); }
+  .empty-state h3 { color: var(--color-neutral-700); margin-bottom: var(--spacing-sm); }
+  .empty-state p { color: var(--color-neutral-500); }
+
+  .key-takeaways { max-width: 900px; margin: 0 auto var(--spacing-2xl) auto; background: var(--color-neutral-50); border-left: 4px solid var(--color-primary); border-radius: var(--radius-md); padding: var(--spacing-xl); }
+  .key-takeaways h3 { font-size: 1.25rem; color: var(--color-neutral-900); margin: 0 0 var(--spacing-md) 0; }
+  .key-takeaways ul { margin: 0; padding-left: var(--spacing-lg); color: var(--color-neutral-700); line-height: 1.7; }
+  .key-takeaways li { margin-bottom: var(--spacing-sm); }
+
+  .faq-section { padding: var(--spacing-3xl) 0; background: white; }
+  .faq-section h2 { font-size: 2.5rem; text-align: center; margin-bottom: var(--spacing-2xl); color: var(--color-neutral-900); }
+  .faq-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--spacing-md); }
+  .faq-item { background: var(--color-neutral-50); border-radius: var(--radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); transition: all var(--transition-base); border: 1px solid var(--color-neutral-200); }
+  .faq-item:hover { box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+  .faq-item summary { font-size: 1.125rem; font-weight: 600; color: var(--color-neutral-900); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--color-primary); transition: transform var(--transition-base); }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { margin-top: var(--spacing-md); line-height: 1.6; color: var(--color-neutral-700); }
+
+  @media (max-width: 768px) {
+    .page-hero h1 { font-size: 2rem; }
+    .hero-description { font-size: 1rem; }
+    .entity-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .filter-group { width: 100%; }
+    .filter-select { width: 100%; }
+    .btn-near-me { width: 100%; justify-content: center; }
+  }
+</style>

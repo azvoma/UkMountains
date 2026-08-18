@@ -4,10 +4,13 @@ import SearchBar from '../components/SearchBar.astro';
 import MountainCard from '../components/MountainCard.astro';
 import { getMountainsWithImages, getAllMountains } from '../lib/data';
 
+import { getAllNatureReserves } from '../lib/entity-data';
+
 const mountainsWithImages = getMountainsWithImages(6);
 const allMts = getAllMountains();
 const allMountainNames = JSON.stringify(allMts.map(m => m.name));
 const allMountainSlugs = JSON.stringify(Object.fromEntries(allMts.map(m => [m.name, m.slug])));
+const natureReserveCount = getAllNatureReserves().length;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -427,6 +430,48 @@ const faqSchema = {
         <p class="editorial-byline">
           <em>Written and maintained by the UK Mountains Directory editorial team. Last updated: August 2026. Heights and classifications verified against Ordnance Survey and the Scottish Mountaineering Club Munro list. [Source: Ordnance Survey]</em>
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION ADDED — everything above this line is pre-existing and unchanged -->
+  <section class="new-directories-section">
+    <div class="container">
+      <h2>Explore More UK Outdoor Directories</h2>
+      <p class="new-directories-intro">
+        Beyond mountains, the UK offers incredible nature reserves, woodland walks and Yorkshire Dales routes. Discover your next outdoor adventure.
+      </p>
+      <div class="new-directories-grid">
+        <a href="/nature-reserves/" class="new-directory-card">
+          <div class="ndc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+          <h3>Nature Reserves</h3>
+          <p>Browse {natureReserveCount} National Nature Reserves across the UK, from coastal wetlands to Highland wilderness.</p>
+          <span class="ndc-link">Explore Reserves &rarr;</span>
+        </a>
+        <a href="/woodland-walks/" class="new-directory-card">
+          <div class="ndc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>
+            </svg>
+          </div>
+          <h3>Woodland Walks</h3>
+          <p>Discover peaceful woodland walks near you, from ancient bluebell woods to community forests.</p>
+          <span class="ndc-link">Find Woods &rarr;</span>
+        </a>
+        <a href="/yorkshire-dales-walks/" class="new-directory-card">
+          <div class="ndc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 20l5-12 4 8 3-6 6 10z"/>
+            </svg>
+          </div>
+          <h3>Yorkshire Dales Walks</h3>
+          <p>Find the best walks in the Yorkshire Dales, from Swaledale to Wensleydale and the Three Peaks.</p>
+          <span class="ndc-link">Browse Dales Walks &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1217,6 +1262,103 @@ const faqSchema = {
     }
 
     .stat-number {
+      font-size: 2rem;
+    }
+  }
+
+  .new-directories-section {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+  }
+
+  .new-directories-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-900);
+  }
+
+  .new-directories-intro {
+    font-size: 1.125rem;
+    color: var(--color-neutral-600);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-2xl);
+  }
+
+  .new-directories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .new-directory-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--color-neutral-50);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--color-neutral-200);
+  }
+
+  .new-directory-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+  }
+
+  .new-directory-card:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .ndc-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .new-directory-card h3 {
+    font-size: 1.35rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .new-directory-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .ndc-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: auto;
+  }
+
+  @media (max-width: 768px) {
+    .new-directories-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .new-directories-section h2 {
       font-size: 2rem;
     }
   }

@@ -1,0 +1,111 @@
+---
+const sections = [
+  {
+    name: 'Mountains',
+    url: '/mountains/',
+    icon: '<path d="m8 3 4 8 5-5 5 15H2L8 3z"/>',
+  },
+  {
+    name: 'Nature Reserves',
+    url: '/nature-reserves/',
+    icon: '<path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/>',
+  },
+  {
+    name: 'Woodland Walks',
+    url: '/woodland-walks/',
+    icon: '<path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>',
+  },
+  {
+    name: 'Yorkshire Dales Walks',
+    url: '/yorkshire-dales-walks/',
+    icon: '<path d="M3 20l5-12 4 8 3-6 6 10z"/>',
+  },
+];
+---
+
+<section class="cross-section-links" aria-label="Explore more UK directories">
+  <div class="csl-container">
+    <h2 class="csl-heading">More UK Directories to Explore</h2>
+    <div class="csl-grid">
+      {sections.map((s) => (
+        <a href={s.url} class="csl-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={s.icon} />
+          <span>{s.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cross-section-links {
+    padding: var(--spacing-2xl) 0;
+    background: var(--color-neutral-50);
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  .csl-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    text-align: center;
+  }
+
+  .csl-heading {
+    font-size: 1.5rem;
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .csl-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+
+  .csl-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: white;
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-neutral-700);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .csl-pill svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .csl-pill:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .csl-pill:hover svg {
+    color: white;
+  }
+
+  .csl-pill:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 640px) {
+    .csl-pill {
+      padding: var(--spacing-sm) var(--spacing-lg);
+      font-size: 0.875rem;
+    }
+  }
+</style>

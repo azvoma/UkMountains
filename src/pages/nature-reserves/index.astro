@@ -1,0 +1,432 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorByline from '../../components/AuthorByline.astro';
+import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
+import { getAllNatureReserves } from '../../lib/entity-data';
+
+const reserves = getAllNatureReserves();
+const reservesJson = JSON.stringify(reserves.map(r => ({
+  slug: r.slug,
+  name: r.name,
+  region: r.region,
+  nation: r.nation,
+  habitat_type: r.habitat_type,
+  access_difficulty: r.access_difficulty,
+  classification: r.classification,
+  description: r.description,
+})));
+
+const regions = [...new Set(reserves.map(r => r.nation))].sort();
+const habitats = [...new Set(reserves.map(r => r.habitat_type))].sort();
+const difficulties = [...new Set(reserves.map(r => r.access_difficulty))].sort();
+---
+
+<Layout
+  title="Nature Reserves: UK National Nature Reserves Directory"
+  description="Browse our complete list of UK nature reserves. Find National Nature Reserves by region, habitat type and access difficulty across England, Scotland and Wales."
+>
+  <div class="nr-page">
+    <section class="page-hero">
+      <div class="container">
+        <Breadcrumbs items={[
+          { name: 'Home', url: '/' },
+          { name: 'Nature Reserves' }
+        ]} />
+        <h1>UK Nature Reserves: Complete List of National Nature Reserves</h1>
+        <p class="hero-description">
+          This directory lists every major <strong>national nature reserve</strong> in the UK — from Beinn Eighe in the Scottish Highlands to Blakeney on the Norfolk coast. Browse <strong>UK nature reserves</strong> by region, habitat type or access difficulty, and find your next nature visit below.
+        </p>
+      </div>
+    </section>
+
+    <section class="nr-section">
+      <div class="container">
+        <AuthorByline lastUpdated="August 2026" />
+
+        <div class="how-organised">
+          <h2>What Is a Nature Reserve in the UK?</h2>
+          <p>
+            A <strong>national nature reserve</strong> (NNR) is a protected area of national importance for wildlife or earth science, designated and managed by the UK's statutory conservation bodies. There are over 200 NNRs across Britain, ranging from tiny meadows to vast Highland estates. NNRs represent the very best of the UK's <strong>natural heritage</strong> — they are the "gold standard" of nature conservation sites.
+          </p>
+          <p>
+            The UK has several tiers of nature reserve designation, each with different levels of protection:
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Designation</th><th>Managed By</th><th>Purpose</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>National Nature Reserve (NNR)</strong></td><td>Natural England, NatureScot, NRW, DAERA</td><td>Nationally important wildlife &amp; earth science</td></tr>
+                <tr><td><strong>Site of Special Scientific Interest (SSSI)</strong></td><td>Statutory conservation bodies</td><td>Protected for specific features — many NNRs are also SSSIs</td></tr>
+                <tr><td><strong>Local Nature Reserve (LNR)</strong></td><td>Local authorities</td><td>Local wildlife value + public access</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><small>Source: Natural England, NatureScot, Natural Resources Wales. [VERIFY: confirm designation counts]</small></p>
+        </div>
+
+        <div class="how-organised">
+          <h2>Browse UK Nature Reserves by Region</h2>
+          <p>
+            <strong>Nature reserves</strong> in the UK span every nation and habitat — from coastal reserves in Norfolk and Suffolk to montane reserves in the Scottish Highlands. Use the filters below to find reserves near you, or browse the full directory of {reserves.length} reserves further down this page.
+          </p>
+          <div class="table-wrapper">
+            <table class="ranking-table">
+              <thead>
+                <tr><th>Nation</th><th>Number of Reserves</th><th>Key Habitats</th></tr>
+              </thead>
+              <tbody>
+                {regions.map(nation => {
+                  const count = reserves.filter(r => r.nation === nation).length;
+                  const habitatList = [...new Set(reserves.filter(r => r.nation === nation).map(r => r.habitat_type))].slice(0, 3).join(', ');
+                  return (
+                    <tr>
+                      <td><strong>{nation}</strong></td>
+                      <td>{count}</td>
+                      <td>{habitatList}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="filter-bar" role="region" aria-label="Filter nature reserves">
+          <div class="filter-group">
+            <label for="nr-region-filter" class="filter-label">Region</label>
+            <select id="nr-region-filter" class="filter-select region-filter" aria-label="Filter by region">
+              <option value="all">All Regions</option>
+              {regions.map(r => <option value={r}>{r}</option>)}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="nr-habitat-filter" class="filter-label">Habitat Type</label>
+            <select id="nr-habitat-filter" class="filter-select habitat-filter" aria-label="Filter by habitat type">
+              <option value="all">All Habitats</option>
+              {habitats.map(h => <option value={h}>{h}</option>)}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="nr-difficulty-filter" class="filter-label">Access Difficulty</label>
+            <select id="nr-difficulty-filter" class="filter-select difficulty-filter" aria-label="Filter by access difficulty">
+              <option value="all">All Difficulties</option>
+              {difficulties.map(d => <option value={d}>{d}</option>)}
+            </select>
+          </div>
+          <button id="nr-near-me" class="btn btn-near-me" aria-label="Find nature reserves near me">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Near Me
+          </button>
+        </div>
+
+        <div class="results-header">
+          <p id="nr-results-count" class="results-count">Showing {reserves.length} nature reserves</p>
+        </div>
+
+        <div id="nr-grid" class="entity-grid">
+          {reserves.map((reserve) => (
+            <a href={`/nature-reserves/${reserve.slug}/`} class="entity-card">
+              <div class="card-image">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt={`${reserve.name} - ${reserve.region}`} loading="lazy" />
+                <span class="badge">{reserve.classification}</span>
+              </div>
+              <div class="card-content">
+                <h3>{reserve.name}</h3>
+                <div class="card-meta">
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    {reserve.region}
+                  </span>
+                  <span class="meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                    {reserve.access_difficulty}
+                  </span>
+                </div>
+                <p class="card-description">{reserve.description.substring(0, 120)}{reserve.description.length > 120 ? '...' : ''}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div id="nr-loading" class="loading-state" style="display: none;">
+          <div class="spinner"></div>
+          <p>Loading nature reserves...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="key-takeaways">
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>This directory lists {reserves.length} <strong>national nature reserves</strong> across the UK, all designated for their national importance to wildlife and earth science.</li>
+            <li>NNRs are managed by the UK's statutory conservation bodies — Natural England, NatureScot, Natural Resources Wales and DAERA.</li>
+            <li>Use the filters above to find <strong>UK nature reserves</strong> by region, habitat type or access difficulty.</li>
+            <li>Most NNRs are open to the public year-round, though access facilities vary — always check before visiting.</li>
+          </ul>
+        </div>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>What is a national nature reserve?</summary>
+            <p>A national nature reserve (NNR) is a protected area of national importance for wildlife or earth science, designated and managed by the UK's statutory conservation bodies. NNRs represent the very best examples of the UK's natural heritage.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How many national nature reserves are there in the UK?</summary>
+            <p>There are over 200 NNRs across the UK. Our directory features {reserves.length} of the most notable reserves, covering a range of habitats from coastal wetlands to montane plateaus. [VERIFY: confirm total NNR count]</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are nature reserves free to visit?</summary>
+            <p>Most NNRs are free to visit and open year-round. Some may have parking charges or restricted areas during breeding seasons. Check the managing body's website for details before visiting.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I take my dog to a nature reserve?</summary>
+            <p>Dog policies vary by reserve. Many NNRs require dogs to be kept on leads, especially during ground-nesting bird season (March-August). Some reserves do not allow dogs at all. Always check the specific reserve's policy before visiting.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the difference between an NNR and an SSSI?</summary>
+            <p>A Site of Special Scientific Interest (SSSI) is a protected area designated for specific features. Many NNRs are also SSSIs, but NNRs have additional protection and are managed specifically for conservation and public access. SSSIs may be on private land with restricted access.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring to a nature reserve?</summary>
+            <p>Essential kit includes binoculars, walking boots or wellies (depending on terrain), a field guide, waterproofs, and insect repellent in summer. Some reserves have visitor centres with refreshments, but many are remote — bring water and snacks.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I find nature reserves near me?</summary>
+            <p>Yes — use the "Near Me" button in the filter bar above to find reserves closest to your location. You'll need to grant location permissions to your browser.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who manages the UK's national nature reserves?</summary>
+            <p>NNRs are managed by the statutory conservation bodies: Natural England (England), NatureScot (Scotland), Natural Resources Wales (Wales), and the Department of Agriculture, Environment and Rural Affairs (Northern Ireland). Some are managed in partnership with other organisations.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <CrossSectionLinks />
+  </div>
+</Layout>
+
+<script is:inline define:vars={{ reservesJson }}>
+  const allReserves = JSON.parse(reservesJson);
+  const grid = document.getElementById('nr-grid');
+  const loading = document.getElementById('nr-loading');
+  const resultsCount = document.getElementById('nr-results-count');
+  const regionFilter = document.getElementById('nr-region-filter');
+  const habitatFilter = document.getElementById('nr-habitat-filter');
+  const difficultyFilter = document.getElementById('nr-difficulty-filter');
+  const nearMeBtn = document.getElementById('nr-near-me');
+
+  let currentRegion = 'all';
+  let currentHabitat = 'all';
+  let currentDifficulty = 'all';
+
+  function renderCards(list) {
+    if (list.length > 0) {
+      grid.innerHTML = list.map(r => `
+        <a href="/nature-reserves/${r.slug}/" class="entity-card">
+          <div class="card-image">
+            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt="${r.name} - ${r.region}" loading="lazy">
+            <span class="badge">${r.classification}</span>
+          </div>
+          <div class="card-content">
+            <h3>${r.name}</h3>
+            <div class="card-meta">
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                ${r.region}
+              </span>
+              <span class="meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                ${r.access_difficulty}
+              </span>
+            </div>
+            <p class="card-description">${r.description.substring(0, 120)}${r.description.length > 120 ? '...' : ''}</p>
+          </div>
+        </a>
+      `).join('');
+    } else {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <h3>No Nature Reserves Found</h3>
+          <p>Try adjusting your filters.</p>
+        </div>
+      `;
+    }
+    resultsCount.textContent = `Showing ${list.length} nature reserve${list.length !== 1 ? 's' : ''}`;
+  }
+
+  function applyFilters() {
+    let filtered = allReserves;
+    if (currentRegion !== 'all') filtered = filtered.filter(r => r.nation === currentRegion);
+    if (currentHabitat !== 'all') filtered = filtered.filter(r => r.habitat_type === currentHabitat);
+    if (currentDifficulty !== 'all') filtered = filtered.filter(r => r.access_difficulty === currentDifficulty);
+    renderCards(filtered);
+  }
+
+  regionFilter.addEventListener('change', () => { currentRegion = regionFilter.value; applyFilters(); });
+  habitatFilter.addEventListener('change', () => { currentHabitat = habitatFilter.value; applyFilters(); });
+  difficultyFilter.addEventListener('change', () => { currentDifficulty = difficultyFilter.value; applyFilters(); });
+
+  nearMeBtn.addEventListener('click', () => {
+    if (!('geolocation' in navigator)) { alert('Location services are not supported by your browser.'); return; }
+    nearMeBtn.disabled = true;
+    nearMeBtn.textContent = 'Finding...';
+    navigator.geolocation.getCurrentPosition(
+      () => {
+        alert('Location-based filtering requires verified coordinate data for each reserve. [VERIFY: lat/long data needed]');
+        nearMeBtn.disabled = false;
+        nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+      },
+      () => {
+        alert('Unable to access your location. Please enable location permissions.');
+        nearMeBtn.disabled = false;
+        nearMeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Near Me';
+      }
+    );
+  });
+</script>
+
+<style>
+  .nr-page { background: var(--color-neutral-50); }
+  .page-hero {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  :global(.page-hero .breadcrumb-list) { justify-content: center; }
+  .page-hero h1 { color: white; font-size: 3rem; margin-bottom: var(--spacing-md); }
+  .hero-description {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nr-section { padding: var(--spacing-3xl) 0; }
+  .how-organised { margin-bottom: var(--spacing-xl); }
+  .how-organised h2 { font-size: 1.75rem; margin-bottom: var(--spacing-md); color: var(--color-neutral-900); }
+  .how-organised p { font-size: 1rem; line-height: 1.7; color: var(--color-neutral-700); margin-bottom: var(--spacing-md); }
+  .table-wrapper { overflow-x: auto; margin-bottom: var(--spacing-lg); }
+  .ranking-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .ranking-table th { text-align: left; padding: var(--spacing-sm) var(--spacing-md); background: var(--color-neutral-100); font-weight: 700; color: var(--color-neutral-900); border-bottom: 2px solid var(--color-neutral-300); }
+  .ranking-table td { padding: var(--spacing-sm) var(--spacing-md); border-bottom: 1px solid var(--color-neutral-200); color: var(--color-neutral-700); }
+  .ranking-table tr:hover td { background: var(--color-neutral-50); }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-200);
+  }
+  .filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .filter-label { font-size: 0.8rem; font-weight: 600; color: var(--color-neutral-600); }
+  .filter-select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--color-neutral-800);
+    background: white;
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+  }
+  .filter-select:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; border-color: var(--color-primary); }
+  .filter-select:hover { border-color: var(--color-primary); }
+  .btn-near-me {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+  }
+  .btn-near-me:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+  .btn-near-me:disabled { opacity: 0.6; cursor: wait; }
+
+  .results-header { margin-bottom: var(--spacing-xl); }
+  .results-count { font-size: 1.125rem; color: var(--color-neutral-700); font-weight: 600; }
+
+  .entity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+  }
+  .entity-card {
+    display: block;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  .entity-card:focus { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+  .entity-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-8px); }
+  .card-image { position: relative; width: 100%; height: 220px; overflow: hidden; }
+  .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+  .entity-card:hover .card-image img { transform: scale(1.1); }
+  .badge {
+    position: absolute; top: 12px; right: 12px;
+    padding: 6px 12px; background: rgba(15,118,110,0.95); color: white;
+    border-radius: var(--radius-md); font-size: 0.75rem; font-weight: 600;
+  }
+  .card-content { padding: var(--spacing-lg); }
+  .card-content h3 { margin: 0 0 var(--spacing-sm) 0; font-size: 1.25rem; color: var(--color-neutral-900); }
+  .card-meta { display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--color-neutral-600); }
+  .meta-item svg { color: var(--color-primary); flex-shrink: 0; }
+  .card-description { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--color-neutral-600); }
+
+  .loading-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--spacing-3xl); gap: var(--spacing-md); }
+  .spinner { width: 48px; height: 48px; border: 4px solid var(--color-neutral-200); border-top-color: var(--color-primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .empty-state { grid-column: 1 / -1; text-align: center; padding: var(--spacing-3xl); }
+  .empty-state h3 { color: var(--color-neutral-700); margin-bottom: var(--spacing-sm); }
+  .empty-state p { color: var(--color-neutral-500); }
+
+  .key-takeaways { max-width: 900px; margin: 0 auto var(--spacing-2xl) auto; background: var(--color-neutral-50); border-left: 4px solid var(--color-primary); border-radius: var(--radius-md); padding: var(--spacing-xl); }
+  .key-takeaways h3 { font-size: 1.25rem; color: var(--color-neutral-900); margin: 0 0 var(--spacing-md) 0; }
+  .key-takeaways ul { margin: 0; padding-left: var(--spacing-lg); color: var(--color-neutral-700); line-height: 1.7; }
+  .key-takeaways li { margin-bottom: var(--spacing-sm); }
+
+  .faq-section { padding: var(--spacing-3xl) 0; background: white; }
+  .faq-section h2 { font-size: 2.5rem; text-align: center; margin-bottom: var(--spacing-2xl); color: var(--color-neutral-900); }
+  .faq-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--spacing-md); }
+  .faq-item { background: var(--color-neutral-50); border-radius: var(--radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); transition: all var(--transition-base); border: 1px solid var(--color-neutral-200); }
+  .faq-item:hover { box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+  .faq-item summary { font-size: 1.125rem; font-weight: 600; color: var(--color-neutral-900); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--color-primary); transition: transform var(--transition-base); }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { margin-top: var(--spacing-md); line-height: 1.6; color: var(--color-neutral-700); }
+
+  @media (max-width: 768px) {
+    .page-hero h1 { font-size: 2rem; }
+    .hero-description { font-size: 1rem; }
+    .entity-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .filter-group { width: 100%; }
+    .filter-select { width: 100%; }
+    .btn-near-me { width: 100%; justify-content: center; }
+  }
+</style>
