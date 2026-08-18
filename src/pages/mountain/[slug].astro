@@ -46,7 +46,7 @@ const displayImages = mountainImages.length > 0
 const difficultyText = mountain.difficulty_rating || 'Moderate';
 const seasonText = mountain.best_season || 'Spring to Autumn';
 
-const weatherUrl = `https://www.metoffice.gov.uk/weather/forecast/${mountain.latitude.toFixed(4)},${mountain.longitude.toFixed(4)}`;
+const weatherUrl = 'https://www.metoffice.gov.uk/';
 const mountainForecastUrl = `https://www.mountain-forecast.com/`;
 
 const nearbyPeaks = getNearbyPeaks(mountain, 4);
