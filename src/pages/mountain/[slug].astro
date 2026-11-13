@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import NearbyPeaks from '../../components/NearbyPeaks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import { metaDescription, answerBlock, buildFaqs } from '../../lib/seo';
 import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoutes, getNearbyPeaks, type Mountain } from '../../lib/data';
 
 export async function getStaticPaths() {
@@ -104,6 +106,8 @@ const pageTitle = mountain.seo_title || (fullTitle.length > 60
   ? `${mountain.name} – UK Mountain Guide`
   : fullTitle);
 
+const pageDescription = mountain.seo_description || metaDescription(mountain);
+
 const updatedDate = mountain.updated_at
   ? new Date(mountain.updated_at).toISOString().split('T')[0]
   : '2025-07-15';
@@ -115,7 +119,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": pageTitle,
-  "description": mountain.seo_description || `Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`,
+  "description": pageDescription,
   "author": {
     "@type": "Person",
     "name": "James Holloway",
@@ -167,49 +171,23 @@ const authoritativeLinks: Record<string, { os: string; park: string; walkhighlan
 
 const authLinks = authoritativeLinks[mountain.region] || authoritativeLinks['Scotland'];
 
+const faqItems = buildFaqs(mountain, mountainRoutes.length);
+const answerText = answerBlock(mountain);
+
 const faqSchemaData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": `Is ${mountain.name} one of the best mountains to climb UK?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `Yes, ${mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, ${mountain.height_meters}m elevation, and ${difficultyText.toLowerCase()} difficulty level.`
-      }
-    },
-    {
-      "@type": "Question",
-      "name": `What level of difficulty is ${mountain.name}?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `${mountain.name} has a difficulty rating of ${difficultyText}. ${mountainRoutes.length > 0 ? 'Multiple routes are available.' : 'Various routes suit different experience levels.'}`
-      }
-    },
-    {
-      "@type": "Question",
-      "name": `When is the best time to climb ${mountain.name}?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `The best season to climb ${mountain.name} is ${seasonText}. Always check the forecast before visiting.`
-      }
-    },
-    ...(mountain.faqs || []).map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  ]
+  "mainEntity": faqItems.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+  }))
 };
 ---
 
 <Layout
   title={pageTitle}
-  description={mountain.seo_description || `Explore ${mountain.name}, one of the mountains in the UK, with routes, difficulty levels, maps, and tips.`}
+  description={pageDescription}
   image={displayImages[0]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -433,6 +411,9 @@ const faqSchemaData = {
         <!-- Author Byline -->
         <AuthorByline lastUpdated={new Date(updatedDate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })} />
 
+        <!-- Answer block (40-60 words, self-contained) -->
+        <p class="answer-block"><strong>Quick answer:</strong> {answerText}</p>
+
         <!-- Key Takeaways (E-E-A-T) -->
         {mountain.seo_key_takeaways && mountain.seo_key_takeaways.length > 0 && (
           <div class="key-takeaways">
@@ -655,25 +636,7 @@ const faqSchemaData = {
         <section class="content-section">
           <h2>Frequently Asked Questions</h2>
           <div class="faqs">
-            <details class="faq-item">
-              <summary>Is {mountain.name} one of the best mountains to climb in the UK?</summary>
-              <p>Yes, {mountain.name} is considered one of the best mountains to climb in the UK thanks to its scenic routes, {mountain.height_meters}m elevation, and {difficultyText.toLowerCase()} difficulty level.</p>
-            </details>
-            <details class="faq-item">
-              <summary>What difficulty level is {mountain.name}?</summary>
-              <p>{mountain.name} has a difficulty rating of {difficultyText}. {mountainRoutes.length > 0 ? `There are ${mountainRoutes.length} documented route${mountainRoutes.length > 1 ? 's' : ''} to choose from.` : 'Various routes are available for different experience levels.'}</p>
-            </details>
-            <details class="faq-item">
-              <summary>When is the best time to climb {mountain.name}?</summary>
-              <p>The best season is {seasonText}. Summit temperatures are typically 5–10°C colder than the valley, and conditions can change rapidly.</p>
-            </details>
-            {mountain.parking_postcode && (
-              <details class="faq-item">
-                <summary>Where should I park for {mountain.name}?</summary>
-                <p>Use postcode {mountain.parking_postcode} for sat-nav. Arrive early on weekends — car parks fill quickly during peak season.</p>
-              </details>
-            )}
-            {mountain.faqs && Array.isArray(mountain.faqs) && mountain.faqs.map((faq: any) => (
+            {faqItems.map((faq) => (
               <details class="faq-item">
                 <summary>{faq.question}</summary>
                 <p>{faq.answer}</p>
@@ -681,6 +644,8 @@ const faqSchemaData = {
             ))}
           </div>
         </section>
+
+        <TrustBlock subject="mountain" updated={mountain.updated_at} />
 
         <!-- SEO Summary -->
         <section class="content-section seo-section">
@@ -1366,6 +1331,15 @@ const faqSchemaData = {
     margin: 0;
     font-size: 0.95rem;
     color: var(--color-neutral-700);
+  }
+
+  .answer-block {
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-neutral-50, #f9fafb);
+    border-left: 4px solid var(--color-primary, #0f766e);
+    border-radius: 6px;
+    line-height: 1.7;
   }
 
   /* FAQs */

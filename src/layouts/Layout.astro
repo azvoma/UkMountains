@@ -10,13 +10,15 @@ interface Props {
   description?: string;
   image?: string;
   type?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'UK Mountains Directory - Explore the Peaks of Britain',
   description = 'Discover and explore the mountains of the United Kingdom. Find detailed information about height, location, facilities, history, and nearby attractions for every peak.',
   image = '/og-image.jpg',
-  type = 'website'
+  type = 'website',
+  noindex = false
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -56,9 +58,15 @@ const imageURL = image.startsWith('http') ? image : new URL(image, Astro.site);
     <meta name="twitter:image" content={imageURL} />
     <meta name="twitter:image:alt" content={title} />
 
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <>
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      </>
+    )}
     <meta name="theme-color" content="#0f766e" />
 
     <script type="application/ld+json" set:html={JSON.stringify({

@@ -1,0 +1,41 @@
+---
+interface Props {
+  subject: string;          // e.g. "mountain", "nature reserve"
+  updated?: string;         // ISO date the underlying record was last updated
+  sources?: string[];       // human-readable source names
+  facts?: string;           // what kinds of facts are checked
+}
+const { subject, updated, sources = ['Ordnance Survey', 'Database of British and Irish Hills (DoBIH)'], facts = 'height, grid reference, classification and location' } = Astro.props;
+const pretty = updated
+  ? new Date(updated).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
+---
+<aside class="trust-block" aria-labelledby="trust-heading">
+  <h2 id="trust-heading">How we check this {subject} page</h2>
+  <p>
+    <strong>Methodology:</strong> facts such as {facts} are cross-checked
+    against {sources.join(' and ')}. Route, parking and seasonal notes are written from public guidance and checked
+    against the same sources before publication. Read more on the <a href="/about/">About page</a>.
+  </p>
+  {pretty && <p><strong>Record last updated:</strong> <time datetime={updated}>{pretty}</time></p>}
+  <p>
+    <strong>Spotted something wrong?</strong> Use the
+    <a href="/contact/#corrections">corrections form</a> and tell us the page, the detail and a source. We review every
+    report and update the page when it checks out.
+  </p>
+</aside>
+
+<style>
+  .trust-block {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--color-neutral-200, #e5e7eb);
+    border-left: 4px solid var(--color-primary, #0f766e);
+    border-radius: 8px;
+    background: var(--color-neutral-50, #f9fafb);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .trust-block h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+  .trust-block p { margin: 0.4rem 0; }
+</style>

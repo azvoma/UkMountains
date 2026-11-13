@@ -2,7 +2,12 @@
   publish = "dist"
   command = "npm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# NOTE: the old catch-all rewrite ("/*" -> "/index.html", 200) was removed.
+# This is a static Astro site, so every real page already exists in dist/.
+# With the rewrite in place, mistyped or deleted URLs returned HTTP 200 (soft 404)
+# and Netlify never served dist/404.html. Without it, unknown URLs now return a real 404.
+# Add 301 redirects below for any renamed or removed pages, e.g.:
+# [[redirects]]
+#   from = "/old-path/"
+#   to = "/new-path/"
+#   status = 301

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
 import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
 import { getNatureReserveBySlug, getRelatedNatureReserves, getAllNatureReserves, type NatureReserve } from '../../lib/entity-data';
 
@@ -263,6 +264,8 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
             ))}
           </div>
         </section>
+
+        <TrustBlock subject="nature reserve" updated="2026-08-18" facts="wildlife, habitat, access and location" sources={['Ordnance Survey mapping','official site operator and conservation body pages']} />
 
         <section class="content-section seo-section">
           <h2>Why Visit {reserve.name}?</h2>

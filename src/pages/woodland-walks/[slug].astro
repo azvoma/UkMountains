@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
 import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
 import { getWoodlandWalkBySlug, getRelatedWoodlandWalks, getAllWoodlandWalks, type WoodlandWalk } from '../../lib/entity-data';
 
@@ -261,6 +262,8 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
             ))}
           </div>
         </section>
+
+        <TrustBlock subject="woodland walk" updated="2026-08-18" facts="route, access, habitat and location" sources={['Ordnance Survey mapping','official landowner and operator pages']} />
 
         <section class="content-section seo-section">
           <h2>Why Visit {walk.name}?</h2>

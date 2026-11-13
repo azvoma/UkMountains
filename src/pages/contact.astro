@@ -235,6 +235,41 @@ const faqSchema = {
         </p>
       </section>
 
+      <section class="contact-form-section" id="corrections">
+        <h2>Send Us a Message or a Correction</h2>
+        <p>Use this form for questions, photo submissions or corrections. For a correction, include the page address and, if you can, a source such as an Ordnance Survey map or the DoBIH.</p>
+        <form name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="cf-form">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="cf-hidden"><label>Leave this empty: <input name="bot-field" /></label></p>
+          <div class="cf-row">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="cf-row">
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="cf-row">
+            <label for="cf-topic">What is this about?</label>
+            <select id="cf-topic" name="topic" required>
+              <option value="General question">General question</option>
+              <option value="Correction">Correction to a page</option>
+              <option value="Photo or route submission">Photo or route submission</option>
+              <option value="Partnership or press">Partnership or press</option>
+            </select>
+          </div>
+          <div class="cf-row">
+            <label for="cf-page">Page address (for corrections)</label>
+            <input id="cf-page" name="page" type="url" placeholder="https://ukmountainsdirectory.co.uk/mountain/..." />
+          </div>
+          <div class="cf-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="cf-submit">Send message</button>
+        </form>
+      </section>
+
       <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
@@ -700,4 +735,22 @@ const faqSchema = {
       font-size: 1.5rem;
     }
   }
+</style>
+
+<style>
+  .contact-form-section { margin: 3rem 0; }
+  .contact-form-section h2 { margin-bottom: 0.5rem; }
+  .cf-form { display: grid; gap: 1rem; max-width: 640px; margin-top: 1rem; }
+  .cf-row { display: grid; gap: 0.35rem; }
+  .cf-row label { font-weight: 600; font-size: 0.95rem; }
+  .cf-row input, .cf-row select, .cf-row textarea {
+    padding: 0.7rem 0.85rem; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff;
+  }
+  .cf-row input:focus, .cf-row select:focus, .cf-row textarea:focus { outline: 2px solid var(--color-primary, #0f766e); outline-offset: 1px; }
+  .cf-hidden { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+  .cf-submit {
+    justify-self: start; padding: 0.75rem 1.5rem; border: 0; border-radius: 8px; cursor: pointer;
+    background: var(--color-primary, #0f766e); color: #fff; font-weight: 600; font: inherit;
+  }
+  .cf-submit:hover { filter: brightness(1.1); }
 </style>
