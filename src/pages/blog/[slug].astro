@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukmountains.directory/" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ukmountains.directory/blog/" },
-    { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://ukmountains.directory/blog/${article.slug}/` }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ukmountainsdirectory.co.uk/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ukmountainsdirectory.co.uk/blog/" },
+    { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://ukmountainsdirectory.co.uk/blog/${article.slug}/` }
   ]
 };
 
@@ -39,16 +39,17 @@ const articleSchema = {
   "datePublished": article.publishedDate,
   "dateModified": article.publishedDate,
   "keywords": [article.focusKeyphrase, ...article.secondaryKeywords, ...article.clusterKeywords].join(', '),
-  "url": `https://ukmountains.directory/blog/${article.slug}/`,
+  "url": `https://ukmountainsdirectory.co.uk/blog/${article.slug}/`,
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": article.authorName,
+    "url": "https://ukmountainsdirectory.co.uk/about/",
     "description": article.authorCredentials
   },
   "publisher": {
     "@type": "Organization",
     "name": "UK Mountains Directory",
-    "url": "https://ukmountains.directory"
+    "url": "https://ukmountainsdirectory.co.uk"
   }
 };
 

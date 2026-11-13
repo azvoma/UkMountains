@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import { authorSchema } from '../../lib/author';
+import { woodlandAnswer, woodlandFaqs } from '../../lib/seo';
 import CrossSectionLinks from '../../components/CrossSectionLinks.astro';
 import { getWoodlandWalkBySlug, getRelatedWoodlandWalks, getAllWoodlandWalks, type WoodlandWalk } from '../../lib/entity-data';
 
@@ -14,6 +17,8 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const walk = getWoodlandWalkBySlug(slug!);
+const faqItems = woodlandFaqs(walk);
+const answerText = woodlandAnswer(walk);
 
 if (!walk) {
   return Astro.redirect('/404');
@@ -48,7 +53,7 @@ const articleSchema = {
   "@type": "Article",
   "headline": pageTitle,
   "description": pageDescription,
-  "author": { "@type": "Person", "name": "James Holloway", "url": "https://ukmountainsdirectory.co.uk/about/" },
+  "author": authorSchema,
   "publisher": { "@type": "Organization", "name": "UK Mountains Directory", "url": "https://ukmountainsdirectory.co.uk" },
   "datePublished": "2026-08-18",
   "dateModified": "2026-08-18",
@@ -58,7 +63,7 @@ const articleSchema = {
 const faqSchemaData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": walk.faqs.map(faq => ({
+  "mainEntity": faqItems.map(faq => ({
     "@type": "Question",
     "name": faq.question,
     "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -179,6 +184,8 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
       <main class="main-content">
         <AuthorByline lastUpdated="August 2026" />
 
+        <p class="answer-block"><strong>Quick answer:</strong> {answerText}</p>
+
         <section id="about" class="content-section">
           <h2>About {walk.name}</h2>
           <p class="lead">{walk.description}</p>
@@ -253,7 +260,7 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
         <section class="content-section">
           <h2>Frequently Asked Questions</h2>
           <div class="faqs">
-            {walk.faqs.map((faq: { question: string; answer: string }) => (
+            {faqItems.map((faq: { question: string; answer: string }) => (
               <details class="faq-item">
                 <summary>{faq.question}</summary>
                 <p>{faq.answer}</p>
@@ -261,6 +268,8 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
             ))}
           </div>
         </section>
+
+        <TrustBlock subject="woodland walk" updated="2026-08-18" facts="route, access, habitat and location" sources={['Ordnance Survey mapping','official landowner and operator pages']} />
 
         <section class="content-section seo-section">
           <h2>Why Visit {walk.name}?</h2>
@@ -392,6 +401,7 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
   .safety-card { display: flex; gap: var(--spacing-md); align-items: flex-start; padding: var(--spacing-md); background: var(--color-neutral-50); border-radius: var(--radius-md); border-left: 3px solid #f59e0b; font-size: 0.875rem; }
   .safety-card strong { display: block; margin-bottom: 4px; color: var(--color-neutral-900); font-size: 0.9rem; }
   .safety-card p { margin: 0; color: var(--color-neutral-600); line-height: 1.5; }
+  .answer-block { margin: 1rem 0 1.5rem; padding: 1rem 1.25rem; background: var(--color-neutral-50, #f9fafb); border-left: 4px solid var(--color-primary, #0f766e); border-radius: 6px; line-height: 1.7; }
   .faqs { display: flex; flex-direction: column; gap: var(--spacing-sm); }
   .faq-item { border: 1px solid var(--color-neutral-200); border-radius: var(--radius-md); overflow: hidden; transition: border-color var(--transition-fast); }
   .faq-item:hover { border-color: var(--color-primary); }
