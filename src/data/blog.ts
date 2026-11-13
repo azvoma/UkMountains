@@ -47,8 +47,8 @@ export interface BlogArticle {
 export const blogArticles: BlogArticle[] = [
   {
     slug: 'ben-nevis-route-hiking-guide',
-    title: 'Ben Nevis Route & Hiking Guide: Complete Walk-Up',
-    metaDescription: 'Planning to climb Ben Nevis? Our complete hiking guide covers the Ben Nevis Mountain Track, route maps, ascent times, parking, and safety tips for the UK\u2019s tallest peak.',
+    title: 'Ben Nevis Route & Hiking Guide: Complete Walk-Up Plan',
+    metaDescription: 'Climbing Ben Nevis? Our guide covers the Mountain Track, route maps, ascent times, parking, safety tips and the best time to climb the UK\u2019s highest peak.',
     focusKeyphrase: 'ben nevis',
     secondaryKeywords: ['ben nevis mountain', 'where is ben nevis', 'tallest mountains in uk', 'ben nevis mountain track', 'ben nevis track', 'ben nevis tracks'],
     clusterKeywords: ['mountain range ben nevis', 'ben nevis range of mountains', 'ben nevis route map'],
@@ -100,7 +100,7 @@ export const blogArticles: BlogArticle[] = [
       osGridRef: 'NN 166 712',
       ascentDuration: '5\u20137 hours (round trip)',
       terrainDifficulty: 'Hard \u2014 rocky upper section, no scrambling on standard track',
-      trailheadParking: 'Glen Nevis Visitor Centre car park, Fort William, PH33 6PF',
+      trailheadParking: 'Glen Nevis Visitor Centre car park, Fort William, PH33 6ST',
       mountainRescue: 'Dial 999 \u2014 ask for Police, then Mountain Rescue (Lochaber MRT)',
       conservationNotes: 'SSSI \u2014 stick to paths, carry out all litter, protect alpine flora',
       bestSeason: 'May\u2013September (summer); winter requires crampons and ice axe',
@@ -124,16 +124,16 @@ export const blogArticles: BlogArticle[] = [
         answer: 'Ben Nevis is located in the Scottish Highlands, just outside the town of Fort William. The main starting point is the Glen Nevis Visitor Centre car park.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has summited Ben Nevis more than 40 times in all seasons, including winter ascents via the CMD Arete. He holds a Mountain Leader award from Mountain Training UK and regularly volunteers with a Scottish mountain rescue team.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-01-15',
     order: 1
   },
   {
     slug: 'cadair-idris-welsh-peaks-guide',
-    title: 'Cadair Idris & Welsh Peaks: Complete Hiking Guide',
-    metaDescription: 'Planning to climb Cadair Idris? Our complete Welsh peaks guide covers the height of Cadair Idris, best routes, ascent times, parking, and a map of peaks across Snowdonia.',
+    title: 'Cadair Idris & the Welsh Peaks: Complete Hiking Guide',
+    metaDescription: 'Climbing Cadair Idris? Our Welsh peaks guide covers its height, best routes, ascent times, parking and a map of nearby Snowdonia peaks to add.',
     focusKeyphrase: 'cadair idris',
     secondaryKeywords: ['height of cadair idris', 'cadair idris height', 'cader idris height', 'cairn gorm', 'peaks map', 'map of peaks'],
     clusterKeywords: [],
@@ -204,16 +204,16 @@ export const blogArticles: BlogArticle[] = [
         answer: 'The Ty Nant car park (LL36 9TP) is the most popular starting point for the Pony Path. The Minffordd car park (LL36 9AJ) is the start for the southern approach via Llyn Cau.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has guided groups up Cadair Idris and throughout Snowdonia in all seasons. He holds a Mountain Leader award from Mountain Training UK and volunteers with a Welsh mountain rescue team.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-01-20',
     order: 2
   },
   {
     slug: 'uk-mountain-heights-top-10-lists',
-    title: 'UK Mountain Heights & Top 10 Summit Lists',
-    metaDescription: 'Compare UK mountain heights with our ranked lists. Discover the tallest mountains in the UK, the top 10 highest peaks, and every major UK mountains list by height.',
+    title: 'UK Mountain Heights: Top 10 Highest Peaks and Summit Lists',
+    metaDescription: 'Compare UK mountain heights with our ranked lists: the tallest mountains in the UK, the top 10 highest peaks and every major list by height.',
     focusKeyphrase: 'mountain in uk',
     secondaryKeywords: ['mountain uk', 'tallest mountains in the uk', 'tallest mountains uk', 'uk mountains by height', 'uk mountain heights', 'top 10 highest mountains in the uk'],
     clusterKeywords: ['list highest mountains', 'mountain list', 'uk mountains list'],
@@ -279,16 +279,16 @@ export const blogArticles: BlogArticle[] = [
         answer: 'Snowdon (Yr Wyddfa) at 1,085 metres (3,560 feet) is the highest mountain in Wales. Cadair Idris at 893 metres is the second-highest.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has completed the Munros, the Welsh 3000s, and the English Wainwrights. He holds a Mountain Leader award from Mountain Training UK and contributes to several UK hillwalking publications.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-02-01',
     order: 3
   },
   {
     slug: 'uk-mountains-overview-guide',
-    title: 'UK Mountains Overview & Complete Hiking Guide',
-    metaDescription: 'Explore every mountain in the UK with our complete overview guide. Learn how many mountains there are, the best to climb, and UK map mountain ranges.',
+    title: 'UK Mountains Overview: Complete Hiking Guide by Region',
+    metaDescription: 'Explore the mountains of the UK with our overview guide. Learn how many there are, which are best to climb, and where the main ranges sit in each nation.',
     focusKeyphrase: 'mountain in the uk',
     secondaryKeywords: ['mountains in uk', 'mountains in the uk', 'how many mountains are there in the uk', 'how many mountains in uk', 'best mountains to climb in uk', 'mountains uk'],
     clusterKeywords: ['height of mountains in uk', 'uk map mountain ranges', 'definition of a mountain uk'],
@@ -359,9 +359,9 @@ export const blogArticles: BlogArticle[] = [
         answer: 'The main UK mountain ranges are in the Scottish Highlands, the Cairngorms, Snowdonia in Wales, the Lake District in England, and the Mourne Mountains in Northern Ireland.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has completed the Munros, the Welsh 3000s, and the Wainwrights, and has guided groups across every major UK mountain range. He holds a Mountain Leader award from Mountain Training UK.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-01-10',
     order: 4
   },
@@ -439,16 +439,16 @@ export const blogArticles: BlogArticle[] = [
         answer: 'The English hills encompass all upland walking areas in England, including both true mountains over 600 metres and culturally significant lower peaks like Mam Tor and Roseberry Topping.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has completed all 214 Wainwrights in the Lake District and guided numerous groups across the Pennine Way. He holds a Mountain Leader award from Mountain Training UK.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-02-05',
     order: 5
   },
   {
     slug: 'famous-uk-mountains-highest-peaks',
-    title: 'Famous UK Mountains & the Three Highest Peaks',
-    metaDescription: 'Explore famous UK mountains and the three highest peaks in the UK. Learn how many mountains are in the UK, find mountains near you, and see a map of mountain ranges.',
+    title: 'Famous UK Mountains: The Three Highest Peaks Explained',
+    metaDescription: 'Explore famous UK mountains and the three highest peaks. See how many mountains there are in the UK, where the main ranges are and which to climb first.',
     focusKeyphrase: 'uk mountain',
     secondaryKeywords: ['mountains near me', 'how many mountains in the uk', 'famous mountains', 'three highest mountains in uk', 'three highest peaks in uk', '3 highest mountains in the uk'],
     clusterKeywords: ['uk mountains', 'map of mountain ranges in britain', 'mountain ranges uk map'],
@@ -519,9 +519,9 @@ export const blogArticles: BlogArticle[] = [
         answer: 'Use our mountains directory to search for peaks by region. Most major UK cities are within a 1\u20132 hour drive of significant upland areas like the Peak District, Lake District, or Brecon Beacons.'
       }
     ],
-    authorName: 'James Whitfield',
-    authorCredentials: 'Qualified Mountain Leader (ML) with 15+ years of UK mountaineering experience',
-    authorBio: 'James is a fully qualified Mountain Leader with over 15 years of experience walking and climbing across the UK. He has completed the National Three Peaks Challenge multiple times and guided groups on all three of the UK\u2019s highest peaks. He holds a Mountain Leader award from Mountain Training UK.',
+    authorName: 'UK Mountains Directory Editorial Team',
+    authorCredentials: 'Facts checked against Ordnance Survey and the Database of British and Irish Hills',
+    authorBio: 'The UK Mountains Directory editorial team compiles and checks mountain, route and access information against Ordnance Survey mapping, the Database of British and Irish Hills (DoBIH) and official landowner and operator guidance.',
     publishedDate: '2025-02-10',
     order: 6
   }

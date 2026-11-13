@@ -4,7 +4,8 @@ import NearbyPeaks from '../../components/NearbyPeaks.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
 import TrustBlock from '../../components/TrustBlock.astro';
-import { metaDescription, answerBlock, buildFaqs } from '../../lib/seo';
+import { authorSchema } from '../../lib/author';
+import { metaDescription, answerBlock, buildFaqs, mountainTitle } from '../../lib/seo';
 import { getAllMountains, getMountainBySlug, getMountainImages, getMountainRoutes, getNearbyPeaks, type Mountain } from '../../lib/data';
 
 export async function getStaticPaths() {
@@ -101,10 +102,7 @@ const touristAttractionSchema = {
   }
 };
 
-const fullTitle = `Mountains in the UK – Guide to ${mountain.name}, Routes & Maps`;
-const pageTitle = mountain.seo_title || (fullTitle.length > 60
-  ? `${mountain.name} – UK Mountain Guide`
-  : fullTitle);
+const pageTitle = mountain.seo_title || mountainTitle(mountain);
 
 const pageDescription = mountain.seo_description || metaDescription(mountain);
 
@@ -120,12 +118,7 @@ const articleSchema = {
   "@type": "Article",
   "headline": pageTitle,
   "description": pageDescription,
-  "author": {
-    "@type": "Person",
-    "name": "James Holloway",
-    "url": "https://ukmountainsdirectory.co.uk/about/",
-    "jobTitle": "Qualified Mountain Leader (ML) & Fell Running Association member"
-  },
+  "author": authorSchema,
   "publisher": {
     "@type": "Organization",
     "name": "UK Mountains Directory",

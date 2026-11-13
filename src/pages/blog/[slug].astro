@@ -41,8 +41,9 @@ const articleSchema = {
   "keywords": [article.focusKeyphrase, ...article.secondaryKeywords, ...article.clusterKeywords].join(', '),
   "url": `https://ukmountainsdirectory.co.uk/blog/${article.slug}/`,
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": article.authorName,
+    "url": "https://ukmountainsdirectory.co.uk/about/",
     "description": article.authorCredentials
   },
   "publisher": {

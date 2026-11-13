@@ -1,4 +1,5 @@
 ---
+import { AUTHOR } from '../lib/author';
 interface Props {
   name?: string;
   credentials?: string;
@@ -7,8 +8,8 @@ interface Props {
 }
 
 const {
-  name = 'James Holloway',
-  credentials = 'Qualified Mountain Leader (ML) & Fell Running Association member',
+  name = AUTHOR.name,
+  credentials = AUTHOR.credentials,
   bioUrl = '/about/',
   lastUpdated = 'July 2025',
 } = Astro.props;
