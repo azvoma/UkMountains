@@ -214,7 +214,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Ben Macdui is usually climbed from the Cairngorm ski area car park, following a path across the high plateau. The ascent is long and the terrain is open and stony, so the round trip takes six to eight hours. A longer approach from Glen Derry or Glenmore gives a more remote feel.\n\nThe summit plateau is vast, windy and cold, even in summer, and navigation is very difficult in mist. A viewpoint indicator on the summit, installed in the 1920s, names the surrounding hills. The mountain is associated with the legend of the Grey Man of Ben Macdui, a ghostly presence said to haunt the summit, which adds to its atmosphere."
   },
   {
     "id": "2ece2f67-5603-40d7-8d8e-671871029a60",
@@ -885,7 +886,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Six main paths lead to the summit of Yr Wyddfa. The Llanberis Path is the longest and gentlest, around nine miles for the round trip, and follows the railway line. The Pyg Track and Miners' Track both start at Pen-y-Pass and join below the final climb, while the Watkin Path begins almost at sea level and gains the most height. The Rhyd Ddu and Snowdon Ranger paths are quieter, approaching from the west. Allow six to seven hours for most routes.\n\nIn summer Snowdon is busy, so start early and use the Sherpa bus rather than relying on the Pen-y-Pass car park, which fills very early. The summit has a visitor building, Hafod Eryri, and the Snowdon Mountain Railway runs from Llanberis. In winter the mountain is a serious mountaineering objective, with ice, snow and very strong winds, and walkers should only go with the right equipment and experience."
   },
   {
     "id": "4cd366ea-5d11-4549-aa28-4f79f9cec62c",
@@ -968,9 +970,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "An Teallach is considered one of Scotland's finest mountains, with a spectacular ridge featuring dramatic pinnacles. The traverse requires scrambling and a good head for heights.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "An Teallach, whose name means the forge, is regarded by many walkers as the finest mountain in the north-west Highlands. The ridge includes the Corrag Bhuidhe pinnacles, and Lord Berkeley's Seat, a sandstone ledge above the corrie, is a well-known viewpoint.",
+    "fun_facts": [
+      "An Teallach means the forge",
+      "The main summits are Bidein a' Ghlas Thuill and Sgurr Fiona",
+      "The Corrag Bhuidhe pinnacles are a famous scramble",
+      "Lord Berkeley's Seat overlooks the corrie",
+      "The mountain stands above Dundonnell in Wester Ross"
+    ],
+    "nearby_places": [
+      "Dundonnell",
+      "Ullapool",
+      "Gairloch",
+      "Loch Broom"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -990,7 +1003,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The traverse starts at the Dundonnell car park and climbs to the ridge, passing both Munros before crossing the Corrag Bhuidhe pinnacles. A bypass path avoids the hardest scrambling. Allow eight to ten hours for the full ridge.\n\nThis is a serious mountain day with exposed scrambling, and it is best undertaken in good weather by experienced walkers. In winter it becomes a major mountaineering route, and the pinnacles can be dangerous in ice or snow."
   },
   {
     "id": "e6594048-110f-4fa3-afff-9693bdda7cd0",
@@ -1003,9 +1017,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Liathach is one of the great Torridon mountains, with a terraced appearance and narrow ridge. The traverse is one of the finest mountain days in Scotland.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Liathach is one of the three great mountains of Torridon, with Beinn Eighe and Beinn Alligin. The mountain is formed of Torridonian sandstone capped with white quartzite, and the Torridon estate is cared for by the National Trust for Scotland.",
+    "fun_facts": [
+      "Liathach is one of the great Torridon mountains",
+      "It has two Munros, Spidean a' Choire Leith and Mullach an Rathain",
+      "The Am Fasarinen pinnacles are the crux of the traverse",
+      "The mountain is formed of Torridonian sandstone and quartzite",
+      "The Torridon estate is cared for by the National Trust for Scotland"
+    ],
+    "nearby_places": [
+      "Torridon",
+      "Kinlochewe",
+      "Loch Torridon",
+      "Shieldaig"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1025,7 +1050,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The traverse of Liathach is one of the great ridge walks of Scotland, starting from the Glen Torridon car park and following a steep path to the main ridge. The Am Fasarinen pinnacles are a scramble that needs a good head for heights, although a bypass path avoids the worst of them. Allow seven to nine hours for the full traverse.\n\nThe ridge is narrow and exposed, and the weather in Torridon can be wild. This is a mountain for experienced walkers who are comfortable with scrambling, and it should be avoided in strong winds, mist, ice or snow unless you have the right skills."
   },
   {
     "id": "4a182855-cf0c-44dd-a6ce-e0fad94d607d",
@@ -1120,9 +1146,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "The \"Great Herdsman of Etive\" is one of Scotland's most iconic mountains, guarding the entrance to Glen Coe. Its pyramid shape is recognized worldwide.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "The Buachaille Etive Mor, whose Gaelic name means the great herdsman of Etive, stands at the head of Glen Coe beside the A82. Its main summit, Stob Dearg, is one of the best-known peaks in Scotland and has long been a classic climbing venue.",
+    "fun_facts": [
+      "Buachaille Etive Mor means great herdsman of Etive",
+      "The main summit is Stob Dearg",
+      "Curved Ridge is a classic scramble",
+      "Coire na Tulaich is the usual walking route",
+      "The mountain overlooks the start of Glen Coe"
+    ],
+    "nearby_places": [
+      "Glencoe",
+      "Kingshouse",
+      "Altnafeadh",
+      "Glen Etive"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1142,7 +1179,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual walkers' route climbs Coire na Tulaich from the road at Lagangarbh, near Altnafeadh. The path is steep and loose, and it becomes a serious winter gully when snow lies. Curved Ridge is a popular scramble on the right-hand side of the face. Allow five to six hours for the round trip.\n\nThe summit ridge is narrow and exposed, and the mountain is a significant undertaking for walkers who are new to Scottish Munros. Check the avalanche forecast in winter, and carry a map, compass and a head torch."
   },
   {
     "id": "ba547826-49c0-4c25-a8dd-b74c7152a599",
@@ -1190,9 +1228,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Glyder Fawr is the highest of the Glyderau range. The summit area has bizarre rock formations, including Cantilever Stone, one of Wales' most photographed features.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Glyder Fawr is the highest of the Glyderau and overlooks Cwm Idwal, a glacial hollow that has been studied by geologists for generations. The summit is a field of shattered rock, a product of frost action over thousands of years.",
+    "fun_facts": [
+      "Glyder Fawr is the highest of the Glyderau",
+      "Cwm Idwal is one of the best examples of a glacial landscape in Britain",
+      "The Devil's Kitchen is a deep gully on the cliffs above Llyn Idwal",
+      "The summit is a field of frost-shattered rock",
+      "Glyder Fach is the neighbouring summit"
+    ],
+    "nearby_places": [
+      "Ogwen Cottage",
+      "Capel Curig",
+      "Bethesda",
+      "Llanberis"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1212,7 +1261,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at Ogwen Cottage, passes Llyn Idwal and climbs beside the Devil's Kitchen, or follows the steep ridge of Y Gribin, to reach the high plateau. The summit is a jumble of rock slabs and boulders, and the round trip takes five to six hours.\n\nNavigation on the plateau is difficult in mist, since paths are faint and the rocks hide the way. The cliffs of the Devil's Kitchen are steep and the rock is loose, so keep away from the edge. This is a fine day for walkers who want rugged scenery without a major scramble."
   },
   {
     "id": "516c4794-ac77-4638-bc83-01f4d750eeae",
@@ -1337,7 +1387,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The shortest route to the summit starts at Wasdale Head and climbs by Brown Tongue and Lingmell Col, taking around five to six hours for the round trip. A longer and more varied route starts at Seathwaite in Borrowdale and climbs via Esk Hause. Walkers from Langdale can also reach the top by the Esk Hause route, though the day is long. The upper section is a boulder field that can be slow going.\n\nThe summit and the surrounding land were given to the National Trust as a memorial to those who died in the First World War, and a plaque on the summit records this. The top is often in cloud, and navigation across the stony plateau needs care, so carry a map and compass and be ready to turn back. This is also one of the National Three Peaks, so expect crowds on summer weekends."
   },
   {
     "id": "9291910c-5104-45f2-9177-8b5c4fb98c49",
@@ -1392,7 +1443,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route, known as the Tourist Route, starts at the Rowardennan car park on the east side of Loch Lomond and climbs steadily to the summit. It is a clear, well-made path and takes around five to six hours for the round trip. A quieter alternative is the Ptarmigan Ridge, which climbs the lower ridge before joining the main path.\n\nBen Lomond is the most southerly Munro and is easy to reach from Glasgow, so it is busy at weekends. The summit can be cold and windy, and cloud can come down quickly, so carry warm layers and a map and compass. The mountain is a good first Munro for walkers with some hillwalking experience."
   },
   {
     "id": "daee0cc1-120b-40d6-a556-b0a1671b60ca",
@@ -1788,10 +1840,21 @@
     "longitude": -3.992778,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Tryfan is one of Wales' most famous mountains, requiring scrambling to reach the summit. Adam and Eve, two monoliths on the summit, are traditionally jumped between.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Tryfan is one of Wales' most famous mountains, requiring scrambling to reach the summit. Adam and Eve, two monoliths on the summit, are traditionally jumped between. Few mountains in Britain have such a clear scrambling line, and the rocky summit is crowned with two standing stones known as Adam and Eve.",
+    "history": "Tryfan rises directly from the A5 in the Ogwen Valley and has long been a training ground for climbers. The two upright stones on its summit are called Adam and Eve, and a long-standing tradition is to jump from one to the other, an act that carries real risk.",
+    "fun_facts": [
+      "Tryfan rises straight from the Ogwen Valley in a single steep line",
+      "The summit is topped by two standing stones, Adam and Eve",
+      "The North Ridge is a classic Grade 1 scramble",
+      "Tryfan is one of the few Welsh mountains with no easy walking route to the top",
+      "The Heather Terrace offers a rough path on the western side"
+    ],
+    "nearby_places": [
+      "Ogwen Cottage",
+      "Capel Curig",
+      "Bethesda",
+      "Llyn Ogwen"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1811,7 +1874,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The North Ridge is the classic route, climbing from the A5 near Llyn Ogwen over a series of rocky steps to the summit. It is a hands-on scramble and not a walk, and most people take three to four hours for the ascent. The descent is usually by the south ridge to Bwlch Tryfan, or by the Heather Terrace path.\n\nTryfan is a popular mountain with walkers, but it needs a head for heights and care in wet weather, when the rock is slippery. It is not advisable to attempt it in mist, snow or ice unless you have scrambling experience. Many walkers combine Tryfan with the Glyderau, but this makes a long day."
   },
   {
     "id": "d7f915fc-7ad9-4233-8dff-fc04d3db2c4d",
@@ -2035,9 +2099,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Great Gable is one of the Lake District's most iconic mountains. Its distinctive shape dominates the head of Wasdale, and it was gifted to the National Trust as a war memorial.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "The summit of Great Gable carries a memorial to members of the Fell and Rock Climbing Club who died in the First World War. The club also gave the surrounding fells to the National Trust, and a Remembrance Sunday service is held at the memorial each year, attended by walkers who make the climb in all weather.",
+    "fun_facts": [
+      "Great Gable has a war memorial on its summit",
+      "A Remembrance Sunday service is held there each year",
+      "Napes Needle on the southern face is a famous rock climb",
+      "The mountain is one of the best viewpoints in the Lake District",
+      "Sty Head is the pass at its foot"
+    ],
+    "nearby_places": [
+      "Seathwaite",
+      "Wasdale Head",
+      "Honister Pass",
+      "Borrowdale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2057,7 +2132,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The shortest route starts at Seathwaite in Borrowdale and climbs via Sty Head to the summit by the steep path on the south side. From Wasdale Head the Gavel Neese path is steep and direct. A longer alternative starts at Honister Pass and traverses Grey Knotts and Windy Gap. Allow five to six hours for the round trip.\n\nThe upper slopes are steep and stony, and the summit is often in cloud. Navigation can be difficult in mist, and the crags on the Wasdale side are dangerous for anyone who strays off the path. This is a good mountain for confident walkers who want a classic Lakeland summit."
   },
   {
     "id": "847b3c5b-f7ae-45d6-936b-62f4562d180d",
