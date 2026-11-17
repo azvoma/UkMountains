@@ -1539,10 +1539,21 @@
     "longitude": -3.147778,
     "region": "England",
     "county": "Cumbria",
-    "description": "Skiddaw is one of the Lake District's most prominent mountains and one of the easiest to climb. The mountain overlooks Keswick and Derwentwater.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Skiddaw is one of the Lake District's most prominent mountains and one of the easiest to climb. The mountain overlooks Keswick and Derwentwater. It rises above Keswick, a broad dome of Skiddaw slate whose smooth, rounded slopes contrast with the craggier fells further south.",
+    "history": "Skiddaw is built from Skiddaw slate, among the oldest rocks in the Lake District, which weathers into the smooth, scree-covered slopes that give the mountain its distinctive profile. It has been a popular ascent for visitors since the early days of Lakeland tourism and is climbed in large numbers because of its straightforward paths from the edge of Keswick.",
+    "fun_facts": [
+      "Skiddaw is one of the four highest mountains in England",
+      "It is made of Skiddaw slate, some of the oldest rocks in the Lake District",
+      "The mountain is climbed from Keswick on a wide, well-made path",
+      "Its bulk dominates the view north of Derwentwater and Keswick",
+      "Skiddaw is part of the Northern Fells, a group of rounded hills far gentler than the central Lakeland peaks"
+    ],
+    "nearby_places": [
+      "Keswick",
+      "Derwentwater",
+      "Bassenthwaite Lake",
+      "Latrigg"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -1562,7 +1573,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route up Skiddaw starts from the car park at the end of Gale Road, above Keswick, and follows a broad track past Latrigg before climbing steadily to the summit ridge. The path is wide and clear, and the gradient is moderate throughout, which makes this one of the easier ways onto a major Lakeland summit. Allow roughly four to five hours for the round trip. The top of Skiddaw is exposed to wind and cloud, so carry waterproofs and warm layers even on a bright day, and take a map and compass in case of poor visibility."
   },
   {
     "id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
@@ -1644,10 +1656,21 @@
     "longitude": -4.065833,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Crib Goch is the most famous knife-edge ridge in Wales. The exposed scramble is the classic route up Snowdon but requires a good head for heights.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Crib Goch is the most famous knife-edge ridge in Wales. The exposed scramble is the classic route up Snowdon but requires a good head for heights. The ridge forms the northern arm of the Snowdon Horseshoe and is regarded as one of the most exposed scrambles in Britain.",
+    "history": "Crib Goch, whose name means red ridge in Welsh, is the first part of the Snowdon Horseshoe. The hotel at Pen-y-Gwryd, close to the foot of the ridge, was used as a training base by the 1953 Everest expedition, a link that adds to the area's mountaineering heritage.",
+    "fun_facts": [
+      "Crib Goch means red ridge in Welsh",
+      "It is the first section of the Snowdon Horseshoe",
+      "The scramble is exposed and graded as a serious undertaking",
+      "The Pen-y-Gwryd Hotel was used by the 1953 Everest team for training",
+      "In winter conditions the ridge becomes a serious mountaineering route"
+    ],
+    "nearby_places": [
+      "Pen-y-Pass",
+      "Llanberis",
+      "Capel Curig",
+      "Beddgelert"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1667,7 +1690,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Crib Goch is usually climbed from Pen-y-Pass by the Pyg Track and a rising path onto the ridge. The knife-edge scrambling requires a good head for heights and should only be attempted in dry, calm weather. Allow time for the traverse to Garnedd Ugain and Snowdon, and consider the Pyg Track as a safer alternative if conditions or confidence are poor."
   },
   {
     "id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
@@ -2111,7 +2135,7 @@
     "longitude": -3.436667,
     "region": "Wales",
     "county": "Powys",
-    "description": "Pen y Fan is the highest peak in South Wales and southern Britain. Part of the Brecon Beacons, it features distinctive flat-topped summit and is visible for miles around.",
+    "description": "Pen y Fan is the highest peak in South Wales and southern Britain. Part of the Brecon Beacons, it features distinctive flat-topped summit and is visible for miles around. The mountain's distinctive flat-topped profile, with a steep northern escarpment, makes it instantly recognisable across the central Brecon Beacons.",
     "history": "The name means \"top of the place\" or \"highest point\" in Welsh. The mountain is used by the military for training, including the SAS selection process. The Roman road Sarn Helen passes nearby.",
     "fun_facts": [
       "Highest peak in southern Britain",
@@ -2154,7 +2178,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The shortest and busiest route up Pen y Fan starts at the Pont ar Daf car park and climbs via Corn Du to the summit, returning the same way, which makes a round trip of around four hours. A longer and quieter alternative is the Beacons horseshoe, which links Cribyn, Pen y Fan, Corn Du and Y Gyrn by a circular route from Neuadd reservoir. Paths are clear but eroded in places, and the summit plateau can be very windy and cold. Take a map and compass, wear sturdy boots, and be prepared to turn back if the cloud comes down."
   },
   {
     "id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
@@ -2271,10 +2296,21 @@
     "longitude": -3.0375,
     "region": "England",
     "county": "Cumbria",
-    "description": "Blencathra, also known as Saddleback, has several ridges offering varied routes. Sharp Edge provides one of the Lake District's finest scrambles.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Blencathra, also known as Saddleback, has several ridges offering varied routes. Sharp Edge provides one of the Lake District's finest scrambles. Its southern face rises steeply above the village of Threlkeld, split by a series of ridges and gullies, and the long, sweeping profile that gives the fell its alternative name of Saddleback.",
+    "history": "Blencathra is also known as Saddleback because, from the east or west, its summit ridge dips like the seat of a saddle. The name Blencathra is thought to be of ancient Brittonic origin. Alfred Wainwright regarded it as one of his favourite fells, and it features prominently in his Pictorial Guide to the Lakeland Fells.",
+    "fun_facts": [
+      "Blencathra is also called Saddleback because of the dip along its summit ridge",
+      "Sharp Edge, on the Scales Tarn side, is one of the best-known scrambles in the Lake District",
+      "Hall's Fell Ridge is a classic route to the summit that gains height steadily from Threlkeld",
+      "The fell is a Wainwright, a Hewitt, a Nuttall and a Marilyn",
+      "Blencathra is a Wainwright in the Northern Fells, a short drive from Keswick"
+    ],
+    "nearby_places": [
+      "Threlkeld",
+      "Keswick",
+      "Scales Tarn",
+      "Mungrisdale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2294,7 +2330,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The most popular ascent of Blencathra starts at Threlkeld and climbs Hall's Fell Ridge, a long and continuous rising ridge that reaches the summit with only light scrambling in places. Many walkers prefer to return by the gentler path to the east or down via Gategill. Sharp Edge, approached from Scales Tarn near Mungrisdale, is a narrow arete that needs a good head for heights and is best avoided in wet, icy or windy weather. Allow around four to five hours for a round trip by Hall's Fell. Carry a map and compass, check the Met Office mountain forecast before you set off, and expect cold, exposed conditions on the summit ridge even on fine days."
   },
   {
     "id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
@@ -2656,10 +2693,21 @@
     "longitude": -2.420833,
     "region": "England",
     "county": "North Yorkshire",
-    "description": "Whernside is the highest of the Yorkshire Three Peaks. The walk along the ridge from Ribblehead Viaduct is spectacular, with panoramic views.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Whernside is the highest of the Yorkshire Three Peaks. The walk along the ridge from Ribblehead Viaduct is spectacular, with panoramic views. The long, whale-backed ridge is one of the Three Peaks and is best known for the view down to Ribblehead Viaduct.",
+    "history": "Whernside is the highest of the Yorkshire Three Peaks. The summit ridge forms part of the boundary between North Yorkshire and Cumbria, and the famous Ribblehead Viaduct, built for the Settle to Carlisle railway in the 1870s, sits at the foot of the fell.",
+    "fun_facts": [
+      "Whernside is the highest of the Yorkshire Three Peaks",
+      "The summit ridge lies on the boundary between North Yorkshire and Cumbria",
+      "Ribblehead Viaduct, with its 24 arches, is visible from the ridge",
+      "The Settle to Carlisle railway runs through Blea Moor tunnel nearby",
+      "Dent and Dentdale lie to the north-east of the fell"
+    ],
+    "nearby_places": [
+      "Ribblehead",
+      "Ingleton",
+      "Dent",
+      "Chapel-le-Dale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2679,7 +2727,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "A popular circuit of Whernside starts at Ribblehead, crosses Ribblehead Viaduct, and climbs by Force Gill before following the long summit ridge to the trig point. The descent is by the broad path to Bruntscar, completing a round trip of around eight miles that takes four to five hours. The ridge is exposed to wind, so bring warm clothing, and use a map and compass in poor weather."
   },
   {
     "id": "75add98a-f19e-4500-a65e-e1fc4605f969",
@@ -2726,10 +2775,21 @@
     "longitude": -2.425833,
     "region": "England",
     "county": "North Yorkshire",
-    "description": "Ingleborough has a distinctive flat summit plateau that was once an Iron Age hill fort. It's the second peak in the Yorkshire Three Peaks challenge.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Ingleborough has a distinctive flat summit plateau that was once an Iron Age hill fort. It's the second peak in the Yorkshire Three Peaks challenge. Its flat, gritstone-capped summit can be seen for miles and is one of the most recognisable landmarks in the Yorkshire Dales.",
+    "history": "The summit plateau of Ingleborough carries the remains of an Iron Age hillfort, one of the highest in England, together with a ring of stone walls and hut circles. Below the fell, the limestone country around Ingleton and Clapham is riddled with caves and potholes, including Gaping Gill, one of Britain's best-known underground shafts.",
+    "fun_facts": [
+      "Ingleborough is one of the Yorkshire Three Peaks",
+      "The summit plateau holds the remains of an Iron Age hillfort",
+      "Gaping Gill, a famous pothole, lies on the fell's southern flank",
+      "Ingleborough Cave, near Clapham, is open to visitors as a show cave",
+      "The flat top makes the mountain easy to spot from across the Dales"
+    ],
+    "nearby_places": [
+      "Clapham",
+      "Ingleton",
+      "Gaping Gill",
+      "Chapel-le-Dale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2749,7 +2809,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The most scenic way up Ingleborough starts in Clapham and follows the Ingleborough Estate trail past the cave and Trow Gill before a steady climb to the plateau. Many walkers instead start in Ingleton or at Chapel-le-Dale and climb by the Southerscales path. The final section is a stone-flagged climb onto the flat summit. Allow four to five hours for the round trip and take care in mist, since the plateau is wide and navigation is hard without a map and compass."
   },
   {
     "id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
@@ -2796,10 +2857,21 @@
     "longitude": -1.873056,
     "region": "England",
     "county": "Derbyshire",
-    "description": "Kinder Scout is the highest point in the Peak District. The plateau is famous for the Mass Trespass of 1932, a pivotal moment in the campaign for access to open country.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Kinder Scout is the highest point in the Peak District. The plateau is famous for the Mass Trespass of 1932, a pivotal moment in the campaign for access to open country. The high, peaty plateau is the focus of one of the most important moments in British access history.",
+    "history": "Kinder Scout was the setting of the Mass Trespass of April 1932, when ramblers from Manchester walked onto the plateau in protest at being barred from open moorland. The protest helped lead to the National Parks and Access to the Countryside Act of 1949, and the Peak District became Britain's first national park in 1951.",
+    "fun_facts": [
+      "Kinder Scout is the highest point in the Peak District",
+      "The 1932 Mass Trespass took place on the plateau",
+      "The Pennine Way begins at Edale, in the Kinder Scout area",
+      "Kinder Downfall is a well-known waterfall on the western edge",
+      "The plateau is covered in eroded peat groughs"
+    ],
+    "nearby_places": [
+      "Edale",
+      "Hayfield",
+      "Castleton",
+      "Mam Tor"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Marilyn",
@@ -2819,7 +2891,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A classic ascent of Kinder Scout begins at Edale and climbs Grindsbrook Clough onto the plateau, where a path follows the edge to Kinder Downfall before returning by the Pennine Way. The plateau is boggy and featureless, and navigation can be hard in cloud, so a map and compass are essential. Allow five to six hours for the full round trip."
   },
   {
     "id": "215212dc-2bf4-4258-af0d-0e201478767f",
@@ -2866,10 +2939,21 @@
     "longitude": -5.122778,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Despite its modest height, Stac Pollaidh is one of Scotland's most distinctive peaks. The sandstone pinnacles and scrambling opportunities make it extremely popular.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Despite its modest height, Stac Pollaidh is one of Scotland's most distinctive peaks. The sandstone pinnacles and scrambling opportunities make it extremely popular. The red sandstone ridge, topped with pinnacles, gives wide views over Coigach and Assynt and is one of the best short hill walks in the north-west Highlands.",
+    "history": "Stac Pollaidh, sometimes spelled Stac Polly, is built from Torridonian sandstone sculpted by frost into the towers that crown the summit ridge. It lies in the Coigach area north of Ullapool, in a landscape of isolated peaks including Cul Beag and Suilven.",
+    "fun_facts": [
+      "Stac Pollaidh is built from Torridonian sandstone",
+      "The summit ridge is topped with weathered pinnacles",
+      "It can be climbed in a couple of hours from the roadside",
+      "The view includes Suilven and Cul Beag",
+      "It is sometimes spelled Stac Polly"
+    ],
+    "nearby_places": [
+      "Ullapool",
+      "Achiltibuie",
+      "Achnahaird",
+      "Suilven"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Marilyn",
@@ -2889,7 +2973,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Stac Pollaidh is climbed from the car park on the single-track road to Achnahaird. A good path rises to a col and then circles the hill, giving a choice of routes onto the ridge. The main summit involves easy scrambling, and the full circuit takes around two to three hours. Be careful on the scrambling sections, particularly in wet or windy weather."
   },
   {
     "id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
@@ -3359,7 +3444,7 @@
     "longitude": -3.196111,
     "region": "England",
     "county": "Cumbria",
-    "description": "Catbells is one of the most beloved hills in the Lake District and one of the most climbed in the UK. Despite its modest height, it offers spectacular views over Derwentwater and is perfect for families and beginners.",
+    "description": "Catbells is one of the most beloved hills in the Lake District and one of the most climbed in the UK. Despite its modest height, it offers spectacular views over Derwentwater and is perfect for families and beginners. It sits on the western shore of Derwentwater and is a popular choice for families and first-time fell walkers.",
     "history": "The name possibly derives from 'Cat Bields', meaning a shelter for wildcats. The fell was immortalised by Beatrix Potter, who set her story of Mrs Tiggy-Winkle on its slopes.",
     "fun_facts": [
       "One of the most climbed hills in England",
@@ -3401,7 +3486,8 @@
     "is_wainwright": true,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Most walkers climb Catbells from the car park at Hawse End or from Gutherscale, following the clear path up the north ridge. The final section is a short rocky scramble to the summit. A round trip takes around two hours, and many walkers continue to Maiden Moor and High Spy. The path is eroded in places, so wear sturdy footwear."
   },
   {
     "id": "a1b2c3d4-0010-4001-8001-000000000010",
@@ -3413,7 +3499,7 @@
     "longitude": -2.248611,
     "region": "England",
     "county": "North Yorkshire",
-    "description": "Pen-y-ghent is the third of the Yorkshire Three Peaks and arguably the most dramatic. The distinctive stepped profile makes it instantly recognisable, and its rocky summit ridge offers an exciting scramble.",
+    "description": "Pen-y-ghent is the third of the Yorkshire Three Peaks and arguably the most dramatic. The distinctive stepped profile makes it instantly recognisable, and its rocky summit ridge offers an exciting scramble. Its stepped, sloping profile and rocky nose make it the most dramatic of the Yorkshire Three Peaks when seen from Horton in Ribblesdale.",
     "history": "The name is thought to derive from Brittonic meaning 'hill of the border territory'. The Three Peaks Challenge, which includes Pen-y-ghent, Ingleborough, and Whernside, began in 1887.",
     "fun_facts": [
       "One of the three Yorkshire Three Peaks",
@@ -3454,7 +3540,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route begins in Horton in Ribblesdale, passes the church, and climbs by Brackenbottom to the foot of the main crag. A short, easy scramble leads to the summit plateau, and the loop can be completed by returning via Hull Pot and Horton Scar Lane. A round trip takes around three to four hours. The scramble sections are easy but can be slippery after rain, so wear boots with a good grip."
   },
   {
     "id": "a1b2c3d4-0011-4001-8001-000000000011",
