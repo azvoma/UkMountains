@@ -228,9 +228,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Braeriach is the third highest mountain in the UK and the highest point in the western Cairngorms. Its vast summit plateau is home to arctic-alpine flora and one of Scotland's few permanent snowbeds.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Braeriach's vast summit plateau holds the Wells of Dee, the source of the River Dee, which rise at one of the highest altitudes of any river source in Britain. Its northern corrie, Garbh Choire Mor, holds snow for much of the year and sometimes through the summer.",
+    "fun_facts": [
+      "Braeriach is the third highest mountain in Britain",
+      "The River Dee rises at the Wells of Dee on the plateau",
+      "Garbh Choire Mor holds snow late into the summer",
+      "The Lairig Ghru pass runs beneath its eastern flank",
+      "Cairn Toul and the Angel's Peak lie across the Garbh Choire"
+    ],
+    "nearby_places": [
+      "Aviemore",
+      "Glenmore",
+      "Linn of Dee",
+      "Lairig Ghru"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -250,7 +261,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Braeriach is a committing day. Most walkers approach from the Cairngorm side through Chalamain Gap and the Lairig Ghru, then climb onto the plateau by the Sron na Lairige ridge. Allow at least nine to eleven hours for the round trip, and more if you add the neighbouring tops.\n\nThe plateau is high, open and very exposed, and the weather can be severe even in summer. Navigation in mist is hard, so you need a map and compass and the skill to use them. The reward is one of the finest views in Britain, down into the Garbh Choire and across to Cairn Toul."
   },
   {
     "id": "0af7db04-e887-4d1c-bb41-4e8b7f868d20",
@@ -263,9 +275,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Cairn Toul is the fourth highest mountain in Scotland, connected to Braeriach by a high col. The mountain offers spectacular views over the Lairig Ghru.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Cairn Toul sits across the Lairig Ghru from Ben Macdui and above the Devil's Point, a rocky tower at the head of Glen Dee. The mountain forms a pair with the Angel's Peak, Sgor an Lochain Uaine, and the two are often climbed together.",
+    "fun_facts": [
+      "Cairn Toul is the fourth highest mountain in Britain",
+      "The Devil's Point rises at the foot of the mountain beside Corrour Bothy",
+      "Sgor an Lochain Uaine, the Angel's Peak, lies on the same ridge",
+      "The Lairig Ghru passes beneath it",
+      "Corrour Bothy, a famous mountain shelter, sits in the glen"
+    ],
+    "nearby_places": [
+      "Braemar",
+      "Linn of Dee",
+      "Corrour Bothy",
+      "Lairig Ghru"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -285,7 +308,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Cairn Toul is reached either from Linn of Dee through Glen Dee and past Corrour Bothy, or from the Cairngorm side through the Lairig Ghru. Both approaches are long. Allow ten hours or more, and consider cycling the track to save time. Many walkers combine Cairn Toul with the Angel's Peak and Braeriach for a major day.\n\nThe terrain is rough and the plateau exposed, and mobile signal is non-existent. This is a mountain for experienced walkers who are happy with long days and navigation in poor visibility. Check the stalking information and tell someone your route."
   },
   {
     "id": "f7c08003-b841-460a-8cc8-41d9df8666ef",
@@ -774,9 +798,20 @@
     "region": "Scotland",
     "county": "Argyll and Bute",
     "description": "Ben Cruachan dominates the Pass of Brander and Loch Awe. The mountain has a vast horseshoe ridge and is home to the Cruachan Power Station hidden inside the mountain.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Ben Cruachan is best known for the Cruachan Power Station, a hydroelectric station built inside the mountain and opened in 1965. A dam high on the hillside holds the upper reservoir, and the station can be visited, which makes this one of the most unusual mountain days in Britain.",
+    "fun_facts": [
+      "Cruachan Power Station is built inside the mountain",
+      "A dam holds the upper reservoir high on the hillside",
+      "The mountain has two Munros, Ben Cruachan and Stob Diamh",
+      "It overlooks the Pass of Brander and Loch Awe",
+      "The Falls of Cruachan railway station sits at the foot"
+    ],
+    "nearby_places": [
+      "Taynuilt",
+      "Dalmally",
+      "Loch Awe",
+      "Pass of Brander"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -796,7 +831,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The classic horseshoe starts at the Falls of Cruachan station, follows the path to the dam, and climbs the ridge to Ben Cruachan before continuing to Stob Diamh. Allow seven to nine hours for the round trip. The ridge is narrow in places and requires some easy scrambling.\n\nThe upper slopes are steep and rocky, and the summit can be in cloud even on fine days. This is a satisfying day for walkers who have done a few Munros and want a proper ridge. The power station visitor centre is worth a visit if you have time."
   },
   {
     "id": "0d910a24-ea84-4ec1-8670-d331459b4f9a",
@@ -900,9 +936,20 @@
     "region": "Scotland",
     "county": "Perth and Kinross",
     "description": "Schiehallion is one of Scotland's best-known mountains, famous for its near-perfect cone shape. It was used in 1774 for the first accurate measurement of Earth's mass.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Schiehallion's symmetrical shape made it ideal for a scientific experiment in 1774, when astronomer Nevil Maskelyne measured the deflection of a plumb line beside the mountain to estimate the density of the Earth. The surveyor Charles Hutton developed contour lines to analyse the data, a technique now used on every map.",
+    "fun_facts": [
+      "Schiehallion was used in 1774 to estimate the mass of the Earth",
+      "Contour lines were developed during the survey of the mountain",
+      "The name is often translated as fairy hill of the Caledonians",
+      "The east ridge is a rough boulder field",
+      "The path from Braes of Foss was rebuilt by the John Muir Trust"
+    ],
+    "nearby_places": [
+      "Kinloch Rannoch",
+      "Loch Rannoch",
+      "Pitlochry",
+      "Aberfeldy"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -922,7 +969,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The standard route starts at the Braes of Foss car park, following a well-built path up the east ridge to the summit. Allow four to five hours for the round trip. The upper section is a field of angular quartzite boulders, and it needs some care, especially when wet.\n\nSchiehallion is a good first Munro, but the summit is exposed and the cloud can come down quickly. Take a map and compass, and wear boots with good grip. The mountain stands alone, so the views in all directions are superb on a clear day."
   },
   {
     "id": "32262237-2045-463a-b660-1faadb5a65ae",
@@ -1982,9 +2030,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Great End is at the head of Borrowdale with impressive crags. Often climbed with Scafell Pike, it gives spectacular views down the valley.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Great End is the northernmost summit of the Scafell range and has a steep, craggy north face that attracts climbers in winter. Seathwaite, the usual starting point, is known as one of the wettest inhabited places in England.",
+    "fun_facts": [
+      "Great End has a steep craggy north face",
+      "Sprinkling Tarn lies beneath the summit",
+      "Seathwaite is among the wettest inhabited places in England",
+      "Esk Hause is the pass beside the mountain",
+      "Great End's gullies are a popular winter climbing venue"
+    ],
+    "nearby_places": [
+      "Seathwaite",
+      "Borrowdale",
+      "Wasdale Head",
+      "Sprinkling Tarn"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2004,7 +2063,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Great End is usually climbed from Seathwaite in Borrowdale by the path to Sty Head and Sprinkling Tarn, then up to the summit. Allow five to six hours. Many walkers combine it with Scafell Pike, which makes a long day.\n\nThe crags on the north face are steep, and in winter the gullies hold snow and ice. Keep away from the edge in mist, and navigate carefully on the stony ground."
   },
   {
     "id": "0a5e0af9-f3ca-4ad3-afa8-4cd2c1e02173",
@@ -2064,9 +2124,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Bowfell is a beautiful mountain at the head of Langdale. The summit is a rocky pyramid with excellent views, and the route via The Band is classic.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Bowfell stands at the head of Great Langdale and is one of the best-known mountains in the central Lake District. Its summit is a rocky cone, and the Great Slab and Bowfell Buttress on its northern flank are well known to climbers.",
+    "fun_facts": [
+      "Bowfell is a rocky pyramid at the head of Great Langdale",
+      "The Band is the classic walkers' route",
+      "Bowfell Buttress is a well-known climbing crag",
+      "Three Tarns lies between Bowfell and Crinkle Crags",
+      "The summit has views to Scafell Pike and the western fells"
+    ],
+    "nearby_places": [
+      "Langdale",
+      "Ambleside",
+      "Elterwater",
+      "Old Dungeon Ghyll"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2086,7 +2157,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at the Old Dungeon Ghyll car park, climbs the ridge known as The Band, and reaches the summit after a steady ascent. Allow five to six hours for the round trip. The path is clear but steep, and the final section is a boulder field.\n\nThe summit is exposed to the wind, and the weather can change quickly. Combine Bowfell with the Crinkle Crags for a longer and more rewarding day. Walkers should avoid the crags in mist and keep to the path."
   },
   {
     "id": "6c904098-64b0-4f1f-8146-5a376b3739dd",
@@ -2298,9 +2370,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Pillar is one of the great Lake District mountains, with the famous Pillar Rock on its northern face. The summit gives excellent views of the western fells.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Pillar takes its name from Pillar Rock, a great crag on its northern face above Ennerdale. The rock was first climbed in 1826 by John Atkinson, and it became a major objective for early Lake District climbers. The mountain is also associated with the remote Black Sail Hut, a youth hostel in the valley below.",
+    "fun_facts": [
+      "Pillar Rock was first climbed in 1826",
+      "The mountain overlooks Ennerdale and Mosedale",
+      "Black Sail Hut stands at the pass below",
+      "Kirk Fell and Scoat Fell are neighbouring tops",
+      "The summit has wide views across the western fells and Ennerdale"
+    ],
+    "nearby_places": [
+      "Wasdale Head",
+      "Ennerdale",
+      "Buttermere",
+      "Black Sail Pass"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2320,7 +2403,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Pillar can be climbed from Wasdale Head by the path over Black Sail Pass and the High Level Route, or from Ennerdale by the path to Black Sail. A circular route round Mosedale is also popular. Allow six to seven hours for the round trip.\n\nThe summit is a broad ridge, and the cliffs of Pillar Rock lie on the northern side. Climbing the rock itself is a serious undertaking that needs rope work and experience. Walkers should keep to the path and take care in mist."
   },
   {
     "id": "21ce6fb7-f5af-4f18-a364-6ea76af6b450",
@@ -2565,9 +2649,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Crinkle Crags is a mountain with five main \"crinkles\" or summits. The route involves scrambling and is one of Lakeland's finest ridge walks.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Crinkle Crags takes its name from the five crinkles, or rocky summits, on its ridge. The Bad Step, a short scramble on the ridge, is the crux of the route, and the mountain is generally regarded as one of the finest ridge walks in Lakeland.",
+    "fun_facts": [
+      "Crinkle Crags has five main crinkles on its ridge",
+      "The Bad Step is a short scramble on the ridge",
+      "Three Tarns lies between Crinkle Crags and Bowfell",
+      "Great Langdale is the usual starting point",
+      "The ridge is often combined with Bowfell"
+    ],
+    "nearby_places": [
+      "Langdale",
+      "Ambleside",
+      "Wrynose Pass",
+      "Elterwater"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2587,7 +2682,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at the Old Dungeon Ghyll car park and climbs by Oxendale and the Great Knott to the ridge. The Bad Step is a short but awkward scramble, and walkers can avoid it by a bypass path. Allow six to seven hours for the round trip.\n\nThe ridge is rocky and the weather can be wild. Navigation in mist is hard since the crinkles look similar. This is a good day for confident walkers who want a ridge with a bit of scrambling."
   },
   {
     "id": "7188549e-446d-4d03-a012-39b77bcc26ed",
@@ -2694,9 +2790,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "High Street follows a Roman road and has one of the Lake District's longest summit ridges. The mountain offers easy walking with extensive views.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "High Street takes its name from a Roman road that crosses its ridge, linking the forts at Ambleside and Brougham. The broad summit was once used for horse races, and the nearby area is known as Racecourse Hill. Below the mountain, Haweswater reservoir drowned the village of Mardale Green in the 1930s.",
+    "fun_facts": [
+      "A Roman road runs along the summit ridge",
+      "Racecourse Hill on the summit was once used for horse races",
+      "Haweswater reservoir drowned the village of Mardale Green",
+      "Riggindale was long the only place in England where golden eagles nested",
+      "The summit ridge is one of the longest in the Lake District"
+    ],
+    "nearby_places": [
+      "Haweswater",
+      "Hartsop",
+      "Patterdale",
+      "Mardale Head"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2716,7 +2823,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The classic route starts at Mardale Head at the end of Haweswater and climbs the ridge of Long Stile, with views down to Riggindale. The summit is a broad plateau, and the return can be made by Mardale Ill Bell. Allow five to six hours for the round trip.\n\nThe ridge is exposed, and the weather can change quickly. This is a gentle mountain in terms of scrambling, so it suits walkers who want a long, high-level walk with history."
   },
   {
     "id": "7b0168df-2a19-41ea-b8d8-fa9d0a720ed2",
@@ -2764,9 +2872,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Coniston Old Man towers over the village of Coniston and its lake. Mining remains on its slopes tell of its industrial past, while the summit gives superb views.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "The slopes of Coniston Old Man are scarred by slate quarries and copper mines, which were worked for centuries. The Coppermines valley beneath the mountain holds many of the remains. Coniston village and its lake are linked with John Ruskin, who lived at Brantwood, and with Donald Campbell, who died on Coniston Water in 1967.",
+    "fun_facts": [
+      "Coniston Old Man was heavily mined for slate and copper",
+      "Low Water tarn lies in a hollow beneath the summit",
+      "John Ruskin lived at Brantwood on Coniston Water",
+      "Donald Campbell died on Coniston Water in 1967",
+      "The summit gives views to Morecambe Bay on clear days"
+    ],
+    "nearby_places": [
+      "Coniston",
+      "Coniston Water",
+      "Torver",
+      "Brantwood"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2786,7 +2905,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts in Coniston village and follows the path up Church Beck and through the Coppermines valley to Low Water and the summit. Allow four to five hours for the round trip. The path is clear and well-made, though the old mine workings are dangerous and best avoided.\n\nThe summit is exposed to the wind, and the weather can be severe even in summer. This is a good choice for walkers who want a classic Lakeland day with a lot of history."
   },
   {
     "id": "b6cfd79b-327c-48e0-8f43-fb3dc66c4313",
