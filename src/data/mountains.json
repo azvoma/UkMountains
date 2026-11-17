@@ -549,10 +549,21 @@
     "longitude": -4.221667,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Ben Lawers is the tenth highest mountain in Britain and the highest in the southern Highlands. It's famous for its arctic-alpine flora and was once thought to be Scotland's highest peak.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Ben Lawers is the tenth highest mountain in Britain and the highest in the southern Highlands. It's famous for its arctic-alpine flora and was once thought to be Scotland's highest peak. It is the high point of a group of Munros above Loch Tay, and its lime-rich schist supports rare mountain plants found nowhere else in Britain.",
+    "history": "Ben Lawers has long been valued by botanists for the rare arctic-alpine plants that grow on its crags, and the National Trust for Scotland looks after much of the mountain as a national nature reserve.",
+    "fun_facts": [
+      "Ben Lawers is the highest mountain in the southern Highlands",
+      "The mountain is part of a National Nature Reserve managed by the National Trust for Scotland",
+      "Its schist rock supports rare alpine flowers",
+      "The summit is the tenth highest in Britain",
+      "The Ben Lawers range includes seven Munros, among them Beinn Ghlas and An Stuc"
+    ],
+    "nearby_places": [
+      "Killin",
+      "Loch Tay",
+      "Fortingall",
+      "Lawers"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -572,7 +583,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Most walkers start at the National Trust for Scotland car park on the Ben Lawers road, high above Loch Tay, which saves around 400 metres of ascent. The path climbs over Beinn Ghlas to the main summit, with a return by the same route or by the Lawers Burn. Allow four to five hours for the round trip. The ground is well-defined, but the upper slopes are exposed and can be dangerous in winter.\n\nBen Lawers rewards a slow pace in early summer, when the rare alpine flowers on the crags are at their best and the limestone-rich slopes are green and bright. The route is one of the most accessible Munro days in Scotland, which makes it a popular first Munro, but it still has plenty of height and wind, so allow for that. Combining Beinn Ghlas and Ben Lawers is easy, and adding An Stuc makes a longer, more rugged day for confident walkers."
   },
   {
     "id": "aee34b16-4f66-483c-bf0c-e081ea0abf3a",
@@ -619,10 +631,21 @@
     "longitude": -3.238611,
     "region": "Scotland",
     "county": "Aberdeenshire",
-    "description": "Lochnagar is famous for its dramatic corrie and the dark lochan beneath its summit. The mountain has strong royal connections and inspired Lord Byron's poetry.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Lochnagar is famous for its dramatic corrie and the dark lochan beneath its summit. The mountain has strong royal connections and inspired Lord Byron's poetry. It is one of the best-known summits of the Cairngorms National Park, and its granite cliffs, deep corrie and dark loch have shaped a serious winter climbing venue.",
+    "history": "Lochnagar is a mountain with strong royal links. Queen Victoria walked in the area from Balmoral, and Prince Charles wrote a children's story, The Old Man of Lochnagar. Lord Byron, who spent part of his childhood in Aberdeenshire, wrote a famous poem about the mountain.",
+    "fun_facts": [
+      "Lochnagar lies within the Cairngorms National Park near Balmoral",
+      "Prince Charles wrote the children's book The Old Man of Lochnagar",
+      "Lord Byron's poem about the hill brought it to wider attention",
+      "The northern corrie has granite cliffs popular with climbers",
+      "The summit cairn is named Cac Carn Beag"
+    ],
+    "nearby_places": [
+      "Ballater",
+      "Braemar",
+      "Loch Muick",
+      "Balmoral"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -642,7 +665,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The easiest ascent starts at the Spittal of Glenmuick car park and follows the Glas Allt path to a shoulder above the loch, before an easy ridge walk to the summit. Allow five to six hours for the round trip. A more dramatic route follows the cliff edge above the loch, with spectacular views into the corrie. The plateau is high and exposed, and snow can linger late in the season.\n\nLochnagar is a good choice for a first Cairngorms-area Munro, thanks to its straightforward start from Glen Muick, but the summit plateau is high, cold and often snowy well into spring. The path over the Meikle Pap is the standard and most direct route, and it is the one most walkers use. Keep away from the edge of the corrie, where snow can overhang the cliffs."
   },
   {
     "id": "46df4420-5ac0-411e-833b-cdb9c085dae0",
@@ -654,10 +678,21 @@
     "longitude": -5.103333,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Bidean nam Bian is the highest peak in Argyll and the Glen Coe area. The mountain is hidden from the road by its three ridges, the Three Sisters of Glen Coe.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Bidean nam Bian is the highest peak in Argyll and the Glen Coe area. The mountain is hidden from the road by its three ridges, the Three Sisters of Glen Coe. Its three great buttresses face the A82 as the Three Sisters of Glen Coe, but the summit itself lies behind them, at the head of two corries.",
+    "history": "Bidean nam Bian is the highest mountain in Argyll. It rises above the Glen Coe valley, where the 1692 Massacre of Glencoe took place, and Coire Gabhail, the Lost Valley, hidden between two of the Three Sisters, is said to have been used by the MacDonalds to hide cattle.",
+    "fun_facts": [
+      "Bidean nam Bian is the highest mountain in Argyll",
+      "The Three Sisters of Glen Coe are three spurs of this mountain",
+      "Coire Gabhail, the Lost Valley, is a hidden glen reached by a steep path from the road",
+      "It has several subsidiary summits, including Stob Coire nan Lochan and Stob Coire Sgreamhach",
+      "Glen Coe is cared for by the National Trust for Scotland"
+    ],
+    "nearby_places": [
+      "Glencoe village",
+      "Loch Achtriochtan",
+      "Kinlochleven",
+      "Clachaig"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -677,7 +712,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A well-liked circuit starts at the lay-by at the foot of Coire nan Lochan, climbs the burn to a high lochan under Stob Coire nan Lochan, then crosses to Bidean nam Bian and returns the same way or by Stob Coire Sgreamhach. The corrie path is steep and rocky, and in winter the whole mountain becomes a serious climb with avalanche risk. Allow seven to nine hours.\n\nGlen Coe weather is often wet, so plan a fallback such as the Lost Valley walk, which makes a rewarding half day without any summit. The mountain is a good choice for walkers who already have a few Munros behind them and want a proper circuit with some scrambling on the upper ridges. In winter, check the Scottish Avalanche Information Service forecast and consider the mountain only with the right kit and experience. The nearby village has pubs and cafes, which makes it easy to base a weekend in the glen."
   },
   {
     "id": "6c946c68-27ef-4b10-8d5e-ecf520a75a65",
@@ -989,10 +1025,21 @@
     "longitude": -3.985,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Carnedd Dafydd is part of the main Carneddau ridge. The mountain is often climbed with Carnedd Llewelyn, forming a fine ridge walk.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Carnedd Dafydd is part of the main Carneddau ridge. The mountain is often climbed with Carnedd Llewelyn, forming a fine ridge walk. It sits on the high ridge of the Carneddau, the largest area of land above 900 metres in Wales and England, and is home to the wild Carneddau ponies.",
+    "history": "Carnedd Dafydd is traditionally said to be named after Dafydd ap Gruffudd, the brother of Llywelyn, the last prince of independent Wales, and it sits beside Carnedd Llewelyn, whose name is traditionally linked to Llywelyn himself. The ridge lies in the Carneddau, Snowdonia's largest and wildest upland area.",
+    "fun_facts": [
+      "Carnedd Dafydd is the third highest mountain in Wales",
+      "It is named after a Welsh prince",
+      "Wild Carneddau ponies graze the high ground",
+      "Pen yr Ole Wen is the steep ascent from the Ogwen Valley",
+      "The ridge continues to Carnedd Llewelyn"
+    ],
+    "nearby_places": [
+      "Bethesda",
+      "Ogwen Cottage",
+      "Capel Curig",
+      "Ogwen Valley"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1012,7 +1059,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The classic route climbs Pen yr Ole Wen from Ogwen Cottage, then follows the ridge to Carnedd Dafydd and onward to Carnedd Llewelyn. Allow five to seven hours for the walk. The first ascent is steep and relentless, but the ridge beyond is broad and fairly gentle. The summit plateau is open and exposed to wind, and navigation can be tricky in mist.\n\nCarnedd Dafydd is a very good choice for a day when the weather is settled, since the high ridge of the Carneddau is open and has few places to shelter. It is often quieter than the Glyderau or Snowdon, so it suits walkers who like space and long views. Walkers can extend the day by continuing to Carnedd Llewelyn and Yr Elen, or shorten it by returning by the Ffynnon Lloer route. Keep a respectful distance from the wild ponies."
   },
   {
     "id": "54dbbac7-84b3-4ab1-8e41-2bf1d7f16ae4",
@@ -1344,10 +1392,21 @@
     "longitude": -6.188333,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Sgurr nan Gillean is one of the Black Cuillin peaks on Skye. The mountain requires scrambling and rock climbing skills, offering spectacular views over the island.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Sgurr nan Gillean is one of the Black Cuillin peaks on Skye. The mountain requires scrambling and rock climbing skills, offering spectacular views over the island. The rock here is rough gabbro, which grips boots and hands far better than most mountain stone, but the narrow summit and the route finding on the approach make it a mountaineering objective rather than a walk.",
+    "history": "Sgurr nan Gillean is the northernmost peak of the Black Cuillin on the Isle of Skye and the first of the Cuillin summits to be climbed in recorded history, by Professor James David Forbes in 1836. The name is usually translated from Gaelic as peak of the young men. Its pinnacled outline is the most photographed view from the Sligachan Hotel and the old bridge beside it.",
+    "fun_facts": [
+      "Sgurr nan Gillean is the northernmost of the Black Cuillin Munros on Skye",
+      "The first recorded ascent was by Professor J. D. Forbes in 1836",
+      "The Cuillin are formed of gabbro, a rock with a notably rough, grippy surface",
+      "The normal route, the West Ridge, is usually graded as a Grade 3 scramble",
+      "Pinnacle Ridge on the eastern side is a more serious route used by experienced scramblers"
+    ],
+    "nearby_places": [
+      "Sligachan",
+      "Portree",
+      "Glen Brittle",
+      "Bhasteir Tooth"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1367,7 +1426,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route begins at Sligachan, follows the path from the hotel towards the mountain's western flank, and climbs the West Ridge, a sustained scramble with some exposed moves near the top. Allow around seven to nine hours for the round trip from Sligachan. The final section has steep ground on both sides, and a rope is often used by less confident parties. Navigation is difficult in mist because the ridge is rocky and compass readings can be unreliable on magnetic gabbro. This is a day for good weather and a competent party.\n\nThis is not a mountain for a first Scottish scramble. Walkers who have done Aonach Eagach, Crib Goch or Sharp Edge in comfort will find the West Ridge a step up, with longer and more consequential exposure, and many people hire a mountain guide for it. Check the forecast carefully, since wet gabbro is still grippy but wind on the pinnacles is dangerous. Midges are bad around Sligachan in still summer weather, so late spring and early autumn are more pleasant."
   },
   {
     "id": "c0032ada-fa01-43c8-93e5-9427ee65a942",
@@ -1379,7 +1439,7 @@
     "longitude": -3.016389,
     "region": "England",
     "county": "Cumbria",
-    "description": "Helvellyn is the third highest peak in England and one of the most popular mountains in the Lake District. The mountain offers several challenging routes including the famous Striding Edge.",
+    "description": "Helvellyn is the third highest peak in England and one of the most popular mountains in the Lake District. The mountain offers several challenging routes including the famous Striding Edge. Two knife-edge arms, Striding Edge and Swirral Edge, wrap around the eastern corrie and hold Red Tarn, which is why the peak has such a pull for walkers who want a proper mountain day without technical climbing.",
     "history": "The mountain has been a popular destination since the 18th century. In 1926, an aircraft landed on the summit plateau, and a memorial stone commemorates this event. The name possibly derives from the Celtic \"hal\" meaning moorland.",
     "fun_facts": [
       "Third highest mountain in England",
@@ -1422,7 +1482,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The classic round starts at Glenridding or Patterdale, climbs to Hole-in-the-Wall and follows Striding Edge to the summit, then drops by Swirral Edge to Red Tarn and returns beside Glenridding Beck. Allow five to six hours. The edge itself is a hands-on scramble above steep drops: choose a dry, calm day, and know that a lower path skirts the crest if the wind picks up. A gentler alternative is the western approach from Wythburn, which avoids the exposure but climbs steadily for most of its length. The summit plateau is wide and flat, and in cloud it is easy to wander towards the edges, so navigate carefully.\n\nChoosing between the routes comes down to confidence on exposed ground. Striding Edge suits walkers who are happy using their hands and keeping calm with drops on both sides, while Swirral Edge is shorter and best used for the descent. Winter conditions turn both edges into serious mountaineering ground that needs an ice axe, crampons and the skills to use them, so most visitors do better to wait for summer or take the Wythburn path instead. Start early on fine weekends, because the Glenridding car parks fill quickly."
   },
   {
     "id": "bb6fa2bb-8f47-4cfd-bd35-d81d0678f9cd",
@@ -1574,7 +1635,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": true,
-    "walking_guide": "The usual route up Skiddaw starts from the car park at the end of Gale Road, above Keswick, and follows a broad track past Latrigg before climbing steadily to the summit ridge. The path is wide and clear, and the gradient is moderate throughout, which makes this one of the easier ways onto a major Lakeland summit. Allow roughly four to five hours for the round trip. The top of Skiddaw is exposed to wind and cloud, so carry waterproofs and warm layers even on a bright day, and take a map and compass in case of poor visibility."
+    "walking_guide": "The usual route up Skiddaw starts from the car park at the end of Gale Road, above Keswick, and follows a broad track past Latrigg before climbing steadily to the summit ridge. The path is wide and clear, and the gradient is moderate throughout, which makes this one of the easier ways onto a major Lakeland summit. Allow roughly four to five hours for the round trip. The top of Skiddaw is exposed to wind and cloud, so carry waterproofs and warm layers even on a bright day, and take a map and compass in case of poor visibility.\n\nSkiddaw is the best choice in the Lake District for walkers who want a big summit without any scrambling. The path is straightforward in summer, but the mountain is exposed and can be very windy and cold, and many people underestimate the walk. Start early to avoid the heat and the crowds on summer weekends. The mountain is also popular with fell runners, so be prepared to share the path."
   },
   {
     "id": "fb85dddc-3f85-4f46-b1c2-46d943b87bf7",
@@ -1691,7 +1752,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": false,
-    "walking_guide": "Crib Goch is usually climbed from Pen-y-Pass by the Pyg Track and a rising path onto the ridge. The knife-edge scrambling requires a good head for heights and should only be attempted in dry, calm weather. Allow time for the traverse to Garnedd Ugain and Snowdon, and consider the Pyg Track as a safer alternative if conditions or confidence are poor."
+    "walking_guide": "Crib Goch is usually climbed from Pen-y-Pass by the Pyg Track and a rising path onto the ridge. The knife-edge scrambling requires a good head for heights and should only be attempted in dry, calm weather. Allow time for the traverse to Garnedd Ugain and Snowdon, and consider the Pyg Track as a safer alternative if conditions or confidence are poor.\n\nCrib Goch is a scramble, not a walk, and the crossing is dangerous in wind, rain, snow or ice. Walkers who have never scrambled before should start on easier ridges, or hire a guide. Once on the ridge, there is no easy escape, so you should be committed before you set off. The Snowdon Horseshoe is best done on a clear, dry, calm day, ideally in summer."
   },
   {
     "id": "1fcd23f3-5a6d-4358-ab04-ad71be94c1a8",
@@ -1773,10 +1834,21 @@
     "longitude": -4.874167,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Foinaven is a remote and spectacular mountain in Sutherland, featuring white quartzite screes and dramatic corries. The mountain requires a long approach through wild country.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Foinaven is a remote and spectacular mountain in Sutherland, featuring white quartzite screes and dramatic corries. The mountain requires a long approach through wild country. Its pale quartzite screes shine in sunlight and give the long ridge a look quite unlike the darker mountains of the north-west Highlands.",
+    "history": "Foinaven lies in the Reay Forest, a vast area of deer forest and moorland in the far north-west. It is one of the finest Corbetts in Scotland and is considered by many walkers to be among the best mountain days in the Highlands. Its remote setting and long approach keep visitor numbers low.",
+    "fun_facts": [
+      "Foinaven is a Corbett in the Reay Forest of Sutherland",
+      "Its quartzite screes are very pale compared with most Highland mountains",
+      "The main top, Ganu Mor, is the high point of the ridge",
+      "The long approach makes it one of the more remote Corbetts",
+      "The area is part of the North West Highlands Geopark"
+    ],
+    "nearby_places": [
+      "Rhiconich",
+      "Kinlochbervie",
+      "Durness",
+      "Cape Wrath"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -1796,7 +1868,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at the Gualin lay-by on the A838, follows the stalkers' path towards Strath Dionard, then climbs the ridge to Ganu Mor. Allow six to eight hours for a long day in remote country with no phone signal. The scree can be loose and tiring, and the weather changes quickly. Carry spare layers and tell someone your plan before you leave.\n\nFoinaven is a long, committing day in a remote area, so it suits experienced hill walkers who are happy navigating without a clear path in places. The ground is wild and rough, and a day in the Reay Forest can mean seeing no other walkers at all. Check stalking information before you go, because access may be restricted during the deer season, and expect a long drive from Inverness or Ullapool. The reward is a ridge of unusual white rock and a sense of space that is rare in the UK."
   },
   {
     "id": "4ab9188d-1729-45ba-92a2-53c4e6c644d2",
@@ -1843,10 +1916,21 @@
     "longitude": -3.697222,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Aran Fawddwy is the highest peak in the Aran range and southern Snowdonia. The mountain is more remote and less visited than the northern peaks.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Aran Fawddwy is the highest peak in the Aran range and southern Snowdonia. The mountain is more remote and less visited than the northern peaks. It stands at the head of the Cwm Cywarch valley, with steep north-east crags that fall to Creiglyn Dyfi, the small lake that is the source of the River Dyfi.",
+    "history": "Aran Fawddwy lies in the southern Snowdonia uplands, far from the busy northern paths. The Afon Dyfi rises on its flank, at Creiglyn Dyfi, and the mountain forms a twin pair with neighbouring Aran Benllyn, the Arans ridge.",
+    "fun_facts": [
+      "Aran Fawddwy is the highest peak in the Aran range",
+      "The River Dyfi rises at Creiglyn Dyfi beneath the summit",
+      "Aran Benllyn is its neighbouring peak on the same ridge",
+      "It is the highest mountain in Wales south of the Snowdon massif",
+      "The Cwm Cywarch route is the classic approach"
+    ],
+    "nearby_places": [
+      "Dinas Mawddwy",
+      "Dolgellau",
+      "Bala",
+      "Llanuwchllyn"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1866,7 +1950,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The classic walk starts in Cwm Cywarch, climbs onto the ridge, then follows the crest to the summit, with a return by the same route or by a loop via Drysgol. Allow four to five hours. The ridge is steep in places but straightforward in clear weather, and the views to the Dyfi valley are among the best in mid Wales.\n\nAran Fawddwy is a quiet and rewarding alternative to Snowdon for walkers who want a big Welsh summit without the crowds. The Cwm Cywarch approach is the most scenic, with the crags and waterfalls of the valley head giving way to long open ridges. Combining Aran Fawddwy with Aran Benllyn makes a classic ridge walk, but it needs transport at both ends or a long return along the road. The area has limited phone signal, so tell someone your plan before setting out."
   },
   {
     "id": "54a205d5-8f88-4ef2-9b01-606c7dfb1717",
@@ -2179,7 +2264,7 @@
     "is_hewitt": false,
     "is_nuttall": false,
     "is_marilyn": false,
-    "walking_guide": "The shortest and busiest route up Pen y Fan starts at the Pont ar Daf car park and climbs via Corn Du to the summit, returning the same way, which makes a round trip of around four hours. A longer and quieter alternative is the Beacons horseshoe, which links Cribyn, Pen y Fan, Corn Du and Y Gyrn by a circular route from Neuadd reservoir. Paths are clear but eroded in places, and the summit plateau can be very windy and cold. Take a map and compass, wear sturdy boots, and be prepared to turn back if the cloud comes down."
+    "walking_guide": "The shortest and busiest route up Pen y Fan starts at the Pont ar Daf car park and climbs via Corn Du to the summit, returning the same way, which makes a round trip of around four hours. A longer and quieter alternative is the Beacons horseshoe, which links Cribyn, Pen y Fan, Corn Du and Y Gyrn by a circular route from Neuadd reservoir. Paths are clear but eroded in places, and the summit plateau can be very windy and cold. Take a map and compass, wear sturdy boots, and be prepared to turn back if the cloud comes down.\n\nPen y Fan is one of the busiest mountains in Wales, so an early start is the best way to enjoy it, and the quieter horseshoe route gives a better day than the short out-and-back from the main car park. In winter the plateau gets very cold, and snow can make the path hard to follow. Carry a map and a head torch if you start late, and avoid the mountain in poor visibility, as the escarpment edge is steep."
   },
   {
     "id": "21b40b46-0244-4a3f-8208-7bcaa893e266",
@@ -2331,7 +2416,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": true,
-    "walking_guide": "The most popular ascent of Blencathra starts at Threlkeld and climbs Hall's Fell Ridge, a long and continuous rising ridge that reaches the summit with only light scrambling in places. Many walkers prefer to return by the gentler path to the east or down via Gategill. Sharp Edge, approached from Scales Tarn near Mungrisdale, is a narrow arete that needs a good head for heights and is best avoided in wet, icy or windy weather. Allow around four to five hours for a round trip by Hall's Fell. Carry a map and compass, check the Met Office mountain forecast before you set off, and expect cold, exposed conditions on the summit ridge even on fine days."
+    "walking_guide": "The most popular ascent of Blencathra starts at Threlkeld and climbs Hall's Fell Ridge, a long and continuous rising ridge that reaches the summit with only light scrambling in places. Many walkers prefer to return by the gentler path to the east or down via Gategill. Sharp Edge, approached from Scales Tarn near Mungrisdale, is a narrow arete that needs a good head for heights and is best avoided in wet, icy or windy weather. Allow around four to five hours for a round trip by Hall's Fell. Carry a map and compass, check the Met Office mountain forecast before you set off, and expect cold, exposed conditions on the summit ridge even on fine days.\n\nBlencathra suits walkers who want a Lake District fell with real character rather than a gentle path. Hall's Fell Ridge is a good introduction to ridge walking, but it is steep and rocky, and the grassy summit ridge above can be windy. Sharp Edge has a reputation as one of the harder scrambles in the Lakes, and the main problem is the exposed final step; walkers who are unsure should take the Hall's Fell route instead. Threlkeld has good parking and a pub."
   },
   {
     "id": "5672ba0d-0bc9-4293-a0a4-152f372db970",
@@ -2728,7 +2813,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": false,
-    "walking_guide": "A popular circuit of Whernside starts at Ribblehead, crosses Ribblehead Viaduct, and climbs by Force Gill before following the long summit ridge to the trig point. The descent is by the broad path to Bruntscar, completing a round trip of around eight miles that takes four to five hours. The ridge is exposed to wind, so bring warm clothing, and use a map and compass in poor weather."
+    "walking_guide": "A popular circuit of Whernside starts at Ribblehead, crosses Ribblehead Viaduct, and climbs by Force Gill before following the long summit ridge to the trig point. The descent is by the broad path to Bruntscar, completing a round trip of around eight miles that takes four to five hours. The ridge is exposed to wind, so bring warm clothing, and use a map and compass in poor weather.\n\nWhernside has a long, remote-feeling ridge, and the route from Ribblehead gives a good view of the viaduct and the Settle to Carlisle line. The ridge is windy and exposed, so prepare for conditions several degrees colder than the valley. The Three Peaks Challenge walkers pass through this way, so expect company during summer weekends."
   },
   {
     "id": "75add98a-f19e-4500-a65e-e1fc4605f969",
@@ -2810,7 +2895,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": true,
-    "walking_guide": "The most scenic way up Ingleborough starts in Clapham and follows the Ingleborough Estate trail past the cave and Trow Gill before a steady climb to the plateau. Many walkers instead start in Ingleton or at Chapel-le-Dale and climb by the Southerscales path. The final section is a stone-flagged climb onto the flat summit. Allow four to five hours for the round trip and take care in mist, since the plateau is wide and navigation is hard without a map and compass."
+    "walking_guide": "The most scenic way up Ingleborough starts in Clapham and follows the Ingleborough Estate trail past the cave and Trow Gill before a steady climb to the plateau. Many walkers instead start in Ingleton or at Chapel-le-Dale and climb by the Southerscales path. The final section is a stone-flagged climb onto the flat summit. Allow four to five hours for the round trip and take care in mist, since the plateau is wide and navigation is hard without a map and compass.\n\nIngleborough is the most varied of the Three Peaks, with caves, potholes and limestone scenery beneath a gritstone summit. The Clapham route is the best choice for visitors who want to see Gaping Gill and Ingleborough Cave, while the shorter Chapel-le-Dale ascent suits walkers short of time. The summit plateau is flat and large, and in cloud it is easy to head in the wrong direction on the descent, so a compass bearing is worthwhile."
   },
   {
     "id": "5c124796-d2e7-4d7b-8aa4-5ba347ae3312",
@@ -2892,7 +2977,7 @@
     "is_hewitt": false,
     "is_nuttall": false,
     "is_marilyn": true,
-    "walking_guide": "A classic ascent of Kinder Scout begins at Edale and climbs Grindsbrook Clough onto the plateau, where a path follows the edge to Kinder Downfall before returning by the Pennine Way. The plateau is boggy and featureless, and navigation can be hard in cloud, so a map and compass are essential. Allow five to six hours for the full round trip."
+    "walking_guide": "A classic ascent of Kinder Scout begins at Edale and climbs Grindsbrook Clough onto the plateau, where a path follows the edge to Kinder Downfall before returning by the Pennine Way. The plateau is boggy and featureless, and navigation can be hard in cloud, so a map and compass are essential. Allow five to six hours for the full round trip.\n\nKinder Scout is a serious moorland plateau, not a gentle hill, and many walkers underestimate the navigation. The peat is deep and sticky after rain, and the Pennine Way path can be badly eroded. A clockwise or anticlockwise edge route is easier to follow than crossing the interior. Edale has a station, a visitor centre and plenty of cafes, which makes it an excellent base for a day on the plateau."
   },
   {
     "id": "215212dc-2bf4-4258-af0d-0e201478767f",
@@ -2974,7 +3059,7 @@
     "is_hewitt": false,
     "is_nuttall": false,
     "is_marilyn": true,
-    "walking_guide": "Stac Pollaidh is climbed from the car park on the single-track road to Achnahaird. A good path rises to a col and then circles the hill, giving a choice of routes onto the ridge. The main summit involves easy scrambling, and the full circuit takes around two to three hours. Be careful on the scrambling sections, particularly in wet or windy weather."
+    "walking_guide": "Stac Pollaidh is climbed from the car park on the single-track road to Achnahaird. A good path rises to a col and then circles the hill, giving a choice of routes onto the ridge. The main summit involves easy scrambling, and the full circuit takes around two to three hours. Be careful on the scrambling sections, particularly in wet or windy weather.\n\nStac Pollaidh is one of the best short hill days in Scotland, and the circuit takes only a few hours. It is a good choice for a half day when the weather is clear, as the views to Suilven and the sea are excellent. The summit ridge is a real scramble, so take care, and avoid it in strong wind or rain. Midges are common in summer, so bring repellent."
   },
   {
     "id": "daf8137f-2c54-4409-86e7-d48e7021fce4",
@@ -3487,7 +3572,7 @@
     "is_hewitt": false,
     "is_nuttall": false,
     "is_marilyn": false,
-    "walking_guide": "Most walkers climb Catbells from the car park at Hawse End or from Gutherscale, following the clear path up the north ridge. The final section is a short rocky scramble to the summit. A round trip takes around two hours, and many walkers continue to Maiden Moor and High Spy. The path is eroded in places, so wear sturdy footwear."
+    "walking_guide": "Most walkers climb Catbells from the car park at Hawse End or from Gutherscale, following the clear path up the north ridge. The final section is a short rocky scramble to the summit. A round trip takes around two hours, and many walkers continue to Maiden Moor and High Spy. The path is eroded in places, so wear sturdy footwear.\n\nCatbells is one of the best first fells in the Lakes, and the ascent is short enough to do in a morning. It becomes very busy on summer weekends, so start early or walk in the evening. Combine it with the Keswick Launch for a different way back to town. The final scramble to the summit has some steep rock, which can be slippery in the wet."
   },
   {
     "id": "a1b2c3d4-0010-4001-8001-000000000010",
@@ -3541,7 +3626,7 @@
     "is_hewitt": true,
     "is_nuttall": true,
     "is_marilyn": false,
-    "walking_guide": "The usual route begins in Horton in Ribblesdale, passes the church, and climbs by Brackenbottom to the foot of the main crag. A short, easy scramble leads to the summit plateau, and the loop can be completed by returning via Hull Pot and Horton Scar Lane. A round trip takes around three to four hours. The scramble sections are easy but can be slippery after rain, so wear boots with a good grip."
+    "walking_guide": "The usual route begins in Horton in Ribblesdale, passes the church, and climbs by Brackenbottom to the foot of the main crag. A short, easy scramble leads to the summit plateau, and the loop can be completed by returning via Hull Pot and Horton Scar Lane. A round trip takes around three to four hours. The scramble sections are easy but can be slippery after rain, so wear boots with a good grip.\n\nPen-y-ghent is the shortest and most approachable of the Three Peaks, and it is the best choice for walkers who want a taste of Dales scenery in half a day. The scramble is short and straightforward, but the rock is polished and slippery when wet. Horton in Ribblesdale has a cafe and a station, which means the route can be reached by train on the Settle to Carlisle line."
   },
   {
     "id": "a1b2c3d4-0011-4001-8001-000000000011",
@@ -3870,8 +3955,8 @@
     "longitude": -1.770833,
     "region": "England",
     "county": "Derbyshire",
-    "description": "Lose Hill is at the eastern end of the Great Ridge in the Peak District. The summit provides panoramic views over Hope Valley and is easily reached from Castleton or Hope village.",
-    "history": null,
+    "description": "Lose Hill is at the eastern end of the Great Ridge in the Peak District. The summit provides panoramic views over Hope Valley and is easily reached from Castleton or Hope village. Together with Mam Tor it forms the Great Ridge, one of the best-known short ridge walks in the Peak District.",
+    "history": "Lose Hill forms the eastern end of the Great Ridge, which runs west to Mam Tor above the Hope Valley. A memorial viewpoint known as Ward's Piece honours the Sheffield rambling campaigner G. H. B. Ward, who was involved in the fight for access to open moorland.",
     "fun_facts": [
       "Eastern end of the Great Ridge walk from Mam Tor",
       "Superb views over Hope Valley and Edale",
@@ -3909,7 +3994,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Lose Hill is easily climbed from Hope or Castleton. Many walkers follow the Great Ridge from Mam Tor over Back Tor to Lose Hill and descend into Hope. The round trip takes around three hours from Castleton. The paths are clear, and the main hazard is the steep drop on the northern side of the ridge in poor weather.\n\nLose Hill is one of the best short outings in the Peak District and a good choice for families, beginners and anyone short of time. The Great Ridge is busy at weekends, so start early or walk on a weekday. Combine it with the walk to Mam Tor for a longer day that finishes in Castleton, where there are cafes and pubs."
   },
   {
     "id": "a1b2c3d4-0021-4001-8001-000000000021",
@@ -4619,7 +4705,7 @@
     "longitude": -5.554444,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Beinn Alligin is one of the great Torridon mountains, comprising two Munros and one of the most spectacular ridges in Scotland. The Horns of Alligin provide an exhilarating scramble above Loch Torridon.",
+    "description": "Beinn Alligin is one of the great Torridon mountains, comprising two Munros and one of the most spectacular ridges in Scotland. The Horns of Alligin provide an exhilarating scramble above Loch Torridon. The horseshoe takes in both Munros and crosses the Horns of Alligin, three rocky pinnacles that give a short but airy scramble.",
     "history": "The name means 'jewelled mountain' in Gaelic. The mountain's dramatic gash, the Eag Dubh, was created by a massive rock fall thousands of years ago.",
     "fun_facts": [
       "Name means 'jewelled mountain' in Gaelic",
@@ -4659,7 +4745,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The horseshoe starts at the Coire Mhic Nobuil car park, climbs Tom na Gruagaich, crosses to Sgurr Mhor, and returns over the Horns of Alligin. The scramble over the Horns can be bypassed by a path below the pinnacles. Allow six to seven hours. The ridge is exposed, and the descent from the Horns is steep and rocky.\n\nBeinn Alligin is the friendliest of the big Torridon mountains, which makes it the usual first choice for walkers who want a taste of the area without committing to the harder ridges of Liathach or Beinn Eighe. The Horns of Alligin are the crux of the day, and anyone who is nervous about exposure can take the bypass path. Allow time for the long descent back to the glen, and be aware that conditions on sandstone terraces can be very slippery when wet."
   },
   {
     "id": "a1b2c3d4-0037-4001-8001-000000000037",

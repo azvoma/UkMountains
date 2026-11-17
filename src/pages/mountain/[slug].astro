@@ -500,7 +500,7 @@ const faqSchemaData = {
         {mountain.walking_guide && (
           <section class="content-section">
             <h2>Walking Guide</h2>
-            <p class="guide-text">{mountain.walking_guide}</p>
+            {mountain.walking_guide.split(/\n\n+/).map((para: string) => <p class="guide-text">{para}</p>)}
           </section>
         )}
 
