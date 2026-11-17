@@ -1577,10 +1577,21 @@
     "longitude": -3.1975,
     "region": "England",
     "county": "Cumbria",
-    "description": "Ill Crag is part of the Scafell massif and England's third highest peak. It's usually climbed as part of a round from Wasdale or Borrowdale.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Ill Crag is part of the Scafell massif and one of England's highest summits. It's usually climbed as part of a round from Wasdale or Borrowdale. It lies between Broad Crag and Esk Hause on the high ground of the Scafell massif.",
+    "history": "Ill Crag is one of the high tops of the Scafell massif, between Scafell Pike and Esk Hause. It is a subsidiary summit of Scafell Pike and is often passed over by walkers heading for England's highest mountain, but it is an excellent viewpoint in its own right.",
+    "fun_facts": [
+      "Ill Crag is one of the highest summits in England",
+      "It lies on the ridge between Scafell Pike and Esk Hause",
+      "Broad Crag is its neighbour",
+      "The summit has views into Eskdale and Wasdale",
+      "It is often climbed as part of a round of the Scafell massif"
+    ],
+    "nearby_places": [
+      "Seathwaite",
+      "Wasdale Head",
+      "Eskdale",
+      "Borrowdale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -1600,7 +1611,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Ill Crag is normally climbed as part of a longer day on Scafell Pike, from Seathwaite in Borrowdale or Wasdale Head. The route follows the ridge from Esk Hause over Ill Crag and Broad Crag to Scafell Pike. Allow six to eight hours for the full round.\n\nThe ground is rocky and the paths are rough, so wear sturdy boots and carry a map and compass. The summit area is frequently cloudy, and the boulder fields can be difficult to navigate in poor visibility."
   },
   {
     "id": "5bfd58b8-c71b-4c1a-b9d6-2988c36c791a",
@@ -1615,7 +1627,7 @@
     "description": "Skiddaw is one of the Lake District's most prominent mountains and one of the easiest to climb. The mountain overlooks Keswick and Derwentwater. It rises above Keswick, a broad dome of Skiddaw slate whose smooth, rounded slopes contrast with the craggier fells further south.",
     "history": "Skiddaw is built from Skiddaw slate, among the oldest rocks in the Lake District, which weathers into the smooth, scree-covered slopes that give the mountain its distinctive profile. It has been a popular ascent for visitors since the early days of Lakeland tourism and is climbed in large numbers because of its straightforward paths from the edge of Keswick.",
     "fun_facts": [
-      "Skiddaw is one of the four highest mountains in England",
+      "Skiddaw is one of the highest mountains in England",
       "It is made of Skiddaw slate, some of the oldest rocks in the Lake District",
       "The mountain is climbed from Keswick on a wide, well-made path",
       "Its bulk dominates the view north of Derwentwater and Keswick",
@@ -1811,10 +1823,21 @@
     "longitude": -5.326944,
     "region": "Scotland",
     "county": "Highland",
-    "description": "A magnificent Corbett in Torridon with superb views of the main Torridon peaks. The mountain offers a rewarding day out with less crowds than the nearby Munros.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "A magnificent Corbett in Torridon with superb views of the main Torridon peaks. The mountain offers a rewarding day out with less crowds than the nearby Munros. The views across Glen Torridon to the great Torridon mountains are the main attraction of the day.",
+    "history": "Beinn Dearg is a Corbett in the Torridon area, in a landscape dominated by the giants of Liathach, Beinn Eighe and Beinn Alligin. The surrounding rock is Torridonian sandstone, among the oldest rock in Britain, and the hills here have a stark, weathered quality.",
+    "fun_facts": [
+      "Beinn Dearg is a Corbett in the Torridon area",
+      "The surrounding hills are made of ancient Torridonian sandstone",
+      "Liathach, Beinn Eighe and Beinn Alligin are the neighbouring giants",
+      "It is far quieter than the nearby Munros",
+      "The views of the Torridon peaks make it popular with photographers"
+    ],
+    "nearby_places": [
+      "Torridon",
+      "Shieldaig",
+      "Loch Torridon",
+      "Kinlochewe"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -1834,7 +1857,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Beinn Dearg is a good choice for walkers who want views of the great Torridon peaks without the crowds. Check a current guidebook or Walkhighlands for the best approach, as paths vary and some sections are rough. Allow around five to six hours for the round trip.\n\nThe weather in Torridon is changeable and the rock can be slippery when wet. Carry a map and compass, and be prepared for navigation in mist on the upper slopes."
   },
   {
     "id": "f12bcf0a-038a-4b25-a44c-220240455b2c",
@@ -2546,10 +2570,21 @@
     "longitude": -5.084722,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Cul Mor is the highest of the Assynt Corbetts. The approach passes spectacular sandstone scenery, and the summit gives panoramic views.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Cul Mor is the highest of the Assynt Corbetts. The approach passes spectacular sandstone scenery, and the summit gives panoramic views. The sandstone landscape of Coigach and Assynt around it is among the most distinctive in Britain.",
+    "history": "Cul Mor is the highest of the Corbetts in this part of Coigach and Assynt. Nearby Knockan Crag is a National Nature Reserve where visitors can see the Moine Thrust, a geological feature that helped to change scientists' understanding of how mountains are formed.",
+    "fun_facts": [
+      "Cul Mor is a Corbett in Coigach and Assynt",
+      "Knockan Crag, nearby, is famous for the Moine Thrust",
+      "The mountain is built from Torridonian sandstone",
+      "Cul Beag is its smaller neighbour",
+      "The summit has far-reaching views over Assynt and Coigach"
+    ],
+    "nearby_places": [
+      "Knockan",
+      "Ullapool",
+      "Elphin",
+      "Cul Beag"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -2569,7 +2604,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Cul Mor is usually climbed from Knockan, with a path leading across the moor towards the foot of the mountain. The ascent is steady, and the final slopes are steep and rocky. Allow around six hours for the round trip.\n\nThe views from the top are among the best in the region, and the area around Knockan Crag is worth a stop on the drive. Check a current guidebook for the latest route details, since paths can be faint."
   },
   {
     "id": "2377ed67-e8bb-4287-bea6-651c46e0f53f",
@@ -2733,10 +2769,21 @@
     "longitude": -5.155833,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Cul Beag is smaller than its neighbor Cul Mor but offers equally fine views. The mountain has dramatic cliffs on its northern side.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Cul Beag is smaller than its neighbor Cul Mor but offers equally fine views. The mountain has dramatic cliffs on its northern side. Its steep northern crags give the hill a rugged character that belies its height, and the views over the lochans of Coigach are superb.",
+    "history": "Cul Beag is a Corbett in Coigach, in the far north-west Highlands, and sits close to Stac Pollaidh and Cul Mor. The hills in this area are made of ancient Torridonian sandstone, and the landscape of isolated peaks rising from a moorland of lochans is one of the most distinctive in Scotland.",
+    "fun_facts": [
+      "Cul Beag is a Corbett in Coigach, near Ullapool",
+      "Its northern face is a line of steep crags",
+      "Cul Mor is its larger neighbour",
+      "Stac Pollaidh lies just to the west",
+      "The surrounding landscape of lochans and sandstone peaks is among the most distinctive in the Highlands"
+    ],
+    "nearby_places": [
+      "Ullapool",
+      "Achiltibuie",
+      "Knockan",
+      "Stac Pollaidh"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -2756,7 +2803,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Cul Beag is usually climbed from the lay-by at Linneraineach on the A835, from where a path leads towards the foot of the hill. The final ascent is steep and rocky in places. Allow around four hours for the round trip.\n\nThe views from the summit are outstanding, with Suilven, Stac Pollaidh and the Summer Isles all in sight. Cul Beag is a good choice for walkers who want a shorter day in a remote setting."
   },
   {
     "id": "2d0b1e8f-813f-469c-9470-ceb894803c92",
@@ -2803,10 +2851,21 @@
     "longitude": -5.168056,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Ben More Coigach is a remote mountain accessed via a long walk through the Coigach hills. The summit provides spectacular views over the Summer Isles.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Ben More Coigach is a remote mountain accessed via a long walk through the Coigach hills. The summit provides spectacular views over the Summer Isles. Its sharp, rocky ridge rises straight above the sea, and the view of the Summer Isles is the main reward.",
+    "history": "Ben More Coigach is a Corbett that rises above the coast at Achiltibuie, with views across the Summer Isles. The mountain is part of the ancient Torridonian landscape of Coigach, a peninsula in the far north-west Highlands.",
+    "fun_facts": [
+      "Ben More Coigach is a Corbett above Achiltibuie",
+      "The Summer Isles lie below the summit",
+      "The mountain is built from Torridonian sandstone",
+      "The ridge has a rocky, jagged skyline",
+      "Coigach is a peninsula in the far north-west Highlands"
+    ],
+    "nearby_places": [
+      "Achiltibuie",
+      "Ullapool",
+      "Summer Isles",
+      "Culnacraig"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -2826,7 +2885,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben More Coigach is normally climbed from the road near Achiltibuie, with a path leading to the summit ridge. The ridge has some easy scrambling, and the final section is steep. Allow around five to six hours for the round trip.\n\nThe views to the Summer Isles are superb, but the summit ridge is exposed and the weather on the coast can change quickly. Take a map and compass, and avoid the ridge in strong winds."
   },
   {
     "id": "9f1e9d5c-84ef-4a31-8770-6a935fe61521",
@@ -2885,10 +2945,21 @@
     "longitude": -3.5575,
     "region": "Wales",
     "county": "Powys",
-    "description": "Fan Fawr is in the western Brecon Beacons. The mountain has a distinctive shape and offers good walking with less crowds than Pen y Fan.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Fan Fawr is in the western Brecon Beacons. The mountain has a distinctive shape and offers good walking with less crowds than Pen y Fan. It rises on the western side of the central Beacons, and the old Roman road of Sarn Helen runs beneath its slopes.",
+    "history": "Fan Fawr stands on the western side of the central Brecon Beacons and overlooks the A470 and the Storey Arms. It is far quieter than its neighbour Pen y Fan, and it gives a good introduction to the Beacons landscape without the crowds.",
+    "fun_facts": [
+      "Fan Fawr is a Hewitt in the western Brecon Beacons",
+      "It is far quieter than Pen y Fan",
+      "The Storey Arms lies close to the mountain",
+      "The Roman road Sarn Helen runs near its slopes",
+      "The summit has views of Pen y Fan and Corn Du"
+    ],
+    "nearby_places": [
+      "Brecon",
+      "Storey Arms",
+      "Libanus",
+      "Merthyr Tydfil"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2908,7 +2979,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Fan Fawr is normally climbed from the Storey Arms area, with a path leading across moorland to the summit. The ascent is gentle compared with Pen y Fan, and the walk takes around three hours. The summit has fine views of the Beacons.\n\nThe terrain is boggy in places, so wear waterproof boots. Fan Fawr is a good choice for walkers who want a quiet day in the Beacons, or who are looking for a gentler alternative on a busy weekend."
   },
   {
     "id": "7141c9bf-33cb-43e3-8707-2fe055a34767",
@@ -4183,8 +4255,8 @@
     "longitude": -4.197778,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Beinn Ghlas is one of the Ben Lawers group of Munros, forming part of a ridge that holds many of the highest mountains in the Southern Highlands. The Ben Lawers massif is renowned for its rare arctic-alpine flowers.",
-    "history": null,
+    "description": "Beinn Ghlas is one of the Ben Lawers group of Munros, forming part of a ridge that holds many of the highest mountains in the Southern Highlands. The Ben Lawers massif is renowned for its rare arctic-alpine flowers. It is the first summit on the usual path to Ben Lawers, so most walkers cross it without a second thought, but it makes a rewarding objective in its own right.",
+    "history": "Beinn Ghlas forms the south-western shoulder of the Ben Lawers range above Loch Tay. The mountain is part of the National Nature Reserve managed by the National Trust for Scotland, where the lime-rich rock supports some of the rarest mountain plants in Britain.",
     "fun_facts": [
       "Part of the Ben Lawers National Nature Reserve",
       "The Ben Lawers massif holds some of the rarest arctic-alpine plants in Scotland",
@@ -4220,7 +4292,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Ghlas is climbed from the National Trust for Scotland car park on the Ben Lawers road. The path climbs steadily onto the ridge and reaches the summit after a little over two hours for most walkers. From the top a short, clear ridge leads to Ben Lawers itself, so the two Munros are nearly always done together.\n\nIf you only want Beinn Ghlas, the round trip is short enough for a half day, which makes it a good choice when the weather closes in higher up. The summit is exposed to the wind, so carry warm layers even in summer."
   },
   {
     "id": "a1b2c3d4-0025-4001-8001-000000000025",
@@ -4232,8 +4305,8 @@
     "longitude": -4.168333,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Meall Garbh is part of the Ben Lawers massif and offers superb views across Loch Tay and the Southern Highlands. It sits between Ben Lawers and An Stùc on a classic ridge walk.",
-    "history": null,
+    "description": "Meall Garbh is part of the Ben Lawers massif and offers superb views across Loch Tay and the Southern Highlands. It lies beyond An Stùc on the classic ridge walk from Ben Lawers. It is the high point of the eastern end of the Lawers range, reached by the exposed ridge past An Stuc.",
+    "history": "Meall Garbh is part of the Ben Lawers range above Loch Tay. The ridge that links it with Ben Lawers passes over An Stuc, a rocky and exposed section that makes the full traverse a more demanding day than the standard Ben Lawers route.",
     "fun_facts": [
       "Part of the Ben Lawers massif with its rare mountain flora",
       "Can be combined with Ben Lawers and An Stuc for a three-Munro day"
@@ -4269,7 +4342,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Meall Garbh is normally climbed along the ridge from Ben Lawers over An Stuc, which involves a scramble and some exposed ground, or from Lawers via Meall Greigh. The ridge is a fine high-level walk, and the full traverse takes around seven to eight hours.\n\nAn Stuc has steep, loose rock, and the traverse should be avoided in wet or icy conditions. Walkers who are not happy scrambling can reach Meall Garbh by the easier route over Meall Greigh from the east."
   },
   {
     "id": "a1b2c3d4-0026-4001-8001-000000000026",
@@ -4281,7 +4355,7 @@
     "longitude": -3.690556,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Beinn a' Ghlo is a massive mountain complex in the central Highlands with three Munro summits. The mountain is a royal shooting estate and offers exceptional wildlife viewing including golden eagles.",
+    "description": "Beinn a' Ghlo is a massive mountain complex in the central Highlands with three Munro summits. The mountain is a royal shooting estate and offers exceptional wildlife viewing including golden eagles. The three Munros of the massif are linked by a high, undulating ridge, and the highest, Carn nan Gabhar, rises well above its neighbours.",
     "history": "Queen Victoria frequently visited Blair Castle nearby and reportedly enjoyed views of Beinn a' Ghlo. The area remains one of the finest grouse moors in Scotland.",
     "fun_facts": [
       "Has three Munro summits within its massif",
@@ -4320,7 +4394,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at Loch Moraig, near Blair Atholl, and follows a path onto the ridge, taking in the three Munros in turn. Allow eight to ten hours for the full round trip. The paths are clear but the ridge is long and exposed.\n\nThe Atholl estate is a working shooting estate, so check stalking restrictions before you go. The mountain is a good choice for walkers who want a high-level day with a fine view of the Cairngorms, but it needs good weather and some stamina."
   },
   {
     "id": "a1b2c3d4-0027-4001-8001-000000000027",
@@ -4332,7 +4407,7 @@
     "longitude": -3.838333,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Sgor Gaoith stands on the edge of the Moine Mhòr, the Great Moss, at the rim of the Cairngorm plateau. The summit gives dramatic views down the steep cliffs to Loch Einich.",
+    "description": "Sgor Gaoith stands on the edge of the Moine Mhòr, the Great Moss, at the rim of the Cairngorm plateau. The summit gives dramatic views down the steep cliffs to Loch Einich. The name is usually translated as peak of the wind, and the airy summit above the cliffs justifies it.",
     "history": null,
     "fun_facts": [
       "Stands on the edge of dramatic cliffs above Loch Einich",
@@ -4368,7 +4443,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Sgor Gaoith is usually climbed from Glen Feshie, where a path leads to the high ground and follows the broad ridge to the summit. The final approach to the cliff edge is a spectacular moment, with Loch Einich far below. Allow around six hours for the round trip.\n\nThe cliff edge drops steeply, so take care in mist and keep well back in strong winds. This is a good choice for walkers who want views of the Cairngorm plateau without the crowds at Cairn Gorm itself."
   },
   {
     "id": "a1b2c3d4-0028-4001-8001-000000000028",
@@ -4380,8 +4456,8 @@
     "longitude": -4.808889,
     "region": "Scotland",
     "county": "Argyll and Bute",
-    "description": "Beinn Ime is the highest of the Arrochar Alps and a rewarding Munro accessible from the village of Arrochar. The mountain provides superb views over Loch Long and the Firth of Clyde.",
-    "history": null,
+    "description": "Beinn Ime is the highest of the Arrochar Alps and a rewarding Munro accessible from the village of Arrochar. The mountain provides superb views over Loch Long and the Firth of Clyde. It is the highest summit of the Arrochar Alps, a group of steep, rocky hills close to Glasgow.",
+    "history": "Beinn Ime is the highest of the Arrochar Alps, a compact group of mountains at the head of Loch Long. The nearby Cobbler, or Ben Arthur, is more famous for its rocky summit, but Beinn Ime is the highest of the group and is often climbed together with its neighbour Beinn Narnain.",
     "fun_facts": [
       "Highest of the Arrochar Alps",
       "Accessible by train to Arrochar & Tarbet station",
@@ -4419,7 +4495,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Ime is usually climbed from the car park at Succoth, at the head of Loch Long, and is often combined with Beinn Narnain to make a long day. The ascent is steep and the paths are eroded in places. Allow around six hours for the round trip, and more if you add Beinn Narnain.\n\nThe Arrochar Alps are close to Glasgow, so they are busy at weekends. The weather here can be very wet, and the upper slopes are exposed, so carry waterproofs. This is a good choice for walkers who want a proper Munro day within easy reach of the city."
   },
   {
     "id": "a1b2c3d4-0029-4001-8001-000000000029",
@@ -4479,8 +4556,8 @@
     "longitude": -5.1175,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Beinn Fhionnlaidh is a remote Munro above the western shores of Loch Mullardoch in the Glen Cannich area. It offers wild and remote mountain walking away from the usual tourist routes.",
-    "history": null,
+    "description": "Beinn Fhionnlaidh is a remote Munro above the western shores of Loch Mullardoch in the Glen Cannich area. It offers wild and remote mountain walking away from the usual tourist routes. Its remoteness is the main challenge, and a walk here is as much about the approach through Glen Cannich as the summit itself.",
+    "history": "Beinn Fhionnlaidh lies in the Glen Cannich area, close to Loch Mullardoch, a large reservoir created for hydroelectric power. The mountain is far from any road, and the long approach means it sees few visitors compared with the popular Munros further south.",
     "fun_facts": [
       "One of the more remote Munros in the Western Highlands",
       "Requires a long approach or a boat across Loch Mullardoch",
@@ -4515,7 +4592,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Fhionnlaidh is a long day, and many walkers use a mountain bike on the estate roads of Glen Cannich to shorten the approach. Allow ten hours or more for the round trip on foot, and plan your route in advance, since paths on the upper ground are faint or absent in places.\n\nThis is a mountain for experienced hillwalkers who are happy to navigate without a path. Check the stalking information before you go, because access may be limited during the deer season, and carry spare food, a map and a compass. Tell someone your route before you set off, as mobile signal is unreliable."
   },
   {
     "id": "a1b2c3d4-0031-4001-8001-000000000031",
@@ -4677,7 +4755,7 @@
     "longitude": -3.908056,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Pen y Cadair is the true summit of Cadair Idris. The mountain is steeped in Welsh mythology — legend says anyone who sleeps on its summit will wake either a poet or a madman.",
+    "description": "Pen y Cadair is the true summit of Cadair Idris. The mountain is steeped in Welsh mythology — legend says anyone who sleeps on its summit will wake either a poet or a madman. The summit lies above the steep cliffs of Cwm Cau, and the lake of Llyn y Gadair lies in a hollow below the summit ridge.",
     "history": "The name means 'chair of Idris', referring to the giant Idris Gawr. Legend states Idris was a giant poet-warrior who used the mountain as his chair to observe the stars. The Minffordd Path is one of the finest routes in Wales.",
     "fun_facts": [
       "Legend says sleeping on the summit makes you a poet or a madman",
@@ -4718,7 +4796,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The most popular route, the Minffordd Path, starts from the car park near Tal-y-llyn and climbs past Llyn Cau, one of the finest glacial lakes in Wales, before reaching the summit ridge. The Pony Path, which starts near Dolgellau, is a longer and gentler alternative. Allow five to six hours for either route.\n\nThe summit is exposed and can be very windy, and the cliffs of Cwm Cau fall steeply from the ridge, so take care in mist. Cadair Idris is a good choice for walkers who want a full Welsh mountain day with a clear path and varied scenery."
   },
   {
     "id": "a1b2c3d4-0035-4001-8001-000000000035",
@@ -4834,8 +4913,8 @@
     "longitude": -4.876111,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Beinn Dearg is the highest mountain in the north-west Highlands outside the Far North, requiring a long approach through wild country. The remote nature of the approach makes reaching the summit a true adventure.",
-    "history": null,
+    "description": "Beinn Dearg is the highest mountain in the north-west Highlands outside the Far North, requiring a long approach through wild country. The remote nature of the approach makes reaching the summit a true adventure. The mountain stands at the centre of a group of high Munros above Loch Broom, and the long approach is part of the reward.",
+    "history": "Beinn Dearg lies in the wild country south of Ullapool and is the high point of a group of Munros that includes Cona' Mheall, Meall nan Ceapraichean and Eididh nan Clach Geala. The name means red hill, and the mountain is a major landmark in this part of the north-west Highlands.",
     "fun_facts": [
       "Highest mountain in the Beinn Dearg group",
       "Requires a long approach of around 10 kilometres",
@@ -4870,7 +4949,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at Inverlael and follows the track into Gleann na Squaib and on to Coire Granda, climbing to the summit plateau. Allow seven to nine hours for the round trip, and more if you add the neighbouring Munros. The path is good on the lower ground but fades higher up.\n\nThe upper slopes are high and exposed, and snow can linger well into spring. This is a challenging day for walkers with some Munro experience, and it is best done in settled weather."
   },
   {
     "id": "a1b2c3d4-0038-4001-8001-000000000038",
@@ -4882,8 +4962,8 @@
     "longitude": -4.595,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Beinn Mhanach is a remote Munro above the head of Loch Lyon. It is one of the more seldom-visited Munros, requiring a long walk-in through Glen Lyon.",
-    "history": null,
+    "description": "Beinn Mhanach is a remote Munro above the head of Loch Lyon. It is one of the more seldom-visited Munros, requiring a long walk-in through Glen Lyon. Its remoteness makes it one of the quieter Munros, and a day here usually means seeing very few other walkers.",
+    "history": "Beinn Mhanach is a remote Munro above the head of Loch Lyon, in one of the quietest parts of the Southern Highlands. The mountain is usually climbed together with its neighbour Beinn a' Chuirn, and the long approach is a large part of the day.",
     "fun_facts": [
       "One of the more remote and less-visited Munros",
       "Accessed via the beautiful and long Glen Lyon",
@@ -4918,7 +4998,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Mhanach is a long day, and the approach is usually the hardest part. Many walkers use a mountain bike on the estate tracks to save time. Allow eight to ten hours on foot, and check your route carefully before setting off.\n\nThis is a mountain for experienced walkers who are comfortable with a long day and some rough ground. Check stalking restrictions before you go, carry a map and compass, and leave details of your plans with someone."
   },
   {
     "id": "a1b2c3d4-0039-4001-8001-000000000039",
@@ -5372,8 +5453,8 @@
     "longitude": -2.875,
     "region": "England",
     "county": "Cumbria",
-    "description": "Thornthwaite Crag is a shapely summit topped with a tall stone beacon column, one of the most distinctive landmarks in the Lake District. The fell forms part of the High Street horseshoe.",
-    "history": null,
+    "description": "Thornthwaite Crag is a shapely summit topped with a tall stone beacon column, one of the most distinctive landmarks in the Lake District. The fell forms part of the High Street horseshoe. The tall stone column on the summit is visible for miles around, and the view along the Kentmere and Troutbeck valleys is one of the best in the eastern fells.",
+    "history": "Thornthwaite Crag stands on the ridge above the Troutbeck and Kentmere valleys, close to the line of the Roman road known as High Street. The tall stone beacon on its summit, one of the landmarks of the eastern fells, is a tall stone column built by shepherds.",
     "fun_facts": [
       "Topped by a striking tall stone beacon visible from miles away",
       "Part of the High Street horseshoe ridge walk",
@@ -5408,7 +5489,8 @@
     "is_wainwright": true,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Thornthwaite Crag is normally climbed from Troutbeck or Hartsop, with the path following the old Roman road along the ridge. The ascent is steady and the summit is reached after about two hours. A longer round of the Kentmere Horseshoe passes over the summit.\n\nThe ridge is exposed, so carry a windproof layer even on a fine day. The beacon is a useful landmark in mist, but be careful of the steep slopes on the western side."
   },
   {
     "id": "a1b2c3d4-0049-4001-8001-000000000049",
@@ -5420,7 +5502,7 @@
     "longitude": -6.241667,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Sgurr na Banachdich is one of the Cuillin Ridge Munros on Skye, the most technically demanding mountain range in Britain. The peak provides extraordinary views over the Cuillin horseshoe.",
+    "description": "Sgurr na Banachdich is one of the Cuillin Ridge Munros on Skye, the most technically demanding mountain range in Britain. The peak provides extraordinary views over the Cuillin horseshoe. It is often regarded as one of the more approachable Cuillin Munros, but the scrambling near the summit still demands care.",
     "history": null,
     "fun_facts": [
       "One of the few 'relatively' accessible Cuillin Munros",
@@ -5456,7 +5538,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at Glen Brittle and climbs into Coire na Banachdich before scrambling up to the ridge and the summit. The scrambling is straightforward for experienced hill walkers, but steep rock and loose scree require care. Allow around six hours for the round trip.\n\nThe Cuillin are rough and rocky and the weather is changeable, so choose a clear day. Mist makes route finding hard in the corrie, and the gabbro rock can affect compasses near the ridge. This is a good choice for walkers who want a taste of the Cuillin without committing to the most serious scrambles."
   },
   {
     "id": "a1b2c3d4-0051-4001-8001-000000000051",
@@ -5517,7 +5600,7 @@
     "longitude": -3.747222,
     "region": "Scotland",
     "county": "Aberdeenshire",
-    "description": "Beinn Bhrotain is a high Munro on the edge of the Moine Mhòr, the Great Moss of the Cairngorms. It is a remote mountain that rewards those willing to make the long approach.",
+    "description": "Beinn Bhrotain is a high Munro on the edge of the Moine Mhòr, the Great Moss of the Cairngorms. It is a remote mountain that rewards those willing to make the long approach. It is one of the remotest Munros in the Cairngorms, and a day here usually combines a long walk-in with a quiet summit.",
     "history": null,
     "fun_facts": [
       "Sits on the edge of the Great Moss (Moine Mhòr)",
@@ -5553,7 +5636,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Bhrotain is usually climbed from the Linn of Dee car park, near Braemar. Many walkers cycle along the track to White Bridge to save time, then walk up Glen Geusachan to reach the mountain, often combining it with neighbouring Monadh Mor. Allow ten hours or more for the round trip.\n\nThis is a big day in remote country with no phone signal. Take a map, a compass and spare layers, and be prepared for the weather to change quickly on the plateau. Check the deer stalking season before planning a visit."
   },
   {
     "id": "a1b2c3d4-0054-4001-8001-000000000054",
@@ -5565,7 +5649,7 @@
     "longitude": -5.536111,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Sgurr nan Coireachan above Glenfinnan has one of the most romantic settings in Scotland. The Glenfinnan Viaduct and monument to Bonnie Prince Charlie lie in the valley below.",
+    "description": "Sgurr nan Coireachan above Glenfinnan has one of the most romantic settings in Scotland. The Glenfinnan Viaduct and monument to Bonnie Prince Charlie lie in the valley below. The mountain rises above Glenfinnan, where the viaduct and the monument to the Jacobite rising of 1745 attract visitors from around the world.",
     "history": "Bonnie Prince Charlie's standard was raised at Glenfinnan in 1745 to begin the Jacobite uprising, visible from the mountain's ridge. The iconic Glenfinnan Viaduct, now famous from the Harry Potter films, is prominent in the valley.",
     "fun_facts": [
       "The Glenfinnan Viaduct (famous from Harry Potter) is visible from the ridge",
@@ -5603,7 +5687,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Sgurr nan Coireachan is normally climbed from Glenfinnan, often together with Sgurr Thuilm to make a long day. The route follows tracks and paths into the hills before climbing to the ridge. Allow seven to nine hours for the round trip.\n\nThe weather on the west coast is changeable, and the ridge can be exposed. Take a map and compass, and check the route on a current guide, as paths may be faint in places."
   },
   {
     "id": "a1b2c3d4-0055-4001-8001-000000000055",
