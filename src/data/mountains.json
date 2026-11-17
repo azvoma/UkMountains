@@ -322,9 +322,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Also known as the Angel's Peak, this Munro is famous for its green lochan and dramatic cliffs. It's often climbed as part of a Cairngorms plateau traverse.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Sgor an Lochain Uaine, the Angel's Peak, takes its Gaelic name from Lochan Uaine, a small green lochan in the corrie beneath. It stands on the Cairngorm plateau beside Cairn Toul, and the pair form one of the finest high-level walks in the Cairngorms.",
+    "fun_facts": [
+      "The Gaelic name means peak of the green lochan",
+      "It is the fifth highest mountain in Britain",
+      "Lochan Uaine lies in the corrie beneath the summit",
+      "Cairn Toul is its neighbour on the same ridge",
+      "The Lairig Ghru pass lies to the east"
+    ],
+    "nearby_places": [
+      "Braemar",
+      "Linn of Dee",
+      "Corrour Bothy",
+      "Lairig Ghru"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -344,7 +355,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The Angel's Peak is nearly always climbed with Cairn Toul. Walkers usually approach from Linn of Dee through Glen Dee, or from the Cairngorm side through the Lairig Ghru, and the round trip takes ten hours or more. A bike helps on the long glen track.\n\nThe narrow ridge between the two summits is a highlight, and the cliffs fall steeply to the corrie. The plateau is exposed and navigation in mist is difficult, so this is a mountain for experienced walkers who are comfortable with long days in remote country."
   },
   {
     "id": "e3156c6c-a60e-4da6-a059-4665904f04d4",
@@ -492,7 +504,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Aonach Beag is usually climbed from the Nevis Range gondola top station by a path that follows the ridge over Aonach Mor. The round trip takes six to seven hours. The final slopes are steep, and the ridge is exposed to the wind.\n\nThe mountain can also be climbed from Glen Nevis, but the approach is long. The views of Ben Nevis and the Grey Corries are among the best in Lochaber."
   },
   {
     "id": "e56c4364-f6a1-44c7-a7d2-efd1980be304",
@@ -505,9 +518,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Aonach Mòr is Scotland's eighth highest mountain. A ski resort operates on its slopes, and the Nevis Range gondola provides access to the mountain.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Aonach Mor is the high point of the ridge east of Ben Nevis that includes Aonach Beag, and the Nevis Range ski area operates on its northern slopes. A gondola climbs from near Torlundy to a top station on the mountainside, which makes the summit far more accessible than most Munros of this height.",
+    "fun_facts": [
+      "Aonach Mor is the eighth highest mountain in Britain",
+      "The Nevis Range gondola climbs from near Torlundy",
+      "The mountain is linked to Aonach Beag by a high col",
+      "The summit looks across to the North Face of Ben Nevis",
+      "The Nevis Range ski area runs on the northern slopes"
+    ],
+    "nearby_places": [
+      "Fort William",
+      "Torlundy",
+      "Spean Bridge",
+      "Glen Nevis"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -527,7 +551,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The easiest ascent uses the Nevis Range gondola to reach the top station, from where a path climbs the mountain to the summit in a couple of hours. Without the gondola the climb from Torlundy takes much longer. Allow four to five hours for the round trip on foot from the top station, and check the last descent time.\n\nThe summit is high and exposed, and cloud can come down quickly. The view of the North Face of Ben Nevis is outstanding. Many walkers combine Aonach Mor with Aonach Beag, which adds distance and height but keeps to a clear ridge."
   },
   {
     "id": "f3a84fd4-fd27-4248-9fbf-ee41fffa5089",
@@ -634,9 +659,20 @@
     "region": "Scotland",
     "county": "Aberdeenshire",
     "description": "Beinn a' Bhuird has a massive plateau summit with huge granite cliffs on its northern face. It's one of the remotest Munros, requiring a long approach.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Beinn a' Bhuird is a vast plateau mountain on the Mar Lodge Estate, which is cared for by the National Trust for Scotland. Its name is usually translated as table mountain, and the high ground is one of the wildest in the Cairngorms.",
+    "fun_facts": [
+      "Beinn a' Bhuird is a Cairngorms Munro with a huge plateau summit",
+      "Its name is usually translated as table mountain",
+      "The Mar Lodge Estate is cared for by the National Trust for Scotland",
+      "Ben Avon is its neighbour",
+      "The north-east corries have impressive cliffs"
+    ],
+    "nearby_places": [
+      "Braemar",
+      "Ballater",
+      "Invercauld",
+      "Mar Lodge"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -656,7 +692,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual approach starts near Invercauld and follows estate tracks up Glen Quoich or Gleann an t-Slugain to the plateau. Cycling saves a lot of time on the approach tracks, and the round trip takes eight to ten hours. The ground rises gently and the summit is a broad stony plateau.\n\nNavigation is difficult in mist, since the plateau has few features. The corries on the north-east side have steep cliffs, so keep away from the edges in poor visibility. Check stalking information and carry plenty of food, spare clothing and a map and compass."
   },
   {
     "id": "5fd700fa-eb3a-4d70-a30c-6257e291f482",
@@ -763,9 +800,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Ben Alder is one of Scotland's most remote Munros, situated in wild country between Loch Ericht and Loch Laggan. The mountain has historical connections to Bonnie Prince Charlie.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Ben Alder is remote, and its history is linked to the Jacobite rising. After Culloden, Bonnie Prince Charlie is said to have hidden in a hideout known as Cluny's Cage on the flanks of the mountain. The mountain lies between Loch Ericht and Loch Laggan, far from any road.",
+    "fun_facts": [
+      "Ben Alder is one of the most remote Munros in Scotland",
+      "Cluny's Cage, a Jacobite hideout, is linked to the mountain",
+      "The summit plateau is a large and exposed area",
+      "The Long Leachas ridge is a classic approach",
+      "Culra Bothy is the usual base"
+    ],
+    "nearby_places": [
+      "Dalwhinnie",
+      "Loch Ericht",
+      "Loch Laggan",
+      "Culra Bothy"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -785,7 +833,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben Alder is a very long day. The usual approach starts at Dalwhinnie and follows the track beside Loch Ericht to Culra Bothy, then climbs into the corrie. Most walkers cycle the first section to save time. Allow ten to twelve hours.\n\nThe summit plateau is high and the cliffs fall steeply, so navigation in mist needs great care. This is a mountain for experienced walkers, and it is best visited in settled weather. Tell someone your plans, as there is no mobile signal."
   },
   {
     "id": "690e9a5c-84c8-40d2-9b77-9520450a12b1",
@@ -845,9 +894,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "A fine Munro with excellent views, Stob Coire Easain is usually climbed with nearby Stob a' Choire Mheadhoin. The approach follows the West Highland Line railway.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Stob Coire Easain stands above Loch Treig, east of the Grey Corries, in country that is crossed by the West Highland railway. It is usually climbed with its neighbour Stob a' Choire Mheadhoin, and the pair give a fine high-level walk.",
+    "fun_facts": [
+      "Stob Coire Easain is usually climbed with Stob a' Choire Mheadhoin",
+      "The summit overlooks Loch Treig",
+      "The West Highland railway passes nearby",
+      "The ridge forms part of the Grey Corries area",
+      "The views include the Ben Nevis range"
+    ],
+    "nearby_places": [
+      "Roybridge",
+      "Fersit",
+      "Loch Treig",
+      "Loch Laggan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -867,7 +927,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Walkers usually approach from the Loch Treig side, using the paths from Fersit or Tulloch station. The pair of Munros can be climbed in a day of six to eight hours. The paths are mostly clear but rough, and the ground can be boggy.\n\nThe ridge is high and exposed, and the weather in the Lochaber hills can be wet. Carry a map and compass, and check that your route is up to date, as estate work can change access."
   },
   {
     "id": "c6d8eef8-be0a-436d-88ec-d815b714d06a",
@@ -983,9 +1044,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Carnedd Llewelyn is the second highest mountain in Wales. The vast summit area is part of the wild Carneddau range, popular with wild campers.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Carnedd Llewelyn is the highest of the Carneddau and the second highest mountain in Wales. It is traditionally linked with Llywelyn ap Gruffudd, the last native prince of Wales. The Carneddau are Snowdonia's largest upland area, and wild ponies graze the high ground.",
+    "fun_facts": [
+      "Carnedd Llewelyn is the second highest mountain in Wales",
+      "It is linked to Llywelyn ap Gruffudd",
+      "Yr Elen is a rocky neighbour",
+      "The Carneddau ponies graze the high ground",
+      "The Carneddau are Snowdonia's largest upland area"
+    ],
+    "nearby_places": [
+      "Bethesda",
+      "Ogwen Cottage",
+      "Capel Curig",
+      "Aber Falls"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1005,7 +1077,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Carnedd Llewelyn is usually climbed as part of a Carneddau round, either from Ogwen via Pen yr Ole Wen and Carnedd Dafydd, or from the Conwy valley side. The full round takes seven to nine hours. The ridge is broad and fairly gentle, but the plateau is very exposed.\n\nThe mountain is popular with wild campers, but the weather can be severe and mist makes navigation hard. Bring a map and compass, and plan for the descent before you set out."
   },
   {
     "id": "a570f7f7-9d57-4556-a154-baf390c1b315",
@@ -1159,9 +1232,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Part of the Beinn a' Bheithir ridge, Sgorr Dhearg offers stunning views over Loch Leven and Glen Coe. The ridge walk is airy and enjoyable.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Sgorr Dhearg is the higher of the two Munros on the Beinn a' Bheithir ridge, which rises above Ballachulish and Loch Leven. The horseshoe ridge, with Sgorr Dhonuill, is considered a classic round.",
+    "fun_facts": [
+      "Sgorr Dhearg is the higher of the two Beinn a' Bheithir Munros",
+      "The other Munro is Sgorr Dhonuill",
+      "The ridge overlooks Loch Leven",
+      "Ballachulish lies at the foot of the mountain",
+      "The horseshoe is a classic round"
+    ],
+    "nearby_places": [
+      "Ballachulish",
+      "Glencoe",
+      "Kinlochleven",
+      "Loch Leven"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1181,7 +1265,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts from Ballachulish and climbs by the path in Gleann a' Chaolais onto the ridge. The horseshoe over both Munros takes six to seven hours. The ridge is narrow and the ground is steep.\n\nThe views to Glen Coe and Loch Leven are superb, but the ridge is exposed and the weather can be wet. Take a map and compass, and avoid the ridge in strong winds."
   },
   {
     "id": "c89badd6-cedd-427e-8886-9ce344c7f9df",
@@ -1241,9 +1326,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Beinn Eighe was Britain's first National Nature Reserve. The mountain has white quartzite screes and a long multi-topped ridge requiring careful navigation.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Beinn Eighe was the first National Nature Reserve in Britain, declared in 1951. The mountain has two Munros, Ruadh-stac Mor and Spidean Coire nan Clach, and its long ridge is capped with white quartzite. Coire Mhic Fhearchair, with its triple buttress, is one of the best-known corries in Scotland.",
+    "fun_facts": [
+      "Beinn Eighe was Britain's first National Nature Reserve",
+      "The two Munros are Ruadh-stac Mor and Spidean Coire nan Clach",
+      "Coire Mhic Fhearchair has a famous triple buttress",
+      "The summit ridge is capped with white quartzite",
+      "The name means file mountain"
+    ],
+    "nearby_places": [
+      "Kinlochewe",
+      "Torridon",
+      "Loch Maree",
+      "Achnasheen"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1263,7 +1359,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A popular route starts at the Coire Dubh car park in Glen Torridon and follows the path to Coire Mhic Fhearchair, with a climb to Ruadh-stac Mor. The full ridge traverse is a much longer day of eight to ten hours and needs good navigation.\n\nThe quartzite scree is loose and tiring, and the ridge is exposed. This is a mountain for experienced walkers, and it is best visited in clear weather. The visit to Coire Mhic Fhearchair is a good option for a shorter day."
   },
   {
     "id": "a12b1bb1-c7cc-4690-9936-26615643cbb2",
@@ -1323,9 +1420,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Glyder Fach has a rocky summit with the famous Cantilever Stone. The summit castle of rocks provides shelter and excellent scrambling opportunities.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Glyder Fach is known for its summit boulder field, with the Cantilever Stone, a balanced slab of rock, and the Castle of the Winds. Bristly Ridge, a Grade 1 scramble, climbs the mountain's eastern flank from Bwlch Tryfan.",
+    "fun_facts": [
+      "The Cantilever Stone is a balanced slab on the summit",
+      "The Castle of the Winds is a rock outcrop beside the top",
+      "Bristly Ridge is a classic Grade 1 scramble",
+      "Tryfan lies across Bwlch Tryfan",
+      "The summit is a jumble of frost-shattered rock"
+    ],
+    "nearby_places": [
+      "Ogwen Cottage",
+      "Capel Curig",
+      "Llyn Ogwen",
+      "Tryfan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1345,7 +1453,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual routes start at Ogwen Cottage or Idwal Cottage and climb to Llyn Bochlwyd, then either scramble up Bristly Ridge or follow the path to the summit. Allow five to six hours for the round trip. The summit area is a field of rocks and requires care.\n\nNavigation in mist is difficult, and the rocks can be slippery in wet weather. Glyder Fach is often combined with Glyder Fawr and Tryfan for a long day in the Glyderau."
   },
   {
     "id": "d98d9322-6c04-4313-a9e6-654db6916570",
@@ -1358,9 +1467,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Sgurr Dearg is famous for the Inaccessible Pinnacle on its summit, a vertical rock tower requiring rock climbing skills. It's the only Munro that must be climbed rather than walked.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "The Inaccessible Pinnacle, known as the In Pinn, is the summit of Sgurr Dearg and was first climbed in 1880 by the Pilkington brothers. Its east ridge is the easiest route and is graded Moderate for climbers. The pinnacle is the only Munro summit in Britain that requires rock climbing.",
+    "fun_facts": [
+      "The Inaccessible Pinnacle is the summit of Sgurr Dearg",
+      "It was first climbed in 1880 by the Pilkington brothers",
+      "The east ridge is graded Moderate for climbers",
+      "It is the only Munro that requires rock climbing",
+      "Walkers can reach the base without climbing"
+    ],
+    "nearby_places": [
+      "Glen Brittle",
+      "Sligachan",
+      "Carbost",
+      "Coire Lagan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -1380,7 +1500,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual approach starts at Glen Brittle and follows the path into Coire Lagan, then climbs the scree to the foot of the pinnacle. The climb itself is short but exposed, and most parties use a rope. Allow six to seven hours for the day.\n\nWalkers without climbing skills can reach the base of the pinnacle and enjoy the ridge. Many people hire a guide for the climb. The rock is rough gabbro, which grips well, but the exposure is serious and the weather can change fast."
   },
   {
     "id": "5794f2c1-015a-4c25-8f8a-fc985492c69c",
@@ -1608,9 +1729,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "One of the Black Cuillin peaks, Sgurr Mhic Choinnich is a rocky summit requiring scrambling. The peak is often climbed as part of the Cuillin Ridge traverse.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Sgurr Mhic Choinnich is named after John Mackenzie, the Skye guide who climbed with Professor Norman Collie in the early days of Cuillin mountaineering. Collie's Ledge, the usual route to the summit, is named after Collie himself.",
+    "fun_facts": [
+      "The name means Mackenzie's peak",
+      "It honours the Skye guide John Mackenzie",
+      "Collie's Ledge is the usual route to the summit",
+      "It lies on the main Cuillin ridge",
+      "Coire Lagan is the usual approach"
+    ],
+    "nearby_places": [
+      "Glen Brittle",
+      "Sligachan",
+      "Carbost",
+      "Coire Lagan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -1630,7 +1762,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at Glen Brittle, climbs into Coire Lagan, and follows Collie's Ledge, a scramble up the mountain's western flank, to the summit. Allow six to seven hours for the round trip.\n\nThe scrambling is straightforward for experienced hill walkers, but the rock can be wet and slippery. Choose a clear day and be prepared to retreat if the weather changes."
   },
   {
     "id": "b58db7eb-36c6-4de1-bd1e-dbc41a2fd004",
@@ -1643,9 +1776,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Y Garn overlooks Llyn Ogwen and has a distinctive pyramidal shape. The Devil's Kitchen cleft on the northeast face is a famous climbing venue.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Y Garn is the north-western summit of the Glyderau and stands above Llyn Ogwen and Llyn Idwal. Its eastern flank forms part of Cwm Idwal, where the Devil's Kitchen cleft cuts through the cliffs.",
+    "fun_facts": [
+      "Y Garn has a distinctive pyramid shape",
+      "The Devil's Kitchen is on its eastern cliffs",
+      "Llyn Idwal lies beneath the cliffs",
+      "It is often combined with Glyder Fawr",
+      "Cwm Idwal is a National Nature Reserve"
+    ],
+    "nearby_places": [
+      "Ogwen Cottage",
+      "Bethesda",
+      "Llanberis",
+      "Llyn Ogwen"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1665,7 +1809,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Y Garn is usually climbed from Ogwen Cottage, following a path beside Llyn Idwal to reach the ridge, and then following the ridge to the summit. Allow four to five hours for the round trip. A longer circuit includes Foel Goch and Mynydd Perfedd.\n\nThe cliffs above Llyn Idwal are steep and loose, so keep away from the edge in mist. The summit gives fine views over Cwm Idwal and the Carneddau."
   },
   {
     "id": "97adfd2f-1ab8-4d92-8586-42e34d09c347",
@@ -1794,7 +1939,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "This Corbett is climbed on a long day with rough ground, so check a current guidebook or Walkhighlands for the best approach and any access restrictions before you go. Allow six to eight hours for the round trip.\n\nThe ridge is long and the ground is rocky and boggy in places. Carry a map and compass, and tell someone your route, since mobile signal is unreliable in this part of the Highlands."
   },
   {
     "id": "569bc013-51ec-429c-82c3-46e9d5b13f75",
@@ -1807,9 +1953,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Elidir Fawr is the northernmost of the major Snowdonia peaks. Inside the mountain is the Dinorwig Power Station, a massive pumped-storage facility.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Elidir Fawr is the northernmost of the Glyderau and conceals the Dinorwig Power Station, a pumped-storage hydroelectric plant built inside the mountain and completed in 1984. The station is known as the Electric Mountain and has a visitor centre in Llanberis.",
+    "fun_facts": [
+      "Dinorwig Power Station is built inside Elidir Fawr",
+      "The station was completed in 1984",
+      "It is known as the Electric Mountain",
+      "Marchlyn Mawr reservoir lies above the mountain",
+      "The Electric Mountain visitor centre is in Llanberis"
+    ],
+    "nearby_places": [
+      "Llanberis",
+      "Nant Peris",
+      "Bethesda",
+      "Marchlyn Mawr"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -1829,7 +1986,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at Nant Peris and climbs steeply by Cwm Dudodyn to the summit. An alternative starts at Marchlyn Mawr reservoir above Bethesda. Allow four to five hours for the round trip.\n\nThe upper slopes are steep, and the summit is exposed. The view of the Snowdon massif is superb. The mountain is a good choice for walkers who want a quieter Glyderau day."
   },
   {
     "id": "8c2664e9-4a63-46b9-9770-a5c84c8a6597",
@@ -2567,9 +2725,20 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Moel Siabod is an isolated peak offering superb views of Snowdon. The mountain is easily accessible from Capel Curig and provides excellent walking.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Moel Siabod stands apart from the main Snowdonia ranges, near Capel Curig, and its isolated position gives superb views of Snowdon. The Daear Ddu ridge, a Grade 1 scramble, is the best-known route, and old slate quarry workings lie beneath the summit.",
+    "fun_facts": [
+      "Moel Siabod is an isolated peak near Capel Curig",
+      "The Daear Ddu ridge is a Grade 1 scramble",
+      "Llyn y Foel lies beneath the summit",
+      "Plas y Brenin, the National Mountain Centre, is at Capel Curig",
+      "The summit has views of the Snowdon horseshoe"
+    ],
+    "nearby_places": [
+      "Capel Curig",
+      "Betws-y-Coed",
+      "Pont Cyfyng",
+      "Llyn y Foel"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2589,7 +2758,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The best route starts near Capel Curig, climbs past the old quarry to Llyn y Foel, and follows the Daear Ddu ridge to the summit. Allow four to five hours for the round trip. The ridge is a fun scramble that suits walkers with some experience.\n\nThe summit has wide views of Snowdon and the Glyderau, but it is exposed to the wind. A path avoids the ridge scramble for walkers who prefer to keep to easier ground."
   },
   {
     "id": "221a94f3-f61f-4e70-b15e-682a6e3be32f",
@@ -2837,9 +3007,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Quinag is a complex mountain with three main tops. The Y-shaped ridge offers superb walking with dramatic views over the Assynt landscape.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Quinag is a Y-shaped mountain with three main tops and was bought by the John Muir Trust in 2005. The area is part of the North West Highlands Geopark, and the mountain gives fine views over Assynt and the sea.",
+    "fun_facts": [
+      "Quinag has three main tops",
+      "The mountain is owned by the John Muir Trust",
+      "The ridge is Y-shaped",
+      "The mountain is part of the North West Highlands Geopark",
+      "Sail Gharbh is the highest top"
+    ],
+    "nearby_places": [
+      "Kylesku",
+      "Lochinver",
+      "Unapool",
+      "Loch Assynt"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -2859,7 +3040,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at the car park on the A894 near the Bealach a' Chornaidh and climbs onto the ridge, taking in Sail Gharbh, Sail Ghorm and Spidean Coinich in a horseshoe. Allow six to eight hours for the full circuit.\n\nThe ridge is narrow in places and the cliffs fall steeply. In mist, navigation can be difficult. Quinag is a great choice for walkers who want a classic Assynt day with spectacular views."
   },
   {
     "id": "56868213-04fd-4f62-b19e-cf3f54f00597",
@@ -3013,9 +3195,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Known as the \"Queen of Scottish Mountains\", Ben Loyal has four distinctive peaks. The mountain dominates the landscape of northwest Sutherland.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Ben Loyal is often called the Queen of Scottish Mountains because of its shapely outline above Loch Loyal and the Kyle of Tongue. Its highest top, An Caisteal, is a fine rocky summit, and the mountain has four main peaks.",
+    "fun_facts": [
+      "Ben Loyal is known as the Queen of Scottish Mountains",
+      "The highest top is An Caisteal",
+      "It has four main peaks",
+      "The Kyle of Tongue lies at the foot",
+      "Castle Varrich stands nearby"
+    ],
+    "nearby_places": [
+      "Tongue",
+      "Loch Loyal",
+      "Altnaharra",
+      "Kyle of Tongue"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -3035,7 +3228,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben Loyal is usually climbed from the Tongue side, with a path leading to the ridge and the highest top, An Caisteal. Allow four to five hours for the round trip. The ground is rough and boggy in places.\n\nThe summit gives superb views over the north coast. The mountain is remote and the weather can be wild, so carry a map and compass and tell someone your plans."
   },
   {
     "id": "e2d89c4a-744e-411f-a411-670fb31a07a1",
@@ -3236,9 +3430,20 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Ben Stack is an isolated peak with superb views over numerous lochs and to the mountains of Sutherland. The ascent is straightforward but rewarding.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Ben Stack is an isolated Corbett above Loch Stack in the far north-west. Its position near the A838 makes it one of the more accessible hills in this part of Sutherland, and the summit gives wide views of Foinaven, Arkle and the surrounding lochs.",
+    "fun_facts": [
+      "Ben Stack is a Corbett near Loch Stack",
+      "The A838 passes close to the mountain",
+      "Foinaven and Arkle are visible from the summit",
+      "The summit has views over many lochs",
+      "It is a short day by Sutherland standards"
+    ],
+    "nearby_places": [
+      "Laxford Bridge",
+      "Achfary",
+      "Kinlochbervie",
+      "Loch Stack"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Corbett",
@@ -3258,7 +3463,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben Stack is climbed from the A838 near Loch Stack by a steep path that rises directly to the summit. Allow three to four hours for the round trip. The path is rough, and the rocky upper slopes can be slippery.\n\nThe summit is a fine viewpoint for the mountains of Sutherland. Because the mountain stands alone, it catches the wind, so carry a windproof layer."
   },
   {
     "id": "4bac9a67-77df-4d99-b19e-ac2e9f1118d9",
@@ -4150,7 +4356,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Moel Hebog is climbed from Beddgelert by a steep path up the mountain, taking around four to five hours for the round trip. The ascent is direct, and the upper slopes are rocky. A short extension reaches Moel yr Ogof, the cave associated with Owain Glyndwr.\n\nThe mountain stands alone above the Beddgelert forest, so the views to Snowdon and Cardigan Bay are superb. The path can be wet and slippery, so wear sturdy boots."
   },
   {
     "id": "a1b2c3d4-0014-4001-8001-000000000014",
@@ -4202,7 +4409,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Fan y Big is usually climbed from the Neuadd Reservoirs car park, following the ridge above Cwm Oergwm to reach the summit and the Diving Board. Allow four to five hours for the round trip. The ridge is broad and clear.\n\nThe Diving Board is a popular photo spot, but the escarpment drops steeply, so keep a safe distance from the edge. The summit is exposed, and mist can reduce visibility quickly."
   },
   {
     "id": "a1b2c3d4-0016-4001-8001-000000000016",
@@ -4215,7 +4423,7 @@
     "region": "Scotland",
     "county": "Perth and Kinross",
     "description": "Ben Vorlich above Loch Earn is one of the most popular Munros in the Southern Highlands, offering excellent views for relatively modest effort. Often combined with Stuc a' Chroin.",
-    "history": null,
+    "history": "Ben Vorlich stands above Loch Earn and is one of the most popular Munros in the Southern Highlands. It is often climbed with its neighbour Stuc a' Chroin, which has a rockier and more demanding summit.",
     "fun_facts": [
       "One of the most popular Munros in the Southern Highlands",
       "Often combined with Stuc a' Chroin for a full day out",
@@ -4253,7 +4461,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at Ardvorlich, on the south side of Loch Earn, and follows a path through Glen Vorlich to the summit. Allow four to five hours for the round trip. Walkers who want a longer day can continue to Stuc a' Chroin, which involves a steep scramble.\n\nThe summit has fine views over Loch Earn and the Southern Highlands. The path is clear, and the mountain is a good choice for walkers with some hillwalking experience."
   },
   {
     "id": "a1b2c3d4-0018-4001-8001-000000000018",
@@ -4371,7 +4580,7 @@
     "region": "Scotland",
     "county": "Highland",
     "description": "Beinn a' Chlachair is a remote Munro in the Monadhliath region. It offers superb mountain walking in a wild and quiet area, often visited alongside neighbouring Munros.",
-    "history": null,
+    "history": "Beinn a' Chlachair is a high Munro in the Central Highlands, away from the main tourist routes. It is often climbed with neighbouring Munros, and the long approach gives it a remote character.",
     "fun_facts": [
       "One of the more remote Munros in the central Highlands",
       "Often combined with Creag Pitridh and Geal Charn",
@@ -4406,7 +4615,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn a' Chlachair is a long day on rough ground. Check a current guide for the best approach, since estate tracks and access arrangements can change. Allow eight to ten hours for the round trip, and consider using a bike for the approach.\n\nThe summit plateau is high and exposed, and navigation in mist needs a map and compass. The area is quiet, so tell someone your route before you set out."
   },
   {
     "id": "a1b2c3d4-0022-4001-8001-000000000022",
@@ -4725,7 +4935,7 @@
     "region": "Scotland",
     "county": "Argyll and Bute",
     "description": "Ben Starav is a prominent Munro above the head of Loch Etive with a striking conical shape. The ascent from the River Etive offers dramatic scenery.",
-    "history": null,
+    "history": "Ben Starav rises steeply from the head of Loch Etive, with a classic conical shape that dominates the glen. It is often climbed with Glas Bheinn Mhor, the neighbouring Munro, in a long day.",
     "fun_facts": [
       "Prominent conical peak above Loch Etive",
       "Part of the Glen Etive Munros group",
@@ -4760,7 +4970,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts on the Glen Etive road and follows the Allt Mheuran path to the ridge, then climbs to the summit. Allow six to seven hours for the round trip. The path is steep and the upper slopes are rocky.\n\nThe glen has some of the wettest weather in Scotland, so carry good waterproofs. The ridge is exposed, and the views down to Loch Etive are superb."
   },
   {
     "id": "a1b2c3d4-0030-4001-8001-000000000030",
@@ -4822,7 +5033,7 @@
     "region": "Wales",
     "county": "Denbighshire",
     "description": "Cadair Berwyn is the highest point of the Berwyn Mountains, a range of heather moorland hills forming part of the border between England and Wales. The summit provides sweeping views across mid-Wales.",
-    "history": null,
+    "history": "Cadair Berwyn is the highest point of the Berwyn Mountains, a range of heather moorland. Nearby Pistyll Rhaeadr is one of the highest waterfalls in Wales, and the starting point for the usual walk.",
     "fun_facts": [
       "Highest point of the Berwyn Mountains",
       "Part of the border between England and Wales",
@@ -4857,7 +5068,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at the Pistyll Rhaeadr car park and climbs past the waterfall to the ridge, then follows the high ground to Cadair Berwyn. Allow four to five hours for the round trip. The ascent is steady and the paths are clear.\n\nThe summit is exposed to the wind, and the ground is boggy in places. The cliffs of Craig Berwyn drop steeply, so keep away from the edge in mist."
   },
   {
     "id": "a1b2c3d4-0032-4001-8001-000000000032",
@@ -4908,7 +5120,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at Llanddeusant and follows the path to Llyn y Fan Fach, a glacial lake linked to the legend of the Lady of the Lake. From the lake, a path climbs to the ridge and follows the escarpment to Fan Brycheiniog, the highest point. Allow six to seven hours for the full circuit.\n\nThe high ridge is exposed and the weather can change quickly. The Black Mountain is quieter than the central Beacons, so it suits walkers who like space. Take a map and compass, and keep to the paths."
   },
   {
     "id": "a1b2c3d4-0033-4001-8001-000000000033",
@@ -4959,7 +5172,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at the Eisteddfa Gurig car park on the A44 and follows a path across moorland to the summit. Allow three to four hours for the round trip. The path is clear but the ground is wet and boggy.\n\nThe mountain is the source of the Severn, Wye and Rheidol rivers. The upper slopes are exposed, and mist can reduce visibility. Wear waterproof boots and carry a map and compass."
   },
   {
     "id": "a1b2c3d4-0034-4001-8001-000000000034",
@@ -5026,7 +5240,7 @@
     "region": "Scotland",
     "county": "Argyll and Bute",
     "description": "Beinn Narnain is one of the Arrochar Alps, accessible by train from Glasgow. The summit has fine views towards the Highlands and can be combined with The Cobbler for a satisfying day.",
-    "history": null,
+    "history": "Beinn Narnain is one of the Arrochar Alps, a short walk from the railway at Arrochar. The Spearhead Arete and the Narnain Boulder, a giant boulder that has long been used as a shelter, are well-known features on its slopes.",
     "fun_facts": [
       "Accessible by train from Glasgow to Arrochar & Tarbet",
       "Part of the popular Arrochar Alps",
@@ -5064,7 +5278,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Beinn Narnain is climbed from Succoth, at the head of Loch Long, by a path that climbs to the col beside The Cobbler and then to the summit. Allow five to six hours for the round trip. The ground is steep and rocky, and the path is eroded in places.\n\nThe summit has fine views to Loch Lomond and the Highlands. The weather here can be wet, so carry waterproofs. Many walkers combine Beinn Narnain with Beinn Ime or The Cobbler."
   },
   {
     "id": "a1b2c3d4-0036-4001-8001-000000000036",
@@ -5335,7 +5550,7 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Lingmell is a magnificent fell above Wasdale with superb views of the Scafell massif and Mosedale. Often overshadowed by its famous neighbours, the summit provides some of the best views in the Lake District.",
-    "history": null,
+    "history": "Lingmell stands at the head of Wasdale, beside Scafell Pike, and has some of the best views in the Lake District. Piers Gill, a deep ravine on its flank, is a dramatic feature, and Wast Water below is England's deepest lake.",
     "fun_facts": [
       "Superb viewpoint for the Scafell massif",
       "Part of the classic Wasdale ridge circuit",
@@ -5370,7 +5585,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Lingmell is usually climbed from Wasdale Head, either by the steep ridge of Lingmell Nose or by the path to Lingmell Col. Allow four to five hours for the round trip. The summit is often combined with Scafell Pike to make a longer day.\n\nThe summit gives fine views of Scafell Pike and Wasdale. The ground is rough, and the ravine of Piers Gill is dangerous, so keep away from the edge."
   },
   {
     "id": "a1b2c3d4-0042-4001-8001-000000000042",
@@ -5383,7 +5599,7 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Kidsty Pike is the highest point on the popular Coast to Coast walk at the point where it descends to Haweswater. Its distinctive sharp pike is visible from miles around.",
-    "history": null,
+    "history": "Kidsty Pike is the highest point on the Coast to Coast walk, the long-distance route devised by Alfred Wainwright. The sharp pike overlooks Haweswater and the drowned village of Mardale Green.",
     "fun_facts": [
       "Highest point on Alfred Wainwright's famous Coast to Coast walk",
       "The pointed summit is distinctive and easily recognised",
@@ -5417,7 +5633,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Kidsty Pike is usually climbed from Mardale Head at the end of Haweswater by the path up Riggindale Edge. Allow four to five hours for the round trip. The ridge is steep and rocky in places, and the summit is small and exposed.\n\nWalkers who want a longer day can continue to High Street. The ridge is exposed to the wind, so carry a windproof layer."
   },
   {
     "id": "a1b2c3d4-0043-4001-8001-000000000043",
@@ -5430,7 +5647,7 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Catstycam is a shapely pyramid peak beside Helvellyn, reached via the exciting Swirral Edge arête. The mountain gives exceptional views over Red Tarn and Helvellyn.",
-    "history": null,
+    "history": "Catstycam is a pyramid-shaped peak beside Helvellyn, reached by the exciting Swirral Edge ridge. The mountain is often climbed as part of a round of Helvellyn, and the nearby Greenside mine gives the area its industrial history.",
     "fun_facts": [
       "A shapely pyramid peak beside Helvellyn",
       "Reached via the exciting Swirral Edge arête",
@@ -5465,7 +5682,8 @@
     "is_wainwright": true,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Catstycam is usually climbed from Glenridding by the path beside Glenridding Beck to Red Tarn, then up to the summit. Allow three to four hours for the round trip. The final climb is steep but short.\n\nSwirral Edge is a narrow ridge that links Catstycam with Helvellyn, and it needs care in wet or windy weather. The views over Red Tarn are among the best in the Lake District."
   },
   {
     "id": "a1b2c3d4-0044-4001-8001-000000000044",
@@ -5478,7 +5696,7 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Foel Fras is the most northerly of the Carneddau Hewitts and provides a natural end to the magnificent Carneddau ridge walk. The views north over Anglesey and the Irish Sea are excellent.",
-    "history": null,
+    "history": "Foel Fras is the most northerly of the high Carneddau and offers fine views over Anglesey and the Irish Sea. The Aber Falls, at the foot of the mountain, are a popular destination.",
     "fun_facts": [
       "Most northerly Hewitt in the Carneddau range",
       "Natural end to the full Carneddau ridge walk",
@@ -5513,7 +5731,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at the car park near Abergwyngregyn and follows the path past Aber Falls to the high ground, then climbs to the summit. Allow five to six hours for the round trip. The approach is long, and the final slopes are gentle.\n\nThe summit is exposed and the weather can be severe. Carneddau ponies graze the high ground, so keep your distance. Take a map and compass."
   },
   {
     "id": "a1b2c3d4-0045-4001-8001-000000000045",
@@ -5525,8 +5744,8 @@
     "longitude": -3.954444,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Pen yr Helgi Du is a superb outlier of the Carneddau range with a distinctive ridge leading from Pen y Gwryd. The mountain provides excellent views over Snowdonia and the Conwy Valley.",
-    "history": null,
+    "description": "Pen yr Helgi Du is a superb outlier of the Carneddau range with a distinctive ridge above the Ogwen valley. The mountain provides excellent views over Snowdonia and the Conwy Valley.",
+    "history": "Pen yr Helgi Du is an outlier of the Carneddau range, with a distinctive ridge that rises above the Ogwen and Conwy valleys. Its views over Snowdonia and the Conwy Valley are among the best in the area.",
     "fun_facts": [
       "A striking outlier of the Carneddau range",
       "The narrow east ridge makes for exciting ridge walking",
@@ -5562,7 +5781,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Pen yr Helgi Du is usually climbed as part of a circuit of the Carneddau from the A5. Check a current guide for the best approach, since the paths vary in quality. Allow five to six hours for the round trip.\n\nThe ridge is exposed, and the weather can be severe. Take a map and compass, and avoid the ridge in poor visibility."
   },
   {
     "id": "a1b2c3d4-0046-4001-8001-000000000046",
@@ -5575,7 +5795,7 @@
     "region": "Wales",
     "county": "Gwynedd",
     "description": "Moelwyn Mawr is the highest of the Moelwyn group of mountains between Blaenau Ffestiniog and Porthmadog. The summit gives wonderful views across the bay towards the Llŷn Peninsula.",
-    "history": null,
+    "history": "Moelwyn Mawr is the highest of the Moelwyn group and overlooks Blaenau Ffestiniog and Porthmadog. Ffestiniog Power Station, the first major pumped-storage hydroelectric station in Britain, stands at the foot of the mountain.",
     "fun_facts": [
       "Highest of the Moelwyn group",
       "Superb views over the Glaslyn estuary",
@@ -5610,7 +5830,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Moelwyn Mawr is usually climbed from Croesor or Tanygrisiau by a path that climbs to the summit ridge. Allow four to five hours for the round trip. The ascent is steep, and the upper section has some easy scrambling.\n\nThe summit has superb views over Cardigan Bay and Snowdon. The ground can be wet and slippery, and the weather on the coast can change quickly."
   },
   {
     "id": "a1b2c3d4-0047-4001-8001-000000000047",
@@ -5623,7 +5844,7 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Red Pike above Buttermere is one of the finest Lake District summits, with a dramatic red rocky peak giving sensational views over Buttermere and Crummock Water. The descent via Scale Force, England's highest waterfall, is outstanding.",
-    "history": null,
+    "history": "Red Pike gets its name from the reddish scree that covers its slopes. The mountain overlooks Buttermere and Crummock Water, and Scale Force, a waterfall on the descent, is one of the highest in England.",
     "fun_facts": [
       "The distinctive red colour comes from iron-rich rocks",
       "Scale Force, England's highest waterfall, is nearby",
@@ -5659,7 +5880,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts in Buttermere village, climbs through Burtness Wood to Bleaberry Tarn and the summit, and returns by Scale Force. Allow four to five hours for the round trip. The ascent is steep and the final section is rocky.\n\nThe summit gives fine views over the Buttermere valley. The paths can be slippery when wet, so wear sturdy boots."
   },
   {
     "id": "a1b2c3d4-0048-4001-8001-000000000048",
@@ -5770,7 +5992,7 @@
     "region": "Scotland",
     "county": "Aberdeenshire",
     "description": "Beinn Mheadhoin is a high Cairngorm Munro with a distinctive and unusual summit of rounded granite tors. The mountain sits at the heart of the Cairngorm plateau.",
-    "history": null,
+    "history": "Beinn Mheadhoin stands in the heart of the Cairngorms, between Loch Avon and Loch Etchachan. Its summit is crowned by a series of granite tors, and the mountain is one of the most remote in the range.",
     "fun_facts": [
       "Has distinctive rounded granite tors on its summit",
       "Sits at the heart of the Cairngorm plateau",
@@ -5806,7 +6028,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route starts at Linn of Dee or Cairngorm and follows tracks to Loch Etchachan, then climbs to the summit. Allow eight to ten hours for the round trip. The ground is rough and exposed.\n\nNavigation on the plateau is difficult in mist, and the weather can be severe. Check stalking information and tell someone your plans."
   },
   {
     "id": "a1b2c3d4-0052-4001-8001-000000000052",
@@ -5958,6 +6181,7 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Conwy Mountain is a short, easy walk from the walled town of Conwy or the Sychnant Pass. The path climbs to the ridge and follows it to the summit, where the remains of an Iron Age hillfort, Castell Caer Seion, can be seen. Allow two to three hours for the round trip.\n\nThe views over the Conwy Estuary and towards Anglesey are superb. The path is clear but can be windy, and the ground is rocky in places. It is a good choice for a short walk with a lot of interest."
   }
 ]
