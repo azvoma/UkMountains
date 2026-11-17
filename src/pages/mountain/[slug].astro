@@ -53,6 +53,8 @@ const weatherUrl = 'https://www.metoffice.gov.uk/';
 const mountainForecastUrl = `https://www.mountain-forecast.com/`;
 
 const nearbyPeaks = getNearbyPeaks(mountain, 4);
+// Next-nearest peaks, shown as a plain link list so every mountain page is linked from several topically related pages.
+const morePeaks = getNearbyPeaks(mountain, 12).filter((m) => !nearbyPeaks.some((n) => n.id === m.id));
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -663,6 +665,16 @@ const faqSchemaData = {
 
         <!-- Nearby Peaks (internal linking for crawlability) -->
         <NearbyPeaks peaks={nearbyPeaks} currentName={mountain.name} />
+        {morePeaks.length > 0 && (
+          <section class="more-peaks">
+            <h2>More mountains near {mountain.name}</h2>
+            <ul>
+              {morePeaks.map((m) => (
+                <li><a href={`/mountain/${m.slug}/`}>{m.name}</a> <span>({Number(m.height_meters).toLocaleString('en-GB')}m, {m.region})</span></li>
+              ))}
+            </ul>
+          </section>
+        )}
 
       </main>
     </div>
@@ -1526,6 +1538,11 @@ const faqSchemaData = {
 
     .content-section { padding: var(--spacing-lg); }
   }
+
+  .more-peaks { max-width: 1100px; margin: 2rem auto 0; padding: 0 1.25rem; }
+  .more-peaks h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+  .more-peaks ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.4rem 1.5rem; }
+  .more-peaks li span { color: #64748b; font-size: 0.9rem; }
 </style>
 
 <script>
