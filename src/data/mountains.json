@@ -514,10 +514,21 @@
     "longitude": -4.9625,
     "region": "Scotland",
     "county": "Highland",
-    "description": "Famous for its knife-edge arête ridge, Carn Mòr Dearg is often climbed en route to Ben Nevis via the CMD Arête, one of Scotland's finest ridge walks.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Famous for its knife-edge arête ridge, Carn Mòr Dearg is often climbed en route to Ben Nevis via the CMD Arête, one of Scotland's finest ridge walks. The ridge to Ben Nevis, the CMD Arete, is a narrow granite crest with the great North Face of Ben Nevis opposite.",
+    "history": "Carn Mor Dearg stands directly opposite the great North Face of Ben Nevis, and the arete that links the two is one of the most celebrated high-level ridge walks in Scotland. The Charles Inglis Clark Memorial Hut, known as the CIC Hut, sits in the corrie below and serves climbers on the North Face.",
+    "fun_facts": [
+      "Carn Mor Dearg is the highest point of the ridge that circles the head of the Allt a' Mhuilinn corrie",
+      "The CMD Arete links Carn Mor Dearg with Ben Nevis",
+      "The North Face of Ben Nevis is visible across the corrie",
+      "The CIC Hut serves climbers on the North Face",
+      "The name is usually translated as big red cairn"
+    ],
+    "nearby_places": [
+      "Fort William",
+      "Torlundy",
+      "Glen Nevis",
+      "Aonach Mor"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Munro",
@@ -537,7 +548,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The best-known route starts at the North Face car park near Torlundy, follows the Allt a' Mhuilinn path to the CIC Hut, and climbs to Carn Mor Dearg before following the CMD Arete to Ben Nevis. The descent is by the Ben Nevis Mountain Track, which needs transport arranged at the end. Allow eight to nine hours for the full circuit.\n\nThe arete is a Grade 1 scramble in good conditions, but it is exposed and needs a good head for heights. In winter it becomes a serious mountaineering route. Carn Mor Dearg is a good alternative for walkers who want a quieter day than the main Ben Nevis path."
   },
   {
     "id": "3f03d960-5c95-4abc-9707-5eb1088b3ca5",
@@ -2276,10 +2288,21 @@
     "longitude": -2.980833,
     "region": "England",
     "county": "Cumbria",
-    "description": "Fairfield is the highest point of the popular Fairfield Horseshoe walk from Ambleside. The mountain has a broad summit plateau.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Fairfield is the highest point of the popular Fairfield Horseshoe walk from Ambleside. The mountain has a broad summit plateau. The broad, grassy summit sits at the centre of a ring of ridges that form one of the Lake District's most popular rounds, the Fairfield Horseshoe.",
+    "history": "Fairfield is the high point of the Fairfield Horseshoe, a circuit above Rydal Beck that has been a favourite round for Ambleside walkers for generations. The valley below is closely linked with the poet William Wordsworth, who lived at nearby Rydal Mount and wrote about the fells around Grasmere and Rydal.",
+    "fun_facts": [
+      "Fairfield is the high point of the Fairfield Horseshoe, one of the best-known rounds in the Lake District",
+      "The summit plateau is broad and flat, with several windbreak shelters",
+      "Wordsworth lived at Rydal Mount, close to the foot of the horseshoe",
+      "The ridge can also be reached from Grasmere and Patterdale",
+      "Hart Crag and Dove Crag are the rocky neighbours on the eastern side of the circuit"
+    ],
+    "nearby_places": [
+      "Ambleside",
+      "Rydal",
+      "Grasmere",
+      "Patterdale"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2299,7 +2322,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The horseshoe starts in Ambleside, climbs Nab Scar and Heron Pike, follows the Rydal Fells to Great Rigg and Fairfield, then continues over Hart Crag and Dove Crag before descending High Pike and Low Pike. The round trip is long, with a lot of height to gain, so allow around seven hours. The paths are good and the route is mostly grassy, but it stays high for several hours.\n\nThe summit plateau is wide and has few features, and in mist it is easy to walk the wrong way. Take a compass bearing at the summit, and plan to turn back at Great Rigg if the weather is poor. Fairfield is a good choice for walkers who want a long, rewarding day without any scrambling."
   },
   {
     "id": "d04aa449-44e0-4056-8943-546517d8fa6c",
@@ -2311,10 +2335,21 @@
     "longitude": -3.4375,
     "region": "Wales",
     "county": "Powys",
-    "description": "Corn Du is the twin summit of Pen y Fan, separated by a small col. The two are usually climbed together on the most popular route in the Brecon Beacons.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Corn Du is the twin summit of Pen y Fan, separated by a small col. The two are usually climbed together on the most popular route in the Brecon Beacons. Its summit carries an ancient cairn and gives the best view of Pen y Fan's northern escarpment.",
+    "history": "Corn Du is the second highest of the Brecon Beacons and sits beside Pen y Fan on the central ridge. A large cairn on the summit is a Bronze Age burial mound. Below it, a memorial obelisk records the death of five-year-old Tommy Jones, who got lost in mist in 1900 and was found weeks later.",
+    "fun_facts": [
+      "Corn Du is the second highest peak in the Brecon Beacons, just 13 metres lower than Pen y Fan",
+      "A Bronze Age burial cairn stands on the summit",
+      "The Tommy Jones obelisk recalls a child who died on the mountain in 1900",
+      "Cwm Llwch and Llyn Cwm Llwch lie to the north",
+      "The ridge between Corn Du and Pen y Fan is a short, simple link"
+    ],
+    "nearby_places": [
+      "Brecon",
+      "Libanus",
+      "Storey Arms",
+      "Pen y Fan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2334,7 +2369,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Corn Du is usually climbed from the Pont ar Daf car park, following the main path up the steep final slope to the summit. It takes around two hours for the ascent, and many walkers continue to Pen y Fan across the short col. A return by Cwm Llwch gives a quieter loop with views of the lake.\n\nThe summit is exposed and the north face drops steeply, so keep away from the edge in mist. Corn Du is a good choice for walkers who want a shorter day than the full horseshoe, and it is a good place to watch the sunrise on a clear morning."
   },
   {
     "id": "47b809a4-ebc1-49f7-8a31-687482dc58e6",
@@ -2463,10 +2499,21 @@
     "longitude": -3.297778,
     "region": "England",
     "county": "Cumbria",
-    "description": "Grasmoor is the highest of the northwestern fells. The mountain has steep sides, particularly Dove Crags, and commands excellent views.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Grasmoor is the highest of the northwestern fells. The mountain has steep sides, particularly Dove Crags, and commands excellent views. It rises above Crummock Water and Buttermere, and its steep western face is one of the more dramatic sights in the north-western fells.",
+    "history": "Grasmoor overlooks the Buttermere valley and Crummock Water in the north-western Lake District. The land beneath it includes Rannerdale, where a famous display of bluebells appears each spring,.",
+    "fun_facts": [
+      "Grasmoor is the highest of the north-western fells",
+      "The steep Dove Crags drop away on its southern flank",
+      "Rannerdale, beneath the mountain, is known for its spring bluebells",
+      "Crummock Water lies directly beneath the western face",
+      "The summit looks out across the Buttermere valley to High Stile and Red Pike"
+    ],
+    "nearby_places": [
+      "Buttermere",
+      "Crummock Water",
+      "Lorton",
+      "Cockermouth"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -2486,7 +2533,8 @@
     "is_wainwright": true,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A common route starts at the Lanthwaite Green car park, crosses the beck, and climbs the Lad Hows ridge to the summit plateau, a steep but straightforward grassy slope. The return can be made by the same path or by a loop round Whiteless Pike. Allow around four hours for the main ascent and descent.\n\nGrasmoor is one of the best Lake District fells for walkers who want long views without a crowd. The western face is steep, so take care on the descent in wet weather, and avoid the rocky ground near Dove Crags in cloud."
   },
   {
     "id": "f929cff9-910b-437a-a947-e5f447164fef",
@@ -2638,10 +2686,21 @@
     "longitude": -3.423889,
     "region": "Wales",
     "county": "Powys",
-    "description": "Cribyn has a sharp pointed summit and is often climbed with Pen y Fan. The mountain forms part of the classic Brecon Beacons horseshoe walk.",
+    "description": "Cribyn has a sharp pointed summit and is often climbed with Pen y Fan. The mountain forms part of the classic Brecon Beacons horseshoe walk. Its steep, pointed summit gives it the look of a classic peak,.",
     "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "fun_facts": [
+      "Cribyn has a steep, pointed summit above the Bwlch ar y Fan col",
+      "The classic horseshoe route links Cribyn with Pen y Fan and Corn Du",
+      "The Neuadd Reservoirs lie beneath its eastern flank",
+      "Bwlch ar y Fan is the col between Cribyn and Pen y Fan",
+      "The ascent from the col is short but steep"
+    ],
+    "nearby_places": [
+      "Brecon",
+      "Libanus",
+      "Neuadd Reservoirs",
+      "Pen y Fan"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Hewitt",
@@ -2661,7 +2720,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Cribyn can be climbed from the Neuadd Reservoirs car park, following the track to the col at Bwlch ar y Fan and then climbing the steep eastern slope. The ascent is short but steep, and the path is eroded in places. Many walkers include Cribyn in the full Beacons horseshoe, which takes five to six hours and links Cribyn, Pen y Fan and Corn Du.\n\nThe views from Cribyn are among the best in the Brecon Beacons, and the summit is often quieter than Pen y Fan. Descents from the summit are steep, so wear boots with good grip."
   },
   {
     "id": "e01c5f88-cf6a-46a1-afb9-30098e1d567b",
@@ -2989,10 +3049,21 @@
     "longitude": -1.859722,
     "region": "England",
     "county": "Derbyshire",
-    "description": "Bleaklow is a wild peat moorland plateau. The summit area can be boggy, but the walk offers solitude and great views over the Dark Peak.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "description": "Bleaklow is a wild peat moorland plateau. The summit area can be boggy, but the walk offers solitude and great views over the Dark Peak. The plateau has a wild, empty feel, and the wreckage of a wartime aircraft near Higher Shelf Stones is a well-known destination.",
+    "history": "Bleaklow is the second highest hill in the Peak District, a large plateau of peat that forms part of the Dark Peak. Near Higher Shelf Stones lie the remains of a US Air Force B-29 Superfortress, Over Exposed, which crashed into the moor in November 1948, and the debris can still be seen.",
+    "fun_facts": [
+      "Bleaklow is the second highest hill in the Peak District, after Kinder Scout",
+      "The wreckage of the B-29 Superfortress Over Exposed lies near Higher Shelf Stones",
+      "The Pennine Way crosses the plateau",
+      "The plateau is deep peat, with groughs and bogs",
+      "Bleaklow Head is where the Pennine Way crosses the high plateau"
+    ],
+    "nearby_places": [
+      "Glossop",
+      "Old Glossop",
+      "Snake Pass",
+      "Crowden"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Marilyn",
@@ -3012,7 +3083,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A good route starts in Old Glossop, follows the Doctor's Gate track and the Pennine Way to Bleaklow Head, then visits the B-29 wreckage near Higher Shelf Stones before returning. Allow five to six hours. The paths are clear for much of the route, but the plateau is boggy and the groughs are deep.\n\nNavigation on Bleaklow can be tough in mist, since the ground is open and featureless. It suits walkers who like wild moorland and are comfortable with a compass. Avoid it after heavy rain, and wear waterproof boots."
   },
   {
     "id": "0c35be0f-3b2f-4ed0-bed9-ce0ec980fd62",
@@ -3161,7 +3233,7 @@
     "longitude": -5.941944,
     "region": "Northern Ireland",
     "county": "Down",
-    "description": "Slieve Commedagh is the second highest peak in Northern Ireland. The famous Mourne Wall climbs its slopes, and the summit provides outstanding views across the Mournes.",
+    "description": "Slieve Commedagh is the second highest peak in Northern Ireland. The famous Mourne Wall climbs its slopes, and the summit provides outstanding views across the Mournes. The Mourne Wall climbs its slopes and gives walkers an easy way to follow the route in poor visibility.",
     "history": "The name means 'mountain of watching' in Irish, likely referring to its use as a lookout point. The Mourne Wall, a remarkable feat of Victorian construction, passes just below the summit.",
     "fun_facts": [
       "Second highest peak in Northern Ireland",
@@ -3202,7 +3274,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts in Donard Park in Newcastle, follows the Glen River path to the Saddle between Slieve Donard and Slieve Commedagh, then climbs beside the Mourne Wall to Commedagh. Allow around three to four hours. The path is clear, and the wall is a good guide in mist.\n\nMany walkers combine Commedagh with Slieve Donard to make a longer day. The path from Newcastle is busy at weekends, so start early. The ground on the upper slopes is exposed, so carry waterproofs even in summer."
   },
   {
     "id": "a1b2c3d4-0003-4001-8001-000000000003",
@@ -3267,8 +3340,8 @@
     "longitude": -5.991944,
     "region": "Northern Ireland",
     "county": "Down",
-    "description": "Slieve Bearnagh is known for its distinctive granite tor summits and the Mourne Wall that passes through the col. The mountain offers dramatic rocky scrambling to the twin summits.",
-    "history": null,
+    "description": "Slieve Bearnagh is known for its distinctive granite tor summits and the Mourne Wall that passes through the col. The mountain offers dramatic rocky scrambling to the twin summits. The Mourne Wall climbs the col beside it, and the granite tors on the summit give a classic Mournes skyline.",
+    "history": "Slieve Bearnagh is one of the best-known peaks in the Mourne Mountains. The Mourne Wall, built between 1904 and 1922 to enclose the catchment of the Silent Valley and Ben Crom reservoirs, crosses its slopes. The name is often translated as gapped mountain.",
     "fun_facts": [
       "Has dramatic twin granite tor summits",
       "The Mourne Wall passes through its col",
@@ -3304,7 +3377,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "A popular route starts at the Trassey Track car park and follows the track to Hare's Gap before climbing beside the Mourne Wall to the col, then onto the summit tors. The round trip takes around four to five hours, and the final scramble onto the tors needs care in wet weather.\n\nThe Mournes are rocky and exposed, and weather can change quickly. This route suits walkers who want a classic Mournes day without the long distance of the full Mourne Wall walk. Slieve Bearnagh is also a good choice for photographers because of the tors."
   },
   {
     "id": "a1b2c3d4-0005-4001-8001-000000000005",
@@ -3692,7 +3766,7 @@
     "longitude": -3.993056,
     "region": "Wales",
     "county": "Gwynedd",
-    "description": "Pen y Ole Wen is the 'gatekeeper' of the Ogwen Valley, with the steepest direct ascent of any mountain in Wales from Ogwen Cottage. The summit gives stunning views across the Carneddau.",
+    "description": "Pen y Ole Wen is the 'gatekeeper' of the Ogwen Valley, with the steepest direct ascent of any mountain in Wales from Ogwen Cottage. The summit gives stunning views across the Carneddau. From the shore of Llyn Ogwen the climb gains around 650 metres in a short distance, which makes it a serious test for walkers who think the Carneddau are an easy option.",
     "history": "The mountain guards the western end of the Carneddau massif. The steep south-west ridge from Ogwen is one of the most challenging routes in Wales, gaining nearly 900 metres in just 2 kilometres.",
     "fun_facts": [
       "Has the steepest direct ascent of any mountain in Wales",
@@ -3734,7 +3808,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "The usual route leaves Ogwen Cottage and climbs steeply up the south-east ridge to the summit. A long and punishing ascent, it can take around two and a half hours for fit walkers, with very little flat ground. The path is clear, but the rocky final section can be slippery. From the summit, the ridge to Carnedd Dafydd is broad and gentler.\n\nThe mountain suits walkers who are fit and happy with a steady, strenuous climb. Avoid it in strong winds. Many walkers use Pen y Ole Wen as the start of a longer day over the Carneddau."
   },
   {
     "id": "a1b2c3d4-0013-4001-8001-000000000013",
@@ -4055,7 +4130,7 @@
     "longitude": -4.687778,
     "region": "Scotland",
     "county": "Perth and Kinross",
-    "description": "Beinn Dorain is one of the most striking mountains in Scotland, with a perfect conical shape visible from the main A82 road. The Gaelic poem 'Moladh Beinn Dobhrain' by Duncan Ban MacIntyre immortalised this mountain.",
+    "description": "Beinn Dorain is one of the most striking mountains in Scotland, with a perfect conical shape visible from the main A82 road. The Gaelic poem 'Moladh Beinn Dobhrain' by Duncan Ban MacIntyre immortalised this mountain. The graceful cone is best seen from the A82 near Bridge of Orchy, where the West Highland Way runs beneath it.",
     "history": "The mountain inspired Duncan Ban MacIntyre's famous 18th-century Gaelic praise poem. The peak dominates the approach to the Bridge of Orchy and is a familiar landmark to travellers on the West Highland Way.",
     "fun_facts": [
       "Inspired one of the greatest Gaelic poems, 'Moladh Beinn Dobhrain'",
@@ -4095,7 +4170,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The usual route starts at the Bridge of Orchy car park, follows the track into Coire an Dothaidh and climbs onto the ridge to Beinn an Dothaidh before continuing to Beinn Dorain. Allow six to seven hours for the full round. The paths are clear, but the upper slopes are steep and rocky, and care is needed in mist.\n\nBridge of Orchy has a railway station on the West Highland line, so it is easy to reach without a car. This route suits walkers who already have some Munro experience, and the poetic link makes it a good mountain to understand before you go."
   },
   {
     "id": "a1b2c3d4-0024-4001-8001-000000000024",
