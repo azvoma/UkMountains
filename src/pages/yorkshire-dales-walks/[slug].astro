@@ -89,7 +89,7 @@ const faqSchemaData = {
 const weatherUrl = 'https://www.metoffice.gov.uk/';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} noindex={Boolean(walk.noindex)}>
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(touristAttractionSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />

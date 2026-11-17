@@ -233,7 +233,8 @@
     ],
     "seo_title": "Walks in Malton, North Yorkshire | Best Routes Guide",
     "seo_description": "Find walks in Malton, North Yorkshire, from riverside paths to market town trails. Discover routes, parking and tips for all abilities near the town.",
-    "seo_h1": "Walks in Malton"
+    "seo_h1": "Walks in Malton",
+    "noindex": true
   },
   {
     "id": "yd005",
@@ -292,7 +293,8 @@
     ],
     "seo_title": "Walks in Bedale: Best Walking Routes & Trails Guide",
     "seo_description": "Explore walks in Bedale, with gentle riverside paths and countryside trails around this North Yorkshire market town. Routes, parking and tips included.",
-    "seo_h1": "Walks in Bedale"
+    "seo_h1": "Walks in Bedale",
+    "noindex": true
   },
   {
     "id": "yd006",
@@ -646,7 +648,8 @@
     ],
     "seo_title": "Walking in the Yorkshire Wolds: Best Routes & Trails Guide",
     "seo_description": "Discover walking in the Yorkshire Wolds, with gentle chalk hills, hidden dales and rolling countryside. Routes, parking and tips for every ability.",
-    "seo_h1": "Walks in the Yorkshire Wolds"
+    "seo_h1": "Walks in the Yorkshire Wolds",
+    "noindex": true
   },
   {
     "id": "yd012",
@@ -705,7 +708,8 @@
     ],
     "seo_title": "Best Walks in North Yorkshire: Routes & Trails Guide",
     "seo_description": "Find the best walks in North Yorkshire, from the Dales and Moors to coastal paths and market towns. Routes, parking and tips for every level of walker.",
-    "seo_h1": "Walks in North Yorkshire"
+    "seo_h1": "Walks in North Yorkshire",
+    "noindex": true
   },
   {
     "id": "yd013",
@@ -764,7 +768,8 @@
     ],
     "seo_title": "Walking in South Yorkshire: Best Routes & Trails Guide",
     "seo_description": "Explore walking in South Yorkshire, from country parks and canal paths to Peak District edges near Sheffield. Routes, parking and tips for all abilities.",
-    "seo_h1": "Walks in South Yorkshire"
+    "seo_h1": "Walks in South Yorkshire",
+    "noindex": true
   },
   {
     "id": "yd014",
@@ -823,7 +828,8 @@
     ],
     "seo_title": "Nice Walks in West Yorkshire: Best Routes & Trails Guide",
     "seo_description": "Discover nice walks in West Yorkshire, from canal towpaths and woodland trails to moorland edges. Routes, parking and tips for every level of walker.",
-    "seo_h1": "Walks in West Yorkshire"
+    "seo_h1": "Walks in West Yorkshire",
+    "noindex": true
   },
   {
     "id": "yd015",
@@ -882,7 +888,8 @@
     ],
     "seo_title": "Best Walks Near York: Walking Routes & Trails Guide",
     "seo_description": "Find the best walks near York, from riverside paths along the Ouse to countryside trails and historic city walks. Routes, parking and tips included.",
-    "seo_h1": "Walks in York"
+    "seo_h1": "Walks in York",
+    "noindex": true
   },
   {
     "id": "yd016",
@@ -941,6 +948,7 @@
     ],
     "seo_title": "Best Walks in Yorkshire: Complete Routes & Trails Guide",
     "seo_description": "Discover the best walks in Yorkshire, from the Dales and Moors to the Wolds and coast. Find routes, parking and tips for every level of walker.",
-    "seo_h1": "Walks in Yorkshire"
+    "seo_h1": "Walks in Yorkshire",
+    "noindex": true
   }
 ]
