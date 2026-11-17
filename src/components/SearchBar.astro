@@ -134,7 +134,7 @@ const { mountainNames = '[]', mountainSlugs = '{}' } = Astro.props;
     const target = currentMatch || val;
     const slug = slugMap[target];
     if (slug) {
-      window.location.href = `/mountain/${slug}`;
+      window.location.href = `/mountain/${slug}/`;
     } else {
       input.dispatchEvent(new Event('input', { bubbles: true }));
     }

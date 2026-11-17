@@ -19,8 +19,7 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date(),
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !page.includes('/contact/thanks'),
       customPages: [],
       serialize(item) {
         if (item.url.includes('/blog/')) {
