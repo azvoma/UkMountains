@@ -3412,9 +3412,20 @@
     "region": "England",
     "county": "Cumbria",
     "description": "Despite its modest height, Haystacks was Alfred Wainwright's favorite mountain. His ashes were scattered here, and the summit overlooks Innominate Tarn.",
-    "history": null,
-    "fun_facts": null,
-    "nearby_places": null,
+    "history": "Haystacks was the favourite fell of Alfred Wainwright, the author of the Pictorial Guides to the Lakeland Fells. He asked for his ashes to be scattered at Innominate Tarn, a small pool on the summit ridge, and walkers still pause there in his memory. The fell stands between Buttermere and Honister, and its rugged outline makes it feel much bigger than its height suggests.",
+    "fun_facts": [
+      "Haystacks was Alfred Wainwright's favourite fell",
+      "His ashes were scattered at Innominate Tarn",
+      "The summit is a rugged knot of crags and tarns",
+      "Honister Pass and Buttermere lie on either side",
+      "Fleetwith Pike and High Crag are the neighbouring fells"
+    ],
+    "nearby_places": [
+      "Buttermere",
+      "Honister",
+      "Gatesgarth",
+      "Fleetwith Pike"
+    ],
     "facilities": null,
     "restaurants": null,
     "classification": "Wainwright",
@@ -3434,7 +3445,8 @@
     "is_wainwright": true,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": false
+    "is_marilyn": false,
+    "walking_guide": "Haystacks is usually climbed from Gatesgarth at the head of Buttermere, following the path to Scarth Gap and then climbing the ridge to the summit. The route is short but rough, and the final section involves easy scrambling. Allow three to four hours for the round trip.\n\nThe summit is a maze of crags, tarns and heather, and the best views are to the Buttermere valley and the surrounding fells. This is a good choice for walkers who want a fell with plenty of character in a short day. The paths can be wet and slippery, so wear sturdy boots."
   },
   {
     "id": "a1b2c3d4-0001-4001-8001-000000000001",
@@ -3489,7 +3501,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The most popular route starts in Donard Park in Newcastle and follows the Glen River path up through Donard Forest to the Saddle, the col between Slieve Donard and Slieve Commedagh. From there a path climbs beside the Mourne Wall to the summit, where an ancient cairn marks the top. Allow four to five hours for the round trip. The mountain rises from sea level, so the climb is more than 800 metres.\n\nAn alternative route starts at the Bloody Bridge car park and follows the Bloody Bridge River up to the Mourne Wall, which gives a quieter ascent. The upper slopes are exposed and can be windy, so carry a windproof layer. The views over the Irish Sea and across the Mournes are worth the effort on a clear day."
   },
   {
     "id": "a1b2c3d4-0002-4001-8001-000000000002",
@@ -3596,7 +3609,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Slieve Binnian is usually climbed from the Carrigagh car park near Annalong, following the track and a path up to the Mourne Wall and the summit tors. A longer route starts at the Silent Valley and climbs the ridge. Allow four to five hours for the round trip.\n\nThe summit area is a maze of granite tors, which can be slippery in wet weather. The views to the Silent Valley reservoirs and the sea are some of the best in the Mournes. Binnian is a good choice for walkers who want a classic Mournes day, with a bit of scrambling and a spectacular summit."
   },
   {
     "id": "a1b2c3d4-0004-4001-8001-000000000004",
@@ -3700,7 +3714,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The Cobbler is climbed from the car park at Succoth, at the head of Loch Long, by a good path that climbs steadily to the col below the three summits. The central peak is the highest, and reaching it requires a scramble through a rock window known as the Eye of the Needle and an exposed step onto the summit block. Allow five to six hours for the round trip.\n\nMany walkers stop at the col, which still gives a satisfying day with fine views of Loch Long. The final move onto the summit block is exposed and should only be attempted by walkers who are happy with heights and have dry conditions. The Cobbler is close to Glasgow and busy at weekends, so start early."
   },
   {
     "id": "a1b2c3d4-0006-4001-8001-000000000006",
@@ -3754,7 +3769,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Suilven is climbed from Glencanisp Lodge, near Lochinver, along a long track and path to the Bealach Mor, the saddle between the two main summits. From the bealach a steep path climbs to Caisteal Liath, the highest point, and the round trip is around 24 kilometres. Allow eight to ten hours for the full day.\n\nThe approach is part of the experience, crossing open moor with views of the whole mountain. The final climb is steep and loose, and the weather can change quickly. Suilven is a long, committing day, so carry spare food, a map and compass and a head torch."
   },
   {
     "id": "a1b2c3d4-0007-4001-8001-000000000007",
@@ -3806,7 +3822,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben Hope is climbed from the car park at Strathmore, near the ruined broch of Dun Dornaigil. A path follows the burn up the mountain beside the waterfall of the Allt na Caillich, then climbs steeply to the summit plateau. Allow four to five hours for the round trip.\n\nThe path is clear but rough, and the upper slopes are exposed to the wind. As the most northerly Munro, Ben Hope sees changeable weather, and cloud can cover the summit quickly. This is a good choice for walkers who want a Munro in remote country with a short walk-in."
   },
   {
     "id": "a1b2c3d4-0008-4001-8001-000000000008",
@@ -3859,7 +3876,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Ben Lui is usually climbed from the Dalrigh car park near Tyndrum, following the track to Cononish Farm and then the path into Coire Gaothach. The final climb to the summit is on the steep north-east ridge, which has a rocky and sometimes exposed section. Allow six to seven hours for the round trip.\n\nThe corrie is one of the finest in the Southern Highlands, and the mountain is a National Nature Reserve. In winter it is a serious mountaineering objective, with steep gullies and avalanche risk. Many walkers choose Ben Lui for its beautiful shape and fine views, but it needs good weather and some Munro experience."
   },
   {
     "id": "a1b2c3d4-0009-4001-8001-000000000009",
@@ -4022,7 +4040,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The shortest route to Mam Tor starts at the Mam Nick car park on the road above Castleton and climbs the stone steps to the summit in around fifteen minutes. A longer circuit starts in Castleton, climbs to Mam Tor, follows the Great Ridge to Lose Hill and returns through the Hope Valley. Allow three to four hours for the circuit.\n\nThe summit has the remains of an Iron Age hillfort, and the eastern face is a landslip that has given the hill its name, the Shivering Mountain. Take care near the edge, as the ground is unstable. The summit is popular at sunrise and sunset, so expect crowds at weekends."
   },
   {
     "id": "a1b2c3d4-0012-4001-8001-000000000012",
@@ -4286,7 +4305,8 @@
     "is_wainwright": false,
     "is_hewitt": true,
     "is_nuttall": true,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "Cross Fell is climbed on the Pennine Way, from Garrigill on the west side or from Dufton on the east. Both routes are long, and the round trip takes six to seven hours. The summit is a broad, stony plateau with a cairn and a small shelter.\n\nThe mountain is famous for the Helm Wind, a strong easterly that blows down the escarpment, and the weather here can be severe at any time of year. Navigation is difficult in mist, since the plateau is featureless. Carry a map and compass, and check the forecast before setting off."
   },
   {
     "id": "a1b2c3d4-0020-4001-8001-000000000020",
@@ -5248,7 +5268,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The walk to the Old Man of Storr starts at the car park beside the A855, north of Portree, and follows a clear, well-made path through woodland and up to the base of the pinnacles. The round trip is around four kilometres, and takes around two hours. The path is steep in places and can be slippery after rain.\n\nThe car park is small and often full by mid-morning, so arrive early. The pinnacles are unstable, and climbing on them is dangerous and discouraged. Walkers who want a longer day can continue to the summit of The Storr, which gives wide views over the Sound of Raasay."
   },
   {
     "id": "a1b2c3d4-0040-4001-8001-000000000040",
@@ -5300,7 +5321,8 @@
     "is_wainwright": false,
     "is_hewitt": false,
     "is_nuttall": false,
-    "is_marilyn": true
+    "is_marilyn": true,
+    "walking_guide": "The Quiraing circuit starts at the car park at the top of the road between Staffin and Uig and follows a high path beneath the cliffs of Meall na Suiramach, passing the Prison and the Needle. A loop to the Table and back takes around two to three hours. The path is narrow and exposed in places, and the ground is still slowly moving.\n\nThe Quiraing is a landslip landscape created by the movement of the hillside, and the road that crosses it is often damaged. The weather on Skye is changeable, and mist can make the path hard to follow. Wear boots with good grip, and stay away from the edge."
   },
   {
     "id": "a1b2c3d4-0041-4001-8001-000000000041",
