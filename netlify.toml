@@ -11,3 +11,9 @@
 #   from = "/old-path/"
 #   to = "/new-path/"
 #   status = 301
+
+# Duplicate reserve page merged into the canonical one
+[[redirects]]
+  from = "/nature-reserves/st-abb-s-head/"
+  to = "/nature-reserves/st-abbs-head/"
+  status = 301

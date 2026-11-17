@@ -75,14 +75,6 @@ const imageURL = image.startsWith('http') ? image : new URL(image, Astro.site);
       "name": "UK Mountains Directory",
       "description": "Discover and explore the mountains of the United Kingdom",
       "url": Astro.site,
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": `${Astro.site}mountains?search={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      },
       "publisher": {
         "@type": "Organization",
         "name": "UK Mountains Directory",

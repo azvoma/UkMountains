@@ -1222,7 +1222,6 @@
       }
     ],
     "related_slugs": [
-      "st-abb-s-head",
       "st-abbs-head",
       "corrieshalloch-gorge",
       "craigellachie"
@@ -1960,62 +1959,6 @@
     "seo_h1": "Rodney Stoke National Nature Reserve"
   },
   {
-    "id": "nr036",
-    "name": "St Abb'S Head National Nature Reserve",
-    "slug": "st-abb-s-head",
-    "primary_keyword": "st abb's head national nature reserve",
-    "region": "Scottish Borders",
-    "nation": "Scotland",
-    "nearest_town": "Eyemouth",
-    "os_grid_ref": "NT 915 675",
-    "latitude": null,
-    "longitude": null,
-    "size_hectares": "65",
-    "managing_body": "NatureScot and National Trust for Scotland",
-    "habitat_type": "Cliff grassland and sea cliffs",
-    "access_difficulty": "Easy",
-    "nnr_status": true,
-    "classification": "National Nature Reserve",
-    "description": "St Abb'S Head is a Cliff grassland and sea cliffs reserve in Scottish Borders, managed by NatureScot and National Trust for Scotland. The reserve covers approximately 65 hectares and is designated as a National Nature Reserve. The cliffs support one of the largest seabird colonies on the east coast of Scotland, with guillemots, razorbills, kittiwakes, fulmars and herring gulls nesting in their thousands. Puffins nest in small numbers. The clifftop grassland has spring squill, thrift and bird's-foot trefoil. Peregrine falcons hunt the cliffs. Grey seals haul out on the rocky shore.",
-    "history": "St Abb's Head NNR was declared in 1983 and is managed in partnership between NatureScot and the National Trust for Scotland. The reserve protects the dramatic sea cliffs and clifftop grassland at the most south-easterly point of Scotland. A lighthouse was built here in 1862.",
-    "wildlife": "The cliffs support one of the largest seabird colonies on the east coast of Scotland, with guillemots, razorbills, kittiwakes, fulmars and herring gulls nesting in their thousands. Puffins nest in small numbers. The clifftop grassland has spring squill, thrift and bird's-foot trefoil. Peregrine falcons hunt the cliffs. Grey seals haul out on the rocky shore.",
-    "nearby_places": [
-      "Eyemouth",
-      "Coldingham",
-      "Berwick-upon-Tweed"
-    ],
-    "facilities": "Car park at St Abbs village. Visitor centre with toilets and cafe at the lighthouse. Waymarked cliff-top trail. Observation points for seabird watching. National Trust for Scotland facilities.",
-    "best_season": "Spring to Autumn",
-    "fun_facts": [
-      "St Abb's Head hosts one of the largest seabird colonies on the east coast of Scotland, with over 60,000 breeding birds packed onto the cliffs each summer.",
-      "The lighthouse at St Abb's Head was built in 1862 by the Stevenson family, the famous dynasty of lighthouse engineers.",
-      "Puffins, with their colourful parrot-like beaks, nest in small numbers on the reserve's cliff tops."
-    ],
-    "faqs": [
-      {
-        "question": "Is St Abb'S Head National Nature Reserve suitable for families?",
-        "answer": "Yes, there are cliff-top paths and a visitor centre suitable for families. Well-maintained clifftop path with some gentle gradients. The path stays safely back from the cliff edge. Good access from the car park and visitor centre. Some sections can be muddy after rain."
-      },
-      {
-        "question": "What is the best time to visit St Abb'S Head NNR?",
-        "answer": "Spring to summer offers the best seabird viewing opportunities. May to July for peak seabird activity — guillemots, razorbills and kittiwakes on the cliffs. Spring for clifftop wildflowers. Autumn for migrating birds and grey seals. Winter is quiet but the cliffs are dramatic in storms."
-      },
-      {
-        "question": "Are dogs allowed at St Abb'S Head National Nature Reserve?",
-        "answer": "Dogs are permitted on the clifftop path but must be kept on a lead at all times to protect ground-nesting seabirds and for safety near the cliff edges."
-      }
-    ],
-    "related_slugs": [
-      "st-abbs-head",
-      "st-cyrus",
-      "craigellachie",
-      "corrieshalloch-gorge"
-    ],
-    "seo_title": "St Abb's Head NNR: Guide to the Scottish Borders Reserve",
-    "seo_description": "Explore St Abb's Head National Nature Reserve in the Scottish Borders. Find access details, wildlife, habitat info and visitor tips for this coastal NNR.",
-    "seo_h1": "St Abb'S Head National Nature Reserve"
-  },
-  {
     "id": "nr037",
     "name": "Lydden Temple Ewell National Nature Reserve",
     "slug": "lydden-temple-ewell",
@@ -2230,7 +2173,6 @@
       }
     ],
     "related_slugs": [
-      "st-abb-s-head",
       "st-cyrus",
       "craigellachie",
       "corrieshalloch-gorge"
